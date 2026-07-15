@@ -281,6 +281,15 @@ SmartScreen warns about the installer because it is not code-signed. Code signin
 
 ---
 
+## Need Help?
+
+Running into a technical issue? Two options:
+
+- **Open an issue** on the [Issues page](https://github.com/OxCone1/HEAT-Sentinel/issues) with steps to reproduce.
+- **Join the Discord server**: [discord.gg/AjfcuhDDw5](https://discord.gg/AjfcuhDDw5) and ask there directly.
+
+---
+
 *Repository: https://github.com/OxCone1/HEAT-Sentinel*
 
 ---
@@ -564,6 +573,15 @@ SmartScreen предупреждает об установщике, потому
   - продавать или иным образом монетизировать модификации, нарушающие эти правила;
   - выдавать его за связанный с Wargaming или World of Tanks: HEAT, одобренный или утверждённый ими продукт.
 - **Поддержка**: это бесплатный проект, который развивается в свободное время. Баги исправляются, а идеи рассматриваются по мере возможности; спасибо за терпение, и вклад всегда приветствуется.
+
+---
+
+## Нужна помощь?
+
+Столкнулись с технической проблемой? Два варианта:
+
+- **Откройте issue** на [странице Issues](https://github.com/OxCone1/HEAT-Sentinel/issues) с шагами воспроизведения.
+- **Присоединяйтесь к Discord-серверу**: [discord.gg/AjfcuhDDw5](https://discord.gg/AjfcuhDDw5) и спросите там напрямую.
 
 ---
 
