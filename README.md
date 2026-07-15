@@ -265,6 +265,10 @@ SmartScreen warns about the installer because it is not code-signed. Code signin
 - **Nothing is shared with anyone.** There is no telemetry and no data collection.
 - In Legacy OCR mode, screenshots are processed on your machine and never leave it.
 
+### Known Issues
+
+- **Some overlay elements can crash the overlay**, with no in-app way to remove them once that happens. Workaround: open developer tools in the overlay's browser view, go to **Application > Local Storage**, and clear it. Alternatively, click the site info icon in the browser's address bar (padlock/page icon) and use the "Clear data" / "Delete site data" option; its exact location depends on the browser.
+
 ---
 
 ## 9. Future Expansion
@@ -573,6 +577,10 @@ SmartScreen предупреждает об установщике, потому
 - **Все данные хранятся локально** в базе на вашем компьютере: бои, опыт, комплектации, настройки.
 - **Ничего никому не передаётся.** Ни телеметрии, ни сбора данных.
 - В режиме Legacy OCR скриншоты обрабатываются на вашем компьютере и не покидают его.
+
+### Известные баги
+
+- **Некоторые элементы оверлея могут вызывать его крах**, и удалить их изнутри приложения после этого нельзя. Обходной путь: откройте инструменты разработчика в браузерном окне оверлея, перейдите в **Application > Local Storage** и очистите её. Либо нажмите на значок информации о сайте в адресной строке браузера (иконка замка/страницы) и выберите "Очистить данные" / "Удалить данные сайта"; точное расположение этой опции зависит от браузера.
 
 ---
 
