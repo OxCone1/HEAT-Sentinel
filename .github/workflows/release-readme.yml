@@ -1,0 +1,100 @@
+# Updates the README download section whenever an app release is published.
+#
+# App releases are built and uploaded (as drafts) by the private WoT_HEAT
+# repository's release workflow. That workflow computes SHA-256 hashes,
+# scans the binaries on VirusTotal, and attaches a machine-readable
+# release_info.json asset to the release. When the draft is published,
+# this workflow:
+#   1. Downloads release_info.json from the release.
+#   2. Resolves the installer's direct download URL from the release assets.
+#   3. Rewrites the RELEASE-EN / RELEASE-RU marker blocks in README.md
+#      (badge with direct download link + VirusTotal report table).
+#   4. Commits the README to the default branch.
+#
+# Releases without a release_info.json asset and an *-setup.exe asset
+# (e.g. Light-LabelMe tool releases) are skipped. No secrets required.
+
+name: Update README on release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to publish into the README
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-readme
+  cancel-in-progress: false
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - name: Checkout default branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Fetch release metadata
+        run: gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${TAG}" > release.json
+
+      - name: Check this is an app release
+        id: guard
+        run: |
+          if jq -e '.assets[] | select(.name == "release_info.json")' release.json > /dev/null \
+            && jq -e '.assets[] | select(.name | test("-setup[.]exe$"; "i"))' release.json > /dev/null; then
+            echo "app_release=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No release_info.json / *-setup.exe asset in ${TAG}; skipping README update."
+            echo "app_release=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download release_info.json
+        if: steps.guard.outputs.app_release == 'true'
+        run: gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --pattern release_info.json --output info.json
+
+      - name: Compose README release data
+        if: steps.guard.outputs.app_release == 'true'
+        run: |
+          jq -s --arg tag "$TAG" '
+            .[0] as $rel | .[1] as $info |
+            (first($rel.assets[] | select(.name | test("-setup[.]exe$"; "i"))) // null) as $inst |
+            {
+              tag: $tag,
+              release_url: $rel.html_url,
+              date: ($rel.published_at[:10]),
+              assets: [ $info.files[] | {
+                kind: .kind,
+                name: (if .kind == "installer" and $inst != null then $inst.name else .name end),
+                sha256: .sha256,
+                size: .size,
+                download_url: (if .kind == "installer" then $inst.browser_download_url else (.download_url // null) end)
+              } ]
+            }' release.json info.json > release_info_full.json
+          cat release_info_full.json
+
+      - name: Update README marker blocks
+        if: steps.guard.outputs.app_release == 'true'
+        run: python3 scripts/update_release_info.py --readme README.md --data release_info_full.json
+
+      - name: Commit and push
+        if: steps.guard.outputs.app_release == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if git diff --cached --quiet; then
+            echo "README already up to date."
+            exit 0
+          fi
+          git commit -m "docs: update release info for ${TAG}"
+          git push

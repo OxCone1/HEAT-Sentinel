@@ -1,0 +1,389 @@
+{
+  "agents": [
+    {
+      "id": "chopper",
+      "name": "巨斧",
+      "role": "防禦型"
+    },
+    {
+      "id": "ember",
+      "name": "微光",
+      "role": "進攻型"
+    },
+    {
+      "id": "kent",
+      "name": "肯特",
+      "role": "進攻型"
+    },
+    {
+      "id": "raketa",
+      "name": "拉克塔",
+      "role": "進攻型"
+    },
+    {
+      "id": "reaper",
+      "name": "收割者",
+      "role": "進攻型"
+    },
+    {
+      "id": "twister",
+      "name": "龍捲風",
+      "role": "狙擊型"
+    },
+    {
+      "id": "hound",
+      "name": "獵犬",
+      "role": "防禦型"
+    },
+    {
+      "id": "fuzzer",
+      "name": "福澤",
+      "role": "狙擊型"
+    },
+    {
+      "id": "flair",
+      "name": "Flair",
+      "role": "Marksman"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "m1e1",
+      "name": "M1E1",
+      "agent_id": "chopper",
+      "slug": "m1e1"
+    },
+    {
+      "id": "fv4030_x",
+      "name": "FV4030 X",
+      "agent_id": "chopper",
+      "slug": "fv4030x"
+    },
+    {
+      "id": "xm1v",
+      "name": "XM1V",
+      "agent_id": "ember",
+      "slug": "xm1-v",
+      "aliases": [
+        "XM1 V"
+      ]
+    },
+    {
+      "id": "xm1_90",
+      "name": "XM1 90",
+      "agent_id": "kent",
+      "slug": "xm1-90"
+    },
+    {
+      "id": "alvt",
+      "name": "ALVT",
+      "agent_id": "kent",
+      "slug": "alvt"
+    },
+    {
+      "id": "t-62av",
+      "name": "T-62AV",
+      "agent_id": "raketa",
+      "slug": "t-62av"
+    },
+    {
+      "id": "obj_287",
+      "name": "287工程",
+      "agent_id": "raketa",
+      "slug": "object-287",
+      "aliases": [
+        "Object 287"
+      ]
+    },
+    {
+      "id": "m60a1",
+      "name": "M60A1",
+      "agent_id": "reaper",
+      "slug": "m60a1"
+    },
+    {
+      "id": "m60a2",
+      "name": "M60A2",
+      "agent_id": "reaper",
+      "slug": "m60a2"
+    },
+    {
+      "id": "hstv-l",
+      "name": "HSTV-L",
+      "agent_id": "twister",
+      "slug": "hstv-l"
+    },
+    {
+      "id": "m551a1",
+      "name": "M551A1",
+      "agent_id": "twister",
+      "slug": "m551a1"
+    },
+    {
+      "id": "leo_1a6a1",
+      "name": "豹1A6A1",
+      "agent_id": "hound",
+      "slug": "leopard-1a6a1",
+      "aliases": [
+        "Leo 1A6A1",
+        "Leopard 1A6A1"
+      ]
+    },
+    {
+      "id": "amx10_rc",
+      "name": "AMX10 RC",
+      "agent_id": "hound",
+      "slug": "amx-10-rc"
+    },
+    {
+      "id": "m3e1",
+      "name": "M3E1",
+      "agent_id": "fuzzer",
+      "slug": "m3a1-bradley"
+    },
+    {
+      "id": "marder_1a3",
+      "name": "黃鼠狼1A3",
+      "agent_id": "fuzzer",
+      "slug": "marder-1a3"
+    },
+    {
+      "id": "leo_2fk",
+      "name": "LEO 2FK",
+      "agent_id": "flair",
+      "slug": "leo-2fk",
+      "aliases": [
+        "Leo 2FK",
+        "Leopard 2FK"
+      ]
+    },
+    {
+      "id": "leo_2kst",
+      "name": "LEO 2KST",
+      "agent_id": "flair",
+      "slug": "leopard-2kst",
+      "aliases": [
+        "Leo 2KST",
+        "Leopard 2KST"
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "id": "scarred_city",
+      "name": "Scarred City"
+    },
+    {
+      "id": "blossom_crash",
+      "name": "Blossom Crash"
+    },
+    {
+      "id": "sunstroke",
+      "name": "Sunstroke"
+    },
+    {
+      "id": "nord_oko",
+      "name": "Nord Oko"
+    },
+    {
+      "id": "nexus_dam",
+      "name": "Nexus Dam"
+    },
+    {
+      "id": "aircraft_carrier",
+      "name": "Aircraft Carrier"
+    },
+    {
+      "id": "project_phoenix",
+      "name": "Project Phoenix"
+    },
+    {
+      "id": "moonshot",
+      "name": "Moonshot"
+    },
+    {
+      "id": "eden",
+      "name": "Eden"
+    }
+  ],
+  "gamemodes": [
+    {
+      "id": "conquest",
+      "name": "征服戰",
+      "is_5v5": false,
+      "it": [
+        "captures",
+        "destroyed",
+        "deaths",
+        "assists",
+        "damage_caused",
+        "damage_blocked"
+      ],
+      "ocr_patterns": [
+        "conquest",
+        "征服戰"
+      ]
+    },
+    {
+      "id": "control",
+      "name": "控制戰",
+      "is_5v5": true,
+      "stat_fields": [
+        "captures",
+        "destroyed",
+        "deaths",
+        "assists",
+        "damage_caused",
+        "damage_blocked"
+      ],
+      "ocr_patterns": [
+        "control",
+        "控制戰"
+      ]
+    },
+    {
+      "id": "hardpoint",
+      "name": "據點戰",
+      "is_5v5": true,
+      "stat_fields": [
+        "captures",
+        "destroyed",
+        "deaths",
+        "assists",
+        "damage_caused",
+        "damage_blocked"
+      ],
+      "ocr_patterns": [
+        "hardpoint",
+        "據點戰"
+      ]
+    },
+    {
+      "id": "kill_confirmed",
+      "name": "確認擊毀",
+      "is_5v5": true,
+      "stat_fields": [
+        "confirms",
+        "denies",
+        "destroyed",
+        "deaths",
+        "assists",
+        "damage_caused"
+      ],
+      "ocr_patterns": [
+        "killconfirmed",
+        "kill confirmed",
+        "確認擊毀"
+      ]
+    },
+    {
+      "id": "versus_ai",
+      "name": "Versus AI",
+      "is_5v5": true,
+      "stat_fields": [
+        "captures",
+        "destroyed",
+        "deaths",
+        "assists",
+        "damage_caused",
+        "damage_blocked"
+      ],
+      "ocr_patterns": [
+        "versusai",
+        "versus ai",
+        "vs ai"
+      ]
+    }
+  ],
+  "ocr_corrections": {
+    "vehicles": {
+      "N1E1": "M1E1",
+      "M1E1": "M1E1",
+      "FV4030.X": "FV4030 X",
+      "FV4030X": "FV4030 X",
+      "FV4030 X": "FV4030 X",
+      "XM1IV": "XM1V",
+      "XMIV": "XM1V",
+      "AXM1V": "XM1V",
+      "XM1V": "XM1V",
+      "XMI 90": "XM1 90",
+      "AXM1 90": "XM1 90",
+      "XM1.90": "XM1 90",
+      "XM190": "XM1 90",
+      "XM1 90": "XM1 90",
+      "ALVT": "ALVT",
+      "AT-62AV": "T-62AV",
+      "T62AV": "T-62AV",
+      "T-62AV": "T-62AV",
+      "287工程": "287工程",
+      "M6OA1": "M60A1",
+      "N60A1": "M60A1",
+      "MGOA1": "M60A1",
+      "M60A1": "M60A1",
+      "MGOA2": "M60A2",
+      "M6OA2": "M60A2",
+      "N60A2": "M60A2",
+      "M60A2": "M60A2",
+      "HSTVL": "HSTV-L",
+      "HSTV-L": "HSTV-L",
+      "M55IA1": "M551A1",
+      "N551A1": "M551A1",
+      "M551A1": "M551A1",
+      "豹1A6A1": "豹1A6A1",
+      "AMMX10 RC": "AMX10 RC",
+      "AMMX10RC": "AMX10 RC",
+      "AMX10RC": "AMX10 RC",
+      "AMX10.RC": "AMX10 RC",
+      "AMX10 RC": "AMX10 RC",
+      "M331": "M3E1",
+      "N3E1": "M3E1",
+      "MEE1": "M3E1",
+      "M3EI": "M3E1",
+      "M3E1": "M3E1",
+      "黃鼠狼1A3": "黃鼠狼1A3"
+    },
+    "agents": {
+      "巨斧。": "巨斧",
+      "巨斧": "巨斧",
+      "微光。": "微光",
+      "微光": "微光",
+      "肯特。": "肯特",
+      "肯特": "肯特",
+      "拉克塔。": "拉克塔",
+      "拉克塔": "拉克塔",
+      "收割者。": "收割者",
+      "收割者": "收割者",
+      "龍捲風。": "龍捲風",
+      "龍捲風": "龍捲風",
+      "獵犬。": "獵犬",
+      "獵犬": "獵犬",
+      "福澤。": "福澤",
+      "福澤": "福澤"
+    },
+    "gamemodes": {
+      "hardpoint": "hardpoint",
+      "control": "control",
+      "killconfirmed": "kill_confirmed",
+      "kill confirmed": "kill_confirmed",
+      "conquest": "conquest",
+      "versusai": "versus_ai",
+      "versus ai": "versus_ai",
+      "vs ai": "versus_ai",
+      "征服戰": "conquest",
+      "征服": "conquest",
+      "控制": "control",
+      "控制戰": "control",
+      "據點戰": "hardpoint",
+      "據點": "hardpoint",
+      "確認擊毀": "kill_confirmed"
+    }
+  },
+  "rarity_colors": {
+    "Common": "#606060",
+    "Uncommon": "#4CAF50",
+    "Rare": "#3288B8",
+    "Epic": "#8E44AD",
+    "Legendary": "#D48806"
+  },
+  "letter_replacements": {}
+}

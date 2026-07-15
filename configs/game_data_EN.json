@@ -1,0 +1,289 @@
+{
+  "agents": [
+    { "id": "chopper", "name": "Chopper", "role": "Defender" },
+    { "id": "ember",   "name": "Ember",   "role": "Assault" },
+    { "id": "kent",    "name": "Kent",    "role": "Assault" },
+    { "id": "raketa",  "name": "Raketa",  "role": "Assault" },
+    { "id": "reaper",  "name": "Reaper",  "role": "Assault" },
+    { "id": "twister", "name": "Twister", "role": "Marksman" },
+    { "id": "hound",   "name": "Hound",   "role": "Defender" },
+    { "id": "fuzzer",  "name": "Fuzzer",  "role": "Marksman" },
+    { "id": "flair",   "name": "Flair",   "role": "Marksman" }
+  ],
+  "vehicles": [
+    { "id": "m1e1",        "name": "M1E1",        "agent_id": "chopper", "locale_key": "a02_m1e1_120" },
+    { "id": "fv4030_x",    "name": "FV4030 X",    "agent_id": "chopper", "locale_key": "gb01_challenger" },
+    { "id": "xm1v",        "name": "XM1V",        "agent_id": "ember",   "locale_key": "a01_chrysler_xm1_volcano", "aliases": ["XM1 V"] },
+    { "id": "xm1_90",      "name": "XM1 90",      "agent_id": "kent",    "locale_key": "a13_chrysler_xm1_ares_90" },
+    { "id": "alvt",        "name": "ALVT",        "agent_id": "kent",    "locale_key": "a12_alvt" },
+    { "id": "t-62av",      "name": "T-62AV",      "agent_id": "raketa",  "locale_key": "r01_t_62a" },
+    { "id": "obj_287",     "name": "OBJ. 287",    "agent_id": "raketa",  "locale_key": "r08_object_287",    "aliases": ["Object 287"] },
+    { "id": "m60a1",       "name": "M60A1",       "agent_id": "reaper",  "locale_key": "a14_m60a1" },
+    { "id": "m60a2",       "name": "M60A2",       "agent_id": "reaper",  "locale_key": "a20_m60a2" },
+    { "id": "hstv-l",      "name": "HSTV-L",      "agent_id": "twister", "locale_key": "a07_hstv_l" },
+    { "id": "m551a1",      "name": "M551A1",      "agent_id": "twister", "locale_key": "a05_m551a1_sheridan" },
+    { "id": "leo_1a6a1",   "name": "LEO 1A6A1",   "agent_id": "hound",   "locale_key": "g01_leopard_1_a6_120", "aliases": ["Leo 1A6A1", "Leopard 1A6A1"] },
+    { "id": "amx10_rc",    "name": "AMX10 RC",    "agent_id": "hound",   "locale_key": "f05_amx_10_rc" },
+    { "id": "m3e1",        "name": "M3E1",        "agent_id": "fuzzer",  "locale_key": "a08_m3_bradley" },
+    { "id": "marder_1a3",  "name": "MARDER 1A3",  "agent_id": "fuzzer",  "locale_key": "g07_marder1a3" },
+    { "id": "leo_2fk",     "name": "LEO 2FK",     "agent_id": "flair",   "locale_key": "g06_leopard2fk_atgm", "aliases": ["Leo 2FK", "Leopard 2FK"] },
+    { "id": "leo_2kst",    "name": "LEO 2KST",    "agent_id": "flair",   "locale_key": "g11_leopard2k_st",  "aliases": ["Leo 2KST", "Leopard 2KST"] }
+  ],
+  "maps": [
+    { "id": "scarred_city",     "name": "Scarred City" },
+    { "id": "blossom_crash",    "name": "Blossom Crash" },
+    { "id": "sunstroke",        "name": "Sunstroke" },
+    { "id": "nord_oko",         "name": "Nord Oko" },
+    { "id": "nexus_dam",        "name": "Nexus Dam" },
+    { "id": "aircraft_carrier", "name": "Aircraft Carrier" },
+    { "id": "project_phoenix",  "name": "Project Phoenix" },
+    { "id": "moonshot",         "name": "Moonshot" },
+    { "id": "eden",             "name": "Eden" }
+  ],
+  "gamemodes": [
+    {
+      "id": "conquest",
+      "name": "Conquest",
+      "is_5v5": false,
+      "it": ["captures", "destroyed", "deaths", "assists", "damage_caused", "damage_blocked"],
+      "ocr_patterns": ["conquest"]
+    },
+    {
+      "id": "control",
+      "name": "Control",
+      "is_5v5": true,
+      "stat_fields": ["captures", "destroyed", "deaths", "assists", "damage_caused", "damage_blocked"],
+      "ocr_patterns": ["control"]
+    },
+    {
+      "id": "hardpoint",
+      "name": "Hardpoint",
+      "is_5v5": true,
+      "stat_fields": ["captures", "destroyed", "deaths", "assists", "damage_caused", "damage_blocked"],
+      "ocr_patterns": ["hardpoint"]
+    },
+    {
+      "id": "kill_confirmed",
+      "name": "Kill Confirmed",
+      "is_5v5": true,
+      "stat_fields": ["confirms", "denies", "destroyed", "deaths", "assists", "damage_caused"],
+      "ocr_patterns": ["killconfirmed", "kill confirmed"]
+    },
+    {
+      "id": "versus_ai",
+      "name": "Versus AI",
+      "is_5v5": true,
+      "stat_fields": ["captures", "destroyed", "deaths", "assists", "damage_caused", "damage_blocked"],
+      "ocr_patterns": ["versusai", "versus ai", "vs ai"]
+    }
+  ],
+  "ocr_corrections": {
+    "vehicles": {
+      "XMI 90": "XM1 90",
+      "XM1 90": "XM1 90",
+      "MIET": "M1E1",
+      "M1E1": "M1E1",
+      "M6OA2": "M60A2",
+      "M60A2": "M60A2",
+      "M60A1": "M60A1",
+      "M3EI": "M3E1",
+      "M3E1": "M3E1",
+      "LEO 1AGAI": "LEO 1A6A1",
+      "LEO 1A6A1": "LEO 1A6A1",
+      "T-62AV": "T-62AV",
+      "OBJ. 287": "OBJ. 287",
+      "HSTV-L": "HSTV-L",
+      "M551A1": "M551A1",
+      "AMX10 RC": "AMX10 RC",
+      "MARDER 1A3": "MARDER 1A3",
+      "FV4030 X": "FV4030 X",
+      "XM1V": "XM1V",
+      "ALVT": "ALVT",
+      "MGOAZ": "M60A2",
+      "AXM190": "XM1 90",
+      "XM190": "XM1 90",
+      "O LE0 1A6A1": "LEO 1A6A1",
+      "LE0 1A6A1": "LEO 1A6A1",
+      "AT-62AV": "T-62AV",
+      "AT62AV": "T-62AV",
+      "LE01A6A1": "LEO 1A6A1",
+      "OLEO 1A6A1": "LEO 1A6A1",
+      "OLE01A6A1": "LEO 1A6A1",
+      "AMMX10 RC": "AMX10 RC",
+      "AMMX10RC": "AMX10 RC",
+      "AMX10RC": "AMX10 RC",
+      "0BJ.287": "OBJ. 287",
+      "0BJ287": "OBJ. 287",
+      "OBJ287": "OBJ. 287",
+      "M55IAI": "M551A1",
+      "M55IA1": "M551A1",
+      "HSTVL": "HSTV-L",
+      "MARDER1A3": "MARDER 1A3",
+      "XMIV": "XM1V",
+      "T62AV": "T-62AV",
+      "FV4030X": "FV4030 X",
+      "LEO 2FK": "LEO 2FK",
+      "LE02FK": "LEO 2FK",
+      "LE0 2FK": "LEO 2FK",
+      "LEO 2KST": "LEO 2KST",
+      "LE02KST": "LEO 2KST",
+      "LE0 2KST": "LEO 2KST"
+    },
+    "agents": {
+      "H0UND": "Hound",
+      "HOUND": "Hound",
+      "HOUND.": "Hound",
+      "CHOPPER": "Chopper",
+      "CHOPPER.": "Chopper",
+      "EMBER": "Ember",
+      "EMBER.": "Ember",
+      "EM8ER": "Ember",
+      "KENT": "Kent",
+      "KENT.": "Kent",
+      "RAKETA": "Raketa",
+      "RAKETA.": "Raketa",
+      "RAK3TA": "Raketa",
+      "R4KETA": "Raketa",
+      "REAPER": "Reaper",
+      "REAPER.": "Reaper",
+      "REAP3R": "Reaper",
+      "TWISTER": "Twister",
+      "TWISTER.": "Twister",
+      "TW1STER": "Twister",
+      "FVZZER": "Fuzzer",
+      "FUZZER": "Fuzzer",
+      "FUZZER.": "Fuzzer",
+      "FVZZER.": "Fuzzer",
+      "FLAIR": "Flair",
+      "FLAIR.": "Flair",
+      "FLA1R": "Flair",
+      "FL4IR": "Flair"
+    },
+    "gamemodes": {
+      "hardpoint": "hardpoint",
+      "control": "control",
+      "killconfirmed": "kill_confirmed",
+      "kill confirmed": "kill_confirmed",
+      "conquest": "conquest",
+      "versusai": "versus_ai",
+      "versus ai": "versus_ai",
+      "vs ai": "versus_ai"
+    }
+  },
+  "rarity_colors": {
+    "Common": "#606060",
+    "Uncommon": "#4CAF50",
+    "Rare": "#3288B8",
+    "Epic": "#8E44AD",
+    "Legendary": "#D48806"
+  },
+  "letter_replacements": {
+    "O": "0",
+    "o": "0",
+    "I": "1",
+    "l": "1"
+  },
+  "localization": {
+    "ru": {
+      "agents": {
+        "ФЛЕР": "flair",
+        "ЧОППЕР": "chopper",
+        "РАКЕТА": "raketa",
+        "ХАУНД": "hound",
+        "РИПЕР": "reaper",
+        "ЭМБЕР": "ember",
+        "КЕНТ": "kent",
+        "ТВИСТЕР": "twister",
+        "ФАЗЗЕР": "fuzzer"
+      },
+      "gamemodes": {
+        "ЗАВОЕВАНИЕ": "conquest",
+        "КОНТРОЛЬ": "control",
+        "ОПОРНЫЙ ПУНКТ": "hardpoint",
+        "ПОДТВЕРЖДЕНИЕ": "kill_confirmed",
+        "ПРОТИВ ИИ": "versus_ai",
+        "ЛИКВИДАЦИЯ": "kill_confirmed",
+        "ПРЕВОСХОДСТВО": "conquest",
+        "БЫСТРЫЙ БОЙ": "quick_battle",
+        "ПОЛИГОН": "firing_range",
+        "СПЕЦОПЕРАЦИЯ": "special_operation"
+      },
+      "maps": {
+        "ЛУННАЯ МИССИЯ": "moonshot",
+        "ШРАМИРОВАННЫЙ ГОРОД": "scarred_city",
+        "ЦВЕТОЧНОЕ КРУШЕНИЕ": "blossom_crash",
+        "СОЛНЕЧНЫЙ УДАР": "sunstroke",
+        "НОРД ОКО": "nord_oko",
+        "НЕКСУС": "nexus_dam",
+        "ДАМБА «НЕКСУС»": "nexus_dam",
+        "АВИАНОСЕЦ": "aircraft_carrier",
+        "ПРОЕКТ ФЕНИКС": "project_phoenix",
+        "ЭДЕМ": "eden",
+        "ПОТЕРЯННЫЙ ЭДЕМ": "eden"
+      },
+      "results": {
+        "ПОБЕДА": "VICTORY",
+        "ПОРАЖЕНИЕ": "DEFEAT",
+        "НИЧЬЯ": "DRAW"
+      },
+      "rarity": {
+        "ОБЫЧНЫЙ": "common",
+        "НЕОБЫЧНЫЙ": "uncommon",
+        "РЕДКИЙ": "rare",
+        "ЭПИЧЕСКИЙ": "epic",
+        "ЛЕГЕНДАРНЫЙ": "legendary"
+      }
+    },
+    "de": {
+      "maps": {},
+      "results": {
+        "SIEG": "VICTORY",
+        "NIEDERLAGE": "DEFEAT",
+        "UNENTSCHIEDEN": "DRAW"
+      },
+      "rarity": {
+        "GEWOHNLICH": "common",
+        "UNGE-WOHNLICH": "uncommon",
+        "SELTEN": "rare",
+        "EPISCH": "epic",
+        "LEGENDAR": "legendary"
+      }
+    },
+    "es": {
+      "maps": {},
+      "results": {
+        "VICTORIA": "VICTORY",
+        "DERROTA": "DEFEAT",
+        "EMPATE": "DRAW"
+      },
+      "rarity": {}
+    },
+    "fr": {
+      "maps": {},
+      "results": {
+        "VICTOIRE": "VICTORY",
+        "DEFAITE": "DEFEAT",
+        "EGALITE": "DRAW"
+      },
+      "rarity": {}
+    },
+    "pl": {
+      "maps": {},
+      "results": {
+        "ZWYCIESTWO": "VICTORY",
+        "PORAZKA": "DEFEAT",
+        "REMIS": "DRAW"
+      },
+      "rarity": {}
+    },
+    "pt-br": {
+      "maps": {},
+      "results": {
+        "VITORIA": "VICTORY",
+        "DERROTA": "DEFEAT",
+        "EMPATE": "DRAW"
+      },
+      "rarity": {}
+    }
+  }
+}

@@ -1,0 +1,454 @@
+{
+  "agents": [
+    {
+      "id": "chopper",
+      "name": "Chopper",
+      "role": "Verteidiger"
+    },
+    {
+      "id": "ember",
+      "name": "Ember",
+      "role": "Angreifer"
+    },
+    {
+      "id": "kent",
+      "name": "Kent",
+      "role": "Angreifer"
+    },
+    {
+      "id": "raketa",
+      "name": "Raketa",
+      "role": "Angreifer"
+    },
+    {
+      "id": "reaper",
+      "name": "Reaper",
+      "role": "Angreifer"
+    },
+    {
+      "id": "twister",
+      "name": "Twister",
+      "role": "Scharfschütze"
+    },
+    {
+      "id": "hound",
+      "name": "Hound",
+      "role": "Verteidiger"
+    },
+    {
+      "id": "fuzzer",
+      "name": "Fuzzer",
+      "role": "Scharfschütze"
+    },
+    {
+      "id": "flair",
+      "name": "Flair",
+      "role": "Marksman"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "m1e1",
+      "name": "M1E1",
+      "agent_id": "chopper",
+      "slug": "m1e1"
+    },
+    {
+      "id": "fv4030_x",
+      "name": "FV4030 X",
+      "agent_id": "chopper",
+      "slug": "fv4030x"
+    },
+    {
+      "id": "xm1v",
+      "name": "XM1V",
+      "agent_id": "ember",
+      "slug": "xm1-v",
+      "aliases": [
+        "XM1 V"
+      ]
+    },
+    {
+      "id": "xm1_90",
+      "name": "XM1 90",
+      "agent_id": "kent",
+      "slug": "xm1-90"
+    },
+    {
+      "id": "alvt",
+      "name": "ALVT",
+      "agent_id": "kent",
+      "slug": "alvt"
+    },
+    {
+      "id": "t-62av",
+      "name": "T-62AV",
+      "agent_id": "raketa",
+      "slug": "t-62av"
+    },
+    {
+      "id": "obj_287",
+      "name": "OBJ. 287",
+      "agent_id": "raketa",
+      "slug": "object-287",
+      "aliases": [
+        "Object 287"
+      ]
+    },
+    {
+      "id": "m60a1",
+      "name": "M60A1",
+      "agent_id": "reaper",
+      "slug": "m60a1"
+    },
+    {
+      "id": "m60a2",
+      "name": "M60A2",
+      "agent_id": "reaper",
+      "slug": "m60a2"
+    },
+    {
+      "id": "hstv-l",
+      "name": "HSTV-L",
+      "agent_id": "twister",
+      "slug": "hstv-l"
+    },
+    {
+      "id": "m551a1",
+      "name": "M551A1",
+      "agent_id": "twister",
+      "slug": "m551a1"
+    },
+    {
+      "id": "leo_1a6a1",
+      "name": "LEO 1A6A1",
+      "agent_id": "hound",
+      "slug": "leopard-1a6a1",
+      "aliases": [
+        "Leo 1A6A1",
+        "Leopard 1A6A1"
+      ]
+    },
+    {
+      "id": "amx10_rc",
+      "name": "AMX10 RC",
+      "agent_id": "hound",
+      "slug": "amx-10-rc"
+    },
+    {
+      "id": "m3e1",
+      "name": "M3E1",
+      "agent_id": "fuzzer",
+      "slug": "m3a1-bradley"
+    },
+    {
+      "id": "marder_1a3",
+      "name": "MARDER 1A3",
+      "agent_id": "fuzzer",
+      "slug": "marder-1a3"
+    },
+    {
+      "id": "leo_2fk",
+      "name": "LEO 2FK",
+      "agent_id": "flair",
+      "slug": "leo-2fk",
+      "aliases": [
+        "Leo 2FK",
+        "Leopard 2FK"
+      ]
+    },
+    {
+      "id": "leo_2kst",
+      "name": "LEO 2KST",
+      "agent_id": "flair",
+      "slug": "leopard-2kst",
+      "aliases": [
+        "Leo 2KST",
+        "Leopard 2KST"
+      ]
+    }
+  ],
+  "maps": [
+    {
+      "id": "scarred_city",
+      "name": "Scarred City"
+    },
+    {
+      "id": "blossom_crash",
+      "name": "Blossom Crash"
+    },
+    {
+      "id": "sunstroke",
+      "name": "Sunstroke"
+    },
+    {
+      "id": "nord_oko",
+      "name": "Nord Oko"
+    },
+    {
+      "id": "nexus_dam",
+      "name": "Nexus Dam"
+    },
+    {
+      "id": "aircraft_carrier",
+      "name": "Aircraft Carrier"
+    },
+    {
+      "id": "project_phoenix",
+      "name": "Project Phoenix"
+    },
+    {
+      "id": "moonshot",
+      "name": "Moonshot"
+    },
+    {
+      "id": "eden",
+      "name": "Eden"
+    }
+  ],
+  "gamemodes": [
+    {
+      "id": "conquest",
+      "name": "Eroberung",
+      "is_5v5": false,
+      "it": [
+        "captures",
+        "destroyed",
+        "deaths",
+        "assists",
+        "damage_caused",
+        "damage_blocked"
+      ],
+      "ocr_patterns": [
+        "conquest",
+        "eroberung"
+      ]
+    },
+    {
+      "id": "control",
+      "name": "Kontrolle",
+      "is_5v5": true,
+      "stat_fields": [
+        "captures",
+        "destroyed",
+        "deaths",
+        "assists",
+        "damage_caused",
+        "damage_blocked"
+      ],
+      "ocr_patterns": [
+        "control",
+        "kontrolle"
+      ]
+    },
+    {
+      "id": "hardpoint",
+      "name": "Herrschaft",
+      "is_5v5": true,
+      "stat_fields": [
+        "captures",
+        "destroyed",
+        "deaths",
+        "assists",
+        "damage_caused",
+        "damage_blocked"
+      ],
+      "ocr_patterns": [
+        "hardpoint",
+        "herrschaft"
+      ]
+    },
+    {
+      "id": "kill_confirmed",
+      "name": "Abschussbestätigung",
+      "is_5v5": true,
+      "stat_fields": [
+        "confirms",
+        "denies",
+        "destroyed",
+        "deaths",
+        "assists",
+        "damage_caused"
+      ],
+      "ocr_patterns": [
+        "killconfirmed",
+        "kill confirmed",
+        "abschussbestätigung"
+      ]
+    },
+    {
+      "id": "versus_ai",
+      "name": "Versus AI",
+      "is_5v5": true,
+      "stat_fields": [
+        "captures",
+        "destroyed",
+        "deaths",
+        "assists",
+        "damage_caused",
+        "damage_blocked"
+      ],
+      "ocr_patterns": [
+        "versusai",
+        "versus ai",
+        "vs ai"
+      ]
+    }
+  ],
+  "ocr_corrections": {
+    "vehicles": {
+      "N1E1": "M1E1",
+      "M1E1": "M1E1",
+      "FV4030.X": "FV4030 X",
+      "FV4030X": "FV4030 X",
+      "FV4030 X": "FV4030 X",
+      "XM1IV": "XM1V",
+      "XMIV": "XM1V",
+      "AXM1V": "XM1V",
+      "XM1V": "XM1V",
+      "XMI 90": "XM1 90",
+      "AXM1 90": "XM1 90",
+      "XM1.90": "XM1 90",
+      "XM190": "XM1 90",
+      "XM1 90": "XM1 90",
+      "ALVT": "ALVT",
+      "AT-62AV": "T-62AV",
+      "T62AV": "T-62AV",
+      "T-62AV": "T-62AV",
+      "OBJ 287": "OBJ. 287",
+      "0BJ. 287": "OBJ. 287",
+      "OBJ..287": "OBJ. 287",
+      "O8J. 287": "OBJ. 287",
+      "OBJ. 2B7": "OBJ. 287",
+      "OBJ.287": "OBJ. 287",
+      "OBJ287": "OBJ. 287",
+      "OBJ. 287": "OBJ. 287",
+      "M6OA1": "M60A1",
+      "N60A1": "M60A1",
+      "MGOA1": "M60A1",
+      "M60A1": "M60A1",
+      "MGOA2": "M60A2",
+      "M6OA2": "M60A2",
+      "N60A2": "M60A2",
+      "M60A2": "M60A2",
+      "HSTVL": "HSTV-L",
+      "HSTV-L": "HSTV-L",
+      "M55IA1": "M551A1",
+      "N551A1": "M551A1",
+      "M551A1": "M551A1",
+      "OLE0 1A6A1": "LEO 1A6A1",
+      "1EO 1A6A1": "LEO 1A6A1",
+      "IEO 1A6A1": "LEO 1A6A1",
+      "OLEO 1A6A1": "LEO 1A6A1",
+      "LEO.1A6A1": "LEO 1A6A1",
+      "LEO1A6A1": "LEO 1A6A1",
+      "LE0 1A6A1": "LEO 1A6A1",
+      "LE01A6A1": "LEO 1A6A1",
+      "LEO 1A6A1": "LEO 1A6A1",
+      "AMMX10 RC": "AMX10 RC",
+      "AMMX10RC": "AMX10 RC",
+      "AMX10RC": "AMX10 RC",
+      "AMX10.RC": "AMX10 RC",
+      "AMX10 RC": "AMX10 RC",
+      "M331": "M3E1",
+      "N3E1": "M3E1",
+      "MEE1": "M3E1",
+      "M3EI": "M3E1",
+      "M3E1": "M3E1",
+      "MARDER 1AE": "MARDER 1A3",
+      "MARDER1A3": "MARDER 1A3",
+      "MARD3R 1A3": "MARDER 1A3",
+      "NARDER 1A3": "MARDER 1A3",
+      "MARDER.1A3": "MARDER 1A3",
+      "MARDER 1A3": "MARDER 1A3"
+    },
+    "agents": {
+      "CHOPPER.": "Chopper",
+      "chopper": "Chopper",
+      "CH0PPER": "Chopper",
+      "CHOPP3R": "Chopper",
+      "CHOPPER": "Chopper",
+      "Chopper.": "Chopper",
+      "Ch0pper": "Chopper",
+      "EMBER": "Ember",
+      "Ember.": "Ember",
+      "3MB3R": "Ember",
+      "3mber": "Ember",
+      "EMBER.": "Ember",
+      "EM8ER": "Ember",
+      "ember": "Ember",
+      "kent": "Kent",
+      "KENT": "Kent",
+      "KENT.": "Kent",
+      "Kent.": "Kent",
+      "K3NT": "Kent",
+      "KEN7": "Kent",
+      "R4KET4": "Raketa",
+      "Raketa.": "Raketa",
+      "RAK3TA": "Raketa",
+      "raketa": "Raketa",
+      "RAKETA": "Raketa",
+      "RAKETA.": "Raketa",
+      "RAKE7A": "Raketa",
+      "R3AP3R": "Reaper",
+      "reaper": "Reaper",
+      "Reaper.": "Reaper",
+      "REAPER.": "Reaper",
+      "REAPER": "Reaper",
+      "RE4PER": "Reaper",
+      "TW1STER": "Twister",
+      "TWI5TER": "Twister",
+      "TWISTER.": "Twister",
+      "TWISTER": "Twister",
+      "Tw1ster": "Twister",
+      "7wister": "Twister",
+      "7WIS7ER": "Twister",
+      "Twister.": "Twister",
+      "twister": "Twister",
+      "TWIST3R": "Twister",
+      "HOUND": "Hound",
+      "H0und": "Hound",
+      "H0UND": "Hound",
+      "Hound.": "Hound",
+      "hound": "Hound",
+      "HOUND.": "Hound",
+      "fuzzer": "Fuzzer",
+      "FUZZER": "Fuzzer",
+      "FU22ER": "Fuzzer",
+      "Fuzzer.": "Fuzzer",
+      "FUZZ3R": "Fuzzer",
+      "FUZZER.": "Fuzzer"
+    },
+    "gamemodes": {
+      "hardpoint": "hardpoint",
+      "control": "control",
+      "killconfirmed": "kill_confirmed",
+      "kill confirmed": "kill_confirmed",
+      "conquest": "conquest",
+      "versusai": "versus_ai",
+      "versus ai": "versus_ai",
+      "vs ai": "versus_ai",
+      "eroberung": "conquest",
+      "kontrolle": "control",
+      "kontro11e": "control",
+      "herrschaft": "hardpoint",
+      "abschussbestätigung": "kill_confirmed",
+      "abschussbestatigung": "kill_confirmed",
+      "versus al": "versus_ai",
+      "versusal": "versus_ai"
+    }
+  },
+  "rarity_colors": {
+    "Common": "#606060",
+    "Uncommon": "#4CAF50",
+    "Rare": "#3288B8",
+    "Epic": "#8E44AD",
+    "Legendary": "#D48806"
+  },
+  "letter_replacements": {
+    "O": "0",
+    "o": "0",
+    "I": "1",
+    "l": "1"
+  }
+}

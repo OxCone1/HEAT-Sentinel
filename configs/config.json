@@ -1,0 +1,119 @@
+{
+  "setup": false,
+  "auto_start": false,
+  "app_language": "EN",
+  "game_language": "EN",
+  "default_app_locale": "EN",
+  "default_game_locale": "EN",
+  "capture_mode": "cdp",
+  "window_title_contains": "WoT HEAT",
+  "window_title_exact": "WoT HEAT Dev 1.0 \u2022 Engine 0.9.20.WIP \u2022 Release \u2022 Default \u2022 DirectX12 \u2022 release/1.0/live",
+  "window_title_exclude": ["tray", "watcher", "capture", "overlay"],
+  "game_source_resolution": [1920, 1080],
+  "output_dir": "",
+  "modules_dir": "modules",
+  "patterns_dir": "patterns",
+  "calibrations_dir": "calibrations",
+  "calibrations": {
+    "team_big":   "EN/10v10_1920x1080_EN.json",
+    "team_small": "EN/5v5_1920x1080_EN.json",
+    "personal":   "EN/personal_1920x1080_EN.json",
+    "lobby":      "EN/lobby_1920x1080_EN.json",
+    "modules":    "EN/modules_1920x1080_EN.json"
+  },
+  "patterns": {
+    "lobby":       "lobby_pattern_1920x1080_EN.png",
+    "battlestats": "battlestats_pattern_1920x1080_EN.png",
+    "personal":    "EN/personal_pattern_1920x1080_EN.png",
+    "team":        "EN/team_pattern_1920x1080_EN.png",
+    "empty_module": "empty_module_pattern_1920x1080_EN.png"
+  },
+  "ocr": {
+    "engine": "rapidocr",
+    "use_gpu": true,
+    "eco": false
+  },
+  "cdp": {
+    "enabled": true,
+    "port": 17503,
+    "poll_interval_ms": 100,
+    "reconnect_interval_s": 2
+  },
+  "module_detector": {
+    "enabled": true
+  },
+  "legacy": {
+    "enabled": true
+  },
+  "macros": {
+    "lobby": {
+      "enabled": true,
+      "pattern_key": "lobby",
+      "match_mode": 5,
+      "threshold": 0.98
+    },
+    "my": {
+      "enabled": true,
+      "pattern_key": "personal",
+      "match_mode": 3,
+      "threshold": 0.97,
+      "pre_capture_delay_ms": 500,
+      "cooldown_s": 180,
+      "output_filename": "my_perf.png"
+    },
+    "team": {
+      "enabled": true,
+      "pattern_key": "team",
+      "match_mode": 1,
+      "threshold": 0.97,
+      "pre_capture_delay_ms": 500,
+      "cooldown_s": 180,
+      "output_filename": "battle_overview.png"
+    },
+    "battle_stats": {
+      "enabled": true,
+      "pattern_key": "battlestats",
+      "match_mode": 5,
+      "threshold": 0.999,
+      "require_window_focus": true,
+      "cooldown_s": 210,
+      "keystrokes": [
+        { "key": "r", "hold_ms": 300 },
+        { "wait_ms": 1000 },
+        { "key": "e", "hold_ms": 300 },
+        { "wait_ms": 1000 },
+        { "key": "esc", "hold_ms": 300 }
+      ]
+    }
+  },
+  "experimental": {
+    "team_overview": {
+      "nickname": true,
+      "vehicle": true,
+      "damage": true,
+      "kills": true,
+      "deaths": true,
+      "assists": true
+    },
+    "personal_stats": {
+      "kills": true,
+      "deaths": true,
+      "assists": true,
+      "damage_caused": true,
+      "damage_blocked": true,
+      "confirms": true,
+      "denies": true,
+      "captures": true
+    },
+    "rewards": {
+      "vehicle_xp": true,
+      "credits": true,
+      "tech": true
+    },
+    "battle_overview": {
+      "map_name": true,
+      "game_mode": true,
+      "result": true
+    }
+  }
+}
