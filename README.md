@@ -59,7 +59,9 @@ The core idea is simple: the game shows you a lot of interesting numbers and the
 
 ### Key Features
 
-![HEAT Sentinel Overview](./docs/sentinel_overview.gif)
+<p align="center">
+  <img alt="HEAT Sentinel Overview" src="./docs/sentinel_overview.gif">
+</p>
 
 **Automatic Battle Tracking**
 - Battle results are captured automatically as you play: outcome, personal performance, team stats, map, vehicle and agent
