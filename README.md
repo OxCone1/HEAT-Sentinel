@@ -9,14 +9,14 @@
 ## Download
 
 <!-- RELEASE-EN:START -->
-[![Download HEAT Sentinel](https://img.shields.io/badge/Download-HEAT%20Sentinel%20v2.1.1-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v2.1.1/HEAT.Sentinel_2.1.1_x64-setup.exe)
+[![Download HEAT Sentinel](https://img.shields.io/badge/Download-HEAT%20Sentinel%20v2.1.2-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v2.1.2/HEAT.Sentinel_2.1.2_x64-setup.exe)
 
-**Latest release:** [v2.1.1](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v2.1.1) -- published 2026-07-18
+**Latest release:** [v2.1.2](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v2.1.2) -- published 2026-07-18
 
 | File | Size | VirusTotal report |
 |------|------|------|
-| [`HEAT.Sentinel_2.1.1_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v2.1.1/HEAT.Sentinel_2.1.1_x64-setup.exe) (app installer) | 186.2 MB | [View scan](https://www.virustotal.com/gui/file/4007ac12961479a5554c66e140d0334b5769140e632d7d6f8b0f19aacdaa4962) |
-| `heat-capture.exe` (capture/watcher engine, bundled inside the installer) | 89.1 MB | [View scan](https://www.virustotal.com/gui/file/caba45c8366c53944f2fb9cfba4cd5601c55b6f8229e2e5d2192cbe54cee5c7f) |
+| [`HEAT.Sentinel_2.1.2_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v2.1.2/HEAT.Sentinel_2.1.2_x64-setup.exe) (app installer) | 186.2 MB | [View scan](https://www.virustotal.com/gui/file/4d540a8e305c5ce9c2155b14e92e3e8dd03aafe547bb0e66e3023bf94d9bd43b) |
+| `heat-capture.exe` (capture/watcher engine, bundled inside the installer) | 89.1 MB | [View scan](https://www.virustotal.com/gui/file/5e40020c454ff78e113dedf585fe9bf0398218de318c296670a38e6f9ca6eb1a) |
 <!-- RELEASE-EN:END -->
 
 Every release is built by GitHub Actions and scanned on VirusTotal. See [Security and Privacy](#8-security-and-privacy) for details.
@@ -320,14 +320,14 @@ Running into a technical issue? Two options:
 ## Скачать
 
 <!-- RELEASE-RU:START -->
-[![Скачать HEAT Sentinel](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-HEAT%20Sentinel%20v2.1.1-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v2.1.1/HEAT.Sentinel_2.1.1_x64-setup.exe)
+[![Скачать HEAT Sentinel](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-HEAT%20Sentinel%20v2.1.2-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v2.1.2/HEAT.Sentinel_2.1.2_x64-setup.exe)
 
-**Последний релиз:** [v2.1.1](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v2.1.1) -- опубликован 2026-07-18
+**Последний релиз:** [v2.1.2](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v2.1.2) -- опубликован 2026-07-18
 
 | Файл | Размер | Отчёт VirusTotal |
 |------|------|------|
-| [`HEAT.Sentinel_2.1.1_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v2.1.1/HEAT.Sentinel_2.1.1_x64-setup.exe) (установщик приложения) | 186.2 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/4007ac12961479a5554c66e140d0334b5769140e632d7d6f8b0f19aacdaa4962) |
-| `heat-capture.exe` (движок захвата, встроен в установщик) | 89.1 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/caba45c8366c53944f2fb9cfba4cd5601c55b6f8229e2e5d2192cbe54cee5c7f) |
+| [`HEAT.Sentinel_2.1.2_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v2.1.2/HEAT.Sentinel_2.1.2_x64-setup.exe) (установщик приложения) | 186.2 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/4d540a8e305c5ce9c2155b14e92e3e8dd03aafe547bb0e66e3023bf94d9bd43b) |
+| `heat-capture.exe` (движок захвата, встроен в установщик) | 89.1 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/5e40020c454ff78e113dedf585fe9bf0398218de318c296670a38e6f9ca6eb1a) |
 <!-- RELEASE-RU:END -->
 
 Каждый релиз собирается через GitHub Actions и проверяется на VirusTotal. Подробнее в разделе [Безопасность и приватность](#8-безопасность-и-приватность).
