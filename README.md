@@ -27,7 +27,7 @@ Every release is built by GitHub Actions and scanned on VirusTotal. See [Securit
 
 | English Table of Contents | Russian Table of Contents |
 |---------------------------|---------------------------|
-| [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Stream Overlay and OBS Integration](#4-stream-overlay-and-obs-integration)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Contributing](#7-contributing)<br>8. [Security and Privacy](#8-security-and-privacy)<br>9. [Future Expansion](#9-future-expansion)<br>10. [Disclaimer](#10-disclaimer) | [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлей для стрима и интеграция с OBS](#4-оверлей-для-стрима-и-интеграция-с-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Участие в проекте](#7-участие-в-проекте)<br>8. [Безопасность и приватность](#8-безопасность-и-приватность)<br>9. [Планы развития](#9-планы-развития)<br>10. [Дисклеймер](#10-дисклеймер) |
+| [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Stream Overlay and OBS Integration](#4-stream-overlay-and-obs-integration)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Contributing](#7-contributing)<br>8. [Security and Privacy](#8-security-and-privacy)<br>9. [Future Expansion](#9-future-expansion)<br>10. [Disclaimer](#10-disclaimer)<br>11. [Troubleshooting](#11-troubleshooting) | [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлей для стрима и интеграция с OBS](#4-оверлей-для-стрима-и-интеграция-с-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Участие в проекте](#7-участие-в-проекте)<br>8. [Безопасность и приватность](#8-безопасность-и-приватность)<br>9. [Планы развития](#9-планы-развития)<br>10. [Дисклеймер](#10-дисклеймер)<br>11. [Устранение неполадок](#11-устранение-неполадок) |
 
 ---
 
@@ -44,6 +44,7 @@ Every release is built by GitHub Actions and scanned on VirusTotal. See [Securit
 | Security and Privacy | VirusTotal scans, SmartScreen, local-only data | [Section 8](#8-security-and-privacy) |
 | Future Expansion | Planned features and roadmap | [Section 9](#9-future-expansion) |
 | Disclaimer | Fair play rules and legal notes | [Section 10](#10-disclaimer) |
+| Troubleshooting | Update failures, closing all instances, sending logs | [Section 11](#11-troubleshooting) |
 
 ---
 
@@ -306,6 +307,27 @@ SmartScreen warns about the installer because it is not code-signed. Code signin
 
 ---
 
+## 11. Troubleshooting
+
+If a new version will not install or the app misbehaves after an update, work through these steps in order. Most update problems come from an old copy still running in the background.
+
+1. **In-app update did not work? Download from GitHub directly.** If the built-in updater fails to apply a release, grab the installer straight from the [Releases page](https://github.com/OxCone1/HEAT-Sentinel/releases) and run it yourself.
+
+2. **Installing over an existing version.** When you run the downloaded `.exe`:
+   - **Preferably choose "Add or repair components"** (the repair option) if the installer offers it.
+   - If that option is not shown, choose **"Do not uninstall"**. Do not remove the existing install first.
+
+3. **Update still did not go through? Close every instance of HEAT Sentinel.** This means **both** the main app (HEAT Sentinel) **and** the capture engine (`heat-capture`). Open **Task Manager** and confirm that neither process is still running before trying the installer again.
+
+4. **Still stuck? Uninstall the app first, then reinstall.** During uninstall there is a **second step** with an option to delete application data. **Do NOT click "delete application data."** Leaving it unchecked preserves your battle history and settings. After uninstalling, install the fresh release.
+
+5. **Nothing above helped? Reboot and start over.** Restart your PC, then run the installer from the beginning.
+
+6. **If none of this works, send your logs.** Archive the app's log files into a single archive (`.zip` / `.7z`) and send it to the **Discord server** or to the developer's **personal DMs**. Both links are available on the **About page inside the app**.
+   - If the archive is too large for Discord's file upload limit, upload it to any file exchange service and paste the link instead.
+
+---
+
 ## Need Help?
 
 Running into a technical issue? Two options:
@@ -347,7 +369,7 @@ Running into a technical issue? Two options:
 
 | Содержание на русском | English Table of Contents |
 |-----------------------|---------------------------|
-| [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлей для стрима и интеграция с OBS](#4-оверлей-для-стрима-и-интеграция-с-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Участие в проекте](#7-участие-в-проекте)<br>8. [Безопасность и приватность](#8-безопасность-и-приватность)<br>9. [Планы развития](#9-планы-развития)<br>10. [Дисклеймер](#10-дисклеймер) | [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Stream Overlay and OBS Integration](#4-stream-overlay-and-obs-integration)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Contributing](#7-contributing)<br>8. [Security and Privacy](#8-security-and-privacy)<br>9. [Future Expansion](#9-future-expansion)<br>10. [Disclaimer](#10-disclaimer) |
+| [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлей для стрима и интеграция с OBS](#4-оверлей-для-стрима-и-интеграция-с-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Участие в проекте](#7-участие-в-проекте)<br>8. [Безопасность и приватность](#8-безопасность-и-приватность)<br>9. [Планы развития](#9-планы-развития)<br>10. [Дисклеймер](#10-дисклеймер)<br>11. [Устранение неполадок](#11-устранение-неполадок) | [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Stream Overlay and OBS Integration](#4-stream-overlay-and-obs-integration)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Contributing](#7-contributing)<br>8. [Security and Privacy](#8-security-and-privacy)<br>9. [Future Expansion](#9-future-expansion)<br>10. [Disclaimer](#10-disclaimer)<br>11. [Troubleshooting](#11-troubleshooting) |
 
 ---
 
@@ -364,6 +386,7 @@ Running into a technical issue? Two options:
 | Безопасность и приватность | Проверки VirusTotal, SmartScreen, локальные данные | [Раздел 8](#8-безопасность-и-приватность) |
 | Планы развития | Что планируется дальше | [Раздел 9](#9-планы-развития) |
 | Дисклеймер | Правила честной игры и юридические заметки | [Раздел 10](#10-дисклеймер) |
+| Устранение неполадок | Сбои обновления, закрытие всех процессов, отправка логов | [Раздел 11](#11-устранение-неполадок) |
 
 ---
 
@@ -620,7 +643,26 @@ SmartScreen предупреждает об установщике, потому
   - распространять или рекламировать его вместе с инструментами, предназначенными для читерства, взлома или эксплуатации игры;
   - продавать или иным образом монетизировать модификации, нарушающие эти правила;
   - выдавать его за связанный с Wargaming или World of Tanks: HEAT, одобренный или утверждённый ими продукт.
-- **Поддержка**: это бесплатный проект, который развивается в свободное время. Баги исправляются, а идеи рассматриваются по мере возможности; спасибо за терпение, и вклад всегда приветствуется.
+---
+
+## 11. Устранение неполадок
+
+Если новая версия не устанавливается или приложение ведёт себя некорректно после обновления, пройдите по шагам по порядку. Чаще всего причина проблем с обновлением -- старая копия, всё ещё работающая в фоне.
+
+1. **Встроенное обновление не сработало? Скачайте с GitHub напрямую.** Если встроенный апдейтер не смог применить релиз, возьмите установщик прямо со [страницы релизов](https://github.com/OxCone1/HEAT-Sentinel/releases) и запустите его вручную.
+
+2. **Установка поверх существующей версии.** Когда вы запускаете скачанный `.exe`:
+   - **Предпочтительно выберите "Add or repair components"** (вариант восстановления/repair), если установщик его предлагает.
+   - Если такого варианта нет, выберите **"Do not uninstall"** (не удалять). Не удаляйте существующую установку заранее.
+
+3. **Обновление всё равно не прошло? Закройте все процессы HEAT Sentinel.** Это значит **и** само приложение (HEAT Sentinel), **и** движок захвата (`heat-capture`). Откройте **Диспетчер задач** и убедитесь, что ни один из этих процессов больше не запущен, прежде чем снова запускать установщик.
+
+4. **Не помогло? Сначала удалите приложение, затем установите заново.** При удалении будет **второй шаг** с опцией удаления данных приложения. **НЕ нажимайте "delete application data" (удалить данные приложения).** Если оставить эту галочку снятой, ваша история боёв и настройки сохранятся. После удаления установите свежий релиз.
+
+5. **Ничего из перечисленного не помогло? Перезагрузитесь и начните заново.** Перезагрузите ПК, затем запустите установщик с самого начала.
+
+6. **Если ничего не помогло, отправьте логи.** Упакуйте лог-файлы приложения в один архив (`.zip` / `.7z`) и отправьте его на **Discord-сервер** или в **личные сообщения** разработчику. Обе ссылки есть на **странице About внутри приложения**.
+   - Если архив слишком большой для лимита загрузки файлов в Discord, загрузите его на любой файлообменник и вставьте ссылку.
 
 ---
 
