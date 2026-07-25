@@ -330,7 +330,7 @@ If a new version will not install or the app misbehaves after an update, work th
 
 ## 12. Acknowledgements
 
-HEAT Sentinel would not be what it is today without the community members who tested early builds, reported bugs, gave feedback and helped shape its direction: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, _VEN0M, ___Oz___, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos and others.
+HEAT Sentinel would not be what it is today without the community members who tested early builds, reported bugs, gave feedback and helped shape its direction: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, _VEN0M, \_\_\_Oz\_\_\_, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos and others.
 
 ---
 
@@ -674,7 +674,7 @@ SmartScreen предупреждает об установщике, потому
 
 ## 12. Благодарности
 
-Отдельное спасибо тем, кто тестировал ранние версии, находил баги и своими советами помог довести HEAT Sentinel до того, чем он стал сегодня: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, _VEN0M, ___Oz___, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos и другим.
+Отдельное спасибо тем, кто тестировал ранние версии, находил баги и своими советами помог довести HEAT Sentinel до того, чем он стал сегодня: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, _VEN0M, \_\_\_Oz\_\_\_, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos и другим.
 
 ---
 
