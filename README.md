@@ -1,4 +1,4 @@
-# HEAT Sentinel -- Complete Documentation -- Полная документация
+# HEAT Sentinel
 
 **[English](#0-table-of-contents-en)** | **[Русский](#0-содержание-ru)**
 
