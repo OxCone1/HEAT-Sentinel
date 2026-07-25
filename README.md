@@ -328,6 +328,12 @@ If a new version will not install or the app misbehaves after an update, work th
 
 ---
 
+## 12. Acknowledgements
+
+HEAT Sentinel would not be what it is today without the community members who tested early builds, reported bugs, gave feedback and helped shape its direction: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, _VEN0M, ___Oz___, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos and others.
+
+---
+
 ## Need Help?
 
 Running into a technical issue? Two options:
@@ -663,6 +669,12 @@ SmartScreen предупреждает об установщике, потому
 
 6. **Если ничего не помогло, отправьте логи.** Упакуйте лог-файлы приложения в один архив (`.zip` / `.7z`) и отправьте его на **Discord-сервер** или в **личные сообщения** разработчику. Обе ссылки есть на **странице About внутри приложения**.
    - Если архив слишком большой для лимита загрузки файлов в Discord, загрузите его на любой файлообменник и вставьте ссылку.
+
+---
+
+## 12. Благодарности
+
+Отдельное спасибо тем, кто тестировал ранние версии, находил баги и своими советами помог довести HEAT Sentinel до того, чем он стал сегодня: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, _VEN0M, ___Oz___, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos и другим.
 
 ---
 
