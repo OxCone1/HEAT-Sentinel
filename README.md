@@ -27,7 +27,7 @@ Every release is built by GitHub Actions and scanned on VirusTotal. See [Securit
 
 | English Table of Contents | Russian Table of Contents |
 |---------------------------|---------------------------|
-| [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Stream Overlay and OBS Integration](#4-stream-overlay-and-obs-integration)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Contributing](#7-contributing)<br>8. [Security and Privacy](#8-security-and-privacy)<br>9. [Future Expansion](#9-future-expansion)<br>10. [Disclaimer](#10-disclaimer)<br>11. [Troubleshooting](#11-troubleshooting) | [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлей для стрима и интеграция с OBS](#4-оверлей-для-стрима-и-интеграция-с-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Участие в проекте](#7-участие-в-проекте)<br>8. [Безопасность и приватность](#8-безопасность-и-приватность)<br>9. [Планы развития](#9-планы-развития)<br>10. [Дисклеймер](#10-дисклеймер)<br>11. [Устранение неполадок](#11-устранение-неполадок) |
+| [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Overlays: In-Game and Stream (OBS)](#4-overlays-in-game-and-stream-obs)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Contributing](#7-contributing)<br>8. [Security and Privacy](#8-security-and-privacy)<br>9. [Future Expansion](#9-future-expansion)<br>10. [Disclaimer](#10-disclaimer)<br>11. [Troubleshooting](#11-troubleshooting) | [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлеи: внутриигровой и для стрима (OBS)](#4-оверлеи-внутриигровой-и-для-стрима-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Участие в проекте](#7-участие-в-проекте)<br>8. [Безопасность и приватность](#8-безопасность-и-приватность)<br>9. [Планы развития](#9-планы-развития)<br>10. [Дисклеймер](#10-дисклеймер)<br>11. [Устранение неполадок](#11-устранение-неполадок) |
 
 ---
 
@@ -37,7 +37,7 @@ Every release is built by GitHub Actions and scanned on VirusTotal. See [Securit
 |---------|-------------|------|
 | Project Overview | What HEAT Sentinel is, features, capabilities | [Section 2](#2-project-overview) |
 | Installation and First Launch | Download, install, first run | [Section 3](#3-installation-and-first-launch) |
-| Stream Overlay and OBS Integration | Overlay editor, OBS setup, real-time sync | [Section 4](#4-stream-overlay-and-obs-integration) |
+| Overlays: In-Game and Stream (OBS) | In-game overlay, stream overlay editor, OBS setup, real-time sync | [Section 4](#4-overlays-in-game-and-stream-obs) |
 | Data Capture | How the main mode works, the Legacy OCR fallback | [Section 5](#5-data-capture-main-mode-and-legacy-ocr) |
 | Calibrations and Patterns | What they are and why they matter | [Section 6](#6-calibrations-and-patterns) |
 | Contributing | How to help: new resolutions, languages, game data | [Section 7](#7-contributing) |
@@ -52,7 +52,7 @@ Every release is built by GitHub Actions and scanned on VirusTotal. See [Securit
 
 ### What is HEAT Sentinel?
 
-HEAT Sentinel is a desktop battle statistics tracker and stream overlay for **World of Tanks: HEAT**. It quietly runs alongside the game, records your battles, XP progression and vehicle loadouts, and can display all of it live on top of your game or stream through a fully customizable transparent overlay.
+HEAT Sentinel is a desktop battle statistics tracker, in-game overlay and stream overlay for **World of Tanks: HEAT**. It quietly runs alongside the game, records your battles, XP progression, loadouts and head-to-head records, and can display all of it live on top of your game or your stream through fully customizable transparent overlays. It can also hide in-game interface elements you do not want to see and show what you are playing on your Discord profile.
 
 The core idea is simple: the game shows you a lot of interesting numbers and then throws most of them away. HEAT Sentinel catches those numbers, keeps them, and turns them into history, aggregates and live widgets.
 
@@ -66,15 +66,39 @@ The core idea is simple: the game shows you a lot of interesting numbers and the
 
 **Automatic Battle Tracking**
 - Battle results are captured automatically as you play: outcome, personal performance, team stats, map, vehicle and agent
-- Full battle history browsable inside the app
+- Full battle history browsable inside the app, with per-vehicle, per-map and per-mode breakdowns
 - Session statistics (your current sitting) alongside all-time aggregates
+- Platoon tracking: per-map and per-vehicle-combo stats for the people you platoon with
+- Live match card on the Overview: the battle you are in, or the queue you are sitting in, updated as it happens
 
 **XP and Progression Tracking**
 - Vehicle and agent XP tracked across battles
 - Level progression visualized in the app and available as overlay elements
 
 **Loadout Tracking**
-- Vehicle module loadouts recorded per battle
+- Vehicle module loadouts recorded per battle, including both equipment (consumable) slots
+- Equipment names are localized into your app language, so you can compare your performance across different builds
+
+**Head-to-Head (1v1) Records**
+- Running score against every named opponent you have fought: how many times you fragged them and how many times they fragged you, ranked by net kills
+- Open any rival for the full breakdown: your best and worst tanks against them, theirs against you, best mode and map per side, and the complete encounter log
+- Rivals are recorded from the moment the app is installed onwards; battles played before that cannot be reconstructed
+
+**In-Game Overlay**
+- A transparent overlay drawn directly on top of the game, separate from the stream overlay
+- Stat tiles and strips (session and all-time win rate, K/D, damage, placement, streaks and more), module gauges for abilities such as the SIS-90 and the PDU-1546S, and free text
+- Built-in editor with layout tools: move, resize, recolour, snap to grid, and gate any element on match state so it only appears when it is useful, for example while aiming or only during a round
+- Toggled with a global hotkey (rebindable in Settings)
+
+**In-Game Interface Customization**
+- A Game UI tab that hides individual in-game interface elements from a checklist: battle HUD parts, radar layers, vehicle nameplate rows, kill-feed entry types, world markers, event and mission panels, and hangar elements
+- Elements on the Tab/scoreboard, map and deploy screens can be hidden too
+- Changes reach a running game instantly, or apply on its next launch
+
+**Discord Rich Presence**
+- Your Discord profile shows what you are actually doing: the hangar, the matchmaking queue, or the tank, map and objective mode of the battle in progress
+- Optional live K/D/A and damage line, switchable off
+- One toggle in Settings, no other setup
 
 **Customizable Stream Overlay**
 - Transparent browser overlay served locally, designed for OBS Browser Source or any browser
@@ -85,8 +109,12 @@ The core idea is simple: the game shows you a lot of interesting numbers and the
 
 **Quality of Life**
 - The tracker runs continuously in the background whenever the app is open, ready to record the moment a battle finishes -- there is nothing to start or stop manually
-- Built-in update check in the app settings
-- English and Russian app interface; the capture pipeline understands all game client languages
+- Optional autostart with Windows, and an option to start tracking automatically when the game launches
+- Selectable colour schemes, plus an opt-in "v2" interface look under Settings > Personalisation (the classic look stays the default)
+- The Battles, Platoons and Loadouts tabs can each be scoped to a single session or shown as all-time data
+- Control over how much per-battle detail is kept on disk: keep it for every battle, or save individual battles you care about (for future features)
+- Built-in update check and in-app updater, with release notes shown after each update
+- Twelve app interface languages; the capture pipeline understands all game client languages
 
 ### Closed Source Notice
 
@@ -138,9 +166,22 @@ The app has a built-in update check in Settings. You can also simply install a n
 
 ---
 
-## 4. Stream Overlay and OBS Integration
+## 4. Overlays: In-Game and Stream (OBS)
 
-While the tracker is running, the overlay is served locally at:
+HEAT Sentinel has two separate overlays. The **in-game overlay** is drawn by the app on top of the game itself and is for you, the player. The **stream overlay** is a browser page meant for OBS and is for your viewers. They are configured independently and can be used together or on their own.
+
+### In-Game Overlay
+
+The in-game overlay is a transparent window that sits over the game and shows live information while you play.
+
+- **Open the editor** from the Overlay tab in the app, or toggle the overlay with the global hotkey (rebindable in Settings; if the default combination is already taken by another app on your machine, no hotkey is bound and Settings will say so, so pick your own).
+- **Add elements** from the "add element" menu: stat tiles and strips (session and all-time win rate, K/D, damage, placement, battle count, best damage, streaks), module gauges for vehicle abilities such as the SIS-90 (M1E1) and the PDU-1546S Combat Reboot (XM1 90), and free text.
+- **Arrange and style** every element: drag, resize, recolour, and align with optional snap-to-grid (off by default, toggled from the magnet icon in the toolbar).
+- **Set visibility rules** so an element only appears when it is relevant, for example while aiming down the gunner sight, in chase camera, or only during an active round.
+
+### Stream Overlay (OBS)
+
+While the tracker is running, the stream overlay is served locally at:
 
 ```
 http://localhost:17504/overlay
@@ -375,7 +416,7 @@ Running into a technical issue? Two options:
 
 | Содержание на русском | English Table of Contents |
 |-----------------------|---------------------------|
-| [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлей для стрима и интеграция с OBS](#4-оверлей-для-стрима-и-интеграция-с-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Участие в проекте](#7-участие-в-проекте)<br>8. [Безопасность и приватность](#8-безопасность-и-приватность)<br>9. [Планы развития](#9-планы-развития)<br>10. [Дисклеймер](#10-дисклеймер)<br>11. [Устранение неполадок](#11-устранение-неполадок) | [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Stream Overlay and OBS Integration](#4-stream-overlay-and-obs-integration)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Contributing](#7-contributing)<br>8. [Security and Privacy](#8-security-and-privacy)<br>9. [Future Expansion](#9-future-expansion)<br>10. [Disclaimer](#10-disclaimer)<br>11. [Troubleshooting](#11-troubleshooting) |
+| [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлеи: внутриигровой и для стрима (OBS)](#4-оверлеи-внутриигровой-и-для-стрима-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Участие в проекте](#7-участие-в-проекте)<br>8. [Безопасность и приватность](#8-безопасность-и-приватность)<br>9. [Планы развития](#9-планы-развития)<br>10. [Дисклеймер](#10-дисклеймер)<br>11. [Устранение неполадок](#11-устранение-неполадок) | [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Overlays: In-Game and Stream (OBS)](#4-overlays-in-game-and-stream-obs)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Contributing](#7-contributing)<br>8. [Security and Privacy](#8-security-and-privacy)<br>9. [Future Expansion](#9-future-expansion)<br>10. [Disclaimer](#10-disclaimer)<br>11. [Troubleshooting](#11-troubleshooting) |
 
 ---
 
@@ -385,7 +426,7 @@ Running into a technical issue? Two options:
 |--------|----------|--------|
 | Обзор проекта | Что такое HEAT Sentinel, возможности | [Раздел 2](#2-обзор-проекта) |
 | Установка и первый запуск | Скачивание, установка, первый запуск | [Раздел 3](#3-установка-и-первый-запуск) |
-| Оверлей и OBS | Редактор оверлея, настройка OBS, синхронизация | [Раздел 4](#4-оверлей-для-стрима-и-интеграция-с-obs) |
+| Оверлеи и OBS | Внутриигровой оверлей, редактор оверлея для стрима, настройка OBS, синхронизация | [Раздел 4](#4-оверлеи-внутриигровой-и-для-стрима-obs) |
 | Захват данных | Как работает основной режим и запасной Legacy OCR | [Раздел 5](#5-захват-данных-основной-режим-и-legacy-ocr) |
 | Калибровки и паттерны | Что это такое и зачем они нужны | [Раздел 6](#6-калибровки-и-паттерны) |
 | Участие в проекте | Как помочь: новые разрешения, языки, игровые данные | [Раздел 7](#7-участие-в-проекте) |
@@ -400,7 +441,7 @@ Running into a technical issue? Two options:
 
 ### Что такое HEAT Sentinel?
 
-HEAT Sentinel -- это настольный трекер боевой статистики и стримерский оверлей для **World of Tanks: HEAT**. Он тихо работает рядом с игрой, записывает ваши бои, прогресс опыта и комплектации техники, и может показывать всё это в реальном времени поверх игры или стрима через полностью настраиваемый прозрачный оверлей.
+HEAT Sentinel -- это настольный трекер боевой статистики, внутриигровой оверлей и стримерский оверлей для **World of Tanks: HEAT**. Он тихо работает рядом с игрой, записывает ваши бои, прогресс опыта, комплектации техники и личные счёты с противниками, и может показывать всё это в реальном времени поверх игры или стрима через полностью настраиваемые прозрачные оверлеи. Он также умеет скрывать ненужные элементы игрового интерфейса и показывать, во что вы играете, в профиле Discord.
 
 Идея проста: игра показывает множество интересных цифр, а потом выбрасывает большинство из них. HEAT Sentinel эти цифры ловит, сохраняет и превращает в историю, сводную статистику и живые виджеты.
 
@@ -412,15 +453,39 @@ HEAT Sentinel -- это настольный трекер боевой стат�
 
 **Автоматический учёт боёв**
 - Результаты боёв записываются автоматически по ходу игры: исход, личная эффективность, статистика команд, карта, техника и агент
-- Полная история боёв доступна прямо в приложении
+- Полная история боёв доступна прямо в приложении, с разбивкой по технике, картам и режимам
 - Статистика сессии (текущей игровой посиделки) вместе со сводной статистикой за всё время
+- Учёт взводов: статистика по картам и по сочетаниям техники для тех, с кем вы играете во взводе
+- Карточка текущего боя на главной: бой, в котором вы находитесь, или очередь, в которой стоите, обновляется в реальном времени
 
 **Отслеживание опыта и прогресса**
 - Опыт техники и агентов учитывается от боя к бою
 - Прогресс уровней отображается в приложении и доступен как элементы оверлея
 
 **Учёт комплектаций**
-- Модули техники записываются для каждого боя
+- Модули техники записываются для каждого боя, вместе с обоими слотами снаряжения (расходников)
+- Названия снаряжения переведены на язык приложения, так что можно сравнивать свою эффективность на разных сборках
+
+**Личные счёты (1v1)**
+- Счёт против каждого именованного противника, с которым вы сталкивались: сколько раз вы убили его и сколько раз он убил вас, с сортировкой по разнице фрагов
+- Откройте любого соперника, чтобы увидеть подробности: ваша лучшая и худшая техника против него, его лучшая и худшая против вас, лучший режим и карта для каждой стороны и полный журнал встреч
+- Соперники записываются с момента установки приложения; бои, сыгранные до этого, восстановить нельзя
+
+**Внутриигровой оверлей**
+- Прозрачный оверлей, который рисуется прямо поверх игры, отдельно от оверлея для стрима
+- Плитки и полосы со статистикой (винрейт, K/D, урон, место, серии за сессию и за всё время), шкалы модулей для способностей вроде SIS-90 и PDU-1546S, а также произвольный текст
+- Встроенный редактор с инструментами компоновки: перемещение, изменение размера, цвета, привязка к сетке и условия видимости, чтобы элемент появлялся только тогда, когда он нужен, например при прицеливании или только во время раунда
+- Включается глобальной горячей клавишей (переназначается в настройках)
+
+**Настройка внутриигрового интерфейса**
+- Вкладка Game UI позволяет скрывать отдельные элементы игрового интерфейса по списку: части боевого HUD, слои миникарты, строки табличек над техникой, типы записей в киллфиде, маркеры мира, панели событий и заданий, элементы ангара
+- Скрывать можно и элементы на экране Tab (таблица), карте и экране высадки
+- Изменения применяются к запущенной игре мгновенно либо при следующем запуске
+
+**Discord Rich Presence**
+- В профиле Discord видно, чем вы заняты на самом деле: ангар, очередь подбора боя или техника, карта и режим текущего боя
+- Опциональная строка с K/D/A и уроном в реальном времени, её можно отключить
+- Один переключатель в настройках, больше ничего настраивать не нужно
 
 **Настраиваемый оверлей для стрима**
 - Прозрачный браузерный оверлей, раздаётся локально, рассчитан на OBS Browser Source и любой браузер
@@ -431,8 +496,12 @@ HEAT Sentinel -- это настольный трекер боевой стат�
 
 **Удобство**
 - Трекер работает в фоне непрерывно, пока открыто приложение, и готов записать результат сразу после боя -- запускать или останавливать его вручную не нужно
-- Встроенная проверка обновлений в настройках приложения
-- Интерфейс на английском и русском; конвейер захвата понимает все языки игрового клиента
+- Автозапуск вместе с Windows по желанию, а также запуск отслеживания автоматически при старте игры
+- Выбор цветовых схем и опциональный внешний вид интерфейса "v2" в разделе Settings > Personalisation (классический вид остаётся по умолчанию)
+- Вкладки "Бои", "Взводы" и "Комплектации" можно смотреть как за отдельную сессию, так и за всё время
+- Контроль над тем, сколько подробных данных по бою хранится на диске: держать их для каждого боя или сохранять только интересные бои вручную (для будущей функциональности)
+- Встроенная проверка обновлений и обновление прямо из приложения, со списком изменений после каждого обновления
+- Двенадцать языков интерфейса приложения; конвейер захвата понимает все языки игрового клиента
 
 ### О закрытом исходном коде
 
@@ -484,9 +553,22 @@ HEAT Sentinel -- это настольный трекер боевой стат�
 
 ---
 
-## 4. Оверлей для стрима и интеграция с OBS
+## 4. Оверлеи: внутриигровой и для стрима (OBS)
 
-Пока трекер работает, оверлей доступен локально по адресу:
+В HEAT Sentinel два независимых оверлея. **Внутриигровой оверлей** рисуется приложением поверх самой игры и предназначен для вас, игрока. **Оверлей для стрима** -- это браузерная страница для OBS, предназначенная для зрителей. Они настраиваются отдельно и могут использоваться вместе или по отдельности.
+
+### Внутриигровой оверлей
+
+Внутриигровой оверлей -- это прозрачное окно поверх игры, показывающее актуальную информацию прямо во время боя.
+
+- **Откройте редактор** на вкладке Overlay в приложении или включите оверлей глобальной горячей клавишей (переназначается в настройках; если сочетание по умолчанию уже занято другим приложением на вашем компьютере, горячая клавиша не назначается и настройки честно об этом сообщат, чтобы вы выбрали своё).
+- **Добавляйте элементы** через меню "add element": плитки и полосы со статистикой (винрейт, K/D, урон, место, число боёв, лучший урон, серии -- за сессию и за всё время), шкалы модулей для способностей техники, например SIS-90 (M1E1) и PDU-1546S Combat Reboot (XM1 90), а также произвольный текст.
+- **Размещайте и оформляйте** любой элемент: перетаскивание, изменение размера, цвета и выравнивание с необязательной привязкой к сетке (по умолчанию выключена, включается иконкой магнита на панели инструментов).
+- **Задавайте условия видимости**, чтобы элемент появлялся только когда он уместен: например, при прицеливании из прицела наводчика, в камере от третьего лица или только во время активного раунда.
+
+### Оверлей для стрима (OBS)
+
+Пока трекер работает, оверлей для стрима доступен локально по адресу:
 
 ```
 http://localhost:17504/overlay
