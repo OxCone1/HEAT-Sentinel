@@ -373,7 +373,7 @@ If a new version will not install or the app misbehaves after an update, work th
 
 HEAT Sentinel would not be what it is today without the community members who tested early builds, reported bugs, gave feedback and helped shape its direction: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, _VEN0M, \_\_\_Oz\_\_\_, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos, Yzhe_Nikto and others.
 
-**Special thanks to: sneakyConcept**
+**Special thanks to: odmarker228, sneakyConcept**
 
 ---
 
@@ -760,7 +760,7 @@ SmartScreen предупреждает об установщике, потому
 
 Отдельное спасибо тем, кто тестировал ранние версии, находил баги и своими советами помог довести HEAT Sentinel до того, чем он стал сегодня: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, _VEN0M, \_\_\_Oz\_\_\_, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos, Yzhe_Nikto и другим.
 
-**Огромное спасибо: sneakyConcept**
+**Огромное спасибо: odmarker228, sneakyConcept**
 
 ---
 
