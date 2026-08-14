@@ -49,8 +49,6 @@ All writable data is stored under your Windows local application data directory:
 
 This includes `heat_local.db` (the statistics database), `config.json`, your calibrations and patterns, overlay settings and log files.
 
-Document columns inside `heat_local.db` are encrypted with a key derived from constants compiled into the shipped binaries. This is intended to stop casual editing of your own records in a SQLite browser. It is deliberately not represented as protection against a determined attacker who already has access to your machine, and it should not be relied on as such.
-
 ### Retention and deletion
 
 Data is kept until you delete it. There is no expiry and no remote copy. To remove everything, uninstall the app and delete the directory listed above. Deleting that directory removes your entire statistics history permanently and cannot be undone.
