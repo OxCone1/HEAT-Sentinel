@@ -160,6 +160,64 @@ Session statistics in the app and overlay always reflect whichever session is cu
 
 All recorded data (battles, XP, loadouts, settings) is stored in a local database in your Windows user profile. It survives app updates and reinstalls, and it is not removed on uninstall, so you will not lose your history by upgrading.
 
+### Moving Your Data to a New PC
+
+Everything HEAT Sentinel records lives in one file, `heat_local.db`, kept in this folder:
+
+```
+%LOCALAPPDATA%\com.oxcone.heat-sentinel
+```
+
+Paste that path into the Explorer address bar to open the folder, then find `heat_local.db` inside it. There is no export step -- that file **is** the export. Copy it to the new machine (USB stick, cloud drive, anywhere), then import it there.
+
+**On the old PC**
+
+1. Quit HEAT Sentinel from the tray icon (right-click, Quit). Copying the file while the app is running can miss your most recent battles.
+2. Copy `heat_local.db` somewhere you can reach from the new PC.
+
+**On the new PC**
+
+1. Install and launch HEAT Sentinel at least once, so it creates its own database.
+2. Open **Settings -> Processing & Storage**. The storage backend must be set to **Local (SQLite)**.
+3. Click **Import** and pick the `heat_local.db` you brought over.
+4. Nothing is written yet. The app reads the file and shows what is inside: how many battles, XP records, loadouts and battle details it holds, and how many of those this PC already has.
+5. Choose what should happen to records both PCs have (see below), then click **Import**. A progress bar runs to the end, and the capture service restarts afterwards so the new battles appear.
+
+An import only adds to your history -- it never clears it. Battles already on the new PC stay where they are.
+
+#### What Gets Imported
+
+| Imported | Not imported |
+|----------|--------------|
+| Battles, including ones you deleted | App settings |
+| Vehicle and agent XP | Overlay layout and hotkeys |
+| Vehicle loadouts | Statistics filters |
+| Duplicate-detection fingerprints | Player tags |
+| Per-tick battle detail (optional) | |
+
+Settings describe the machine they are on, so yours stay exactly as you have set them here. The per-tick battle detail is what powers the detailed view of a single battle; it is by far the largest part of the file, so there is a checkbox to leave it out if you only want the battles themselves.
+
+#### Duplicate Records
+
+Every battle carries an id derived from what happened in it and from the play session it happened in. The same battle therefore has the same id in both databases, and two different battles never share one -- which is what makes "do I already have this?" answerable without guesswork.
+
+The dialog shows the overlap per row before you commit, and offers two ways to resolve it:
+
+- **Keep the local record** (default) -- your existing rows win, and only genuinely new ones are added. Importing the same file twice is harmless: the second run adds nothing.
+- **Use the imported record** -- the incoming version overwrites yours. Pick this when the file you are importing is the fuller or more recent one. Manual edits you made on this PC to those particular battles are lost.
+
+Either way, the number added and the number that overlapped are reported when it finishes.
+
+#### If Something Goes Wrong
+
+| Message | What it means |
+|---------|---------------|
+| *That is the database this app is already using* | You picked the live file rather than the copy brought from the other PC. |
+| *This is a database, but its battles cannot be read* | The file is a SQLite database that HEAT Sentinel did not write. |
+| *That file holds no records to import* | The file is one of ours but empty -- most likely a fresh install that never recorded a battle. |
+
+The file you point at is never modified. The app works from a temporary copy of it, so an import that fails part-way leaves both databases exactly as they were, and you can simply try again.
+
 ### Updating
 
 The app has a built-in update check in Settings. You can also simply install a newer release on top of the existing one; your data is preserved.
@@ -371,7 +429,7 @@ If a new version will not install or the app misbehaves after an update, work th
 
 ## 12. Acknowledgements
 
-HEAT Sentinel would not be what it is today without the community members who tested early builds, reported bugs, gave feedback and helped shape its direction: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, _VEN0M, \_\_\_Oz\_\_\_, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos, Yzhe_Nikto, Sturcidus, Faustous_, Montainary, venom_OLEG_slabitelnoe and others.
+HEAT Sentinel would not be what it is today without the community members who tested early builds, reported bugs, gave feedback and helped shape its direction: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, \_VEN0M, \_\_\_Oz\_\_\_, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos, Yzhe_Nikto, Sturcidus, Faustous_, Montainary, venom_OLEG_slabitelnoe and others.
 
 **Special thanks to: odmarker228, Sturcidus, venom_OLEG_slabitelnoe, sneakyConcept**
 
@@ -548,6 +606,64 @@ HEAT Sentinel -- это настольный трекер боевой стат�
 ### Где хранятся ваши данные
 
 Все записанные данные (бои, опыт, комплектации, настройки) хранятся в локальной базе в профиле пользователя Windows. Они переживают обновления и переустановки приложения и не удаляются при деинсталляции, так что история при обновлении не теряется.
+
+### Перенос данных на новый ПК
+
+Всё, что записывает HEAT Sentinel, лежит в одном файле `heat_local.db` в этой папке:
+
+```
+%LOCALAPPDATA%\com.oxcone.heat-sentinel
+```
+
+Вставьте этот путь в адресную строку Проводника, чтобы открыть папку, и найдите в ней `heat_local.db`. Отдельного экспорта нет -- этот файл **и есть** экспорт. Скопируйте его на новый компьютер (флешка, облако, что угодно) и импортируйте там.
+
+**На старом ПК**
+
+1. Закройте HEAT Sentinel через иконку в трее (правая кнопка, Quit). Копирование файла при работающем приложении может потерять самые свежие бои.
+2. Скопируйте `heat_local.db` туда, откуда его будет видно с нового ПК.
+
+**На новом ПК**
+
+1. Установите и хотя бы раз запустите HEAT Sentinel, чтобы он создал свою базу.
+2. Откройте **Настройки -> Обработка и хранение**. Хранилище должно быть переключено на **Локально (SQLite)**.
+3. Нажмите **Импорт** и выберите принесённый `heat_local.db`.
+4. Пока ничего не записывается. Приложение читает файл и показывает, что в нём: сколько боёв, записей опыта, комплектаций и детализации боёв, и сколько из этого на этом ПК уже есть.
+5. Выберите, что делать с записями, которые есть на обоих ПК (см. ниже), и нажмите **Импортировать**. Полоса прогресса дойдёт до конца, после чего служба захвата перезапустится, чтобы новые бои появились в интерфейсе.
+
+Импорт только добавляет к вашей истории и никогда её не очищает. Бои, уже имеющиеся на новом ПК, остаются на месте.
+
+#### Что импортируется
+
+| Импортируется | Не импортируется |
+|---------------|------------------|
+| Бои, включая удалённые | Настройки приложения |
+| Опыт техники и командиров | Раскладка оверлея и горячие клавиши |
+| Комплектации техники | Фильтры статистики |
+| Отпечатки для поиска дубликатов | Метки игроков |
+| Детализация боёв по тикам (опционально) | |
+
+Настройки описывают конкретную машину, поэтому ваши остаются ровно такими, какими вы их здесь задали. Детализация по тикам -- это то, из чего строится подробный разбор отдельного боя; она занимает основную часть файла, поэтому её можно не импортировать, сняв галочку, если нужны только сами бои.
+
+#### Дубликаты записей
+
+У каждого боя есть идентификатор, выведенный из того, что в нём произошло, и из игровой сессии, в которой он был сыгран. Поэтому один и тот же бой имеет один и тот же идентификатор в обеих базах, а два разных боя никогда не получают общий -- благодаря этому вопрос «есть ли это у меня уже?» решается без догадок.
+
+Диалог показывает пересечение по каждой строке до подтверждения и предлагает два варианта:
+
+- **Оставить локальную запись** (по умолчанию) -- побеждают ваши существующие записи, добавляются только действительно новые. Повторный импорт того же файла безвреден: второй раз он ничего не добавит.
+- **Взять запись из файла** -- импортируемая версия перезапишет вашу. Выбирайте, если импортируемый файл полнее или свежее. Ручные правки, сделанные на этом ПК для этих боёв, будут потеряны.
+
+В обоих случаях по завершении показывается, сколько записей добавлено и сколько пересеклось.
+
+#### Если что-то пошло не так
+
+| Сообщение | Что это значит |
+|-----------|----------------|
+| *That is the database this app is already using* | Выбран рабочий файл приложения, а не копия с другого ПК. |
+| *This is a database, but its battles cannot be read* | Это база SQLite, но записана она не HEAT Sentinel. |
+| *That file holds no records to import* | Файл наш, но пустой -- скорее всего, свежая установка, не записавшая ни одного боя. |
+
+Выбранный вами файл никогда не изменяется. Приложение работает с его временной копией, поэтому прерванный импорт оставляет обе базы ровно в том виде, в каком они были, и его можно просто повторить.
 
 ### Обновление
 
@@ -758,7 +874,7 @@ SmartScreen предупреждает об установщике, потому
 
 ## 12. Благодарности
 
-Отдельное спасибо тем, кто тестировал ранние версии, находил баги и своими советами помог довести HEAT Sentinel до того, чем он стал сегодня: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, _VEN0M, \_\_\_Oz\_\_\_, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos, Yzhe_Nikto, Sturcidus, Faustous_, Montainary, venom_OLEG_slabitelnoe и другим.
+Отдельное спасибо тем, кто тестировал ранние версии, находил баги и своими советами помог довести HEAT Sentinel до того, чем он стал сегодня: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, \_VEN0M, \_\_\_Oz\_\_\_, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos, Yzhe_Nikto, Sturcidus, Faustous_, Montainary, venom_OLEG_slabitelnoe и другим.
 
 **Огромное спасибо: odmarker228, Sturcidus, venom_OLEG_slabitelnoe, sneakyConcept**
 
