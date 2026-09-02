@@ -1,0 +1,192 @@
+{
+  "v": 1,
+  "equipment": [
+    {
+      "n": "rebuild_kit_ability",
+      "slot": "FirstEquipment",
+      "name": {
+        "en": "Rebuild Kit",
+        "de": "Erneuerungssatz",
+        "es": "Kit de reconstrucción",
+        "fr": "Kit de reconstruction",
+        "ja": "復旧キット",
+        "ko": "재조립 도구",
+        "pl": "Zestaw odbudowujący",
+        "pt_br": "Kit de Reconstrução",
+        "ru": "Набор для восстановления",
+        "uk": "Відновлювальний набір",
+        "zh_sg": "重铸套件",
+        "zh_tw": "重鑄套件"
+      },
+      "icon": "rebuild_kit_big.png",
+      "family": "rebuild_kit"
+    },
+    {
+      "n": "recovery_system_ability",
+      "slot": "FirstEquipment",
+      "name": {
+        "en": "Recovery System",
+        "de": "Wiederherstellungssystem",
+        "es": "Sistema de recuperación",
+        "fr": "Système de récupération",
+        "ja": "リカバリーシステム",
+        "ko": "복구 시스템",
+        "pl": "System regeneracji",
+        "pt_br": "Sistema de Recuperação",
+        "ru": "Система восстановления",
+        "uk": "Система відновлення",
+        "zh_sg": "恢复系统",
+        "zh_tw": "恢復系統"
+      },
+      "icon": "ico_recovery_system_big.png",
+      "family": "recovery_system"
+    },
+    {
+      "n": "repair_kit_ability",
+      "slot": "FirstEquipment",
+      "name": {
+        "en": "Repair Kit",
+        "de": "Ersatzteilkiste",
+        "es": "Kit de reparación",
+        "fr": "Kit de réparation",
+        "ja": "修理キット",
+        "ko": "수리 도구",
+        "pl": "Zestaw naprawczy",
+        "pt_br": "Kit de Reparos",
+        "ru": "Ремкомплект",
+        "uk": "Ремкомплект",
+        "zh_sg": "修理箱",
+        "zh_tw": "修理箱"
+      },
+      "icon": "repair_big.png",
+      "family": "repair_kit"
+    },
+    {
+      "n": "exhaust_vail_ability",
+      "slot": "SecondEquipment",
+      "name": {
+        "en": "Exhaust Veil",
+        "de": "Abgasschleier",
+        "es": "Velo de escape",
+        "fr": "Voile d'échappement",
+        "ja": "エキゾースト・ヴェール",
+        "ko": "배기 장막",
+        "pl": "Zasłona wydechowa",
+        "pt_br": "Véu de Escape",
+        "ru": "Пелена выхлопов",
+        "uk": "Вихлопна завіса",
+        "zh_sg": "排气帷幕",
+        "zh_tw": "排氣帷幕"
+      },
+      "icon": "exhaust_vail_big.png",
+      "family": "exhaust_vail"
+    },
+    {
+      "n": "fail_safe_circuit",
+      "slot": "SecondEquipment",
+      "name": {
+        "en": "Fail-Safe Circuit",
+        "de": "Fail-Safe-Schaltkreis",
+        "es": "Circuito seguro",
+        "fr": "Circuit de secours",
+        "ja": "フェールセーフ回路",
+        "ko": "기능 고장 방지 회로",
+        "pl": "Obwód zabezpieczający przed awarią",
+        "pt_br": "Circuito à prova de falhas",
+        "ru": "Отказоустойчивая цепь",
+        "uk": "Закритий контур",
+        "zh_sg": "故障保险电路",
+        "zh_tw": "故障保險電路"
+      },
+      "icon": "fail_safe_circuit_big.png",
+      "family": "fail_safe_circuit"
+    },
+    {
+      "n": "hull_reinforcement_kit",
+      "slot": "SecondEquipment",
+      "name": {
+        "en": "Hull Reinforcement Kit",
+        "de": "Wannenverstärkungssatz",
+        "es": "Kit de refuerzo de la barcaza",
+        "fr": "KIT DE RENFORT DE LA CAISSE",
+        "ja": "車体強化キット",
+        "ko": "차체 보강 도구",
+        "pl": "Zestaw wzmocnień kadłuba",
+        "pt_br": "KIT DE REFORÇO DO CASCO",
+        "ru": "Набор для усиления корпуса",
+        "uk": "Комплект посилення корпусу",
+        "zh_sg": "车体强化套件",
+        "zh_tw": "車體強化套件"
+      },
+      "icon": "hull_reinforcement_kit_bg.png",
+      "family": "hull_reinforcement_kit"
+    },
+    {
+      "n": "phantom_curtain_ability",
+      "slot": "SecondEquipment",
+      "name": {
+        "en": "Phantom Curtain",
+        "de": "Phantomvorhang",
+        "es": "Cortina fantasmal",
+        "fr": "Rideau fantôme",
+        "ja": "ファントム・カーテン",
+        "ko": "유령 장막",
+        "pl": "Fantomowa kurtyna",
+        "pt_br": "Cortina Fantasma",
+        "ru": "Призрачная завеса",
+        "uk": "Фантомна завіса",
+        "zh_sg": "幻影雾障",
+        "zh_tw": "幻影霧障"
+      },
+      "icon": "phanton_curtain_big.png",
+      "family": "phantom_curtain"
+    },
+    {
+      "n": "phantom_curtain_charged",
+      "slot": "SecondEquipment",
+      "name": {},
+      "icon": "",
+      "family": "phantom_curtain"
+    },
+    {
+      "n": "recovery_protocol",
+      "slot": "SecondEquipment",
+      "name": {
+        "en": "Recovery Protocol",
+        "de": "Wiederherstellungsprotokoll",
+        "es": "Protocolo de recuperación",
+        "fr": "Protocole de récupération",
+        "ja": "回復プロトコル",
+        "ko": "복구 프로토콜",
+        "pl": "Protokół przywracania",
+        "pt_br": "Protocolo de Recuperação",
+        "ru": "Протокол восстановления",
+        "uk": "Протокол відновлення",
+        "zh_sg": "应急恢复协议",
+        "zh_tw": "應急恢復協議"
+      },
+      "icon": "recovery_protocol_big.png",
+      "family": "recovery_protocol"
+    },
+    {
+      "n": "teps_ability",
+      "slot": "SecondEquipment",
+      "name": {
+        "en": "TEPS",
+        "de": "TEPS",
+        "es": "TEPS",
+        "fr": "TEPS",
+        "ja": "TEPS",
+        "ko": "TEPS",
+        "pl": "TEPS",
+        "pt_br": "TEPS",
+        "ru": "TEPS",
+        "uk": "TEPS",
+        "zh_sg": "TEPS",
+        "zh_tw": "TEPS"
+      },
+      "icon": "teps_big.png",
+      "family": "teps"
+    }
+  ]
+}
