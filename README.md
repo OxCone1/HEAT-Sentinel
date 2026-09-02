@@ -19,7 +19,7 @@
 | `heat-capture.exe` (capture/watcher engine, bundled inside the installer) | 35.9 MB | [View scan](https://www.virustotal.com/gui/file/0261439d0df52a9fafd33cc1f250e9d671d873d6b1c0839297ffc71f6e9df3e4) |
 <!-- RELEASE-EN:END -->
 
-Every release is built by GitHub Actions and scanned on VirusTotal. See [Security and Privacy](#8-security-and-privacy) for details.
+Every release is built by GitHub Actions and scanned on VirusTotal. See [Security and Privacy](#9-security-and-privacy) for details.
 
 ---
 
@@ -27,7 +27,7 @@ Every release is built by GitHub Actions and scanned on VirusTotal. See [Securit
 
 | English Table of Contents | Russian Table of Contents |
 |---------------------------|---------------------------|
-| [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Overlays: In-Game and Stream (OBS)](#4-overlays-in-game-and-stream-obs)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Contributing](#7-contributing)<br>8. [Security and Privacy](#8-security-and-privacy)<br>9. [Future Expansion](#9-future-expansion)<br>10. [Disclaimer](#10-disclaimer)<br>11. [Troubleshooting](#11-troubleshooting) | [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлеи: внутриигровой и для стрима (OBS)](#4-оверлеи-внутриигровой-и-для-стрима-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Участие в проекте](#7-участие-в-проекте)<br>8. [Безопасность и приватность](#8-безопасность-и-приватность)<br>9. [Планы развития](#9-планы-развития)<br>10. [Дисклеймер](#10-дисклеймер)<br>11. [Устранение неполадок](#11-устранение-неполадок) |
+| [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Overlays: In-Game and Stream (OBS)](#4-overlays-in-game-and-stream-obs)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Build Links](#7-build-links)<br>8. [Contributing](#8-contributing)<br>9. [Security and Privacy](#9-security-and-privacy)<br>10. [Future Expansion](#10-future-expansion)<br>11. [Disclaimer](#11-disclaimer)<br>12. [Troubleshooting](#12-troubleshooting) | [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлеи: внутриигровой и для стрима (OBS)](#4-оверлеи-внутриигровой-и-для-стрима-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Ссылки на сборки](#7-ссылки-на-сборки)<br>8. [Участие в проекте](#8-участие-в-проекте)<br>9. [Безопасность и приватность](#9-безопасность-и-приватность)<br>10. [Планы развития](#10-планы-развития)<br>11. [Дисклеймер](#11-дисклеймер)<br>12. [Устранение неполадок](#12-устранение-неполадок) |
 
 ---
 
@@ -40,11 +40,12 @@ Every release is built by GitHub Actions and scanned on VirusTotal. See [Securit
 | Overlays: In-Game and Stream (OBS) | In-game overlay, stream overlay editor, OBS setup, real-time sync | [Section 4](#4-overlays-in-game-and-stream-obs) |
 | Data Capture | How the main mode works, the Legacy OCR fallback | [Section 5](#5-data-capture-main-mode-and-legacy-ocr) |
 | Calibrations and Patterns | What they are and why they matter | [Section 6](#6-calibrations-and-patterns) |
-| Contributing | How to help: new resolutions, languages, game data | [Section 7](#7-contributing) |
-| Security and Privacy | VirusTotal scans, SmartScreen, local-only data | [Section 8](#8-security-and-privacy) |
-| Future Expansion | Planned features and roadmap | [Section 9](#9-future-expansion) |
-| Disclaimer | Fair play rules and legal notes | [Section 10](#10-disclaimer) |
-| Troubleshooting | Update failures, closing all instances, sending logs | [Section 11](#11-troubleshooting) |
+| Build Links | Sharing a build as a link, and integrating a planner site | [Section 7](#7-build-links) |
+| Contributing | How to help: new resolutions, languages, game data | [Section 8](#8-contributing) |
+| Security and Privacy | VirusTotal scans, SmartScreen, local-only data | [Section 9](#9-security-and-privacy) |
+| Future Expansion | Planned features and roadmap | [Section 10](#10-future-expansion) |
+| Disclaimer | Fair play rules and legal notes | [Section 11](#11-disclaimer) |
+| Troubleshooting | Update failures, closing all instances, sending logs | [Section 12](#12-troubleshooting) |
 
 ---
 
@@ -78,6 +79,11 @@ The core idea is simple: the game shows you a lot of interesting numbers and the
 **Loadout Tracking**
 - Vehicle module loadouts recorded per battle, including both equipment (consumable) slots
 - Equipment names are localized into your app language, so you can compare your performance across different builds
+
+**Build Sharing**
+- Any loadout can be kept as a named build, sent out as a one-line share code or a `sentinel://` link, and written back into the game in one click
+- An incoming build is drawn beside what is fitted on that tank right now, with anything your account does not own listed before you act -- nothing is ever bought without a separate hold-to-confirm showing the exact cost
+- The link format and the full parts catalog are published, so loadout planner sites can send a build straight into the game instead of asking you to copy module names across by hand
 
 **Head-to-Head (1v1) Records**
 - Running score against every named opponent you have fought: how many times you fragged them and how many times they fragged you, ranked by net kills
@@ -131,7 +137,7 @@ Grab the latest installer from the [Download](#download) section at the top of t
 ### Installation Steps
 
 1. **Run the installer** (`HEAT.Sentinel_<version>_x64-setup.exe`).
-2. **Windows SmartScreen will most likely warn you.** This is expected for an unsigned application from a small developer: click "More info", then "Run anyway". Read [Security and Privacy](#8-security-and-privacy) to understand exactly why this happens and how you can verify every build yourself.
+2. **Windows SmartScreen will most likely warn you.** This is expected for an unsigned application from a small developer: click "More info", then "Run anyway". Read [Security and Privacy](#9-security-and-privacy) to understand exactly why this happens and how you can verify every build yourself.
 3. **Launch HEAT Sentinel** from the Start Menu or desktop shortcut and follow the first-launch setup.
 4. **Play the game.** The tracker runs in the background as long as the app is open and records every battle automatically -- there is no manual start/stop step.
 
@@ -279,7 +285,7 @@ HEAT Sentinel has two ways of reading game data. You can switch between them in 
 
 The main mode reads game values directly from the game client's own interface: the same numbers that are already drawn on your screen. No screenshots, no image recognition, no guessing. This makes it fast, exact and independent of your screen resolution and game language.
 
-Important: the main mode only ever reads information that is already visible to you during normal play. It does not touch the game's memory, does not modify the game in any way, and does not expose anything hidden. See the [Disclaimer](#10-disclaimer).
+Important: the main mode only ever reads information that is already visible to you during normal play. It does not touch the game's memory, does not modify the game in any way, and does not expose anything hidden. See the [Disclaimer](#11-disclaimer).
 
 ### Legacy OCR Mode (fallback)
 
@@ -341,7 +347,62 @@ This is the single most valuable thing the community can contribute. If you play
 
 ---
 
-## 7. Contributing
+## 7. Build Links
+
+### Sharing a build
+
+Any build in HEAT Sentinel can leave the app as a **share code** -- one line of
+text -- or as a **build link**:
+
+```
+sentinel://build/HEAT1.eyJ2IjoxLCJ2ZWhpY2xlIjoi...
+```
+
+Send either to anyone. Clicking a link opens HEAT Sentinel, decodes the build
+against your own game data, and shows it beside whatever is fitted on that tank
+right now. Nothing is written until you press Apply.
+
+**Builds > Export** gives you both: *Copy code* for places that mangle links,
+*Copy link* for everywhere else. To take one in, use **Builds > Import**, or
+just click a link.
+
+A build travels as the parts it is made of, and nothing else. Names of modules,
+equipment and perks, the vehicle, your label for it, and the module you starred
+as the point of the build. **Not** the battles, win rate or damage behind it --
+a record is earned, not transferred, and it accumulates the more its owner plays.
+
+**A link never spends anything.** A build naming parts you do not own is not
+applied silently: those parts are listed and skipped, and buying them takes a
+separate hold-to-confirm that shows the exact cost.
+
+**If you already have the build**, the app names which of your builds it is and
+offers to take the sender's label and starred module -- rather than making a
+second card you cannot tell from the first.
+
+The `sentinel:` scheme is claimed for your Windows user the first time HEAT
+Sentinel runs. If a link does nothing, the app has not been installed and
+launched yet -- paste the code into Builds > Import instead.
+
+### For loadout planner sites
+
+If you run a build planner on the web, you can hand players a link instead of a
+list of module names to copy across by hand. It needs no API key, no server and
+no partnership: a build link is a string you generate offline.
+
+- **[Build links for HEAT Sentinel](docs/build-share-codes.md)** -- the
+  integration guide. The link format, the build object, the rules a valid build
+  follows, and encoders in JavaScript and Python.
+- **[`public-catalog/`](public-catalog/)** -- the vocabulary, as JSON. Every
+  vehicle, module, equipment item, perk and agent, keyed by the technical name a
+  code is written in, with display names in all twelve languages the game ships.
+
+The catalog carries no account data, no numeric ids and no artwork, and is
+regenerated after game patches. `catalog.json` holds a SHA-256 per file, so you
+can tell a real update from a re-upload.
+
+---
+
+## 8. Contributing
 
 The application itself is closed source, but everything that makes it work across resolutions, languages and game versions is open and lives in this repository. Contributions are very welcome:
 
@@ -354,7 +415,7 @@ Open an issue to discuss an idea, or submit a pull request directly. If you foun
 
 ---
 
-## 8. Security and Privacy
+## 9. Security and Privacy
 
 The "great, another crypto miner" jokes are funny, and honestly fair as far as random internet executables go. But I take the security aspect seriously, so here is the full picture:
 
@@ -378,7 +439,7 @@ SmartScreen warns about the installer because it is not code-signed. Code signin
 
 ---
 
-## 9. Future Expansion
+## 10. Future Expansion
 
 - **More statistical elements**: deeper aggregates, richer per-vehicle / per-agent / per-map breakdowns, and more ways to slice your battle history, both in the app and as overlay widgets
 - **Major overlay improvements**: expanded element customization and editor quality-of-life
@@ -387,7 +448,7 @@ SmartScreen warns about the installer because it is not code-signed. Code signin
 
 ---
 
-## 10. Disclaimer
+## 11. Disclaimer
 
 - **Unofficial Project**: WoT: HEAT Sentinel is an unofficial statistics gathering app. It is not affiliated with, endorsed by, or sponsored by Wargaming Group Limited. All in-game assets and trademarks belong to their respective owners.
 - **Use at Your Own Risk**: The app is provided "as is", without warranties of any kind. While every effort goes into stability and safety, you use it at your own risk. Always be cautious with executables downloaded from the internet, and use the VirusTotal links provided with every release.
@@ -406,7 +467,7 @@ SmartScreen warns about the installer because it is not code-signed. Code signin
 
 ---
 
-## 11. Troubleshooting
+## 12. Troubleshooting
 
 If a new version will not install or the app misbehaves after an update, work through these steps in order. Most update problems come from an old copy still running in the background.
 
@@ -427,7 +488,7 @@ If a new version will not install or the app misbehaves after an update, work th
 
 ---
 
-## 12. Acknowledgements
+## 13. Acknowledgements
 
 HEAT Sentinel would not be what it is today without the community members who tested early builds, reported bugs, gave feedback and helped shape its direction: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, \_VEN0M, \_\_\_Oz\_\_\_, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos, Yzhe_Nikto, Sturcidus, Faustous_, Montainary, venom_OLEG_slabitelnoe and others.
 
@@ -468,7 +529,7 @@ Running into a technical issue? Two options:
 | `heat-capture.exe` (движок захвата, встроен в установщик) | 35.9 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/0261439d0df52a9fafd33cc1f250e9d671d873d6b1c0839297ffc71f6e9df3e4) |
 <!-- RELEASE-RU:END -->
 
-Каждый релиз собирается через GitHub Actions и проверяется на VirusTotal. Подробнее в разделе [Безопасность и приватность](#8-безопасность-и-приватность).
+Каждый релиз собирается через GitHub Actions и проверяется на VirusTotal. Подробнее в разделе [Безопасность и приватность](#9-безопасность-и-приватность).
 
 ---
 
@@ -476,7 +537,7 @@ Running into a technical issue? Two options:
 
 | Содержание на русском | English Table of Contents |
 |-----------------------|---------------------------|
-| [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлеи: внутриигровой и для стрима (OBS)](#4-оверлеи-внутриигровой-и-для-стрима-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Участие в проекте](#7-участие-в-проекте)<br>8. [Безопасность и приватность](#8-безопасность-и-приватность)<br>9. [Планы развития](#9-планы-развития)<br>10. [Дисклеймер](#10-дисклеймер)<br>11. [Устранение неполадок](#11-устранение-неполадок) | [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Overlays: In-Game and Stream (OBS)](#4-overlays-in-game-and-stream-obs)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Contributing](#7-contributing)<br>8. [Security and Privacy](#8-security-and-privacy)<br>9. [Future Expansion](#9-future-expansion)<br>10. [Disclaimer](#10-disclaimer)<br>11. [Troubleshooting](#11-troubleshooting) |
+| [Cкачать](#скачать)<br>0. [Содержание (RU)](#0-содержание-ru)<br>1. [Навигация](#1-навигация)<br>2. [Обзор проекта](#2-обзор-проекта)<br>3. [Установка и первый запуск](#3-установка-и-первый-запуск)<br>4. [Оверлеи: внутриигровой и для стрима (OBS)](#4-оверлеи-внутриигровой-и-для-стрима-obs)<br>5. [Захват данных: основной режим и Legacy OCR](#5-захват-данных-основной-режим-и-legacy-ocr)<br>6. [Калибровки и паттерны](#6-калибровки-и-паттерны)<br>7. [Ссылки на сборки](#7-ссылки-на-сборки)<br>8. [Участие в проекте](#8-участие-в-проекте)<br>9. [Безопасность и приватность](#9-безопасность-и-приватность)<br>10. [Планы развития](#10-планы-развития)<br>11. [Дисклеймер](#11-дисклеймер)<br>12. [Устранение неполадок](#12-устранение-неполадок) | [Download](#download)<br>0. [Table of Contents (EN)](#0-table-of-contents-en)<br>1. [Navigation](#1-navigation)<br>2. [Project Overview](#2-project-overview)<br>3. [Installation and First Launch](#3-installation-and-first-launch)<br>4. [Overlays: In-Game and Stream (OBS)](#4-overlays-in-game-and-stream-obs)<br>5. [Data Capture: Main Mode and Legacy OCR](#5-data-capture-main-mode-and-legacy-ocr)<br>6. [Calibrations and Patterns](#6-calibrations-and-patterns)<br>7. [Build Links](#7-build-links)<br>8. [Contributing](#8-contributing)<br>9. [Security and Privacy](#9-security-and-privacy)<br>10. [Future Expansion](#10-future-expansion)<br>11. [Disclaimer](#11-disclaimer)<br>12. [Troubleshooting](#12-troubleshooting) |
 
 ---
 
@@ -489,11 +550,12 @@ Running into a technical issue? Two options:
 | Оверлеи и OBS | Внутриигровой оверлей, редактор оверлея для стрима, настройка OBS, синхронизация | [Раздел 4](#4-оверлеи-внутриигровой-и-для-стрима-obs) |
 | Захват данных | Как работает основной режим и запасной Legacy OCR | [Раздел 5](#5-захват-данных-основной-режим-и-legacy-ocr) |
 | Калибровки и паттерны | Что это такое и зачем они нужны | [Раздел 6](#6-калибровки-и-паттерны) |
-| Участие в проекте | Как помочь: новые разрешения, языки, игровые данные | [Раздел 7](#7-участие-в-проекте) |
-| Безопасность и приватность | Проверки VirusTotal, SmartScreen, локальные данные | [Раздел 8](#8-безопасность-и-приватность) |
-| Планы развития | Что планируется дальше | [Раздел 9](#9-планы-развития) |
-| Дисклеймер | Правила честной игры и юридические заметки | [Раздел 10](#10-дисклеймер) |
-| Устранение неполадок | Сбои обновления, закрытие всех процессов, отправка логов | [Раздел 11](#11-устранение-неполадок) |
+| Ссылки на сборки | Обмен сборками через ссылки и интеграция сайтов-планировщиков | [Раздел 7](#7-ссылки-на-сборки) |
+| Участие в проекте | Как помочь: новые разрешения, языки, игровые данные | [Раздел 8](#8-участие-в-проекте) |
+| Безопасность и приватность | Проверки VirusTotal, SmartScreen, локальные данные | [Раздел 9](#9-безопасность-и-приватность) |
+| Планы развития | Что планируется дальше | [Раздел 10](#10-планы-развития) |
+| Дисклеймер | Правила честной игры и юридические заметки | [Раздел 11](#11-дисклеймер) |
+| Устранение неполадок | Сбои обновления, закрытие всех процессов, отправка логов | [Раздел 12](#12-устранение-неполадок) |
 
 ---
 
@@ -525,6 +587,11 @@ HEAT Sentinel -- это настольный трекер боевой стат�
 **Учёт комплектаций**
 - Модули техники записываются для каждого боя, вместе с обоими слотами снаряжения (расходников)
 - Названия снаряжения переведены на язык приложения, так что можно сравнивать свою эффективность на разных сборках
+
+**Обмен сборками**
+- Любую комплектацию можно сохранить как именованную сборку, вынести одной строкой-кодом или ссылкой `sentinel://` и применить обратно в игру одним кликом
+- Входящая сборка показывается рядом с тем, что стоит на этом танке сейчас, а всё, чего нет на аккаунте, перечисляется до применения -- ничего не покупается без отдельного подтверждения удержанием с указанием точной цены
+- Формат ссылки и полный каталог деталей опубликованы, поэтому сайты-планировщики сборок могут отправлять сборку прямо в игру, вместо того чтобы просить вас переносить названия модулей вручную
 
 **Личные счёты (1v1)**
 - Счёт против каждого именованного противника, с которым вы сталкивались: сколько раз вы убили его и сколько раз он убил вас, с сортировкой по разнице фрагов
@@ -578,7 +645,7 @@ HEAT Sentinel -- это настольный трекер боевой стат�
 ### Порядок установки
 
 1. **Запустите установщик** (`HEAT.Sentinel_<версия>_x64-setup.exe`).
-2. **Windows SmartScreen скорее всего покажет предупреждение.** Это ожидаемо для неподписанного приложения от небольшого разработчика: нажмите "Подробнее", затем "Выполнить в любом случае". В разделе [Безопасность и приватность](#8-безопасность-и-приватность) подробно объясняется, почему так происходит и как самостоятельно проверить любую сборку.
+2. **Windows SmartScreen скорее всего покажет предупреждение.** Это ожидаемо для неподписанного приложения от небольшого разработчика: нажмите "Подробнее", затем "Выполнить в любом случае". В разделе [Безопасность и приватность](#9-безопасность-и-приватность) подробно объясняется, почему так происходит и как самостоятельно проверить любую сборку.
 3. **Запустите HEAT Sentinel** из меню Пуск или с ярлыка на рабочем столе и пройдите первоначальную настройку.
 4. **Играйте.** Пока приложение открыто, трекер работает в фоне и записывает каждый бой автоматически -- никакого ручного запуска или остановки не требуется.
 
@@ -726,7 +793,7 @@ http://localhost:17504/overlay
 
 Основной режим читает значения напрямую из интерфейса игрового клиента: те же самые цифры, которые уже нарисованы у вас на экране. Никаких скриншотов, никакого распознавания изображений, никаких догадок. Поэтому он быстрый, точный и не зависит от разрешения экрана и языка игры.
 
-Важно: основной режим читает только ту информацию, которая и так видна вам в обычной игре. Он не трогает память игры, никак её не модифицирует и не раскрывает ничего скрытого. См. [Дисклеймер](#10-дисклеймер).
+Важно: основной режим читает только ту информацию, которая и так видна вам в обычной игре. Он не трогает память игры, никак её не модифицирует и не раскрывает ничего скрытого. См. [Дисклеймер](#11-дисклеймер).
 
 ### Режим Legacy OCR (запасной)
 
@@ -788,7 +855,64 @@ http://localhost:17504/overlay
 
 ---
 
-## 7. Участие в проекте
+## 7. Ссылки на сборки
+
+### Как поделиться сборкой
+
+Любая сборка в HEAT Sentinel может покинуть приложение как **код обмена** --
+одна строка текста -- или как **ссылка на сборку**:
+
+```
+sentinel://build/HEAT1.eyJ2IjoxLCJ2ZWhpY2xlIjoi...
+```
+
+Отправьте кому угодно. По клику откроется HEAT Sentinel, расшифрует сборку по
+данным вашего клиента и покажет её рядом с тем, что стоит на этом танке сейчас.
+Пока вы не нажмёте «Применить», ничего не записывается.
+
+**Сборки > Экспорт** даёт и то, и другое: *Копировать код* для мест, где ссылки
+ломаются, *Копировать ссылку* для всех остальных. Чтобы принять чужую сборку --
+**Сборки > Импорт**, либо просто клик по ссылке.
+
+Сборка передаётся как набор деталей, из которых она состоит, и ничего кроме.
+Названия модулей, снаряжения и перков, машина, ваша подпись к сборке и модуль,
+отмеченный как её смысл. **Не** передаются бои, процент побед и урон: результат
+зарабатывается, а не передаётся, и накапливается тем больше, чем больше играет
+его владелец.
+
+**Ссылка ничего не тратит.** Сборка, называющая детали, которых у вас нет, не
+применяется молча: они перечисляются и пропускаются, а покупка требует
+отдельного подтверждения удержанием кнопки с показом точной цены.
+
+**Если такая сборка у вас уже есть**, приложение скажет, какая именно, и
+предложит взять у отправителя только подпись и отмеченный модуль -- вместо
+второй карточки, неотличимой от первой.
+
+Схема `sentinel:` закрепляется за вашим пользователем Windows при первом запуске
+HEAT Sentinel. Если ссылка ничего не делает, приложение ещё не установлено и не
+запускалось -- вставьте код через Сборки > Импорт.
+
+### Для сайтов-планировщиков сборок
+
+Если вы держите веб-планировщик сборок, вы можете отдавать игрокам ссылку вместо
+списка названий модулей, который они переносят вручную. Не нужны ни ключ API, ни
+сервер, ни партнёрство: ссылка на сборку -- это строка, которую вы формируете
+офлайн.
+
+- **[Build links for HEAT Sentinel](docs/build-share-codes.md)** -- руководство
+  по интеграции (на английском). Формат ссылки, объект сборки, правила
+  корректной сборки и кодировщики на JavaScript и Python.
+- **[`public-catalog/`](public-catalog/)** -- словарь в виде JSON. Все машины,
+  модули, снаряжение, перки и агенты по техническим именам, которыми
+  записывается код, с отображаемыми названиями на всех двенадцати языках игры.
+
+В каталоге нет данных аккаунта, числовых идентификаторов и изображений; он
+пересобирается после игровых патчей. В `catalog.json` есть SHA-256 для каждого
+файла, чтобы отличить настоящее обновление от повторной загрузки.
+
+---
+
+## 8. Участие в проекте
 
 Само приложение имеет закрытый исходный код, но всё, что заставляет его работать на разных разрешениях, языках и версиях игры, открыто и живёт в этом репозитории. Вклад очень приветствуется:
 
@@ -801,7 +925,7 @@ http://localhost:17504/overlay
 
 ---
 
-## 8. Безопасность и приватность
+## 9. Безопасность и приватность
 
 Шутки в духе "отлично, ещё один криптомайнер" смешные и, честно говоря, справедливые, когда речь о случайных исполняемых файлах из интернета. Но к безопасности я отношусь серьёзно, поэтому вот полная картина:
 
@@ -825,7 +949,7 @@ SmartScreen предупреждает об установщике, потому
 
 ---
 
-## 9. Планы развития
+## 10. Планы развития
 
 - **Больше статистических элементов**: более глубокая сводная статистика, детальные разбивки по технике / агентам / картам и новые способы взглянуть на историю боёв, как в приложении, так и в виде виджетов оверлея
 - **Крупные улучшения оверлея**: расширенная настройка элементов и удобство редактора
@@ -834,7 +958,7 @@ SmartScreen предупреждает об установщике, потому
 
 ---
 
-## 10. Дисклеймер
+## 11. Дисклеймер
 
 - **Неофициальный проект**: WoT: HEAT Sentinel -- неофициальное приложение для сбора статистики. Оно не связано с Wargaming Group Limited, не одобрено и не спонсируется ею. Все внутриигровые материалы и товарные знаки принадлежат их владельцам.
 - **Используйте на свой риск**: приложение поставляется "как есть", без каких-либо гарантий. Хотя в стабильность и безопасность вложено много усилий, вы используете его на свой страх и риск. Всегда будьте осторожны с исполняемыми файлами из интернета и пользуйтесь ссылками на VirusTotal, которые публикуются с каждым релизом.
@@ -851,7 +975,7 @@ SmartScreen предупреждает об установщике, потому
   - выдавать его за связанный с Wargaming или World of Tanks: HEAT, одобренный или утверждённый ими продукт.
 ---
 
-## 11. Устранение неполадок
+## 12. Устранение неполадок
 
 Если новая версия не устанавливается или приложение ведёт себя некорректно после обновления, пройдите по шагам по порядку. Чаще всего причина проблем с обновлением -- старая копия, всё ещё работающая в фоне.
 
@@ -872,7 +996,7 @@ SmartScreen предупреждает об установщике, потому
 
 ---
 
-## 12. Благодарности
+## 13. Благодарности
 
 Отдельное спасибо тем, кто тестировал ранние версии, находил баги и своими советами помог довести HEAT Sentinel до того, чем он стал сегодня: AET9RNAL, sneakyConcept, Ustitsa_13, iSeNtYi, SINEWAVE, \_VEN0M, \_\_\_Oz\_\_\_, 99999999999999, lullabyvlr, T_A_N_K_I_S_T_E_G_O_R, Animaluos, Yzhe_Nikto, Sturcidus, Faustous_, Montainary, venom_OLEG_slabitelnoe и другим.
 

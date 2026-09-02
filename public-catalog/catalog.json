@@ -1,0 +1,44 @@
+{
+  "v": 1,
+  "buildCodeFormat": "HEAT1",
+  "generated": "2026-09-02T20:57:40+00:00",
+  "languages": [
+    "en",
+    "de",
+    "es",
+    "fr",
+    "ja",
+    "ko",
+    "pl",
+    "pt_br",
+    "ru",
+    "uk",
+    "zh_sg",
+    "zh_tw"
+  ],
+  "counts": {
+    "vehicles": 20,
+    "modules": 501,
+    "equipment": 10,
+    "perks": 160,
+    "agents": 15
+  },
+  "files": {
+    "vehicles.json": {
+      "bytes": 772969,
+      "sha256": "aa9d368ccfd89b30bc35dcf09e2947a32e615509cb292942228663077b1e8dbb"
+    },
+    "equipment.json": {
+      "bytes": 5925,
+      "sha256": "c521fca02a276984f7154550fdafa4ad54c9e7c77268ad73467d044617d5198e"
+    },
+    "perks.json": {
+      "bytes": 177280,
+      "sha256": "0b25f376c6f971103257c152a2f85669c8b1a7cfa50358ca9cc478f090344635"
+    },
+    "agents.json": {
+      "bytes": 15231,
+      "sha256": "a4a319be8f4e048444eaad6cf5824de5795d3d77b7ef65ff88546a087d5c4160"
+    }
+  }
+}
