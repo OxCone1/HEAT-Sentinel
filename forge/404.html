@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <!-- Inter, the desktop app's face. Loaded with media="print" so it never
+         blocks first paint, then swapped to "all" once it has arrived — the
+         same trick heat-tray/index.html uses, and for the same reason: an
+         unreachable fonts.googleapis.com should cost a fallback, not a window
+         that stays blank until the request times out. The --font-* stacks in
+         styles/tokens.css degrade to Segoe UI / system-ui, so the builder is
+         usable either way. -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <title>Sight Forge — HEAT Sentinel</title>
+    <meta
+      name="description"
+      content="Draw a gun sight and a reticle pack for World of Tanks: HEAT, preview them with the game's own renderer, and export the files HEAT Sentinel imports."
+    />
+    <script type="module" crossorigin src="/HEAT-Sentinel/forge/assets/index-BDGJka5o.js"></script>
+    <link rel="stylesheet" crossorigin href="/HEAT-Sentinel/forge/assets/index-BowCSGfY.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

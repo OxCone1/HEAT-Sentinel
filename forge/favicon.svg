@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1407.76 1527.74">
+  <!-- The standalone Sentinel mark. A favicon cannot inherit currentColor, so
+       the body colour is switched here: a tab strip may be light or dark and
+       a single-colour mark disappears in one of them. -->
+  <style>
+    .body { fill: #0d1116; }
+    @media (prefers-color-scheme: dark) { .body { fill: #e6eaef; } }
+    .live { fill: #ff0f30; }
+  </style>
+  <polygon class="body" points="737.66 551.15 737.66 1527.74 1117.88 1167.96 1117.88 920.89 903.62 1096.67 903.62 1028.81 1407.76 614.34 1407.76 0 737.66 551.15"/>
+  <polygon class="body" points="670.1 551.15 670.1 1527.74 289.88 1167.96 289.88 920.89 504.14 1096.67 504.14 1028.81 0 614.34 0 0 670.1 551.15"/>
+  <polygon class="live" points="1117.88 920.89 1117.88 852.66 903.62 1028.81 903.62 1096.67 1117.88 920.89"/>
+  <polygon class="live" points="504.14 1096.67 504.14 1028.81 289.88 852.66 289.88 920.89 504.14 1096.67"/>
+</svg>
