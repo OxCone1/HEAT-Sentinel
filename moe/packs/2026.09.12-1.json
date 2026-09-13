@@ -1,0 +1,274 @@
+{
+ "schema": 1,
+ "version": "2026.09.12-1",
+ "effective_from": "2026-09-12",
+ "generated": "2026-09-12T05:04:41Z",
+ "reference": {
+  "event": "weekend-chase-2-2026-08-07",
+  "min_battles": 30,
+  "players": 2182,
+  "percentiles": [
+   65.0,
+   85.0,
+   95.0
+  ]
+ },
+ "rules": {
+  "window": 50,
+  "rolling": "fill",
+  "band": 0.03,
+  "floor_seconds": 360,
+  "queue_modes": [
+   "quick_match"
+  ],
+  "game_modes": [
+   "conquest",
+   "control",
+   "kill_confirmed",
+   "hardpoint",
+   "ct"
+  ]
+ },
+ "base_dpm": 1559.17,
+ "thresholds": [
+  1.3095,
+  1.6004,
+  1.8768
+ ],
+ "curve": [
+  0.3308,
+  0.5203,
+  0.5774,
+  0.6213,
+  0.6649,
+  0.6928,
+  0.7143,
+  0.7315,
+  0.7555,
+  0.7713,
+  0.7884,
+  0.8037,
+  0.8193,
+  0.8349,
+  0.8452,
+  0.8563,
+  0.8701,
+  0.8834,
+  0.8955,
+  0.905,
+  0.9108,
+  0.923,
+  0.9356,
+  0.9461,
+  0.9556,
+  0.9634,
+  0.9701,
+  0.9788,
+  0.9865,
+  0.9929,
+  0.9994,
+  1.0089,
+  1.0159,
+  1.0275,
+  1.0399,
+  1.0507,
+  1.0582,
+  1.0647,
+  1.0735,
+  1.0823,
+  1.0885,
+  1.0954,
+  1.1051,
+  1.1151,
+  1.1225,
+  1.1291,
+  1.139,
+  1.1477,
+  1.159,
+  1.1653,
+  1.1713,
+  1.178,
+  1.1864,
+  1.1964,
+  1.2051,
+  1.2112,
+  1.22,
+  1.2279,
+  1.2383,
+  1.2474,
+  1.2583,
+  1.2713,
+  1.2819,
+  1.2905,
+  1.2993,
+  1.3095,
+  1.3175,
+  1.329,
+  1.3379,
+  1.3522,
+  1.3641,
+  1.3766,
+  1.3896,
+  1.4006,
+  1.4098,
+  1.4232,
+  1.4374,
+  1.4556,
+  1.4722,
+  1.4913,
+  1.5069,
+  1.5221,
+  1.5392,
+  1.5546,
+  1.5771,
+  1.6004,
+  1.6194,
+  1.6335,
+  1.6569,
+  1.6796,
+  1.709,
+  1.7301,
+  1.7526,
+  1.7834,
+  1.8083,
+  1.8768,
+  1.925,
+  2.011,
+  2.1181,
+  2.2727,
+  2.8543
+ ],
+ "modes": {
+  "conquest": 0.9586,
+  "control": 0.9677,
+  "kill_confirmed": 1.289,
+  "hardpoint": 1.0187,
+  "ct": 0.6313
+ },
+ "vehicles": {
+  "a01_chrysler_xm1_volcano": {
+   "factor": 0.9164,
+   "results": 368,
+   "name": "XM1V",
+   "role": "defender"
+  },
+  "a02_m1e1_120": {
+   "factor": 0.8789,
+   "results": 741,
+   "name": "M1E1",
+   "role": "defender"
+  },
+  "a03_m60a3": {
+   "factor": 1.0601,
+   "results": 572,
+   "name": "M60A3E2",
+   "role": "defender"
+  },
+  "a05_m551a1_sheridan": {
+   "factor": 1.0029,
+   "results": 85,
+   "name": "M551A1",
+   "role": "assault"
+  },
+  "a07_hstv_l": {
+   "factor": 0.9915,
+   "results": 266,
+   "name": "HSTV-L",
+   "role": "assault"
+  },
+  "a08_m3_bradley": {
+   "factor": 0.8566,
+   "results": 227,
+   "name": "M3E1",
+   "role": "marksman"
+  },
+  "a12_alvt": {
+   "factor": 1.1241,
+   "results": 457,
+   "name": "ALVT",
+   "role": "assault"
+  },
+  "a13_xm1_90": {
+   "factor": 0.9044,
+   "results": 371,
+   "name": "XM1 90",
+   "role": "assault"
+  },
+  "a14_m60a1": {
+   "factor": 1.0043,
+   "results": 218,
+   "name": "M60A1",
+   "role": "assault"
+  },
+  "a17_m1150_abv": {
+   "factor": 1.0585,
+   "results": 823,
+   "name": "M1150 ABV",
+   "role": "defender"
+  },
+  "a20_m60a2": {
+   "factor": 1.1582,
+   "results": 332,
+   "name": "M60A2",
+   "role": "assault"
+  },
+  "f05_amx_10_rc": {
+   "factor": 0.8585,
+   "results": 526,
+   "name": "AMX10 RC",
+   "role": "marksman"
+  },
+  "g01_leopard_1_a6_120": {
+   "factor": 0.9548,
+   "results": 965,
+   "name": "Leo 1A6A1",
+   "role": "marksman"
+  },
+  "g06_leopard2fk_atgm": {
+   "factor": 1.1191,
+   "results": 462,
+   "name": "Leo 2FK",
+   "role": "marksman"
+  },
+  "g07_marder1a3": {
+   "factor": 1.0566,
+   "results": 186,
+   "name": "Marder 1A3",
+   "role": "marksman"
+  },
+  "g11_leopard2k_st": {
+   "factor": 0.9712,
+   "results": 205,
+   "name": "LEO 2KST",
+   "role": "marksman"
+  },
+  "gb01_challenger": {
+   "factor": 0.9558,
+   "results": 299,
+   "name": "FV4030 X",
+   "role": "defender"
+  },
+  "r01_t_62a": {
+   "factor": 1.1325,
+   "results": 439,
+   "name": "T-62AV",
+   "role": "assault"
+  },
+  "r02_t_72a": {
+   "factor": 1.0305,
+   "results": 745,
+   "name": "T-72SH",
+   "role": "defender"
+  },
+  "r08_object_287": {
+   "factor": 0.9951,
+   "results": 214,
+   "name": "Obj. 287",
+   "role": "assault"
+  }
+ },
+ "default_vehicle_factor": 1.0,
+ "aliases": {
+  "a13_chrysler_xm1_ares_90": "a13_xm1_90"
+ }
+}
