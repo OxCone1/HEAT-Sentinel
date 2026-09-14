@@ -1,0 +1,19 @@
+{
+  "v": 1,
+  "id": "lockbox",
+  "name": "Lockbox",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "Amber electronics. Double chevrons on the diagonals close on the target as the spread settles, with a compact reload, magazine and heat stack under the aim point.",
+  "tags": [
+    "tactical",
+    "amber",
+    "rangefinder"
+  ],
+  "opts": {
+    "show": "always"
+  },
+  "preview": "preview.png"
+}

@@ -1,0 +1,319 @@
+{
+  "format": "heat.reticle",
+  "version": 1,
+  "name": "Blueprint",
+  "author": "HEAT Sentinel",
+  "hide": [
+    "ammo_wheel",
+    "reload_clock",
+    "loader_ammo_count",
+    "aim_static_ring",
+    "aim_ring_shadow",
+    "aim_reload_ring",
+    "aim_ring_highlight",
+    "aim_centre_mark",
+    "aim_front_sight",
+    "scope_reticle",
+    "range_readout"
+  ],
+  "widgets": [
+    {
+      "t": "ring",
+      "track": "none",
+      "r": -0.5,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 14.5,
+      "r_max": 8000,
+      "width": 1,
+      "color": "rgba(232,241,255,0.55)",
+      "shadow": "rgba(6,20,40,0.55)",
+      "shadow_width": 2,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ]
+      }
+    },
+    {
+      "t": "strips",
+      "sides": "all",
+      "count": 1,
+      "len": 10,
+      "thickness": 1,
+      "offset": 3,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 18,
+      "r_max": 8000,
+      "color": "#e8f1ffff",
+      "shadow": "rgba(6,20,40,0.55)",
+      "shadow_width": 2,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ]
+      }
+    },
+    {
+      "t": "dot",
+      "shape": "plus",
+      "w": 8,
+      "thickness": 1,
+      "gap": 0,
+      "color": "#e8f1ffff"
+    },
+    {
+      "t": "ring",
+      "track": "reload",
+      "r": -1,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 14,
+      "r_max": 8000,
+      "width": 2,
+      "cap": "butt",
+      "color": "#7fc8ffff",
+      "color_bg": null,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ],
+        "reloading": true
+      }
+    },
+    {
+      "t": "bar",
+      "track": "reload_time",
+      "x": -50,
+      "y": 90,
+      "w": 100,
+      "h": 1,
+      "color": "#7fc8ffff",
+      "color_bg": "rgba(232,241,255,0.16)",
+      "when": {
+        "reloading": true
+      }
+    },
+    {
+      "t": "shape",
+      "sp": [
+        {
+          "p": [
+            [
+              -50,
+              -4
+            ],
+            [
+              -50,
+              5
+            ]
+          ],
+          "c": false
+        },
+        {
+          "p": [
+            [
+              50,
+              -4
+            ],
+            [
+              50,
+              5
+            ]
+          ],
+          "c": false
+        }
+      ],
+      "scale": 1,
+      "y": 90,
+      "fill": null,
+      "stroke": "rgba(232,241,255,0.55)",
+      "sw": 1,
+      "when": {
+        "reloading": true
+      }
+    },
+    {
+      "t": "text",
+      "text": "{time_left:2} s",
+      "y": 102,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "color": "#e8f1ffff",
+      "shadow": "rgba(6,20,40,0.55)",
+      "when": {
+        "reloading": true
+      }
+    },
+    {
+      "t": "shells",
+      "layout": "stack",
+      "x": 80,
+      "y": -2,
+      "cell_w": 10,
+      "cell_h": 4,
+      "gap": 2,
+      "fill_dir": "right",
+      "border": true,
+      "border_width": 1,
+      "border_color": "rgba(232,241,255,0.55)",
+      "color_ready": "#e8f1ffff",
+      "color_loading": "#7fc8ffff",
+      "color_paused": "#ff8a7aff",
+      "color_empty": null,
+      "when": {
+        "magazine_min": 2,
+        "magazine_max": 14
+      }
+    },
+    {
+      "t": "bar",
+      "track": "magazine",
+      "x": 84,
+      "y": -50,
+      "w": 2,
+      "h": 50,
+      "fill_dir": "up",
+      "color": "#e8f1ffff",
+      "color_bg": "rgba(232,241,255,0.16)",
+      "when": {
+        "magazine_min": 15
+      }
+    },
+    {
+      "t": "text",
+      "text": "{shells_ready}/{magazine}",
+      "x": 80,
+      "y": 12,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "#e8f1ffff",
+      "shadow": "rgba(6,20,40,0.55)",
+      "when": {
+        "magazine_min": 2
+      }
+    },
+    {
+      "t": "text",
+      "text": "+{shell_time_left:1}",
+      "x": 80,
+      "y": 25,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "#7fc8ffff",
+      "shadow": "rgba(6,20,40,0.55)",
+      "when": {
+        "magazine_min": 2,
+        "round_loading": true
+      }
+    },
+    {
+      "t": "bar",
+      "track": "heat",
+      "x": -82,
+      "y": -50,
+      "w": 2,
+      "h": 50,
+      "fill_dir": "up",
+      "color": "#e8f1ffff",
+      "color_bg": "rgba(232,241,255,0.16)",
+      "when": {
+        "heat_gun": true
+      }
+    },
+    {
+      "t": "text",
+      "text": "HEAT",
+      "x": -90,
+      "y": -25,
+      "rotate": -90,
+      "size": 9,
+      "font": "Normalidad Compact 400",
+      "color": "rgba(232,241,255,0.55)",
+      "when": {
+        "heat_gun": true
+      }
+    },
+    {
+      "t": "bar",
+      "track": "none",
+      "x": -82,
+      "y": -50,
+      "w": 2,
+      "h": 50,
+      "color": "#ff8a7aff",
+      "color_bg": null,
+      "when": {
+        "overheated": true
+      }
+    },
+    {
+      "t": "text",
+      "text": "OVERHEAT",
+      "x": -81,
+      "y": 12,
+      "size": 10,
+      "font": "Normalidad Compact 500",
+      "color": "#ff8a7aff",
+      "shadow": "rgba(6,20,40,0.55)",
+      "when": {
+        "overheated": true
+      }
+    },
+    {
+      "t": "bar",
+      "source": "secondary",
+      "track": "magazine",
+      "x": -100,
+      "y": -50,
+      "w": 2,
+      "h": 50,
+      "fill_dir": "up",
+      "color": "#7fc8ffff",
+      "color_bg": null
+    },
+    {
+      "t": "text",
+      "source": "secondary",
+      "text": "{shells_ready}",
+      "x": -99,
+      "y": -58,
+      "size": 10,
+      "font": "Normalidad Compact 400",
+      "color": "#7fc8ffff",
+      "shadow": "rgba(6,20,40,0.55)"
+    },
+    {
+      "t": "text",
+      "text": "{distance:0} m",
+      "x": 80,
+      "y": 38,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "#e8f1ffff",
+      "shadow": "rgba(6,20,40,0.55)",
+      "when": {
+        "range_shown": true,
+        "range_close": false
+      }
+    },
+    {
+      "t": "text",
+      "text": "{distance:0} m",
+      "x": 80,
+      "y": 38,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "#ff8a7aff",
+      "shadow": "rgba(6,20,40,0.55)",
+      "when": {
+        "range_close": true
+      }
+    }
+  ]
+}

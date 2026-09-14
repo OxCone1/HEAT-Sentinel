@@ -1,0 +1,260 @@
+{
+  "format": "heat.reticle",
+  "version": 1,
+  "name": "Lockbox",
+  "author": "HEAT Sentinel",
+  "hide": [
+    "ammo_wheel",
+    "reload_clock",
+    "loader_ammo_count",
+    "aim_static_ring",
+    "aim_ring_shadow",
+    "aim_reload_ring",
+    "aim_ring_highlight",
+    "aim_centre_mark",
+    "aim_front_sight",
+    "scope_reticle",
+    "range_readout"
+  ],
+  "widgets": [
+    {
+      "t": "ring",
+      "track": "none",
+      "r": -0.5,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 14.5,
+      "r_max": 8000,
+      "width": 1,
+      "color": "rgba(255,179,0,0.45)",
+      "shadow": "rgba(12,8,0,0.55)",
+      "shadow_width": 2,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ]
+      }
+    },
+    {
+      "t": "strips",
+      "sides": "all",
+      "count": 2,
+      "len": 12,
+      "thickness": 1.5,
+      "offset": 5,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 20,
+      "r_max": 8000,
+      "step": 4,
+      "taper": 0.5,
+      "rotate": 45,
+      "color": "#ffb300ff",
+      "shadow": "rgba(12,8,0,0.55)",
+      "shadow_width": 2,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ]
+      }
+    },
+    {
+      "t": "dot",
+      "shape": "cross",
+      "w": 7,
+      "thickness": 1.2,
+      "gap": 2,
+      "color": "#ffb300ff"
+    },
+    {
+      "t": "ring",
+      "track": "reload",
+      "r": -1,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 14,
+      "r_max": 8000,
+      "width": 2,
+      "cap": "butt",
+      "color": "#ffb300ff",
+      "color_bg": null,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ],
+        "reloading": true
+      }
+    },
+    {
+      "t": "bar",
+      "track": "reload_time",
+      "x": -30,
+      "y": 92,
+      "w": 60,
+      "h": 3,
+      "color": "#ffb300ff",
+      "color_bg": "rgba(255,179,0,0.15)",
+      "when": {
+        "reloading": true
+      }
+    },
+    {
+      "t": "text",
+      "text": "{time_left:1}",
+      "x": 36,
+      "y": 93,
+      "size": 12,
+      "font": "Normalidad Extended 400",
+      "align": "left",
+      "color": "#ffb300ff",
+      "shadow": "rgba(12,8,0,0.55)",
+      "when": {
+        "reloading": true
+      }
+    },
+    {
+      "t": "shells",
+      "layout": "row",
+      "x": -30,
+      "y": 102,
+      "cell_w": 6,
+      "cell_h": 4,
+      "gap": 2,
+      "skew": -20,
+      "fill_dir": "right",
+      "color_ready": "#ffb300ff",
+      "color_loading": "rgba(255,179,0,0.45)",
+      "color_paused": "#ff4d2eff",
+      "color_empty": "rgba(255,179,0,0.15)",
+      "when": {
+        "magazine_min": 2,
+        "magazine_max": 8
+      }
+    },
+    {
+      "t": "bar",
+      "track": "magazine",
+      "x": -30,
+      "y": 102,
+      "w": 60,
+      "h": 3,
+      "skew": -20,
+      "color": "#ffb300ff",
+      "color_bg": "rgba(255,179,0,0.15)",
+      "when": {
+        "magazine_min": 9
+      }
+    },
+    {
+      "t": "text",
+      "text": "{shells_ready}",
+      "x": 36,
+      "y": 104,
+      "size": 11,
+      "font": "Normalidad Extended 400",
+      "align": "left",
+      "color": "#ffb300ff",
+      "shadow": "rgba(12,8,0,0.55)",
+      "when": {
+        "magazine_min": 9
+      }
+    },
+    {
+      "t": "text",
+      "text": "+{shell_time_left:1}",
+      "x": -36,
+      "y": 104,
+      "size": 11,
+      "font": "Normalidad Extended 400",
+      "align": "right",
+      "color": "rgba(255,179,0,0.45)",
+      "shadow": "rgba(12,8,0,0.55)",
+      "when": {
+        "magazine_min": 2,
+        "round_loading": true
+      }
+    },
+    {
+      "t": "bar",
+      "track": "heat",
+      "x": -30,
+      "y": 114,
+      "w": 60,
+      "h": 2,
+      "color": {
+        "g": "linear",
+        "p": [
+          0,
+          0,
+          60,
+          0
+        ],
+        "s": [
+          [
+            0,
+            "#ffb300ff"
+          ],
+          [
+            1,
+            "#ff4d2eff"
+          ]
+        ]
+      },
+      "color_bg": "rgba(255,179,0,0.15)",
+      "when": {
+        "heat_gun": true
+      }
+    },
+    {
+      "t": "text",
+      "text": "OVERHEAT",
+      "y": 128,
+      "size": 12,
+      "font": "Normalidad Extended 400",
+      "color": "#ff4d2eff",
+      "shadow": "rgba(12,8,0,0.55)",
+      "when": {
+        "overheated": true
+      }
+    },
+    {
+      "t": "text",
+      "source": "secondary",
+      "text": "2ND {shells_ready}",
+      "x": -36,
+      "y": 93,
+      "size": 11,
+      "font": "Normalidad Extended 400",
+      "align": "right",
+      "color": "rgba(255,179,0,0.45)",
+      "shadow": "rgba(12,8,0,0.55)"
+    },
+    {
+      "t": "text",
+      "text": "{distance:0} m",
+      "x": 0,
+      "y": -58,
+      "size": 11,
+      "font": "Normalidad Extended 400",
+      "color": "#ffb300ff",
+      "shadow": "rgba(12,8,0,0.55)",
+      "when": {
+        "range_shown": true,
+        "range_close": false
+      }
+    },
+    {
+      "t": "text",
+      "text": "{distance:0} m",
+      "x": 0,
+      "y": -58,
+      "size": 11,
+      "font": "Normalidad Extended 400",
+      "color": "#ff4d2eff",
+      "shadow": "rgba(12,8,0,0.55)",
+      "when": {
+        "range_close": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "v": 1,
+  "id": "phosphor",
+  "name": "Phosphor",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "A fighter-jet head-up display in phosphor green. The spread circle becomes a gun cross, and reload, magazine, next round and temperature sit in a tidy data block beside it.",
+  "tags": [
+    "hud",
+    "minimal",
+    "monochrome"
+  ],
+  "opts": {
+    "show": "always"
+  },
+  "preview": "preview.png"
+}

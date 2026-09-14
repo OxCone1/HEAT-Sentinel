@@ -1,0 +1,305 @@
+{
+  "format": "heat.reticle",
+  "version": 1,
+  "name": "Phosphor",
+  "author": "HEAT Sentinel",
+  "hide": [
+    "ammo_wheel",
+    "reload_clock",
+    "loader_ammo_count",
+    "aim_static_ring",
+    "aim_ring_shadow",
+    "aim_reload_ring",
+    "aim_ring_highlight",
+    "aim_centre_mark",
+    "aim_front_sight",
+    "scope_reticle",
+    "range_readout"
+  ],
+  "widgets": [
+    {
+      "t": "ring",
+      "track": "none",
+      "r": -0.5,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 14.5,
+      "r_max": 8000,
+      "width": 1.2,
+      "color": "#7cffa0ff",
+      "shadow": "rgba(0,18,8,0.55)",
+      "shadow_width": 2,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ]
+      }
+    },
+    {
+      "t": "strips",
+      "sides": "all",
+      "count": 1,
+      "len": 6,
+      "thickness": 1.2,
+      "offset": 1,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 16,
+      "r_max": 8000,
+      "color": "#7cffa0ff",
+      "shadow": "rgba(0,18,8,0.55)",
+      "shadow_width": 2,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ]
+      }
+    },
+    {
+      "t": "dot",
+      "shape": "circle",
+      "w": 2.5,
+      "h": 2.5,
+      "color": "#7cffa0ff"
+    },
+    {
+      "t": "ring",
+      "track": "reload",
+      "r": 4,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 19,
+      "r_max": 8000,
+      "width": 2,
+      "cap": "butt",
+      "color": "#7cffa0ff",
+      "color_bg": null,
+      "shadow": "rgba(0,18,8,0.55)",
+      "shadow_width": 2,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ],
+        "reloading": true
+      }
+    },
+    {
+      "t": "shape",
+      "sp": [
+        {
+          "p": [
+            [
+              0,
+              -40
+            ],
+            [
+              0,
+              30
+            ]
+          ],
+          "c": false
+        }
+      ],
+      "scale": 1,
+      "x": 84,
+      "fill": null,
+      "stroke": "rgba(124,255,160,0.4)",
+      "sw": 1
+    },
+    {
+      "t": "text",
+      "text": "RLD {time_left:1}",
+      "x": 90,
+      "y": -32,
+      "size": 12,
+      "font": "Normalidad Compact 500",
+      "align": "left",
+      "color": "#7cffa0ff",
+      "shadow": "rgba(0,18,8,0.55)",
+      "when": {
+        "reloading": true
+      }
+    },
+    {
+      "t": "text",
+      "text": "RDY",
+      "x": 90,
+      "y": -32,
+      "size": 12,
+      "font": "Normalidad Compact 500",
+      "align": "left",
+      "color": "#7cffa0ff",
+      "shadow": "rgba(0,18,8,0.55)",
+      "when": {
+        "reloading": false,
+        "heat_gun": false
+      }
+    },
+    {
+      "t": "text",
+      "text": "MAG {shells_ready}/{magazine}",
+      "x": 90,
+      "y": -18,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "#7cffa0ff",
+      "shadow": "rgba(0,18,8,0.55)",
+      "when": {
+        "magazine_min": 2
+      }
+    },
+    {
+      "t": "text",
+      "text": "NXT {shell_time_left:1}",
+      "x": 90,
+      "y": -4,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "rgba(124,255,160,0.4)",
+      "shadow": "rgba(0,18,8,0.55)",
+      "when": {
+        "magazine_min": 2,
+        "round_loading": true
+      }
+    },
+    {
+      "t": "shells",
+      "layout": "row",
+      "x": 90,
+      "y": 8,
+      "cell_w": 4,
+      "cell_h": 4,
+      "gap": 3,
+      "fill_dir": "up",
+      "color_ready": "#7cffa0ff",
+      "color_loading": "rgba(124,255,160,0.4)",
+      "color_paused": "#ffcf5aff",
+      "color_empty": "rgba(124,255,160,0.14)",
+      "when": {
+        "magazine_min": 2,
+        "magazine_max": 12
+      }
+    },
+    {
+      "t": "bar",
+      "track": "magazine",
+      "x": 90,
+      "y": 9,
+      "w": 60,
+      "h": 2,
+      "color": "#7cffa0ff",
+      "color_bg": "rgba(124,255,160,0.14)",
+      "when": {
+        "magazine_min": 13
+      }
+    },
+    {
+      "t": "text",
+      "text": "TMP",
+      "x": 90,
+      "y": 24,
+      "size": 10,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "#7cffa0ff",
+      "shadow": "rgba(0,18,8,0.55)",
+      "when": {
+        "heat_gun": true
+      }
+    },
+    {
+      "t": "bar",
+      "track": "heat",
+      "x": 112,
+      "y": 23,
+      "w": 40,
+      "h": 2,
+      "color": "#7cffa0ff",
+      "color_bg": "rgba(124,255,160,0.14)",
+      "when": {
+        "heat_gun": true
+      }
+    },
+    {
+      "t": "bar",
+      "track": "none",
+      "x": 112,
+      "y": 23,
+      "w": 40,
+      "h": 2,
+      "color": "#ffcf5aff",
+      "color_bg": null,
+      "when": {
+        "overheated": true
+      }
+    },
+    {
+      "t": "text",
+      "text": "OVERHEAT",
+      "x": 90,
+      "y": 38,
+      "size": 11,
+      "font": "Normalidad Compact 500",
+      "align": "left",
+      "color": "#ffcf5aff",
+      "shadow": "rgba(0,18,8,0.55)",
+      "when": {
+        "overheated": true
+      }
+    },
+    {
+      "t": "text",
+      "source": "secondary",
+      "text": "SEC {shells_ready}",
+      "x": -84,
+      "y": -32,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "right",
+      "color": "#7cffa0ff",
+      "shadow": "rgba(0,18,8,0.55)"
+    },
+    {
+      "t": "bar",
+      "source": "secondary",
+      "track": "magazine",
+      "x": -144,
+      "y": -22,
+      "w": 60,
+      "h": 2,
+      "color": "#7cffa0ff",
+      "color_bg": null
+    },
+    {
+      "t": "text",
+      "text": "RNG {distance:0}",
+      "x": 90,
+      "y": -46,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "#7cffa0ff",
+      "shadow": "rgba(0,18,8,0.55)",
+      "when": {
+        "range_shown": true,
+        "range_close": false
+      }
+    },
+    {
+      "t": "text",
+      "text": "RNG {distance:0}",
+      "x": 90,
+      "y": -46,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "#ffcf5aff",
+      "shadow": "rgba(0,18,8,0.55)",
+      "when": {
+        "range_close": true
+      }
+    }
+  ]
+}

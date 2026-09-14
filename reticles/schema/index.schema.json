@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://heat-sentinel.app/schema/reticle-index.schema.json",
+  "title": "HEAT Sentinel reticle index",
+  "description": "`reticles/index.json`: every shipped reticle in one file, so the app reads one document instead of walking a directory it may be reading out of an installer's resource folder. GENERATED, never hand-edited — `py scripts/build_reticle_index.py` writes it from the per-folder manifests, and `--check` fails CI when it is stale. Same manifest shape as `sentinel-repo/public-catalog/catalog.json`: a version, a generation time, counts, and a hash per file.",
+  "type": "object",
+  "required": ["v", "generated", "counts", "reticles"],
+  "additionalProperties": false,
+  "properties": {
+    "v": { "type": "integer", "const": 1 },
+    "generated": {
+      "description": "When the generator last ran, RFC 3339 in UTC. `null` in a checked-in empty index that no generator run has touched.",
+      "type": ["string", "null"]
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reticles": { "type": "integer", "minimum": 0 },
+        "blk": { "type": "integer", "minimum": 0 },
+        "image": { "type": "integer", "minimum": 0 },
+        "pack": { "type": "integer", "minimum": 0 }
+      },
+      "required": ["reticles"]
+    },
+    "reticles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "description": "One manifest, plus what the generator worked out: which folder it is in, which kind its file turned out to be, and a hash per shipped file so an update can be told from a re-upload.",
+        "required": ["id", "name", "dir", "file", "kind", "files"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "dir": {
+            "description": "Folder name under `reticles/`, which is also the id.",
+            "type": "string"
+          },
+          "file": { "type": "string" },
+          "kind": { "enum": ["blk", "image", "pack", "svg"] },
+          "author": { "type": "string" },
+          "license": { "type": "string" },
+          "source": { "type": "string" },
+          "description": { "type": "string" },
+          "preview": { "type": "string" },
+          "tags": { "type": "array", "items": { "type": "string" } },
+          "unitRef": { "type": "string" },
+          "opts": { "type": "object" },
+          "image": { "type": "object" },
+          "files": {
+            "description": "Every file the folder ships, by name relative to it.",
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "required": ["bytes", "sha256"],
+              "properties": {
+                "bytes": { "type": "integer", "minimum": 0 },
+                "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

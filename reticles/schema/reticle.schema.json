@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://heat-sentinel.app/schema/reticle.schema.json",
+  "title": "HEAT Sentinel reticle manifest",
+  "description": "One `reticle.json`, in one folder under `reticles/`. Describes a single shipped sight: what it is, who made it, which file holds the drawing, and where the author thinks it should sit. Everything except `id`, `name` and `file` has a working default, because a reticle that only names its file is a legitimate contribution.",
+  "type": "object",
+  "required": ["v", "id", "name", "file"],
+  "additionalProperties": false,
+  "properties": {
+    "v": {
+      "description": "Manifest version. 1 is the only one there has been.",
+      "type": "integer",
+      "const": 1
+    },
+    "id": {
+      "description": "Stable address of this reticle, and the folder name. Lower-case, digits, dash. It travels in settings and in links, so renaming one is a breaking change for anybody who applied it.",
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]{1,62}$"
+    },
+    "name": {
+      "description": "What a person calls it, shown in the tray.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 48
+    },
+    "file": {
+      "description": "The drawing, relative to this manifest's own folder. No `..`, no absolute paths, no subdirectories above this one.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+$",
+      "maxLength": 96
+    },
+    "kind": {
+      "description": "What `file` is. Omitted, it is inferred from the extension and then from the bytes, exactly as an import from disk is. `svg` is flattened to vector shapes on import, not handed to the game as a document.",
+      "enum": ["blk", "image", "pack", "svg"]
+    },
+    "author": {
+      "description": "Who drew it. A name or a handle; not an email.",
+      "type": "string",
+      "maxLength": 64
+    },
+    "license": {
+      "description": "SPDX identifier, or a short phrase for anything without one. Required in practice by the contribution rules even though the schema does not force it, because a drawing with no stated licence cannot be shipped.",
+      "type": "string",
+      "maxLength": 64
+    },
+    "source": {
+      "description": "Where it came from, for credit and for checking updates: a forum post, a repository, a gallery page.",
+      "type": "string",
+      "format": "uri",
+      "maxLength": 300
+    },
+    "description": {
+      "description": "One or two sentences on what it is for. Shown under the name.",
+      "type": "string",
+      "maxLength": 400
+    },
+    "preview": {
+      "description": "A small picture of the sight in use, relative to this folder. Not the drawing itself.",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]+$",
+      "maxLength": 96
+    },
+    "tags": {
+      "description": "Free-form labels for filtering: `minimal`, `mil`, `art`, `rangefinder`, `autoloader`.",
+      "type": "array",
+      "maxItems": 12,
+      "items": { "type": "string", "maxLength": 24 }
+    },
+    "unitRef": {
+      "description": "What a coordinate of 1.0 means for a `.blk`. `height` is right for everything measured so far; the field exists because one screenshot is one aspect ratio. Ignored for a picture.",
+      "enum": ["half_height", "height", "half_width", "width"]
+    },
+    "opts": {
+      "description": "The placement the author recommends. Applied WITH the reticle, so a drawing made for another game's proportions arrives fitted rather than needing four sliders moved. Every field is optional and clamped by `cdp/sight.py` on the way in.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "show": { "enum": ["sniper", "always", "third_person"] },
+        "anchor": { "enum": ["crosshair", "screen"] },
+        "central": { "enum": ["off", "file", "on"] },
+        "scale": { "type": "number", "exclusiveMinimum": 0, "maximum": 100 },
+        "offset": {
+          "description": "Screen pixels at 1080p, added after scaling.",
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": { "type": "number" }
+        },
+        "line_width": { "type": "number", "exclusiveMinimum": 0, "maximum": 50 },
+        "font_scale": { "type": "number", "exclusiveMinimum": 0, "maximum": 50 },
+        "color_main": {
+          "description": "Overrides whatever the drawing asked for. Leave it out unless the reticle only reads in one colour.",
+          "type": "string", "maxLength": 32
+        },
+        "scale_with_zoom": { "type": "boolean" },
+        "spread_scale": {
+          "description": "Multiplies everything in a pack that follows the gun's spread. 1 is the game's own circle, 0.75 the smallest allowed.",
+          "type": "number", "minimum": 0.75, "maximum": 3
+        },
+        "fov_deg": { "type": "number", "minimum": 0, "maximum": 180 },
+        "mil_uses_zoom": { "type": "boolean" }
+      }
+    },
+    "image": {
+      "description": "Placement for a picture reticle. `anchor` is the point of the BITMAP that aims, as a fraction of it, and it is the one field a picture cannot be used well without.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "anchor": {
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": { "type": "number", "minimum": -4, "maximum": 4 }
+        },
+        "p": {
+          "description": "Where that anchor point sits, relative to the aim point, in sight units.",
+          "type": "array", "minItems": 2, "maxItems": 2,
+          "items": { "type": "number" }
+        },
+        "w": {
+          "description": "Width in sight units. 0 means the bitmap's own pixels.",
+          "type": "number", "minimum": 0, "maximum": 100
+        },
+        "h": {
+          "description": "Height in sight units. 0 keeps the bitmap's aspect ratio, which is almost always what is wanted.",
+          "type": "number", "minimum": 0, "maximum": 100
+        },
+        "opacity": { "type": "number", "minimum": 0, "maximum": 1 },
+        "mil": {
+          "description": "Treat `p`, `w` and `h` as milliradians rather than screen fractions. Needs the user's FOV calibration to mean anything.",
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

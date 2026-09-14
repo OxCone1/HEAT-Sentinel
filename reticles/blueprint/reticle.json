@@ -1,0 +1,19 @@
+{
+  "v": 1,
+  "id": "blueprint",
+  "name": "Blueprint",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "A technical drawing. Registration marks on the spread circle, reload as a dimension line with its value in seconds, and rounds as outlined boxes on a drafting sheet.",
+  "tags": [
+    "technical",
+    "minimal",
+    "precise"
+  ],
+  "opts": {
+    "show": "always"
+  },
+  "preview": "preview.png"
+}

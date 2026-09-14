@@ -1,0 +1,19 @@
+{
+  "v": 1,
+  "id": "brass-belt",
+  "name": "Brass Belt",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "Real cartridges. Each round is a drawn shell that fills from the base as it loads, the machine gun is a nickel belt, and heat is a slim strip that runs brass to red.",
+  "tags": [
+    "art",
+    "autoloader",
+    "heat"
+  ],
+  "opts": {
+    "show": "always"
+  },
+  "preview": "preview.png"
+}

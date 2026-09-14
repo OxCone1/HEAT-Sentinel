@@ -1,0 +1,19 @@
+{
+  "v": 1,
+  "id": "neon-drift",
+  "name": "Neon Drift",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "Cyan to magenta. The game's spread circle in neon with a glowing reload ring riding it, a fan of rounds overhead and chromatic split numbers.",
+  "tags": [
+    "art",
+    "colour",
+    "autoloader"
+  ],
+  "opts": {
+    "show": "always"
+  },
+  "preview": "preview.png"
+}

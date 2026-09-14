@@ -1,0 +1,246 @@
+{
+  "v": 1,
+  "generated": "2026-09-14T11:58:45Z",
+  "counts": {
+    "reticles": 8,
+    "blk": 0,
+    "image": 0,
+    "pack": 8,
+    "svg": 0
+  },
+  "reticles": [
+    {
+      "id": "blueprint",
+      "name": "Blueprint",
+      "dir": "blueprint",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "A technical drawing. Registration marks on the spread circle, reload as a dimension line with its value in seconds, and rounds as outlined boxes on a drafting sheet.",
+      "preview": "preview.png",
+      "tags": [
+        "technical",
+        "minimal",
+        "precise"
+      ],
+      "opts": {
+        "show": "always"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 6518,
+          "sha256": "a65100f48dea729a7952c4a7f2825e9e2c6e70365e2fcd925366e01998bd2a81"
+        },
+        "preview.png": {
+          "bytes": 52760,
+          "sha256": "cd662c453232f323341114a37fcb36d4839fe6fe5b9850bac0c8040a82f18b83"
+        }
+      }
+    },
+    {
+      "id": "brass-belt",
+      "name": "Brass Belt",
+      "dir": "brass-belt",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "Real cartridges. Each round is a drawn shell that fills from the base as it loads, the machine gun is a nickel belt, and heat is a slim strip that runs brass to red.",
+      "preview": "preview.png",
+      "tags": [
+        "art",
+        "autoloader",
+        "heat"
+      ],
+      "opts": {
+        "show": "always"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 9037,
+          "sha256": "58468de678155d99502ad9dd203bb845e14494673f01660bf4f65bfbbf780055"
+        },
+        "preview.png": {
+          "bytes": 54600,
+          "sha256": "d680f55d8a7f0c07a4220bcafd68950828a146e98ea2f12fd1fbeec44b0c67f7"
+        }
+      }
+    },
+    {
+      "id": "ember",
+      "name": "Ember",
+      "dir": "ember",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "Quiet and warm. The spread circle drawn as four soft arcs, a vermilion aim dot and reload stroke, and rounds as beads that float just outside the bloom.",
+      "preview": "preview.png",
+      "tags": [
+        "minimal",
+        "elegant",
+        "autoloader"
+      ],
+      "opts": {
+        "show": "always"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 9451,
+          "sha256": "fd211b39cba59f6dc187987560aa73184483a8dd6b89aba4ce2d617c50027cf8"
+        },
+        "preview.png": {
+          "bytes": 50295,
+          "sha256": "39763e88eb31a6197cad3b5c9f7eeab4842a12b95da8975c4f4c8b3188cb118e"
+        }
+      }
+    },
+    {
+      "id": "field-standard",
+      "name": "Field Standard",
+      "dir": "field-standard",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "The stock HUD, finished. Same arcs, colours and spread circle as the game, plus the per-round refill timer, a ready count, a heat gauge and the second gun.",
+      "preview": "preview.png",
+      "tags": [
+        "stock",
+        "autoloader",
+        "heat",
+        "clean"
+      ],
+      "opts": {
+        "show": "always"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 6042,
+          "sha256": "9a7b5f8e41492555ba875994d4328d0d541d97593e6ce78fc683304a672cdfda"
+        },
+        "preview.png": {
+          "bytes": 56892,
+          "sha256": "3287759d02a850c1f323100361a943959014c4063d6a883c527a1a4119ca20cb"
+        }
+      }
+    },
+    {
+      "id": "lockbox",
+      "name": "Lockbox",
+      "dir": "lockbox",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "Amber electronics. Double chevrons on the diagonals close on the target as the spread settles, with a compact reload, magazine and heat stack under the aim point.",
+      "preview": "preview.png",
+      "tags": [
+        "tactical",
+        "amber",
+        "rangefinder"
+      ],
+      "opts": {
+        "show": "always"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 5388,
+          "sha256": "21bfb45d202e32cdfca54a4c223c1cc06e108b653b698f4de6d0150d71c01174"
+        },
+        "preview.png": {
+          "bytes": 52214,
+          "sha256": "eb697b104f1fdcf704a6de1cbc7ca3a59a8abb6f300b53e8072247df4b678ef3"
+        }
+      }
+    },
+    {
+      "id": "neon-drift",
+      "name": "Neon Drift",
+      "dir": "neon-drift",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "Cyan to magenta. The game's spread circle in neon with a glowing reload ring riding it, a fan of rounds overhead and chromatic split numbers.",
+      "preview": "preview.png",
+      "tags": [
+        "art",
+        "colour",
+        "autoloader"
+      ],
+      "opts": {
+        "show": "always"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 6892,
+          "sha256": "0dbd8f59a5af1174ee3bb897cc8e5bf2b13ed3468cb2e40d3227651fec864e4d"
+        },
+        "preview.png": {
+          "bytes": 51010,
+          "sha256": "82f80ccef725c397b72e93006a52a511cbc21f2cd30af1179de8b973bf8619c6"
+        }
+      }
+    },
+    {
+      "id": "phosphor",
+      "name": "Phosphor",
+      "dir": "phosphor",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "A fighter-jet head-up display in phosphor green. The spread circle becomes a gun cross, and reload, magazine, next round and temperature sit in a tidy data block beside it.",
+      "preview": "preview.png",
+      "tags": [
+        "hud",
+        "minimal",
+        "monochrome"
+      ],
+      "opts": {
+        "show": "always"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 6333,
+          "sha256": "42b4f3b6e5177d9082a8f1c732e0174520402d1fbdf32fc5ae7cc63c47a59a76"
+        },
+        "preview.png": {
+          "bytes": 56418,
+          "sha256": "64b08fe3f5aaf944d46596bdde5570db614d2872dd6a0428526c14e4e9ad4dfd"
+        }
+      }
+    },
+    {
+      "id": "recon-minimal",
+      "name": "Recon Minimal",
+      "dir": "recon-minimal",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "Hairlines only. The game's spread circle as a thin line with ranging ticks riding outside it, and ammo and heat as quiet side tapes.",
+      "preview": "preview.png",
+      "tags": [
+        "minimal",
+        "rangefinder",
+        "sniper"
+      ],
+      "opts": {
+        "show": "always"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 5615,
+          "sha256": "d95b1f7c54d5e7d93aa5fe79ee6238c1dd683fb54d6465ec3d51329095f4cb71"
+        },
+        "preview.png": {
+          "bytes": 52564,
+          "sha256": "75983ed0e62722222f5c3650e171b1baa3f4f06802e805e085d5fa907160a198"
+        }
+      }
+    }
+  ]
+}

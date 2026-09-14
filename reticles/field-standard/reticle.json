@@ -1,0 +1,20 @@
+{
+  "v": 1,
+  "id": "field-standard",
+  "name": "Field Standard",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "The stock HUD, finished. Same arcs, colours and spread circle as the game, plus the per-round refill timer, a ready count, a heat gauge and the second gun.",
+  "tags": [
+    "stock",
+    "autoloader",
+    "heat",
+    "clean"
+  ],
+  "opts": {
+    "show": "always"
+  },
+  "preview": "preview.png"
+}

@@ -1,0 +1,19 @@
+{
+  "v": 1,
+  "id": "recon-minimal",
+  "name": "Recon Minimal",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "Hairlines only. The game's spread circle as a thin line with ranging ticks riding outside it, and ammo and heat as quiet side tapes.",
+  "tags": [
+    "minimal",
+    "rangefinder",
+    "sniper"
+  ],
+  "opts": {
+    "show": "always"
+  },
+  "preview": "preview.png"
+}

@@ -1,0 +1,19 @@
+{
+  "v": 1,
+  "id": "ember",
+  "name": "Ember",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "Quiet and warm. The spread circle drawn as four soft arcs, a vermilion aim dot and reload stroke, and rounds as beads that float just outside the bloom.",
+  "tags": [
+    "minimal",
+    "elegant",
+    "autoloader"
+  ],
+  "opts": {
+    "show": "always"
+  },
+  "preview": "preview.png"
+}
