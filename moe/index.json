@@ -2,12 +2,6 @@
  "schema": 1,
  "packs": [
   {
-   "version": "2026.09.12-1",
-   "effective_from": "2026-07-10",
-   "path": "packs/2026.09.12-1.json",
-   "sha256": "84958c00b230fd46fb808327f0c2c6447b301d7c70335682242a84dc02251592"
-  },
-  {
    "version": "2026.07.10-1",
    "effective_from": "2026-07-10",
    "path": "packs/2026.07.10-1.json",
