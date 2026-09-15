@@ -76,7 +76,7 @@
       "additionalProperties": false,
       "properties": {
         "show": { "enum": ["sniper", "always", "third_person"] },
-        "anchor": { "enum": ["crosshair", "screen"] },
+        "anchor": { "enum": ["crosshair", "screen", "aim_static"] },
         "central": { "enum": ["off", "file", "on"] },
         "scale": { "type": "number", "exclusiveMinimum": 0, "maximum": 100 },
         "offset": {
