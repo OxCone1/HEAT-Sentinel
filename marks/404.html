@@ -1,0 +1,1179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEAT Marks of Excellence</title>
+<meta name="description" content="What a Mark of Excellence costs in HEAT: the published calibration, every tank and mode, and a calculator for one battle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root {
+  --ground: #f3f4f6; --panel: #ffffff; --inset: #eceef2; --line: #d9dde4; --line-strong: #bfc5cf;
+  --ink: #1b1e24; --ink-2: #4b525e; --ink-3: #7a818d;
+  --gold: #a4760e; --gold-soft: rgba(164, 118, 14, 0.14); --gold-dim: #d8cbaa;
+  --up: #2f8a57; --up-soft: rgba(47, 138, 87, 0.13); --down: #bf4a3a; --down-soft: rgba(191, 74, 58, 0.12);
+  --warn: #b0660c; --focus: #2d6fd6;
+  --display: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body: "Barlow", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #121418; --panel: #181b20; --inset: #1f2329; --line: #2a2f38; --line-strong: #3a414d;
+    --ink: #e3e6ec; --ink-2: #b4bac5; --ink-3: #858c98;
+    --gold: #e8b93f; --gold-soft: rgba(232, 185, 63, 0.13); --gold-dim: #4a4230;
+    --up: #5fc18b; --up-soft: rgba(95, 193, 139, 0.14); --down: #ec7a68; --down-soft: rgba(236, 122, 104, 0.14);
+    --warn: #e39a3c; --focus: #7aa7f0;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--ink); font: 400 14px/1.45 var(--body); padding-inline: 16px; }
+.app { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 20px; max-width: 1580px; margin: 0 auto; padding-block: 18px 40px; }
+@media (max-width: 980px) { .app { grid-template-columns: minmax(0, 1fr); } }
+h1, h2, h3, .label, th { font-family: var(--display); text-transform: uppercase; letter-spacing: 0.06em; }
+h1 { font-size: 26px; font-weight: 700; margin: 0; line-height: 1; letter-spacing: 0.04em; }
+h2 { font-size: 17px; font-weight: 600; margin: 0; }
+h3 { font-size: 13px; font-weight: 600; margin: 0; color: var(--ink-3); }
+.label { font-size: 12px; font-weight: 600; color: var(--ink-3); }
+.muted { color: var(--ink-3); }
+p { margin: 0; max-width: 68ch; }
+a { color: inherit; }
+
+.rail { position: sticky; top: 12px; align-self: start; max-height: calc(100vh - 24px); overflow-y: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 6px; }
+@media (max-width: 980px) { .rail { position: static; max-height: none; } }
+.rail-head { padding: 16px 16px 12px; border-bottom: 1px solid var(--line); display: grid; gap: 6px; }
+.rail-head .sub { font-size: 12.5px; color: var(--ink-3); }
+.rail section { padding: 14px 16px; border-bottom: 1px solid var(--line); display: grid; gap: 10px; }
+.rail section:last-child { border-bottom: 0; }
+.field { display: grid; grid-template-columns: 1fr 112px; align-items: center; gap: 8px; }
+.field label { font-size: 13px; color: var(--ink-2); }
+.field .hint { grid-column: 1 / -1; font-size: 11.5px; color: var(--ink-3); margin-top: -4px; font-family: var(--mono); line-height: 1.5; }
+.field.wide { grid-template-columns: 1fr; }
+input[type="number"], input[type="date"], select {
+  width: 100%; font: 500 13px var(--mono); color: var(--ink); background: var(--inset);
+  border: 1px solid var(--line); border-radius: 4px; padding: 5px 7px; font-variant-numeric: tabular-nums;
+}
+select { font-family: var(--body); font-size: 13px; }
+input:hover:not(:disabled), select:hover:not(:disabled) { border-color: var(--line-strong); }
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+input.changed { border-color: var(--gold); background: var(--gold-soft); }
+/* Reading is the default state of this page, so a disabled control has to stay
+   legible rather than fade out: those numbers are the point of looking. */
+input:disabled, select:disabled { color: var(--ink); background: transparent; border-color: transparent; padding-left: 0; opacity: 1; -webkit-text-fill-color: var(--ink); }
+input[type="checkbox"] { accent-color: var(--gold); width: 15px; height: 15px; margin: 0; }
+input[type="checkbox"]:disabled { opacity: 0.75; }
+.thr { display: grid; grid-template-columns: 30px 1fr 84px; gap: 8px; align-items: center; }
+.thr .hint { grid-column: 2 / -1; font-size: 11.5px; color: var(--ink-3); font-family: var(--mono); margin-top: -4px; line-height: 1.5; }
+button { font: 600 13px var(--display); text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink); background: var(--inset); border: 1px solid var(--line-strong); border-radius: 4px; padding: 7px 12px; cursor: pointer; }
+button:hover { border-color: var(--ink-3); }
+button.primary { background: var(--gold); border-color: var(--gold); color: #17140c; }
+button:disabled { opacity: 0.5; cursor: not-allowed; }
+.btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.note { font-size: 12px; color: var(--ink-3); line-height: 1.45; }
+.note b { color: var(--ink-2); }
+.errors { font-size: 12px; color: var(--down); display: grid; gap: 2px; }
+.good { color: var(--up); }
+.bad { color: var(--down); }
+.status { font: 12px var(--mono); color: var(--ink-2); line-height: 1.5; overflow-wrap: anywhere; }
+.banner { padding: 10px 14px; border: 1px solid var(--warn); border-radius: 6px; color: var(--ink); background: var(--panel); font-size: 13px; }
+
+.mk { display: inline-flex; gap: 2px; vertical-align: middle; }
+.mk i { width: 5px; height: 12px; background: var(--gold-dim); transform: skewX(-22deg); border-radius: 1px; }
+.mk[data-m="1"] i:nth-child(-n+1), .mk[data-m="2"] i:nth-child(-n+2), .mk[data-m="3"] i { background: var(--gold); }
+
+main { display: grid; gap: 20px; min-width: 0; align-content: start; }
+.block { background: var(--panel); border: 1px solid var(--line); border-radius: 6px; min-width: 0; }
+.block-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; padding: 14px 16px 10px; }
+.block-head p { font-size: 12.5px; color: var(--ink-3); }
+.block-body { padding: 0 16px 14px; display: grid; gap: 10px; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; }
+th { font-size: 11.5px; font-weight: 600; color: var(--ink-3); text-align: right; padding: 7px 10px; white-space: nowrap; border-bottom: 1px solid var(--line); background: var(--panel); }
+th.l, td.l { text-align: left; }
+td { padding: 6px 10px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap; font-family: var(--mono); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+tbody tr:last-child td { border-bottom: 0; }
+tbody tr:hover td { background: var(--inset); }
+td.name { font-family: var(--body); font-weight: 600; font-size: 13.5px; }
+.role { font: 600 10.5px var(--display); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-left: 6px; }
+td input[type="number"] { width: 78px; padding: 3px 6px; font-size: 12.5px; }
+td input[type="number"]:disabled { width: auto; padding: 0; }
+.delta-up { color: var(--up); }
+.delta-down { color: var(--down); }
+.flag { color: var(--warn); font-family: var(--body); font-size: 11.5px; }
+th.group { text-align: center; color: var(--ink-2); border-bottom: 0; padding-bottom: 0; }
+td.sep, th.sep { border-left: 1px solid var(--line); }
+.seg { display: inline-flex; border: 1px solid var(--line-strong); border-radius: 4px; overflow: hidden; }
+.seg button { border: 0; border-radius: 0; padding: 4px 10px; background: transparent; font-size: 12px; }
+.seg button + button { border-left: 1px solid var(--line-strong); }
+.seg button[aria-pressed="true"] { background: var(--gold); color: #17140c; }
+.legend-inline { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--ink-3); padding: 0 16px 12px; }
+.legend-inline b { color: var(--ink-2); font-weight: 600; }
+.cl-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 0 16px 12px; font-size: 13px; color: var(--ink-2); }
+.cl-parts { display: grid; gap: 12px; padding: 0 16px 16px; }
+.cl-parts:empty { display: none; }
+.part { display: grid; gap: 6px; }
+.part-head { display: flex; align-items: center; gap: 12px; }
+.part-head .count { font: 12px var(--mono); color: var(--ink-3); margin-right: auto; }
+.part-head .count.over { color: var(--down); }
+.part textarea { width: 100%; min-height: 180px; resize: vertical; font: 12px/1.5 var(--mono); color: var(--ink); background: var(--inset); border: 1px solid var(--line); border-radius: 4px; padding: 8px; }
+.sort { all: unset; cursor: pointer; }
+.sort:hover { color: var(--ink); }
+.sort:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+th[aria-sort="ascending"], th[aria-sort="descending"] { color: var(--ink); }
+th[aria-sort="ascending"] .arrow::after { content: " \25B2"; }
+th[aria-sort="descending"] .arrow::after { content: " \25BC"; }
+.calc-in { display: flex; flex-wrap: wrap; align-items: end; gap: 10px 16px; padding: 0 16px 12px; font-size: 13px; color: var(--ink-2); }
+.calc-in label { display: grid; gap: 4px; }
+.calc-in select { min-width: 180px; }
+.calc-in input[type="number"] { width: 110px; }
+.calc-len { display: flex; align-items: center; gap: 6px; }
+.calc-len input[type="number"] { width: 64px; }
+.facts { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 4px 14px; margin: 0; font-size: 12.5px; }
+.facts dt { color: var(--ink-3); font-family: var(--display); text-transform: uppercase; letter-spacing: 0.06em; }
+.facts dd { margin: 0; font: 12.5px var(--mono); overflow-wrap: anywhere; }
+[hidden] { display: none !important; }
+body:not(.editing) .edit-only { display: none !important; }
+body.editing .view-only { display: none !important; }
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="rail" aria-label="Calibration">
+    <div class="rail-head">
+      <h1>Marks of Excellence</h1>
+      <p class="sub">What a mark costs in HEAT, read straight from the calibration pack the app scores with. Nothing here reads anybody's battles.</p>
+    </div>
+
+    <section>
+      <h3>Calibration pack</h3>
+      <div class="field wide"><label for="packPick">Showing</label><select id="packPick"></select></div>
+      <div class="status" id="packStatus">Loading the published packs...</div>
+    </section>
+
+    <section>
+      <h3>Rules</h3>
+      <div class="field"><label for="base">Base DPM</label><input id="base" type="number" step="1" min="1"><span class="hint" id="baseHint"></span></div>
+      <div class="field"><label for="window">Window (battles)</label><input id="window" type="number" step="1" min="1"></div>
+      <div class="field"><label for="rolling">Averaging</label><select id="rolling"><option value="fill">Equal weight: last N battles</option><option value="ema">Exponential: newer battles weigh more (WoT formula)</option></select><span class="hint" id="rollingHint"></span></div>
+      <div class="field"><label for="band">Keep band (%)</label><input id="band" type="number" step="0.5" min="0" max="50"></div>
+      <div class="field"><label for="floor">Length floor (s)</label><input id="floor" type="number" step="10" min="0"></div>
+      <div class="field"><label for="bots">Max enemy bots (%)</label><input id="bots" type="number" step="5" min="0" max="100"><span class="hint" id="botsHint"></span></div>
+    </section>
+
+    <section>
+      <h3>Mark thresholds (index x100)</h3>
+      <div id="thresholds" style="display:grid;gap:12px"></div>
+    </section>
+
+    <section>
+      <h3>Progress scale</h3>
+      <div class="field"><label for="scale">Progress %</label><select id="scale"><option value="linear">Linear to the mark lines</option><option value="percentile">Measured percentile</option></select><span class="hint" id="scaleHint"></span></div>
+      <p class="note">Linear: 0% at average 0 and 65 / 85 / 95% at marks 1 / 2 / 3, so every battle moves progress in proportion to its own index, from a tank's first battle. Percentile: where the average sits among regular players, which reads 0% for a new tank's first battles. Neither changes marks.</p>
+    </section>
+
+    <section>
+      <h3>Try your own balance</h3>
+      <p class="note view-only">Every number above and every factor below becomes editable, and the tables show what your change does to each tank against <b id="editAgainst">the published pack</b>. It stays in this browser.</p>
+      <div class="btns">
+        <button id="editToggle" type="button" class="primary">Edit a copy</button>
+        <button id="reset" type="button" class="edit-only">Discard my changes</button>
+      </div>
+      <div class="edit-only" style="display:grid;gap:10px">
+        <div class="field"><label for="eff">Pack starts on</label><input id="eff" type="date"></div>
+        <div class="errors" id="errors"></div>
+        <div class="btns">
+          <button id="download" type="button">Download JSON</button>
+          <button id="clJump" type="button">Write changelog</button>
+        </div>
+        <p class="note"><b>This changes nothing for anyone.</b> A pack you build here is a proposal and nothing more: it is never uploaded, and no install will ever fetch it. If you think it is right, send the downloaded JSON and the changelog to the author, who is the only one who publishes calibration.</p>
+      </div>
+    </section>
+
+    <section>
+      <h3>View</h3>
+      <div class="field"><label for="dec">Factor decimals</label><input id="dec" type="number" step="1" min="0" max="4" value="3"></div>
+      <p class="note">How many decimals the Factor columns show. The arithmetic always uses the full value.</p>
+    </section>
+  </aside>
+
+  <main>
+    <div class="banner" id="banner" hidden></div>
+
+    <div class="block" id="calc">
+      <div class="block-head">
+        <h2>Battle calculator</h2>
+        <p>One battle scored the way the app scores it: length floor, base DPM, mode and tank factors, mark lines.</p>
+      </div>
+      <div class="calc-in">
+        <label for="cTank">Tank <select id="cTank"></select></label>
+        <label for="cMode">Game mode <select id="cMode"></select></label>
+        <label>Length <span class="calc-len"><input id="cMin" type="number" min="0" step="1" value="7" aria-label="Minutes"> m <input id="cSec" type="number" min="0" max="59" step="1" value="0" aria-label="Seconds"> s</span></label>
+        <label for="cDmg">Damage <input id="cDmg" type="number" min="0" step="100" value="12000"></label>
+      </div>
+      <div class="scroll"><table id="calcOut"></table></div>
+      <p class="note" id="calcNote" style="padding: 0 16px 14px"></p>
+    </div>
+
+    <div class="block">
+      <div class="block-head">
+        <h2>Tanks</h2>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <span class="label">Average DPM needed for</span>
+          <div class="seg" id="markSeg" role="group" aria-label="Mark shown in DPM columns">
+            <button type="button" data-m="0" aria-pressed="true">Mark 1</button>
+            <button type="button" data-m="1" aria-pressed="false">Mark 2</button>
+            <button type="button" data-m="2" aria-pressed="false">Mark 3</button>
+            <button type="button" data-m="3" aria-pressed="false">100%</button>
+          </div>
+        </div>
+      </div>
+      <div class="legend-inline">
+        <span>A tank's <b>factor</b> is what an average battle in it is worth: above 1.0 the tank is expected to do more damage, so a mark costs more.</span>
+        <span><b>Lobby</b>: the factor measured on other players in the research lobbies, before shrinking toward 1.0, with its result count.</span>
+        <span class="edit-only"><b>Editing</b>: wheel over a factor steps 0.001, Ctrl+wheel 0.01, Alt+wheel 0.1.</span>
+        <span>Click a heading to sort.</span>
+      </div>
+      <div class="scroll"><table id="tanks"></table></div>
+    </div>
+
+    <div class="block">
+      <div class="block-head"><h2>Game modes</h2><p>An unticked mode does not count toward marks at all.</p></div>
+      <div class="scroll"><table id="modes"></table></div>
+    </div>
+
+    <div class="block" id="changelog">
+      <div class="block-head">
+        <h2>Changelog</h2>
+        <p>Every change in your copy against the pack you started from, as Discord markdown. Long notes are split into messages under Discord's 2,000-character limit.</p>
+      </div>
+      <div class="cl-controls">
+        <button class="primary" id="clGenerate" type="button">Generate changelog</button>
+        <button id="clDownload" type="button" disabled>Download .md</button>
+        <span class="note" id="clNote" aria-live="polite"></span>
+      </div>
+      <div class="cl-parts" id="clParts"></div>
+    </div>
+
+    <div class="block">
+      <div class="block-head"><h2>About this pack</h2></div>
+      <div class="block-body">
+        <dl class="facts" id="packFacts"></dl>
+        <p class="note" id="footnote"></p>
+      </div>
+    </div>
+  </main>
+</div>
+
+<noscript><p style="max-width:68ch;margin:24px auto">This page scores battles in your browser, so it needs JavaScript. The calibration itself is plain JSON at <a href="https://github.com/OxCone1/HEAT-Sentinel/tree/main/moe">github.com/OxCone1/HEAT-Sentinel/moe</a>.</p></noscript>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---- what this page is ---------------------------------------------
+  // The calibration bench (watcher/moe/bench.html) with everything that touches
+  // a player's battles cut out. There is no database here and no server of our
+  // own: a published pack is 4 KB and carries its own vehicle names and roles,
+  // so the whole page is that file plus the engine's arithmetic, re-run in the
+  // browser.
+  //
+  // What could not survive the cut: the outcome summary, the player-and-tank
+  // grid and the per-player totals, all of which read somebody's battles. What
+  // did: everything that depends only on the pack, which is every figure a
+  // player actually asks about -- what a mark costs on their tank, in their
+  // mode, at their battle length.
+  //
+  // Anything edited here stays in this browser. Nothing is uploaded.
+
+  const MODE_NAME = { conquest: "Conquest", control: "Control", kill_confirmed: "Kill Confirmed", hardpoint: "Hardpoint", ct: "Plant/Defuse" };
+  // The standard PvP modes in display order, as bench.MODE_IDS. A pack may price
+  // more; those are appended after these.
+  const MODE_IDS = ["conquest", "control", "kill_confirmed", "hardpoint", "ct"];
+  const ROLE_ORDER = { assault: 0, defender: 1, marksman: 2 };
+
+  // The same two URLs watcher/moe/pack.py fetches, in the same order. Both send
+  // `Access-Control-Allow-Origin: *`, which is what lets this page have no
+  // backend at all; the second is the fallback for when raw.githubusercontent is
+  // rate-limited or blocked.
+  const INDEX_URLS = [
+    "https://raw.githubusercontent.com/OxCone1/HEAT-Sentinel/main/moe/index.json",
+    "https://cdn.jsdelivr.net/gh/OxCone1/HEAT-Sentinel@main/moe/index.json"
+  ];
+  const REPO_MOE = "https://github.com/OxCone1/HEAT-Sentinel/tree/main/moe";
+
+  const $ = (id) => document.getElementById(id);
+  const fmt = (x, d = 0) => (x == null || !isFinite(x)) ? "–" : x.toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+  const esc = (s) => String(s == null ? "" : s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const round = (x, d) => Math.round(x * 10 ** d) / 10 ** d;
+  const modeName = (m) => MODE_NAME[m] || m;
+  const utcDay = () => new Date().toISOString().slice(0, 10);
+  const ARROW = "→";
+  const DOT = "·";
+
+  async function getJson(url) {
+    const res = await fetch(url, { cache: "no-cache" });
+    if (!res.ok) throw new Error(`${url} answered ${res.status}`);
+    return res.json();
+  }
+
+  // ---- state ---------------------------
+  // INDEX: the published index.json. PACKS: every pack it lists, by version --
+  // an index only ever lists packs that are still in force (a superseded one is
+  // withdrawn from it), so this stays a handful of small files.
+  let INDEX = null, INDEX_BASE = "", PACKS = {}, REF = null;
+  let basePack = null, compareKey = null, work = null, cmp = null;
+  let VEH = [], MODES = [], META = {};
+  let editing = false, markShown = 0, decimals = 3;
+
+  function banner(text) { $("banner").hidden = !text; $("banner").innerHTML = text || ""; }
+
+  // ---- the pack, read the way the engine reads it ----
+  function cfgFromPack(p) {
+    const veh = {}, modes = {}, on = {};
+    const def = p.default_vehicle_factor || 1;
+    for (const k of VEH) veh[k] = (p.vehicles[k] && p.vehicles[k].factor) || def;
+    for (const m of MODES) { modes[m] = p.modes[m] || 1; on[m] = (p.rules.game_modes || []).includes(m) && !!p.modes[m]; }
+    // `top`: the average that reads 100% progress, the curve's last point.
+    const top = p.curve && p.curve[100] > p.thresholds[2] ? p.curve[100] : p.thresholds[2] * 1.05;
+    return { base: p.base_dpm, window: p.rules.window, band: p.rules.band, floor: p.rules.floor_seconds, bots: botShare(p.rules), scale: scaleOf(p), rolling: rollingOf(p), T: p.thresholds.slice(), top, modes, on, veh, def };
+  }
+
+  // pack.validate_pack: rules.progress_scale is "linear" or "percentile"; absent means percentile.
+  const scaleOf = (p) => (p && p.rules && p.rules.progress_scale === "linear" ? "linear" : "percentile");
+  // pack.validate_pack / engine.rolling_mode: rules.rolling is "fill" or "ema"; absent means fill.
+  const rollingOf = (p) => (p && p.rules && p.rules.rolling === "ema" ? "ema" : "fill");
+  // engine.ema_alpha: the newest battle's weight under "ema".
+  const emaAlpha = (n) => 2 / (Math.max(1, Math.round(n)) + 1);
+  // What `index` battles in a row leave on an empty average after `b` of them.
+  const afterBattles = (c, index, b) => c.rolling === "ema"
+    ? index * (1 - Math.pow(1 - emaAlpha(c.window), b))
+    : index * Math.min(b, c.window) / c.window;
+  // engine.battle_weights, as percentages: the newest, the 10th newest and the Nth newest battle.
+  function weightHint(c) {
+    const n = Math.max(1, Math.round(c.window));
+    if (c.rolling !== "ema") return `every battle in the last ${n} weighs ${fmt(100 / n, 2)}%; the oldest drops out whole`;
+    const a = emaAlpha(n), w = (age) => fmt(100 * a * Math.pow(1 - a, age), 2) + "%";
+    return `newest battle ${w(0)} · 10th newest ${w(9)} · ${n}th newest ${w(n - 1)}; the last ${n} carry ${fmt(100 * (1 - Math.pow(1 - a, n)), 1)}% of the average, and nothing drops out at once`;
+  }
+  // A curve of measured players: not linear, and not bent by the retired build-up ramp.
+  const measured = (p) => scaleOf(p) === "percentile" && !(p.rules && p.rules.progress_ramp) && p.curve[0] > 0;
+
+  // normalize.max_bot_share: the pack's share, or 0.5 when it sets none or sets nonsense.
+  function botShare(rules) {
+    const v = rules && rules.max_bot_share;
+    return typeof v === "number" && v >= 0 && v <= 1 ? v : 0.5;
+  }
+  // normalize.bot_limit: most bots a team of `size` may have, rounded down.
+  const botLimit = (size, share) => Math.floor(size * share + 1e-9);
+
+  // Where `x` sits in a sorted population: the share of it at or above `x`.
+  function topShare(sorted, x) {
+    let lo = 0, hi = sorted.length;
+    while (lo < hi) { const mid = (lo + hi) >> 1; if (sorted[mid] < x) lo = mid + 1; else hi = mid; }
+    return 100 - (lo / sorted.length) * 100;
+  }
+
+  // ---- loading -------------------------
+  async function loadIndex() {
+    let last = null;
+    for (const url of INDEX_URLS) {
+      try {
+        const doc = await getJson(url);
+        if (!doc || !Array.isArray(doc.packs) || !doc.packs.length) throw new Error("that index lists no packs");
+        INDEX = doc;
+        INDEX_BASE = url.slice(0, url.lastIndexOf("/"));
+        return;
+      } catch (e) { last = e; }
+    }
+    throw new Error("Could not read the published calibration index." + (last ? " " + last.message : ""));
+  }
+
+  // Every pack the index lists. They are a few kilobytes each, and the picker,
+  // the comparison and the percentile curve all want any of them at any moment,
+  // so they are fetched once, together, rather than on each change.
+  async function loadPacks() {
+    const entries = INDEX.packs.filter((e) => e && e.path);
+    const got = await Promise.all(entries.map(async (e) => {
+      try { return [e, await getJson(`${INDEX_BASE}/${e.path}`)]; } catch (err) { return [e, null]; }
+    }));
+    PACKS = {};
+    const failed = [];
+    for (const [e, p] of got) {
+      if (p && p.vehicles && p.thresholds && p.rules) PACKS[p.version || e.version] = p;
+      else failed.push(e.version || e.path);
+    }
+    if (!Object.keys(PACKS).length) throw new Error("None of the published packs could be read.");
+    return failed;
+  }
+
+  // Newest first: the day the pack starts, then its version.
+  const packOrder = (a, b) => (b.effective_from + "|" + b.version).localeCompare(a.effective_from + "|" + a.version);
+
+  function fillPicker() {
+    const list = Object.values(PACKS).sort(packOrder);
+    const live = INDEX.latest;
+    $("packPick").innerHTML = list.map((p) => {
+      const tail = p.version === live ? ` ${DOT} in the game now` : "";
+      return `<option value="${esc(p.version)}">${esc(p.version)} ${DOT} starts ${esc(p.effective_from)}${tail}</option>`;
+    }).join("");
+    $("packPick").value = (live in PACKS) ? live : list[0].version;
+  }
+
+  // VEH, MODES and META come from the pack itself: a published pack carries every
+  // vehicle's catalog name and role, which is exactly why this page needs nothing else.
+  function adoptPack(p) {
+    basePack = p;
+    compareKey = p.version;
+    MODES = MODE_IDS.concat(Object.keys(p.modes || {}).filter((m) => !MODE_IDS.includes(m)));
+    META = {};
+    for (const k in p.vehicles) {
+      const v = p.vehicles[k] || {};
+      META[k] = { name: v.name || k, role: v.role || "" };
+    }
+    VEH = Object.keys(META).sort((a, b) => (ROLE_ORDER[META[a].role] ?? 9) - (ROLE_ORDER[META[b].role] ?? 9) || META[a].name.localeCompare(META[b].name));
+    work = cfgFromPack(p);
+    cmp = cfgFromPack(p);
+    $("eff").value = p.effective_from;
+    $("editAgainst").textContent = p.version;
+  }
+
+  function packStatus(failed) {
+    const live = INDEX.latest;
+    const lines = [`Published packs: ${Object.keys(PACKS).length} ${DOT} the game reads <b>${esc(live || "none")}</b>`];
+    if (basePack && basePack.version !== live) lines.push(`<span class="bad">You are looking at ${esc(basePack.version)}, which is not what the game reads.</span>`);
+    if (failed && failed.length) lines.push(`<span class="bad">Could not read ${esc(failed.join(", "))}.</span>`);
+    $("packStatus").innerHTML = lines.join("<br>");
+  }
+
+  function packFacts() {
+    const p = basePack, r = p.reference || {};
+    const clock = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+    const rows = [
+      ["Version", p.version],
+      ["Starts on", p.effective_from],
+      ["Built", (p.generated || "").replace("T", " ").replace("Z", " UTC")],
+      ["Thresholds from", r.event ? `${r.event}, ${fmt(r.players)} players with ${r.min_battles}+ battles, percentiles ${(r.percentiles || []).join(" / ")}` : "not recorded in this pack"],
+      ["Counted modes", (p.rules.game_modes || []).map(modeName).join(", ") || "none"],
+      ["Tanks priced", `${Object.keys(p.vehicles).length}; anything else counts at ${fmt(p.default_vehicle_factor || 1, 3)}`],
+      ["Source", REPO_MOE]
+    ];
+    $("packFacts").innerHTML = rows.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${k === "Source"
+      ? `<a href="${esc(v)}" rel="noreferrer">${esc(v.replace("https://", ""))}</a>` : esc(v)}</dd>`).join("");
+    $("footnote").innerHTML = `A mark is held, not permanent: the average is over the last <b>${p.rules.window}</b> counted battles on that tank, `
+      + (p.rules.band > 0
+        ? `a mark is gained at its line and lost <b>${fmt(p.rules.band * 100, 1)}%</b> below it, and a battle shorter than `
+        : `a mark is gained at its line and lost <b>the moment the average falls under it</b>, and a battle shorter than `)
+      + `<b>${clock(p.rules.floor_seconds)}</b> is scored as that length, so a fast stomp is worth no more than the same damage over the floor. `
+      + `A battle in a mode this pack does not count, and a battle with more than <b>${fmt(botShare(p.rules) * 100)}%</b> bots on the enemy team, does not count at all. `
+      + `Your own marks are worked out on your own machine from your own battles. This page holds neither, and knows nothing about you.`;
+  }
+
+  async function boot() {
+    // The reference figures are a convenience, not a requirement: without them
+    // the Lobby columns and the threshold percentiles simply do not appear.
+    try { REF = await getJson("./reference.json"); } catch (e) { REF = null; }
+    try {
+      await loadIndex();
+      const failed = await loadPacks();
+      fillPicker();
+      adoptPack(PACKS[$("packPick").value]);
+      packStatus(failed);
+      packFacts();
+      rebuildAll();
+    } catch (e) {
+      banner(esc(e.message));
+      $("packStatus").innerHTML = `<span class="bad">${esc(e.message)}</span>`;
+    }
+  }
+
+  function rebuildAll() {
+    buildTanks(); buildModes(); fillCalc(); fillRail(); fillTables(); render();
+  }
+
+  // ---- rail ----------------------------
+  $("thresholds").innerHTML = [0, 1, 2].map((i) => `
+    <div class="thr">
+      <span class="mk" data-m="${i + 1}"><i></i><i></i><i></i></span>
+      <label for="t${i}" class="label" style="color:var(--ink-2)">Mark ${i + 1}</label>
+      <input id="t${i}" type="number" step="1" min="1">
+      <span class="hint" id="t${i}hint"></span>
+    </div>`).join("") + `
+    <div class="thr">
+      <span></span>
+      <label for="t3" class="label" style="color:var(--ink-2)">100% progress</label>
+      <input id="t3" type="number" step="1" min="1">
+      <span class="hint" id="t3hint"></span>
+    </div>`;
+
+  const RAIL_NUM = ["base", "window", "band", "floor", "bots", "t0", "t1", "t2", "t3", "eff"];
+
+  function fillRail() {
+    $("base").value = round(work.base, 2);
+    $("window").value = work.window;
+    $("band").value = round(work.band * 100, 2);
+    $("floor").value = work.floor;
+    $("bots").value = round(work.bots * 100, 1);
+    $("scale").value = work.scale;
+    $("rolling").value = work.rolling;
+    for (let i = 0; i < 3; i++) $("t" + i).value = round(work.T[i] * 100, 2);
+    $("t3").value = round(work.top * 100, 2);
+    for (const id of RAIL_NUM) $(id).disabled = !editing;
+    $("scale").disabled = !editing;
+    $("rolling").disabled = !editing;
+  }
+
+  function bindNum(id, apply) {
+    $(id).addEventListener("input", (e) => {
+      const v = parseFloat(e.target.value);
+      if (!isFinite(v) || !work) return;
+      apply(v); schedule();
+    });
+  }
+  bindNum("base", (v) => { if (v > 0) work.base = v; });
+  bindNum("window", (v) => { if (v >= 1) work.window = Math.round(v); });
+  bindNum("band", (v) => { if (v >= 0) work.band = v / 100; });
+  bindNum("floor", (v) => { if (v >= 0) work.floor = Math.round(v); });
+  bindNum("bots", (v) => { if (v >= 0 && v <= 100) work.bots = v / 100; });
+  for (let i = 0; i < 3; i++) bindNum("t" + i, (v) => { if (v > 0) work.T[i] = v / 100; });
+  bindNum("t3", (v) => { if (v > 0) work.top = v / 100; });
+  $("scale").addEventListener("change", (e) => { if (work) { work.scale = e.target.value === "linear" ? "linear" : "percentile"; schedule(); } });
+  $("rolling").addEventListener("change", (e) => { if (work) { work.rolling = e.target.value === "ema" ? "ema" : "fill"; schedule(); } });
+  $("eff").addEventListener("input", schedule);
+  $("dec").addEventListener("input", (e) => {
+    const v = parseInt(e.target.value, 10);
+    if (isFinite(v) && v >= 0 && v <= 4) { decimals = v; if (work) { fillTables(); schedule(); } }
+  });
+
+  // ---- the two modes -------------------
+  // Reading is the default. Editing hands over the same editor the bench uses,
+  // minus anywhere for the result to go: a pack built here is downloaded, never
+  // applied.
+  function setEditing(on) {
+    editing = on;
+    document.body.classList.toggle("editing", on);
+    $("editToggle").textContent = on ? "Stop editing" : "Edit a copy";
+    $("editToggle").classList.toggle("primary", !on);
+    rebuildAll();
+  }
+
+  $("editToggle").addEventListener("click", () => {
+    if (editing && isDirty() && !confirm("Stop editing?\n\nYour changes are dropped and the page goes back to the published pack.")) return;
+    if (editing) work = cfgFromPack(basePack);
+    setEditing(!editing);
+  });
+
+  $("reset").addEventListener("click", () => {
+    if (!work || !isDirty()) return;
+    work = cfgFromPack(basePack);
+    fillRail(); fillTables(); schedule();
+  });
+
+  $("packPick").addEventListener("change", (e) => {
+    const next = PACKS[e.target.value];
+    if (!next) return;
+    if (editing && isDirty() && !confirm("Switch pack?\n\nYour changes are dropped and the editor starts again from the pack you pick.")) {
+      e.target.value = basePack.version; return;
+    }
+    adoptPack(next);
+    packStatus(null); packFacts(); rebuildAll();
+  });
+
+  $("markSeg").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    markShown = +b.dataset.m;
+    for (const x of $("markSeg").querySelectorAll("button")) x.setAttribute("aria-pressed", String(x === b));
+    schedule();
+  });
+
+  // ---- sorting and wheel steps ----
+  // Sorting reorders the rows already built, so inputs keep their values and listeners. While the
+  // pointer is on an input, or one has focus, the order holds: a row must not slide out from under
+  // a wheel or a caret. It catches up when the pointer leaves.
+  const sortState = { tanks: null, modes: null };
+  const sortVals = { tanks: {}, modes: {} };
+  const sortHead = (key, label, attrs = "") =>
+    `<th ${attrs} data-sort-key="${key}" aria-sort="none"><button type="button" class="sort" data-sort="${key}">${label}<span class="arrow" aria-hidden="true"></span></button></th>`;
+
+  function applySort(table, order) {
+    const el = $(table), body = el.tBodies[0];
+    if (!body) return;
+    const st = sortState[table];
+    for (const th of el.querySelectorAll("th[data-sort-key]")) {
+      th.setAttribute("aria-sort", st && st.key === th.dataset.sortKey ? (st.dir === "asc" ? "ascending" : "descending") : "none");
+    }
+    if (el.querySelector("tbody input:hover, tbody input:focus")) return;
+    const vals = sortVals[table];
+    const keys = order.slice();
+    // Rows with nothing to sort by (a mode that is off) stay at the bottom either way.
+    if (st) keys.sort((a, b) => {
+      const x = vals[a] ? vals[a][st.key] : null, y = vals[b] ? vals[b][st.key] : null;
+      if (x == null || y == null) return x == null ? (y == null ? 0 : 1) : -1;
+      const c = typeof x === "string" ? x.localeCompare(y) : x - y;
+      return st.dir === "asc" ? c : -c;
+    });
+    const rows = [...body.rows];
+    if (rows.map((r) => r.dataset.key).join("\n") === keys.join("\n")) return;
+    const byKey = {};
+    for (const r of rows) byKey[r.dataset.key] = r;
+    for (const k of keys) if (byKey[k]) body.appendChild(byKey[k]);
+  }
+
+  for (const table of ["tanks", "modes"]) {
+    // First click sorts high to low (names A to Z), the second flips it, the third goes back.
+    $(table).addEventListener("click", (e) => {
+      const b = e.target.closest("button.sort"); if (!b) return;
+      const key = b.dataset.sort, st = sortState[table];
+      const first = key === "name" ? "asc" : "desc";
+      sortState[table] = !st || st.key !== key ? { key, dir: first }
+        : st.dir === first ? { key, dir: first === "asc" ? "desc" : "asc" } : null;
+      schedule();
+    });
+    $(table).addEventListener("mouseout", (e) => { if (e.target.matches("input")) schedule(); });
+    $(table).addEventListener("focusout", schedule);
+  }
+
+  // The wheel over a factor: 0.001 a notch, Ctrl 0.01, Alt 0.1; up raises it.
+  function bindWheel(input) {
+    input.addEventListener("wheel", (e) => {
+      if (input.disabled) return;
+      const d = e.deltaY || e.deltaX;
+      if (!d) return;
+      e.preventDefault();
+      const step = e.altKey ? 0.1 : e.ctrlKey ? 0.01 : 0.001;
+      const cur = parseFloat(input.value);
+      input.value = Math.max(parseFloat(input.min) || 0, round((isFinite(cur) ? cur : 1) + (d < 0 ? step : -step), 4));
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+    }, { passive: false });
+  }
+
+  // ---- battle calculator ----
+  // One battle through the engine's arithmetic: length floor, DPM, the expected DPM of an average
+  // battle in that mode on that tank, the index, and where it lands on the progress curve.
+  const CALC = "heat-marks-calc-v1";
+  let calcSaved = null, calcRestored = false;
+  try { calcSaved = JSON.parse(localStorage.getItem(CALC) || "null"); } catch (e) {}
+
+  function fillCalc() {
+    const keepT = $("cTank").value || (calcSaved && calcSaved.tank);
+    const keepM = $("cMode").value || (calcSaved && calcSaved.mode);
+    $("cTank").innerHTML = VEH.map((k) => `<option value="${esc(k)}">${esc(META[k].name)}</option>`).join("");
+    $("cMode").innerHTML = MODES.map((m) => `<option value="${esc(m)}">${esc(modeName(m))}</option>`).join("");
+    if (keepT && VEH.includes(keepT)) $("cTank").value = keepT;
+    if (keepM && MODES.includes(keepM)) $("cMode").value = keepM;
+    if (calcSaved && !calcRestored) {
+      calcRestored = true;
+      for (const [id, k] of [["cMin", "min"], ["cSec", "sec"], ["cDmg", "dmg"]]) if (calcSaved[k] != null) $(id).value = calcSaved[k];
+    }
+  }
+  for (const id of ["cTank", "cMode", "cMin", "cSec", "cDmg"]) $(id).addEventListener("input", schedule);
+
+  // null when the mode does not count under `c`.
+  function scoreBattle(c, curve, key, mode, secs, dmg) {
+    if (!c.on[mode]) return null;
+    const counted = Math.max(secs, c.floor);
+    const exp = c.base * c.modes[mode] * (c.veh[key] ?? c.def);
+    const idx = dmg / (counted / 60) / exp;
+    let pace = 0;
+    while (pace < 3 && idx >= c.T[pace]) pace++;
+    return {
+      counted, exp, idx, pace, dpm: dmg / (counted / 60),
+      // Damage this battle length needs for each line: the DPM line priced back into damage.
+      need: [c.T[0], c.T[1], c.T[2], curve[100]].map((t) => t * exp * counted / 60),
+      // Where an average of this index sits, and what one such battle adds to an empty window.
+      full: progressOn(curve, idx),
+      one: progressOn(curve, afterBattles(c, idx, 1))
+    };
+  }
+
+  function renderCalc(built) {
+    const key = $("cTank").value, mode = $("cMode").value;
+    const min = parseFloat($("cMin").value) || 0, sec = parseFloat($("cSec").value) || 0;
+    const dmg = parseFloat($("cDmg").value) || 0;
+    const secs = min * 60 + sec;
+    try { localStorage.setItem(CALC, JSON.stringify({ tank: key, mode, min, sec, dmg })); } catch (e) {}
+    if (!key || !mode || secs <= 0) {
+      $("calcOut").innerHTML = "";
+      $("calcNote").textContent = "Pick a tank and a mode, and give the battle a length.";
+      return;
+    }
+    const W = scoreBattle(work, built.curve, key, mode, secs, dmg);
+    const C = editing ? scoreBattle(cmp, basePack.curve, key, mode, secs, dmg) : null;
+    const clock = (s) => `${Math.floor(s / 60)}:${String(Math.round(s % 60)).padStart(2, "0")}`;
+    const pace = (s) => (s.full >= 100 ? "100% pace" : s.pace ? `Mark ${s.pace} pace` : "Below mark 1");
+    const rows = [
+      ["Counted length", (s) => clock(s.counted) + (s.counted > secs ? " (floor)" : ""), (s) => s.counted],
+      ["DPM", (s) => fmt(s.dpm), (s) => s.dpm],
+      ["Average battle's DPM here", (s) => fmt(s.exp), (s) => s.exp, true],
+      ["Battle index", (s) => fmt(s.idx * 100, 1), (s) => s.idx],
+      ["Pace", pace, null],
+      ["Damage for mark 1 at this length", (s) => fmt(s.need[0]), (s) => s.need[0], true],
+      ["Damage for mark 2 at this length", (s) => fmt(s.need[1]), (s) => s.need[1], true],
+      ["Damage for mark 3 at this length", (s) => fmt(s.need[2]), (s) => s.need[2], true],
+      ["Damage for 100% at this length", (s) => fmt(s.need[3]), (s) => s.need[3], true],
+      ["Progress if the whole window played like this", (s) => fmt(s.full, 1) + "%", (s) => s.full],
+      ["Progress this battle adds to an empty window", (s) => fmt(s.one, 1) + "%", (s) => s.one]
+    ];
+    const off = `<span class="muted">does not count</span>`;
+    const head = editing
+      ? `<th>Your copy</th><th>${esc(compareKey)}</th><th>Change</th>`
+      : `<th>${esc(compareKey)}</th>`;
+    $("calcOut").innerHTML = `<thead><tr><th class="l">${esc(META[key].name)} ${DOT} ${esc(modeName(mode))}</th>${head}</tr></thead><tbody>`
+      + rows.map(([label, show, num, harder]) => `<tr><td class="l">${label}</td><td>${W ? esc(show(W)) : off}</td>`
+        + (editing ? `<td>${C ? esc(show(C)) : off}</td><td>${W && C && num ? deltaCell(num(W), num(C), harder) : ""}</td>` : "")
+        + `</tr>`).join("")
+      + `</tbody>`;
+    $("calcNote").textContent = !W
+      ? `${modeName(mode)} is not counted, so this battle scores nothing.`
+      : `Index = damage / (counted minutes) / (base ${fmt(work.base)} x mode ${fmt(work.modes[mode], 3)} x tank ${fmt(work.veh[key] ?? work.def, 3)}). A battle shorter than ${clock(work.floor)} counts as ${clock(work.floor)}.`;
+  }
+
+  // ---- tables with inputs (built on pack or mode change) ----
+  function buildTanks() {
+    const lobby = REF && REF.measured;
+    const head = `<thead>
+      <tr>${sortHead("name", "Tank", 'class="l" rowspan="2"')}${sortHead("factor", "Factor", 'rowspan="2"')}
+      ${editing ? '<th rowspan="2">Change</th>' : ""}
+      ${lobby ? '<th rowspan="2" class="sep">Lobby</th>' : ""}
+      <th class="group sep" colspan="${MODES.length + 1}" id="dpmHead">Average DPM needed</th></tr>
+      <tr>${sortHead("avg", "Average mode", 'class="sep" title="Mode factor 1.0: the figure the changelog quotes"')}${MODES.map((m) => sortHead("m:" + m, esc(modeName(m)))).join("")}</tr></thead>`;
+    const rows = VEH.map((k) => {
+      const ms = lobby ? lobby[k] : null;
+      return `<tr data-key="${esc(k)}">
+        <td class="l name">${esc(META[k].name)}<span class="role">${esc(META[k].role)}</span></td>
+        <td><input type="number" step="0.001" min="0.05" id="vf-${k}" aria-label="${esc(META[k].name)} factor"></td>
+        ${editing ? `<td id="vd-${k}"></td>` : ""}
+        ${lobby ? `<td class="sep">${ms ? fmt(ms.raw, 3) : "–"} <span class="muted">${ms ? ms.n : ""}</span></td>` : ""}
+        <td id="va-${k}" class="sep"></td>${MODES.map((m) => `<td id="vp-${k}-${m}"></td>`).join("")}
+      </tr>`;
+    }).join("");
+    $("tanks").innerHTML = head + `<tbody>${rows}</tbody>`;
+    for (const k of VEH) {
+      $("vf-" + k).addEventListener("input", (e) => {
+        const v = parseFloat(e.target.value);
+        if (isFinite(v) && v > 0) { work.veh[k] = v; schedule(); }
+      });
+      bindWheel($("vf-" + k));
+    }
+  }
+
+  function buildModes() {
+    const lobby = REF && REF.mode_measured;
+    const head = `<thead><tr>${sortHead("name", "Mode", 'class="l"')}<th>Counts</th>${sortHead("factor", "Factor")}
+      ${editing ? "<th>Change</th>" : ""}
+      ${lobby ? '<th class="sep">Lobby</th>' : ""}
+      ${sortHead("dpm0", "Mark 1 DPM", 'class="sep"')}${sortHead("dpm1", "Mark 2 DPM")}${sortHead("dpm2", "Mark 3 DPM")}${sortHead("dpm3", "100% DPM")}</tr></thead>`;
+    const rows = MODES.map((m) => {
+      const lm = lobby ? lobby[m] : null;
+      return `<tr data-key="${esc(m)}">
+        <td class="l name">${esc(modeName(m))}</td>
+        <td><input type="checkbox" id="mo-${m}" aria-label="${esc(modeName(m))} counts"></td>
+        <td><input type="number" step="0.001" min="0.05" id="mf-${m}" aria-label="${esc(modeName(m))} factor"></td>
+        ${editing ? `<td id="md-${m}"></td>` : ""}
+        ${lobby ? `<td class="sep">${lm ? fmt(lm[0], 3) : "–"} <span class="muted">${lm ? lm[1] : ""}</span></td>` : ""}
+        <td class="sep" id="mp0-${m}"></td><td id="mp1-${m}"></td><td id="mp2-${m}"></td><td id="mp3-${m}"></td>
+      </tr>`;
+    }).join("");
+    $("modes").innerHTML = head + `<tbody>${rows}</tbody>`;
+    for (const m of MODES) {
+      $("mf-" + m).addEventListener("input", (e) => {
+        const v = parseFloat(e.target.value);
+        if (isFinite(v) && v > 0) { work.modes[m] = v; schedule(); }
+      });
+      bindWheel($("mf-" + m));
+      $("mo-" + m).addEventListener("change", (e) => { work.on[m] = e.target.checked; schedule(); });
+    }
+  }
+
+  // Editing shows the full stored factor, because that is what is being changed.
+  // Reading rounds it to `decimals` in render(), where a pack switch reaches it too.
+  function fillTables() {
+    for (const k of VEH) { $("vf-" + k).value = round(work.veh[k], 4); $("vf-" + k).disabled = !editing; }
+    for (const m of MODES) {
+      $("mf-" + m).value = round(work.modes[m], 4); $("mf-" + m).disabled = !editing;
+      $("mo-" + m).checked = work.on[m]; $("mo-" + m).disabled = !editing;
+    }
+  }
+
+  // ---- render --------------------------
+  let pending = false;
+  function schedule() {
+    if (!pending) { pending = true; requestAnimationFrame(() => { pending = false; render(); }); }
+  }
+
+  // Green is easier for the player, red harder. `harder` marks a figure where going up makes a
+  // mark harder to get (a factor, the damage a line needs), so a rise there reads red.
+  function deltaCell(now, was, harder = false) {
+    const diff = now - was;
+    if (Math.abs(diff) < 1e-6) return `<span class="muted">${DOT}</span>`;
+    const pct = was ? (diff / was) * 100 : 0;
+    const good = harder ? diff < 0 : diff > 0;
+    return `<span class="${good ? "delta-up" : "delta-down"}">${diff > 0 ? "+" : ""}${fmt(pct, 1)}%</span>`;
+  }
+
+  function render() {
+    if (!work || !basePack) return;
+
+    $("baseHint").textContent = REF && REF.lobby_base ? `lobby measured ${fmt(REF.lobby_base)} over ${fmt(REF.lobby_results)} results` : "";
+    for (let i = 0; i < 4; i++) {
+      const t = i < 3 ? work.T[i] : work.top, was = i < 3 ? cmp.T[i] : cmp.top;
+      let hint = `${fmt(t * work.base)} DPM avg tank and mode`;
+      if (REF && REF.ref_regulars) hint += `<br>top ${fmt(topShare(REF.ref_regulars, t), 1)}% of regulars ${DOT} top ${fmt(topShare(REF.ref_all10, t), 1)}% of 10+ players`;
+      $("t" + i + "hint").innerHTML = hint;
+      $("t" + i).classList.toggle("changed", Math.abs(t - was) > 1e-6);
+    }
+    $("base").classList.toggle("changed", Math.abs(work.base - cmp.base) > 1e-6);
+    $("window").classList.toggle("changed", work.window !== cmp.window);
+    $("band").classList.toggle("changed", Math.abs(work.band - cmp.band) > 1e-9);
+    $("floor").classList.toggle("changed", work.floor !== cmp.floor);
+    $("bots").classList.toggle("changed", Math.abs(work.bots - cmp.bots) > 1e-9);
+    const built = curveFor(work);
+    $("scale").classList.toggle("changed", built.scale !== cmp.scale);
+    $("rolling").classList.toggle("changed", work.rolling !== cmp.rolling);
+    $("rollingHint").textContent = weightHint(work);
+    const shows = (index) => [1, 5, 20].map((b) => fmt(progressOn(built.curve, afterBattles(work, index, b)), 1) + "%").join(` ${DOT} `);
+    $("scaleHint").innerHTML = (built.note ? `<span class="bad">${esc(built.note)}</span><br>` : "")
+      + `after 1 ${DOT} 5 ${DOT} 20 battles: mark-3 player ${shows(work.T[2])}<br>average player ${shows(1)}`;
+    $("botsHint").textContent = `5v5 up to ${botLimit(5, work.bots)} ${DOT} 10v10 up to ${botLimit(10, work.bots)} bots; a battle over that does not count`;
+
+    // tanks
+    // 100% is not a mark line but the top of the progress curve: the window average that reads 100%.
+    const top = built.curve[100];
+    $("dpmHead").textContent = markShown === 3 ? "Average DPM needed for 100%" : `Average DPM needed for mark ${markShown + 1}`;
+    const T = markShown === 3 ? top : work.T[markShown];
+    for (const k of VEH) {
+      const f = work.veh[k];
+      $("vf-" + k).classList.toggle("changed", Math.abs(f - cmp.veh[k]) > 1e-6);
+      if (!editing) $("vf-" + k).value = round(f, decimals).toFixed(decimals);
+      if (editing) $("vd-" + k).innerHTML = deltaCell(f, cmp.veh[k], true);
+      $("va-" + k).textContent = fmt(T * work.base * f);
+      for (const m of MODES) $(`vp-${k}-${m}`).innerHTML = work.on[m] ? fmt(T * work.base * work.modes[m] * f) : `<span class="muted">off</span>`;
+      const tv = sortVals.tanks[k] = { name: META[k].name, factor: f, avg: T * work.base * f };
+      for (const m of MODES) tv["m:" + m] = work.on[m] ? T * work.base * work.modes[m] * f : null;
+    }
+    applySort("tanks", VEH);
+
+    // modes
+    for (const m of MODES) {
+      $("mf-" + m).classList.toggle("changed", Math.abs(work.modes[m] - cmp.modes[m]) > 1e-6);
+      if (!editing) $("mf-" + m).value = round(work.modes[m], decimals).toFixed(decimals);
+      if (editing) {
+        let dh = deltaCell(work.modes[m], cmp.modes[m], true);
+        if (work.on[m] !== cmp.on[m]) dh += ` <span class="flag">${work.on[m] ? "added" : "removed"}</span>`;
+        $("md-" + m).innerHTML = dh;
+      }
+      for (let j = 0; j < 3; j++) $(`mp${j}-${m}`).textContent = work.on[m] ? fmt(work.T[j] * work.base * work.modes[m]) : "off";
+      $(`mp3-${m}`).textContent = work.on[m] ? fmt(top * work.base * work.modes[m]) : "off";
+      const lines = [work.T[0], work.T[1], work.T[2], top];
+      sortVals.modes[m] = { name: modeName(m), factor: work.modes[m] };
+      lines.forEach((t, j) => { sortVals.modes[m]["dpm" + j] = work.on[m] ? t * work.base * work.modes[m] : null; });
+    }
+    applySort("modes", MODES);
+
+    renderCalc(built);
+    if (editing) validate();
+  }
+
+  // ---- the pack you build --------------
+  function problems() {
+    const out = [];
+    if (!(work.T[0] < work.T[1] && work.T[1] < work.T[2])) out.push("Thresholds must rise from mark 1 to mark 3.");
+    if (!(work.top > work.T[2])) out.push("The 100% progress line must sit above mark 3.");
+    if (!(work.base > 0)) out.push("Base DPM must be above 0.");
+    if (!(work.window >= 1)) out.push("Window must be at least 1 battle.");
+    if (!MODES.some((m) => work.on[m])) out.push("At least one game mode has to count.");
+    if (!(work.bots >= 0 && work.bots <= 1)) out.push("Max enemy bots must be between 0 and 100%.");
+    if (!/^\d{4}-\d{2}-\d{2}$/.test($("eff").value)) out.push("Pick the day the pack starts.");
+    return out;
+  }
+  function validate() {
+    const p = problems();
+    $("errors").innerHTML = p.map((x) => `<span>${esc(x)}</span>`).join("");
+    $("download").disabled = p.length > 0;
+  }
+
+  // The measured curve re-mapped onto the lines being tried: 0, the three marks, and `top` at 100%.
+  function anchoredCurve(src, T, top) {
+    const c = src.slice();
+    const c0 = Math.min(c[0], T[0] * 0.5);
+    const a = [[0, c[0], c0], [65, c[65], T[0]], [85, c[85], T[1]], [95, c[95], T[2]], [100, c[100], top]];
+    const out = new Array(101);
+    for (let i = 0; i <= 100; i++) {
+      let s = 0; while (s < a.length - 2 && i > a[s + 1][0]) s++;
+      const [, o0, n0] = a[s], [, o1, n1] = a[s + 1];
+      out[i] = o1 === o0 ? n0 : n0 + (c[i] - o0) * (n1 - n0) / (o1 - o0);
+    }
+    for (let i = 1; i <= 100; i++) if (out[i] < out[i - 1]) out[i] = out[i - 1];
+    return out.map((x) => round(x, 4));
+  }
+
+  // 0 at average 0, straight lines through the mark lines at 65, 85 and 95, and on to the measured
+  // top at 100. Below mark 1 progress is 65 x average / mark 1, so each battle moves it in
+  // proportion to its own index, however many battles came before it.
+  function linearCurve(T, top) {
+    const knots = [[0, 0], [65, T[0]], [85, T[1]], [95, T[2]], [100, Math.max(top, T[2] + 1e-4)]];
+    const out = new Array(101);
+    for (let i = 0; i <= 100; i++) {
+      let s = 0; while (s < knots.length - 2 && i > knots[s + 1][0]) s++;
+      const [i0, v0] = knots[s], [i1, v1] = knots[s + 1];
+      out[i] = round(v0 + (v1 - v0) * (i - i0) / (i1 - i0), 4);
+    }
+    return out;
+  }
+
+  // engine.progress: piecewise-linear percentile on the curve.
+  function progressOn(c, a) {
+    if (a <= c[0]) return 0;
+    if (a >= c[100]) return 100;
+    let i = 0; while (i < 99 && c[i + 1] <= a) i++;
+    const s = c[i + 1] - c[i];
+    return i + (s ? (a - c[i]) / s : 0);
+  }
+
+  // `ref_regulars` is the denoised index of every regular player, sorted. That IS the percentile
+  // curve, sampled once per player instead of once per percentile, so reading it at each percentile
+  // gives back the same 101 points a measured pack carries. It is the fallback for the percentile
+  // scale once every pack left in the index has gone linear and none of them carries a curve.
+  function refCurve() {
+    const xs = REF && REF.ref_regulars;
+    if (!Array.isArray(xs) || xs.length < 101) return null;
+    const out = new Array(101);
+    for (let i = 0; i <= 100; i++) out[i] = xs[Math.round((i / 100) * (xs.length - 1))];
+    for (let i = 1; i <= 100; i++) if (out[i] < out[i - 1]) out[i] = out[i - 1];
+    return out;
+  }
+
+  // The curve a pack built from `w` carries. The measured curve comes from the newest pack that
+  // still has one (a linear or ramped pack has lost it), re-anchored to the thresholds being
+  // tried; the linear scale takes only its top from it.
+  function curveFor(w) {
+    const top = w.top > w.T[2] ? w.top : w.T[2] * 1.05;
+    if (w.scale === "linear") return { curve: linearCurve(w.T, top), scale: "linear", note: "" };
+    let src = measured(basePack) ? basePack.curve : null, note = "";
+    if (!src) {
+      const raw = Object.values(PACKS).filter(measured).sort(packOrder)[0];
+      if (raw) src = raw.curve;
+      else {
+        src = refCurve();
+        note = src ? "No published pack carries a measured curve, so this reads the research population instead."
+          : "No measured curve is available, so the percentile scale falls back to the linear one.";
+      }
+    }
+    return src
+      ? { curve: anchoredCurve(src, w.T, top), scale: "percentile", note }
+      : { curve: linearCurve(w.T, top), scale: "percentile", note };
+  }
+
+  function buildPack() {
+    const src = basePack;
+    const vehicles = {};
+    const keys = new Set(Object.keys(src.vehicles));
+    for (const k of VEH) if (Math.abs(work.veh[k] - work.def) > 1e-9) keys.add(k);
+    for (const k of [...keys].sort()) {
+      const v = src.vehicles[k] || {};
+      vehicles[k] = { factor: round(work.veh[k] ?? v.factor, 4), results: v.results || 0, name: v.name || (META[k] && META[k].name) || k, role: v.role || (META[k] && META[k].role) || null };
+    }
+    const modes = {};
+    for (const m of MODES) if (work.on[m] || src.modes[m]) modes[m] = round(work.modes[m], 4);
+    const built = curveFor(work);
+    return {
+      schema: 1, version: "", effective_from: $("eff").value, generated: "",
+      reference: src.reference,
+      // progress_ramp is dropped: the build-up ramp is retired, and the curve built here never carries one.
+      rules: (({ progress_ramp, ...r }) => r)(Object.assign({}, src.rules, { window: work.window, rolling: work.rolling, band: round(work.band, 4), floor_seconds: work.floor, max_bot_share: round(work.bots, 4), progress_scale: built.scale, game_modes: MODES.filter((m) => work.on[m]) })),
+      base_dpm: round(work.base, 2),
+      thresholds: work.T.map((t) => round(t, 4)),
+      curve: built.curve,
+      modes, vehicles,
+      default_vehicle_factor: src.default_vehicle_factor,
+      aliases: src.aliases || {}
+    };
+  }
+
+  const saveBlob = (body, type, name) => {
+    const url = URL.createObjectURL(new Blob([body], { type }));
+    const a = document.createElement("a");
+    a.href = url; a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  };
+
+  $("download").addEventListener("click", () => {
+    const pack = buildPack();
+    // `-proposal`, not a version: a real version is assigned by whoever publishes
+    // it, and a file that looked published would be mistaken for one.
+    pack.version = utcDay().replace(/-/g, ".") + "-proposal";
+    pack.generated = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
+    saveBlob(JSON.stringify(pack, null, 1), "application/json", `${pack.version}.json`);
+  });
+
+  // ---- changelog -----------------------
+  const DISCORD_LIMIT = 2000;
+  const same = (a, b) => Math.abs(a - b) < 1e-9;
+  const signedPct = (was, now) => {
+    if (!was) return "";
+    const d = ((now - was) / was) * 100;
+    return `${d > 0 ? "+" : d < 0 ? "-" : ""}${fmt(Math.abs(d), 1)}%`;
+  };
+
+  function isDirty() {
+    if (!work || !basePack) return false;
+    const src = cfgFromPack(basePack);
+    if (!same(work.base, src.base) || work.window !== src.window || !same(work.band, src.band)
+      || work.floor !== src.floor || !same(work.bots, src.bots) || work.scale !== src.scale || work.rolling !== src.rolling || !same(work.top, src.top)) return true;
+    if (work.T.some((t, i) => !same(t, src.T[i]))) return true;
+    if (MODES.some((m) => !same(work.modes[m], src.modes[m]) || work.on[m] !== src.on[m])) return true;
+    return VEH.some((k) => !same(work.veh[k], src.veh[k]));
+  }
+
+  // Code-block rows split so no single block runs past what one message can hold.
+  function codeBlocks(title, rows) {
+    const out = [];
+    let chunk = [];
+    const flush = () => { if (chunk.length) { out.push((out.length ? "" : title + "\n") + "```\n" + chunk.join("\n") + "\n```"); chunk = []; } };
+    for (const row of rows) {
+      if ((chunk.join("\n").length + row.length + title.length + 12) > DISCORD_LIMIT - 100) flush();
+      chunk.push(row);
+    }
+    flush();
+    return out;
+  }
+
+  function changelogBlocks() {
+    const dirty = isDirty();
+    const eff = dirty ? $("eff").value : basePack.effective_from;
+    const H = (title, note) => `**${title}**${note ? ` (${note})` : ""}\n`;
+    const blocks = [dirty
+      ? `## MoE calibration proposal\nStarts ${eff}. Compared with \`${compareKey}\`. Built in a browser; not published.`
+      : `## MoE calibration \`${compareKey}\`\nStarts ${eff}.`];
+
+    const rules = [];
+    if (!same(work.base, cmp.base)) rules.push(`- Base DPM: ${fmt(cmp.base)} ${ARROW} ${fmt(work.base)} (${signedPct(cmp.base, work.base)})`);
+    if (work.window !== cmp.window) rules.push(`- Window: last ${cmp.window} ${ARROW} last ${work.window} battles`);
+    if (!same(work.band, cmp.band)) rules.push(`- Keep band: ${fmt(cmp.band * 100, 1)}% ${ARROW} ${fmt(work.band * 100, 1)}% ` + (work.band > 0
+      ? `(a mark is lost this far below its line)`
+      : `(no leeway: a mark is now lost the moment the average falls under its line)`));
+    if (work.floor !== cmp.floor) rules.push(`- Shortest battle length counted: ${cmp.floor}s ${ARROW} ${work.floor}s`);
+    if (!same(work.bots, cmp.bots)) rules.push(`- Max enemy bots: ${fmt(cmp.bots * 100)}% ${ARROW} ${fmt(work.bots * 100)}% (5v5 up to ${botLimit(5, work.bots)}, 10v10 up to ${botLimit(10, work.bots)} bots; battles over it don't count)`);
+    if (work.rolling !== cmp.rolling) rules.push(work.rolling === "ema"
+      ? `- Averaging: now exponential, the formula World of Tanks uses. Your newest battle counts the most and each older battle a little less, so nothing drops out of your average all at once`
+      : `- Averaging: back to an equal-weight window. Every one of your last ${work.window} battles counts the same, and the oldest drops out when a new one lands`);
+    if (work.scale !== cmp.scale) rules.push(work.scale === "linear"
+      ? `- Progress %: now runs straight to the mark lines (65% = mark 1, 85% = mark 2, 95% = mark 3). Every battle moves it in proportion to how good it was, from a tank's first battle. Marks themselves are unchanged`
+      : `- Progress %: back to a percentile of regular players. Marks themselves are unchanged`);
+    if (rules.length) blocks.push(H("Rules") + rules.join("\n"));
+
+    const marks = [];
+    for (let i = 0; i < 3; i++) {
+      const wasDpm = cmp.T[i] * cmp.base, nowDpm = work.T[i] * work.base;
+      if (same(cmp.T[i], work.T[i]) && same(wasDpm, nowDpm)) continue;
+      marks.push(`- Mark ${i + 1}: ${fmt(cmp.T[i] * 100)} ${ARROW} ${fmt(work.T[i] * 100)} (${fmt(wasDpm)} ${ARROW} ${fmt(nowDpm)} DPM, ${signedPct(wasDpm, nowDpm)})`);
+    }
+    if (!same(cmp.top * cmp.base, work.top * work.base)) {
+      marks.push(`- 100% progress: ${fmt(cmp.top * 100)} ${ARROW} ${fmt(work.top * 100)} (${fmt(cmp.top * cmp.base)} ${ARROW} ${fmt(work.top * work.base)} DPM, ${signedPct(cmp.top * cmp.base, work.top * work.base)})`);
+    }
+    if (marks.length) blocks.push(H("Mark lines", "index, and DPM on an average tank in an average mode") + marks.join("\n"));
+
+    const modes = [];
+    for (const m of MODES) {
+      if (work.on[m] !== cmp.on[m]) { modes.push(`- ${modeName(m)}: ${work.on[m] ? "now counts toward marks" : "no longer counts toward marks"}`); continue; }
+      if (!work.on[m] || same(work.modes[m], cmp.modes[m])) continue;
+      const harder = work.modes[m] > cmp.modes[m];
+      modes.push(`- ${modeName(m)}: ${fmt(cmp.modes[m], 3)} ${ARROW} ${fmt(work.modes[m], 3)} (${signedPct(cmp.modes[m], work.modes[m])}, ${harder ? "harder" : "easier"}). Mark 3 on an average tank: ${fmt(cmp.T[2] * cmp.base * cmp.modes[m])} ${ARROW} ${fmt(work.T[2] * work.base * work.modes[m])} DPM`);
+    }
+    if (modes.length) blocks.push(H("Game modes", "factor up = more damage needed") + modes.join("\n"));
+
+    const changed = VEH.filter((k) => !same(work.veh[k], cmp.veh[k]))
+      .sort((a, b) => (work.veh[b] / cmp.veh[b]) - (work.veh[a] / cmp.veh[a]));
+    if (changed.length) {
+      const w = Math.max(4, ...changed.map((k) => META[k].name.length));
+      const rows = [`${"Tank".padEnd(w)}  ${"Factor".padEnd(15)} ${"Change".padStart(7)}  Mark 3 DPM`];
+      for (const k of changed) {
+        const was = cmp.veh[k], now = work.veh[k];
+        rows.push(`${META[k].name.padEnd(w)}  ${(fmt(was, 3) + " " + ARROW + " " + fmt(now, 3)).padEnd(15)} ${signedPct(was, now).padStart(7)}  ${fmt(cmp.T[2] * cmp.base * was)} ${ARROW} ${fmt(work.T[2] * work.base * now)}`);
+      }
+      const harder = changed.filter((k) => work.veh[k] > cmp.veh[k]).map((k) => META[k].name);
+      const easier = changed.filter((k) => work.veh[k] < cmp.veh[k]).map((k) => META[k].name);
+      const summary = [harder.length ? `Harder: ${harder.join(", ")}` : "", easier.length ? `Easier: ${easier.join(", ")}` : ""].filter(Boolean);
+      const title = H("Tanks", "factor up = more damage needed; Mark 3 DPM at an average mode").trimEnd() + (summary.length ? "\n" + summary.join("\n") : "");
+      blocks.push(...codeBlocks(title, rows));
+    }
+    if (!same(cmp.T[2] * cmp.base, work.T[2] * work.base)) {
+      blocks.push(`Every tank's mark 3 target also moves ${signedPct(cmp.T[2] * cmp.base, work.T[2] * work.base)} with the mark line and base DPM.`);
+    }
+    if (blocks.length === 1) blocks.push(`No calibration changes against \`${compareKey}\`.`);
+    return blocks;
+  }
+
+  // Greedy packing into Discord messages; a block longer than a message is cut on line breaks.
+  function toMessages(blocks) {
+    const pieces = [];
+    for (const b of blocks) {
+      if (b.length <= DISCORD_LIMIT) { pieces.push(b); continue; }
+      let cur = "";
+      for (const line of b.split("\n")) {
+        if (cur && (cur.length + 1 + line.length) > DISCORD_LIMIT) { pieces.push(cur); cur = ""; }
+        cur = cur ? cur + "\n" + line : line;
+      }
+      if (cur) pieces.push(cur);
+    }
+    const out = [];
+    let cur = "";
+    for (const p of pieces) {
+      if (cur && (cur.length + 2 + p.length) > DISCORD_LIMIT) { out.push(cur); cur = ""; }
+      cur = cur ? cur + "\n\n" + p : p;
+    }
+    if (cur) out.push(cur);
+    return out;
+  }
+
+  let clMessages = [];
+  async function copyText(text, note) {
+    try { await navigator.clipboard.writeText(text); note.textContent = "Copied."; }
+    catch (e) { note.textContent = "Clipboard blocked: select the text and press Ctrl+C."; }
+  }
+
+  function generateChangelog() {
+    if (!work || !basePack) return;
+    clMessages = toMessages(changelogBlocks());
+    const n = clMessages.length;
+    $("clParts").innerHTML = clMessages.map((m, i) => `
+      <div class="part">
+        <div class="part-head">
+          <span class="label">${n > 1 ? `Message ${i + 1} of ${n}` : "Message"}</span>
+          <span class="count${m.length > DISCORD_LIMIT ? " over" : ""}">${fmt(m.length)} / ${fmt(DISCORD_LIMIT)}</span>
+          <button type="button" data-copy="${i}">Copy</button>
+        </div>
+        <textarea id="cl-${i}" readonly aria-label="Changelog message ${i + 1}"></textarea>
+      </div>`).join("");
+    clMessages.forEach((m, i) => { $("cl-" + i).value = m; });
+    $("clDownload").disabled = n === 0;
+    $("clNote").textContent = `Generated ${n} message${n === 1 ? "" : "s"} against ${compareKey}.`;
+  }
+
+  $("clGenerate").addEventListener("click", generateChangelog);
+  $("clJump").addEventListener("click", () => {
+    generateChangelog();
+    $("changelog").scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  });
+  $("clParts").addEventListener("click", (e) => {
+    const b = e.target.closest("button[data-copy]"); if (!b) return;
+    copyText(clMessages[+b.dataset.copy], $("clNote"));
+  });
+  $("clDownload").addEventListener("click", () => {
+    if (!clMessages.length) return;
+    saveBlob(clMessages.join("\n\n"), "text/markdown", `moe-changelog-${utcDay()}.md`);
+  });
+
+  addEventListener("beforeunload", (e) => {
+    if (editing && isDirty()) { e.preventDefault(); e.returnValue = ""; }
+  });
+
+  boot();
+})();
+</script>
+</body>
+</html>
