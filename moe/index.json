@@ -2,17 +2,11 @@
  "schema": 1,
  "packs": [
   {
-   "version": "2026.07.10-1",
+   "version": "2026.09.17-1",
    "effective_from": "2026-07-10",
-   "path": "packs/2026.07.10-1.json",
-   "sha256": "02ec678a1621def5e2857e741de3b7b226192772229cdb19dab8d95d90a1c3b4"
-  },
-  {
-   "version": "2026.07.10-2",
-   "effective_from": "2026-07-10",
-   "path": "packs/2026.07.10-2.json",
-   "sha256": "dc0e5f73c40bf15490cc75e56dfd28d689254645b1c42e23a9b8396f17fd471f"
+   "path": "packs/2026.09.17-1.json",
+   "sha256": "2a508fe7cb3e22c682c40686ba758e6c2880683c53bab0ef6e74fab604ae6514"
   }
  ],
- "latest": "2026.07.10-2"
+ "latest": "2026.09.17-1"
 }
