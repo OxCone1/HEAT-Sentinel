@@ -2,11 +2,11 @@
  "schema": 1,
  "packs": [
   {
-   "version": "2026.09.17-1",
+   "version": "2026.09.17-2",
    "effective_from": "2026-07-10",
-   "path": "packs/2026.09.17-1.json",
-   "sha256": "2a508fe7cb3e22c682c40686ba758e6c2880683c53bab0ef6e74fab604ae6514"
+   "path": "packs/2026.09.17-2.json",
+   "sha256": "f7371ef8288bc50a446012e0a01ba19c121f2d38871d831c2e67e0561a3c8572"
   }
  ],
- "latest": "2026.09.17-1"
+ "latest": "2026.09.17-2"
 }
