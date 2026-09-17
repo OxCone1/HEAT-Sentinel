@@ -1,0 +1,20 @@
+{
+  "v": 1,
+  "id": "vanguard",
+  "name": "Vanguard",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "A chevron under the fixed aim point that is red while reloading and turns white the moment the gun can fire, with a pill magazine, a reload bar and a large countdown beneath it.",
+  "tags": [
+    "chevron",
+    "aim-static",
+    "high-visibility"
+  ],
+  "opts": {
+    "show": "always",
+    "anchor": "aim_static"
+  },
+  "preview": "preview.png"
+}

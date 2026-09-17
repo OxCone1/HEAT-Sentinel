@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "generated": "2026-09-14T12:30:51Z",
+  "generated": "2026-09-17T11:57:54Z",
   "counts": {
-    "reticles": 8,
+    "reticles": 12,
     "blk": 0,
     "image": 0,
-    "pack": 8,
+    "pack": 12,
     "svg": 0
   },
   "reticles": [
@@ -29,8 +29,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 6199,
-          "sha256": "c63fc8169a3f51113b4347004d8fd6a5969c53f3d07c1b85b85368b06c245d74"
+          "bytes": 7638,
+          "sha256": "b177ded66f8de844b76a4e7750183770fb0785fed07d490584b26db45f18a27a"
         },
         "preview.png": {
           "bytes": 52760,
@@ -58,12 +58,43 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 8554,
-          "sha256": "7705c1826ee87bf82ba1348e2d52c626723f54375e705b4baf8395b8951d99a2"
+          "bytes": 10519,
+          "sha256": "b8c9c632771a5e2dc059c1a26e808bc120367eb0d19b3c906024f2382b529e2d"
         },
         "preview.png": {
           "bytes": 54600,
           "sha256": "d680f55d8a7f0c07a4220bcafd68950828a146e98ea2f12fd1fbeec44b0c67f7"
+        }
+      }
+    },
+    {
+      "id": "compass",
+      "name": "Compass",
+      "dir": "compass",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "Khaki dial locked to the fixed aim point with cardinal notches and ranging ladders. The dial itself is the reload, the magazine and second gun sit on its lower quadrants, heat on the upper right.",
+      "preview": "preview.png",
+      "tags": [
+        "dial",
+        "aim-static",
+        "autoloader",
+        "rangefinder"
+      ],
+      "opts": {
+        "show": "always",
+        "anchor": "aim_static"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 7347,
+          "sha256": "9d07901e1cf0c067e417f59e6d8e9fe02c144a6ba413a7cb5376f14a83960e03"
+        },
+        "preview.png": {
+          "bytes": 74984,
+          "sha256": "20b000d2a9a4c101416b0cc10ed75a8ba5a208fd3f126724e9fb45e493d4803e"
         }
       }
     },
@@ -87,8 +118,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 8995,
-          "sha256": "0a041efe3ad2d8ce14d103fd501d23c15a14280baa073a00bed7f8e668188849"
+          "bytes": 10590,
+          "sha256": "a09fa2b6a22c51ba20bdae1f8c8eb97d3cbc75ecffd0809c247beafd5317d25a"
         },
         "preview.png": {
           "bytes": 50295,
@@ -117,12 +148,72 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 5771,
-          "sha256": "ed8bbf2bff3cecba431c7b09a9181fbc21d6c3cd4a2372be6f0e8d72634b9b06"
+          "bytes": 7348,
+          "sha256": "14be3725f5519b07b93a4f5ba85b846cc7480f87f03d13cf6b3abbccf94e188b"
         },
         "preview.png": {
           "bytes": 56892,
           "sha256": "3287759d02a850c1f323100361a943959014c4063d6a883c527a1a4119ca20cb"
+        }
+      }
+    },
+    {
+      "id": "gate",
+      "name": "Gate",
+      "dir": "gate",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "Lavender twin posts either side of the fixed aim point: the left fills with the reload (or heat), the right holds the magazine. The gun marker settles between them.",
+      "preview": "preview.png",
+      "tags": [
+        "tactical",
+        "aim-static",
+        "autoloader"
+      ],
+      "opts": {
+        "show": "always",
+        "anchor": "aim_static"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 9036,
+          "sha256": "190c8e0bcb624401fb567e4383fbaf30b8d661c56265c2834670a6905f1ea836"
+        },
+        "preview.png": {
+          "bytes": 66777,
+          "sha256": "8561346dd5c956b646b4aaeeaf29f20ba193bc1816f8088f7d57adef47650879"
+        }
+      }
+    },
+    {
+      "id": "horizon",
+      "name": "Horizon",
+      "dir": "horizon",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "Ice-white level line through the fixed aim point. Both arms close toward the centre as the gun reloads, rounds ride the right arm, heat and the second gun sit on the left, while the spread circle chases the gun into the gap.",
+      "preview": "preview.png",
+      "tags": [
+        "minimal",
+        "aim-static",
+        "rangefinder"
+      ],
+      "opts": {
+        "show": "always",
+        "anchor": "aim_static"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 8533,
+          "sha256": "bf2f3e2536eb4c0e64f8d24c91440dc1c01f4e2584a33a63f58e40843eb3d0a6"
+        },
+        "preview.png": {
+          "bytes": 65110,
+          "sha256": "88682fe5554cef5465fda49f7604b5bc23c0643af23895910b1c4c312f3d1d3d"
         }
       }
     },
@@ -146,8 +237,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 5128,
-          "sha256": "aa9af6fc5a4bc760524f4ffe2c14a3162636d46eeccea55119ab8bb92bc4964d"
+          "bytes": 6977,
+          "sha256": "6ac7efd9fad6693dce8b8fb0fdef4889a3ffe18f6c8d51b96eb3c9a1e8802360"
         },
         "preview.png": {
           "bytes": 52214,
@@ -175,8 +266,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 6547,
-          "sha256": "9244bd0a18e36561316508103e576fa6ef6fd1ce7ab749263b3a5bc444297d47"
+          "bytes": 8564,
+          "sha256": "4096fd514d93d6dfe0e4a3970523cb2841b3ec9fde213168dc76475f3a70c525"
         },
         "preview.png": {
           "bytes": 51010,
@@ -204,8 +295,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 6028,
-          "sha256": "02b149443294f8c271958fa30878d5e4529149299c58fd1306cf4694ccaddae7"
+          "bytes": 7378,
+          "sha256": "7ecaeb9d8250ae34e28174832e4be3339b047864fcdf686f6c481325dbc00f47"
         },
         "preview.png": {
           "bytes": 56418,
@@ -233,12 +324,42 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 5349,
-          "sha256": "90d6ae0a52c8d3e1a3c1d1393087a2d7fe90e724501c96a27f20adde68cbbd97"
+          "bytes": 6709,
+          "sha256": "18fc0eaef49b3910208b7ae5f4d37d6b00029efe23671b2d39c13d7564578edf"
         },
         "preview.png": {
           "bytes": 52564,
           "sha256": "75983ed0e62722222f5c3650e171b1baa3f4f06802e805e085d5fa907160a198"
+        }
+      }
+    },
+    {
+      "id": "vanguard",
+      "name": "Vanguard",
+      "dir": "vanguard",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "A chevron under the fixed aim point that is red while reloading and turns white the moment the gun can fire, with a pill magazine, a reload bar and a large countdown beneath it.",
+      "preview": "preview.png",
+      "tags": [
+        "chevron",
+        "aim-static",
+        "high-visibility"
+      ],
+      "opts": {
+        "show": "always",
+        "anchor": "aim_static"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 8378,
+          "sha256": "bff3a08eb18f0911f2bc5e2dd3854f0fc6f966b4b545b767d43eba1b7e9c0f30"
+        },
+        "preview.png": {
+          "bytes": 67918,
+          "sha256": "173da89e74c23b9f56622a9826720581f22d1ee6347911363a6d784e84af79a5"
         }
       }
     }

@@ -1,0 +1,20 @@
+{
+  "v": 1,
+  "id": "horizon",
+  "name": "Horizon",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "Ice-white level line through the fixed aim point. Both arms close toward the centre as the gun reloads, rounds ride the right arm, heat and the second gun sit on the left, while the spread circle chases the gun into the gap.",
+  "tags": [
+    "minimal",
+    "aim-static",
+    "rangefinder"
+  ],
+  "opts": {
+    "show": "always",
+    "anchor": "aim_static"
+  },
+  "preview": "preview.png"
+}

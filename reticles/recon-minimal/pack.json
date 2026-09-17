@@ -96,7 +96,8 @@
         "crosshair_type": [
           "Common"
         ],
-        "reloading": true
+        "reloading": true,
+        "heat_gun": false
       }
     },
     {
@@ -108,7 +109,8 @@
       "color": "#f8f7f6ff",
       "shadow": "rgba(0,0,0,0.5)",
       "when": {
-        "reloading": true
+        "reloading": true,
+        "heat_gun": false
       }
     },
     {
@@ -127,7 +129,8 @@
       "when": {
         "magazine_min": 2,
         "magazine_max": 16
-      }
+      },
+      "source": "primary"
     },
     {
       "t": "bar",
@@ -141,7 +144,8 @@
       "color_bg": "rgba(248,247,246,0.16)",
       "when": {
         "magazine_min": 17
-      }
+      },
+      "source": "primary"
     },
     {
       "t": "text",
@@ -154,7 +158,8 @@
       "shadow": "rgba(0,0,0,0.5)",
       "when": {
         "magazine_min": 17
-      }
+      },
+      "source": "primary"
     },
     {
       "t": "text",
@@ -168,7 +173,8 @@
       "when": {
         "magazine_min": 2,
         "round_loading": true
-      }
+      },
+      "source": "primary"
     },
     {
       "t": "bar",
@@ -181,12 +187,57 @@
       "color": "#f8f7f6ff",
       "color_bg": "rgba(248,247,246,0.16)",
       "when": {
-        "heat_gun": true
-      }
+        "heat_gun": true,
+        "heat_phase": [
+          "idle",
+          "heating",
+          "cooling",
+          "overheat",
+          "overheat_cooling"
+        ]
+      },
+      "source": "primary"
     },
     {
       "t": "bar",
-      "track": "none",
+      "track": "heat",
+      "x": -94,
+      "y": -64,
+      "w": 3,
+      "h": 56,
+      "fill_dir": "up",
+      "color": "#f8f7f6ff",
+      "color_bg": "rgba(248,247,246,0.16)",
+      "when": {
+        "heat_gun": true,
+        "heat_phase": [
+          "delay"
+        ]
+      },
+      "source": "primary",
+      "opacity": 0.4
+    },
+    {
+      "t": "bar",
+      "track": "heat_delay",
+      "x": -94,
+      "y": -64,
+      "w": 3,
+      "h": 56,
+      "fill_dir": "up",
+      "color": "#f8f7f6ff",
+      "when": {
+        "heat_gun": true,
+        "heat_phase": [
+          "delay"
+        ]
+      },
+      "source": "primary",
+      "bg_sweep": false
+    },
+    {
+      "t": "bar",
+      "track": "heat",
       "x": -94,
       "y": -64,
       "w": 3,
@@ -195,7 +246,8 @@
       "color_bg": null,
       "when": {
         "overheated": true
-      }
+      },
+      "source": "primary"
     },
     {
       "t": "text",
@@ -261,6 +313,20 @@
       "when": {
         "range_close": true
       }
+    },
+    {
+      "t": "text",
+      "text": "+{shell_time_left:1}",
+      "x": -101,
+      "y": -60.0,
+      "size": 12,
+      "font": "Normalidad Compact 400",
+      "color": "#ffb347ff",
+      "shadow": "rgba(0,0,0,0.5)",
+      "when": {
+        "round_loading": true
+      },
+      "source": "secondary"
     }
   ]
 }

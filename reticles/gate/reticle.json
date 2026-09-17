@@ -1,0 +1,20 @@
+{
+  "v": 1,
+  "id": "gate",
+  "name": "Gate",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "Lavender twin posts either side of the fixed aim point: the left fills with the reload (or heat), the right holds the magazine. The gun marker settles between them.",
+  "tags": [
+    "tactical",
+    "aim-static",
+    "autoloader"
+  ],
+  "opts": {
+    "show": "always",
+    "anchor": "aim_static"
+  },
+  "preview": "preview.png"
+}

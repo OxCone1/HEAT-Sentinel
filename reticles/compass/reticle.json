@@ -1,0 +1,21 @@
+{
+  "v": 1,
+  "id": "compass",
+  "name": "Compass",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "Khaki dial locked to the fixed aim point with cardinal notches and ranging ladders. The dial itself is the reload, the magazine and second gun sit on its lower quadrants, heat on the upper right.",
+  "tags": [
+    "dial",
+    "aim-static",
+    "autoloader",
+    "rangefinder"
+  ],
+  "opts": {
+    "show": "always",
+    "anchor": "aim_static"
+  },
+  "preview": "preview.png"
+}

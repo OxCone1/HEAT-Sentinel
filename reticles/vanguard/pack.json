@@ -1,0 +1,448 @@
+{
+  "format": "heat.reticle",
+  "version": 1,
+  "name": "Vanguard",
+  "author": "HEAT Sentinel",
+  "hide": [
+    "ammo_wheel",
+    "reload_clock",
+    "loader_ammo_count",
+    "aim_static_ring",
+    "aim_ring_shadow",
+    "aim_reload_ring",
+    "aim_ring_highlight",
+    "aim_centre_mark",
+    "aim_front_sight",
+    "scope_reticle",
+    "range_readout"
+  ],
+  "widgets": [
+    {
+      "t": "shape",
+      "sp": [
+        {
+          "p": [
+            [
+              -0.17,
+              0.27
+            ],
+            [
+              0.0,
+              0.11
+            ],
+            [
+              0.17,
+              0.27
+            ]
+          ],
+          "c": false
+        }
+      ],
+      "scale": 100,
+      "fill": null,
+      "stroke": "rgba(20,4,4,0.6)",
+      "sw": 5,
+      "cap": "round",
+      "join": "miter"
+    },
+    {
+      "t": "shape",
+      "sp": [
+        {
+          "p": [
+            [
+              -0.17,
+              0.27
+            ],
+            [
+              0.0,
+              0.11
+            ],
+            [
+              0.17,
+              0.27
+            ]
+          ],
+          "c": false
+        }
+      ],
+      "scale": 100,
+      "fill": null,
+      "stroke": "#ff3b3bff",
+      "sw": 2.5,
+      "cap": "round",
+      "join": "miter",
+      "when": {
+        "reloading": true,
+        "heat_gun": false
+      }
+    },
+    {
+      "t": "shape",
+      "sp": [
+        {
+          "p": [
+            [
+              -0.17,
+              0.27
+            ],
+            [
+              0.0,
+              0.11
+            ],
+            [
+              0.17,
+              0.27
+            ]
+          ],
+          "c": false
+        }
+      ],
+      "scale": 100,
+      "fill": null,
+      "stroke": "#f4f4f2ff",
+      "sw": 2.5,
+      "cap": "round",
+      "join": "miter",
+      "when": {
+        "reloading": false,
+        "heat_gun": false
+      }
+    },
+    {
+      "t": "shape",
+      "sp": [
+        {
+          "p": [
+            [
+              -0.17,
+              0.27
+            ],
+            [
+              0.0,
+              0.11
+            ],
+            [
+              0.17,
+              0.27
+            ]
+          ],
+          "c": false
+        }
+      ],
+      "scale": 100,
+      "fill": null,
+      "stroke": "#f4f4f2ff",
+      "sw": 2.5,
+      "cap": "round",
+      "join": "miter",
+      "when": {
+        "heat_gun": true
+      }
+    },
+    {
+      "t": "ring",
+      "track": "none",
+      "r": -0.5,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 14.5,
+      "r_max": 8000,
+      "width": 1,
+      "color": "rgba(244,244,242,0.5)",
+      "shadow": "rgba(20,4,4,0.35)",
+      "shadow_width": 2,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ]
+      }
+    },
+    {
+      "t": "dot",
+      "shape": "circle",
+      "w": 4,
+      "h": 4,
+      "color": "#f4f4f2ff",
+      "border": true,
+      "border_width": 1,
+      "border_color": "rgba(20,4,4,0.6)"
+    },
+    {
+      "t": "sectors",
+      "r": 44,
+      "thickness": 5,
+      "total_deg": 76,
+      "gap_px": 4,
+      "start_deg": 180,
+      "align": "center",
+      "cap": "round",
+      "color_ready": "#f4f4f2ff",
+      "color_loading": "#ff3b3bff",
+      "color_paused": "#ffb020ff",
+      "color_empty": "rgba(244,244,242,0.18)",
+      "shadow": "rgba(20,4,4,0.6)",
+      "shadow_width": 2,
+      "when": {
+        "magazine_min": 2,
+        "magazine_max": 12
+      },
+      "source": "primary"
+    },
+    {
+      "t": "bar",
+      "track": "magazine",
+      "x": -40,
+      "y": 43,
+      "w": 80,
+      "h": 3,
+      "radius": 1.5,
+      "color": "#f4f4f2ff",
+      "color_bg": "rgba(244,244,242,0.18)",
+      "when": {
+        "magazine_min": 13
+      },
+      "source": "primary"
+    },
+    {
+      "t": "text",
+      "text": "{shells_ready}",
+      "x": 46,
+      "y": 44,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "#f4f4f2ff",
+      "shadow": "rgba(20,4,4,0.6)",
+      "when": {
+        "magazine_min": 13
+      },
+      "source": "primary"
+    },
+    {
+      "t": "bar",
+      "track": "reload_time",
+      "x": -40,
+      "y": 60,
+      "w": 80,
+      "h": 2,
+      "color": "#f4f4f2ff",
+      "color_bg": "rgba(244,244,242,0.18)",
+      "when": {
+        "reloading": true,
+        "heat_gun": false
+      }
+    },
+    {
+      "t": "text",
+      "text": "{time_left:1}",
+      "x": 0,
+      "y": 78,
+      "size": 16,
+      "font": "Normalidad Extended 400",
+      "align": "center",
+      "color": "#f4f4f2ff",
+      "shadow": "rgba(20,4,4,0.6)",
+      "when": {
+        "reloading": true,
+        "heat_gun": false
+      }
+    },
+    {
+      "t": "text",
+      "text": "+{shell_time_left:1}",
+      "x": 30,
+      "y": 79,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "left",
+      "color": "#ff3b3bff",
+      "shadow": "rgba(20,4,4,0.6)",
+      "when": {
+        "magazine_min": 2,
+        "round_loading": true
+      },
+      "source": "primary"
+    },
+    {
+      "t": "text",
+      "text": "2ND {shells_ready}",
+      "x": -30,
+      "y": 79,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "right",
+      "color": "rgba(244,244,242,0.6)",
+      "shadow": "rgba(20,4,4,0.6)",
+      "source": "secondary"
+    },
+    {
+      "t": "bar",
+      "track": "heat",
+      "x": -40,
+      "y": 66,
+      "w": 80,
+      "h": 2,
+      "color": {
+        "g": "linear",
+        "p": [
+          0,
+          0,
+          80,
+          0
+        ],
+        "s": [
+          [
+            0,
+            "#f4f4f2ff"
+          ],
+          [
+            1,
+            "#ffb020ff"
+          ]
+        ]
+      },
+      "color_bg": "rgba(244,244,242,0.18)",
+      "when": {
+        "heat_gun": true,
+        "heat_phase": [
+          "idle",
+          "heating",
+          "cooling",
+          "overheat",
+          "overheat_cooling"
+        ]
+      },
+      "source": "primary"
+    },
+    {
+      "t": "bar",
+      "track": "heat",
+      "x": -40,
+      "y": 66,
+      "w": 80,
+      "h": 2,
+      "color": {
+        "g": "linear",
+        "p": [
+          0,
+          0,
+          80,
+          0
+        ],
+        "s": [
+          [
+            0,
+            "#f4f4f2ff"
+          ],
+          [
+            1,
+            "#ffb020ff"
+          ]
+        ]
+      },
+      "color_bg": "rgba(244,244,242,0.18)",
+      "when": {
+        "heat_gun": true,
+        "heat_phase": [
+          "delay"
+        ]
+      },
+      "source": "primary",
+      "opacity": 0.4
+    },
+    {
+      "t": "bar",
+      "track": "heat_delay",
+      "x": -40,
+      "y": 66,
+      "w": 80,
+      "h": 2,
+      "color": {
+        "g": "linear",
+        "p": [
+          0,
+          0,
+          80,
+          0
+        ],
+        "s": [
+          [
+            0,
+            "#f4f4f2ff"
+          ],
+          [
+            1,
+            "#ffb020ff"
+          ]
+        ]
+      },
+      "when": {
+        "heat_gun": true,
+        "heat_phase": [
+          "delay"
+        ]
+      },
+      "source": "primary",
+      "bg_sweep": false
+    },
+    {
+      "t": "text",
+      "text": "OVERHEAT",
+      "x": 0,
+      "y": 96,
+      "size": 11,
+      "font": "Normalidad Extended 400",
+      "align": "center",
+      "color": "#ffb020ff",
+      "shadow": "rgba(20,4,4,0.6)",
+      "when": {
+        "overheated": true
+      }
+    },
+    {
+      "t": "text",
+      "text": "{distance:0} m",
+      "x": 0,
+      "y": -48,
+      "size": 12,
+      "font": "Normalidad Extended 400",
+      "align": "center",
+      "color": "rgba(244,244,242,0.85)",
+      "shadow": "rgba(20,4,4,0.6)",
+      "when": {
+        "range_shown": true,
+        "range_close": false
+      }
+    },
+    {
+      "t": "text",
+      "text": "{distance:0} m",
+      "x": 0,
+      "y": -48,
+      "size": 12,
+      "font": "Normalidad Extended 400",
+      "align": "center",
+      "color": "#ffb020ff",
+      "shadow": "rgba(20,4,4,0.6)",
+      "when": {
+        "range_close": true
+      }
+    },
+    {
+      "t": "text",
+      "text": "+{shell_time_left:1}",
+      "x": -30,
+      "y": 93.0,
+      "size": 11,
+      "font": "Normalidad Compact 400",
+      "align": "right",
+      "color": "#ff3b3bff",
+      "shadow": "rgba(20,4,4,0.6)",
+      "when": {
+        "round_loading": true
+      },
+      "source": "secondary"
+    }
+  ]
+}
