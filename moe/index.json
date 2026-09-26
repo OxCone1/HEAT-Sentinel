@@ -6,7 +6,13 @@
    "effective_from": "2026-07-10",
    "path": "packs/2026.09.18-1.json",
    "sha256": "bfeb0ac5b6b21dadf8a7374bb4c2154d37f97ce0a222195eaec79582d55b4770"
+  },
+  {
+   "version": "2026.09.26-1",
+   "effective_from": "2026-09-24",
+   "path": "packs/2026.09.26-1.json",
+   "sha256": "a4636ced7c0387b40de6b18e9b6f9028930ec678437099970564354efeedcda0"
   }
  ],
- "latest": "2026.09.18-1"
+ "latest": "2026.09.26-1"
 }
