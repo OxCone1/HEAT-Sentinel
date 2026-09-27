@@ -30,11 +30,8 @@ A nickname can change, and two accounts can show the same one. Each entry is key
 | `accounts` | yes | One or more in-game account ids (numbers) that belong to this streamer |
 | `name` | no | Last known in-game nickname. Display only, never used for matching |
 
-## Getting on the list
+## Getting on or off the list
 
-The list is opt-in. Only streamers who ask to be added are listed.
+The list is opt-in and kept by the developer. To be added, or to have the link between your in-game account and your Twitch channel removed, message the developer on Discord: <https://discord.com/users/376062591480365068>. The same link is on the About page in HEAT Sentinel.
 
-1. In HEAT Sentinel, open **Add-ons > HEAT Snap**, then **Streamer list > Copy my entry**. That copies your entry with your in-game account id already filled in.
-2. Open an issue or a pull request on this repository with that entry.
-
-To be removed, open an issue or a pull request that deletes your entry.
+HEAT Snap downloads the list again every time its window is opened, so a removal reaches every user without an app update.

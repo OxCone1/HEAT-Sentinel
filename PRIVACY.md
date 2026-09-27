@@ -85,7 +85,7 @@ Nothing on these ports is reachable from the internet unless you deliberately fo
 
 HEAT Snap creates Twitch clips of streamers you meet in battle. It does nothing until you switch it on under Add-ons and connect your own Twitch account. While it is on:
 
-- **Streamer list.** The app downloads the public, opt-in streamer list from this repository (`heatsnap/streamers.json`) at launch and every few hours. The request carries nothing about you.
+- **Streamer list.** The app downloads the public, opt-in streamer list from this repository (`heatsnap/streamers.json`) at launch, every few hours, and each time the HEAT Snap window is opened. The request carries nothing about you.
 - **Twitch sign-in.** You approve the connection on twitch.tv in your own browser. HEAT Snap asks only for permission to create clips (`clips:edit`). The resulting tokens are stored encrypted in your local database and are sent only to Twitch. Signing out revokes them.
 - **Live check.** When a player on the streamer list is in your battle, the app asks Twitch whether that streamer's channel is live. Twitch receives the channel names being checked, from your Twitch account. Players who are not on the list are never looked up.
 - **Clips.** When you destroy a listed streamer who is live, or one destroys you, the app asks Twitch to create a clip of that streamer's broadcast. The clip is created on your Twitch account, like a clip made on twitch.tv, and appears in your Twitch clip manager. Your list of clips, with the map and vehicles involved, is kept in your local database.
@@ -106,7 +106,7 @@ The app does not upload your database, screenshots, logs or settings. There is n
 
 Battle result screens contain the nicknames and performance figures of other players in your match. When the app records a battle, those values are stored in your local database as part of your own record of the match. They are visible only to you, are never transmitted by the app, and are exactly the information the game already showed you on screen.
 
-The HEAT Snap streamer list is the one exception to "local only": it is a public file in this repository that links a streamer's in-game account id to their Twitch channel. It lists only streamers who asked to be listed, and an entry is removed on request.
+The HEAT Snap streamer list is the one exception to "local only": it is a public file in this repository that links a streamer's in-game account id to their Twitch channel. It lists only streamers who asked to be listed. If you are on it and want the link between your in-game account and your Twitch channel removed, message the developer on Discord at <https://discord.com/users/376062591480365068> (the same link is on the About page in the app). The next time any user opens HEAT Snap, the entry is gone.
 
 If you publish screenshots, exported data or overlay captures yourself, you are responsible for whatever they reveal about other players.
 
@@ -114,7 +114,7 @@ If you publish screenshots, exported data or overlay captures yourself, you are 
 
 ## 6. Contributions to this repository
 
-This repository accepts community contributions: calibration data, screen patterns, game data, localisation files and HEAT Snap streamer list entries.
+This repository accepts community contributions: calibration data, screen patterns, game data and localisation files. The HEAT Snap streamer list is kept by the developer; see Section 5.
 
 Anything you submit through a pull request or issue becomes publicly visible, including your GitHub username and the contents of the files, and remains part of the public repository history. Before submitting, check that screenshots, calibration images and sample data do not contain your nickname, friend list, Discord overlay, browser tabs or anything else you would rather not publish. Do not include personal information in contributed files.
 
