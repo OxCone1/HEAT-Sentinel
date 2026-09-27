@@ -2,7 +2,7 @@
 
 **Application:** WoT: HEAT Sentinel ("HEAT Sentinel", "the app")
 **Publisher:** OxCone ("we", "the developer")
-**Last updated:** 14 August 2026
+**Last updated:** 28 September 2026
 
 WoT: HEAT Sentinel is an unofficial statistics gathering app. It is not affiliated with, endorsed by, or sponsored by Wargaming Group Limited. All in-game assets and trademarks belong to their respective owners.
 
@@ -12,7 +12,7 @@ WoT: HEAT Sentinel is an unofficial statistics gathering app. It is not affiliat
 
 HEAT Sentinel has no accounts, no registration, no telemetry, no analytics and no advertising. Everything the app records is written to your own machine. We operate no server that receives your battle data, and we cannot read your statistics.
 
-Three things do involve a network, and all three are described in full in [Section 4](#4-network-activity): the update check against GitHub, the optional Discord Rich Presence integration, and the local overlay server that serves data to your browser or OBS.
+A few things do involve a network, and all of them are described in full in [Section 4](#4-network-activity): the update check against GitHub, the optional Discord Rich Presence integration, the optional HEAT Snap add-on (off by default), and the local overlay server that serves data to your browser or OBS.
 
 ---
 
@@ -81,11 +81,22 @@ In practice this means any device on the same local network that can reach those
 
 Nothing on these ports is reachable from the internet unless you deliberately forward the ports on your router.
 
-### 4.4 Links to external sites
+### 4.4 HEAT Snap (optional add-on, off by default)
+
+HEAT Snap creates Twitch clips of streamers you meet in battle. It does nothing until you switch it on under Add-ons and connect your own Twitch account. While it is on:
+
+- **Streamer list.** The app downloads the public, opt-in streamer list from this repository (`heatsnap/streamers.json`) at launch and every few hours. The request carries nothing about you.
+- **Twitch sign-in.** You approve the connection on twitch.tv in your own browser. HEAT Snap asks only for permission to create clips (`clips:edit`). The resulting tokens are stored encrypted in your local database and are sent only to Twitch. Signing out revokes them.
+- **Live check.** When a player on the streamer list is in your battle, the app asks Twitch whether that streamer's channel is live. Twitch receives the channel names being checked, from your Twitch account. Players who are not on the list are never looked up.
+- **Clips.** When you destroy a listed streamer who is live, or one destroys you, the app asks Twitch to create a clip of that streamer's broadcast. The clip is created on your Twitch account, like a clip made on twitch.tv, and appears in your Twitch clip manager. Your list of clips, with the map and vehicles involved, is kept in your local database.
+
+Nothing about your battles is sent to Twitch beyond the channel being clipped. Twitch handles this data under its own privacy policy. Switching the add-on off stops all of it.
+
+### 4.5 Links to external sites
 
 The app contains links to GitHub, the community Discord server, Twitch and donation pages. Following a link opens your browser and hands you over to that site, which then applies its own policies. No data from the app is attached to those links.
 
-### 4.5 What the app does not send
+### 4.6 What the app does not send
 
 The app does not upload your database, screenshots, logs or settings. There is no crash reporting service, no analytics SDK, no advertising identifier, and no profile of you held by the developer. Nothing is sold, rented or shared with third parties, because nothing is collected in the first place.
 
@@ -95,13 +106,15 @@ The app does not upload your database, screenshots, logs or settings. There is n
 
 Battle result screens contain the nicknames and performance figures of other players in your match. When the app records a battle, those values are stored in your local database as part of your own record of the match. They are visible only to you, are never transmitted by the app, and are exactly the information the game already showed you on screen.
 
+The HEAT Snap streamer list is the one exception to "local only": it is a public file in this repository that links a streamer's in-game account id to their Twitch channel. It lists only streamers who asked to be listed, and an entry is removed on request.
+
 If you publish screenshots, exported data or overlay captures yourself, you are responsible for whatever they reveal about other players.
 
 ---
 
 ## 6. Contributions to this repository
 
-This repository accepts community contributions: calibration data, screen patterns, game data and localisation files.
+This repository accepts community contributions: calibration data, screen patterns, game data, localisation files and HEAT Snap streamer list entries.
 
 Anything you submit through a pull request or issue becomes publicly visible, including your GitHub username and the contents of the files, and remains part of the public repository history. Before submitting, check that screenshots, calibration images and sample data do not contain your nickname, friend list, Discord overlay, browser tabs or anything else you would rather not publish. Do not include personal information in contributed files.
 
@@ -132,6 +145,7 @@ If an online feature is ever released, it will be opt-in, it will require an exp
 ## 10. Your choices
 
 - Turn Discord Rich Presence, or just the score display, off in Settings.
+- Leave HEAT Snap off, or switch it off under Add-ons. Sign out of Twitch in its window to revoke its access.
 - Restrict or block ports `17504` and `17505` in your firewall if you do not use the browser or OBS overlays.
 - Switch capture mode between the default direct-read mode and the Legacy OCR mode in the app configuration.
 - Delete `%LOCALAPPDATA%\com.oxcone.heat-sentinel\` to erase all stored data.
