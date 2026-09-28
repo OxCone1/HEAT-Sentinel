@@ -106,7 +106,7 @@ The app does not upload your database, screenshots, logs or settings. There is n
 
 Battle result screens contain the nicknames and performance figures of other players in your match. When the app records a battle, those values are stored in your local database as part of your own record of the match. They are visible only to you, are never transmitted by the app, and are exactly the information the game already showed you on screen.
 
-The HEAT Snap streamer list is the one exception to "local only": it is a public file in this repository that links a streamer's in-game account id to their Twitch channel. It lists only streamers who asked to be listed. If you are on it and want the link between your in-game account and your Twitch channel removed, message the developer on Discord at <https://discord.com/users/376062591480365068> (the same link is on the About page in the app). The next time any user opens HEAT Snap, the entry is gone.
+The HEAT Snap streamer list is the one exception to "local only": it is a public file in this repository that links a streamer's in-game account id, or in-game nickname, to their Twitch channel. It lists only streamers who asked to be listed. If you are on it and want the link between your in-game account and your Twitch channel removed, message the developer on Discord at <https://discord.com/users/376062591480365068> (the same link is on the About page in the app). The next time any user opens HEAT Snap, the entry is gone.
 
 If you publish screenshots, exported data or overlay captures yourself, you are responsible for whatever they reveal about other players.
 
