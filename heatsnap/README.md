@@ -1,6 +1,11 @@
 # HEAT Snap streamer list
 
-HEAT Snap is the HEAT Sentinel add-on that creates a Twitch clip of a streamer's broadcast when you destroy them, or when they destroy you. It only knows who a streamer is from `streamers.json` in this folder. Nobody outside this file is ever looked up.
+HEAT Snap is the HEAT Sentinel add-on that creates a Twitch clip of a streamer's broadcast when you destroy them, or when they destroy you. It recognises streamers in two passes:
+
+1. **This list**, `streamers.json`, checked first.
+2. **Everyone else in the battle**: their in-game nickname is tried as a Twitch login, and counts only if that channel is live in the World of Tanks: HEAT category right now. A channel streaming anything else is never clipped.
+
+The list is for streamers whose Twitch name differs from their in-game name, or who should be recognised by account id. A streamer who uses the same name in both places is found without being listed.
 
 ## Accounts first, nicknames as a fallback
 
