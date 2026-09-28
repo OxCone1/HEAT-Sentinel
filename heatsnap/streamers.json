@@ -1,5 +1,151 @@
 {
   "schema": 1,
   "updated": "2026-09-28",
-  "streamers": []
+  "streamers": [
+    {
+      "twitch": "uvlazhnitel13",
+      "accounts": [],
+      "name": "Ustitsa_13"
+    },
+    {
+      "twitch": "jaraypunto",
+      "accounts": [],
+      "name": "jaraypunto"
+    },
+    {
+      "twitch": "wot_heat",
+      "accounts": [],
+      "name": "Mr_Matcha"
+    },
+    {
+      "twitch": "wot_heat",
+      "accounts": [],
+      "name": "121Remmy"
+    },
+    {
+      "twitch": "wot_heat",
+      "accounts": [],
+      "name": "MrConway"
+    },
+    {
+      "twitch": "thecommandershatch",
+      "accounts": [],
+      "name": "The_Roman_Hammer"
+    },
+    {
+      "twitch": "gosmordll",
+      "accounts": [],
+      "name": "Gosmord"
+    },
+    {
+      "twitch": "lwet_",
+      "accounts": [],
+      "name": "Pavlikiller"
+    },
+    {
+      "twitch": "myst1c_ex0",
+      "accounts": [],
+      "name": "Myst1c_ex0"
+    },
+    {
+      "twitch": "TokusYomigaeri",
+      "accounts": [],
+      "name": "TokugawaShogunat1"
+    },
+    {
+      "twitch": "LadyDeadpool996",
+      "accounts": [],
+      "name": "LadyDeadpool996"
+    },
+    {
+      "twitch": "unclefuzzy86",
+      "accounts": [],
+      "name": "unclefuzzy86"
+    },
+    {
+      "twitch": "oogabouoo",
+      "accounts": [],
+      "name": "oOGABOUOo"
+    },
+    {
+      "twitch": "dekan0v",
+      "accounts": [],
+      "name": "dekan0v"
+    },
+    {
+      "twitch": "darthschnuff",
+      "accounts": [],
+      "name": "DarthSchnuff"
+    },
+    {
+      "twitch": "vazybot",
+      "accounts": [],
+      "name": "vazyb0t"
+    },
+    {
+      "twitch": "restless_rogue03",
+      "accounts": [],
+      "name": "Restless03"
+    },
+    {
+      "twitch": "wot_heat",
+      "accounts": [],
+      "name": "Mr_Matcha"
+    },
+    {
+      "twitch": "r1ghtwix",
+      "accounts": [],
+      "name": "rightw1x"
+    },
+    {
+      "twitch": "fantomas_fr_tv",
+      "accounts": [],
+      "name": "FantomasFR_TV"
+    },
+    {
+      "twitch": "leon4ikkz",
+      "accounts": [],
+      "name": "Nozevenom"
+    },
+    {
+      "twitch": "just_real_noob",
+      "accounts": [],
+      "name": "JustRealNoob"
+    },
+    {
+      "twitch": "gogi_jaaan",
+      "accounts": [],
+      "name": "GOSHA_ZABIK"
+    },
+    {
+      "twitch": "triggsrigg",
+      "accounts": [],
+      "name": "ninebarz"
+    },
+    {
+      "twitch": "imthebale",
+      "accounts": [],
+      "name": "IMTheBale_WoTCC"
+    },
+    {
+      "twitch": "augustopoa",
+      "accounts": [],
+      "name": "AugustoPOA"
+    },
+    {
+      "twitch": "zjalaska",
+      "accounts": [],
+      "name": "ZJALASKA"
+    },
+    {
+      "twitch": "slava_ua23",
+      "accounts": [],
+      "name": "Stiv_931"
+    },
+    {
+      "twitch": "violentdabber",
+      "accounts": [],
+      "name": "Violentdabber"
+    }
+  ]
 }
