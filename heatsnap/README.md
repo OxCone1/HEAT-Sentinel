@@ -41,8 +41,10 @@ Bots are never matched by name.
 
 An entry needs `accounts` or a name, or it is skipped.
 
-## Getting on or off the list
+## Who is on the list, and opting out
 
-The list is opt-in and kept by the developer. To be added, or to have the link between your in-game account and your Twitch channel removed, message the developer on Discord: <https://discord.com/users/376062591480365068>. The same link is on the About page in HEAT Sentinel.
+The list is curated by the developer. You may be on it because you have streamed HEAT: your in-game nickname was seen on your public stream and linked to your Twitch channel.
+
+To opt out, message the developer on Discord: <https://discord.com/users/376062591480365068>. Your entry is removed. The same link is on the About page in HEAT Sentinel. To be added, use the same link.
 
 HEAT Snap downloads the list again every time its window is opened, so a removal reaches every user without an app update.
