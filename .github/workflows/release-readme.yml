@@ -10,6 +10,8 @@
 #   3. Rewrites the RELEASE-EN / RELEASE-RU marker blocks in README.md
 #      (badge with direct download link + VirusTotal report table).
 #   4. Commits the README to the default branch.
+#   5. Puts the same download badge at the top of the release's notes
+#      (between DOWNLOAD marker comments, so re-runs replace it).
 #
 # Releases without a release_info.json asset and an *-setup.exe asset
 # (e.g. Light-LabelMe tool releases) are skipped. No secrets required.
@@ -82,9 +84,15 @@ jobs:
             }' release.json info.json > release_info_full.json
           cat release_info_full.json
 
-      - name: Update README marker blocks
+      - name: Update README marker blocks and release notes
         if: steps.guard.outputs.app_release == 'true'
-        run: python3 scripts/update_release_info.py --readme README.md --data release_info_full.json
+        run: |
+          jq -r '.body // ""' release.json > notes.md
+          python3 scripts/update_release_info.py --readme README.md --data release_info_full.json --notes notes.md
+
+      - name: Add download button to release notes
+        if: steps.guard.outputs.app_release == 'true'
+        run: gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --notes-file notes.md
 
       - name: Commit and push
         if: steps.guard.outputs.app_release == 'true'

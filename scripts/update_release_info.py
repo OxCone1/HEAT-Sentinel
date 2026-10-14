@@ -32,6 +32,8 @@ MARKERS = {
     "ru": ("<!-- RELEASE-RU:START -->", "<!-- RELEASE-RU:END -->"),
 }
 
+NOTES_MARKERS = ("<!-- DOWNLOAD:START -->", "<!-- DOWNLOAD:END -->")
+
 TEXT = {
     "en": {
         "badge_label": "Download",
@@ -89,10 +91,9 @@ def asset_kind(asset: dict, lang: str) -> str:
     return TEXT[lang]["asset"]
 
 
-def build_block(data: dict, lang: str) -> str:
+def build_badge(data: dict, lang: str) -> str:
     t = TEXT[lang]
-    tag = data["tag"]
-    version = tag.lstrip("vV")
+    version = data["tag"].lstrip("vV")
 
     installer = next(
         (
@@ -106,13 +107,19 @@ def build_block(data: dict, lang: str) -> str:
     if installer is None or not installer.get("download_url"):
         sys.exit("No installer asset with a download URL found in release data.")
 
-    badge = (
+    return (
         f"[![{t['badge_label']} HEAT Sentinel]"
         f"(https://img.shields.io/badge/"
         f"{shields_escape(t['badge_label'])}-"
         f"{shields_escape(f'HEAT Sentinel v{version}')}-0a0a0a"
         f"?style=for-the-badge&logo=github)]({installer['download_url']})"
     )
+
+
+def build_block(data: dict, lang: str) -> str:
+    t = TEXT[lang]
+    tag = data["tag"]
+    badge = build_badge(data, lang)
 
     lines = [
         badge,
@@ -143,10 +150,23 @@ def replace_block(readme: str, lang: str, block: str) -> str:
     return pattern.sub(f"{start}\n{block}\n{end}", readme)
 
 
+def update_notes(notes: str, badge: str) -> str:
+    """Put the download badge at the top of the release notes (idempotent)."""
+    start, end = NOTES_MARKERS
+    notes = re.sub(
+        re.escape(start) + r".*?" + re.escape(end) + r"\s*", "", notes, flags=re.DOTALL
+    )
+    return f"{start}\n{badge}\n{end}\n\n{notes.lstrip()}".rstrip() + "\n"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--readme", required=True)
     parser.add_argument("--data", required=True)
+    parser.add_argument(
+        "--notes",
+        help="Release notes markdown file to update in place with the download badge.",
+    )
     args = parser.parse_args()
 
     with open(args.data, encoding="utf-8") as f:
@@ -160,6 +180,14 @@ def main() -> None:
     with open(args.readme, "w", encoding="utf-8", newline="\n") as f:
         f.write(readme)
     print("README updated.")
+
+    if args.notes:
+        with open(args.notes, encoding="utf-8") as f:
+            notes = f.read()
+        notes = update_notes(notes, build_badge(data, "en"))
+        with open(args.notes, "w", encoding="utf-8", newline="\n") as f:
+            f.write(notes)
+        print("Release notes updated.")
 
 
 if __name__ == "__main__":
