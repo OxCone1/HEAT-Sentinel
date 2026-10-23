@@ -27,7 +27,7 @@ Unless required by applicable law or agreed in writing, you may not:
 - remove, obscure or alter copyright notices, attributions or version information;
 - represent the application, or anything derived from it, as affiliated with or endorsed by OxCone, Wargaming or World of Tanks: HEAT.
 
-The fair play rules and usage restrictions in the [Disclaimer](./README.md#10-disclaimer) section of the README form part of these terms.
+The fair play rules and usage restrictions in the [Disclaimer](./README.md#fair-play-and-disclaimer) section of the README form part of these terms.
 
 ---
 

@@ -7,7 +7,7 @@
 # this workflow:
 #   1. Downloads release_info.json from the release.
 #   2. Resolves the installer's direct download URL from the release assets.
-#   3. Rewrites the RELEASE-EN / RELEASE-RU marker blocks in README.md
+#   3. Rewrites the RELEASE-EN / RELEASE-RU marker blocks in README.md and README.ru.md
 #      (badge with direct download link + VirusTotal report table).
 #   4. Commits the README to the default branch.
 #   5. Puts the same download badge at the top of the release's notes
@@ -88,7 +88,7 @@ jobs:
         if: steps.guard.outputs.app_release == 'true'
         run: |
           jq -r '.body // ""' release.json > notes.md
-          python3 scripts/update_release_info.py --readme README.md --data release_info_full.json --notes notes.md
+          python3 scripts/update_release_info.py --readme README.md README.ru.md --data release_info_full.json --notes notes.md
 
       - name: Add download button to release notes
         if: steps.guard.outputs.app_release == 'true'
@@ -99,7 +99,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add README.md README.ru.md
           if git diff --cached --quiet; then
             echo "README already up to date."
             exit 0

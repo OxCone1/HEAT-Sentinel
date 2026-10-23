@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Rewrite the RELEASE-EN / RELEASE-RU marker blocks in README.md.
+"""Rewrite the RELEASE-EN / RELEASE-RU marker blocks in README.md and README.ru.md.
 
 Input JSON (produced by .github/workflows/release-readme.yml):
 {
@@ -142,12 +142,13 @@ def build_block(data: dict, lang: str) -> str:
     return "\n".join(lines)
 
 
-def replace_block(readme: str, lang: str, block: str) -> str:
+def replace_block(readme: str, lang: str, block: str) -> tuple[str, bool]:
+    """Rewrite one language's marker block; False when the file has none."""
     start, end = MARKERS[lang]
     pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
     if not pattern.search(readme):
-        sys.exit(f"Markers {start} / {end} not found in README.")
-    return pattern.sub(f"{start}\n{block}\n{end}", readme)
+        return readme, False
+    return pattern.sub(lambda _: f"{start}\n{block}\n{end}", readme), True
 
 
 def update_notes(notes: str, badge: str) -> str:
@@ -161,7 +162,12 @@ def update_notes(notes: str, badge: str) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--readme", required=True)
+    parser.add_argument(
+        "--readme",
+        required=True,
+        nargs="+",
+        help="README files to update; each gets the marker blocks it contains.",
+    )
     parser.add_argument("--data", required=True)
     parser.add_argument(
         "--notes",
@@ -171,15 +177,24 @@ def main() -> None:
 
     with open(args.data, encoding="utf-8") as f:
         data = json.load(f)
-    with open(args.readme, encoding="utf-8") as f:
-        readme = f.read()
-
-    for lang in ("en", "ru"):
-        readme = replace_block(readme, lang, build_block(data, lang))
-
-    with open(args.readme, "w", encoding="utf-8", newline="\n") as f:
-        f.write(readme)
-    print("README updated.")
+    found = set()
+    for path in args.readme:
+        with open(path, encoding="utf-8") as f:
+            readme = f.read()
+        hit = False
+        for lang in MARKERS:
+            readme, ok = replace_block(readme, lang, build_block(data, lang))
+            if ok:
+                found.add(lang)
+                hit = True
+        if not hit:
+            sys.exit(f"No release marker blocks found in {path}.")
+        with open(path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(readme)
+        print(f"{path} updated.")
+    missing = [f"{MARKERS[lang][0]} / {MARKERS[lang][1]}" for lang in MARKERS if lang not in found]
+    if missing:
+        sys.exit(f"Markers not found in any README: {', '.join(missing)}")
 
     if args.notes:
         with open(args.notes, encoding="utf-8") as f:
