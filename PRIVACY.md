@@ -2,7 +2,7 @@
 
 **Application:** WoT: HEAT Sentinel ("HEAT Sentinel", "the app")
 **Publisher:** OxCone ("we", "the developer")
-**Last updated:** 28 September 2026
+**Last updated:** 23 October 2026
 
 WoT: HEAT Sentinel is an unofficial statistics gathering app. It is not affiliated with, endorsed by, or sponsored by Wargaming Group Limited. All in-game assets and trademarks belong to their respective owners.
 
@@ -12,7 +12,7 @@ WoT: HEAT Sentinel is an unofficial statistics gathering app. It is not affiliat
 
 HEAT Sentinel has no accounts, no registration, no telemetry, no analytics and no advertising. Everything the app records is written to your own machine. We operate no server that receives your battle data, and we cannot read your statistics.
 
-A few things do involve a network, and all of them are described in full in [Section 4](#4-network-activity): the update check against GitHub, the optional Discord Rich Presence integration, the optional HEAT Snap add-on (off by default), and the local overlay server that serves data to your browser or OBS.
+A few things do involve a network, and all of them are described in full in [Section 4](#4-network-activity): the update check against GitHub, the optional Discord Rich Presence integration, the optional HEAT Snap add-on (off by default), map downloads for the optional Tactics Board add-on (off by default), and the local overlay server that serves data to your browser or OBS.
 
 ---
 
@@ -92,11 +92,19 @@ HEAT Snap creates Twitch clips of streamers you meet in battle. It does nothing 
 
 Nothing about your battles is sent to Twitch beyond the channel being clipped. Twitch handles this data under its own privacy policy. Switching the add-on off stops all of it.
 
-### 4.5 Links to external sites
+### 4.5 Tactics Board (optional add-on, off by default)
+
+The Tactics Board lets you plan strategies on top-down map images. It does nothing until you switch it on under Add-ons. While it is on:
+
+- **Map downloads.** The app downloads the list of maps and the maps you install from GitHub. These requests carry nothing about you.
+- **Account mark.** Map images shown in the Tactics Board carry an invisible mark of your account, so leaked copies can be traced. The mark stays on your computer unless you share an image.
+- **Your plans.** Strategies and teams are stored only on your computer and leave it only when you share them yourself.
+
+### 4.6 Links to external sites
 
 The app contains links to GitHub, the community Discord server, Twitch and donation pages. Following a link opens your browser and hands you over to that site, which then applies its own policies. No data from the app is attached to those links.
 
-### 4.6 What the app does not send
+### 4.7 What the app does not send
 
 The app does not upload your database, screenshots, logs or settings. There is no crash reporting service, no analytics SDK, no advertising identifier, and no profile of you held by the developer. Nothing is sold, rented or shared with third parties, because nothing is collected in the first place.
 
@@ -146,6 +154,7 @@ If an online feature is ever released, it will be opt-in, it will require an exp
 
 - Turn Discord Rich Presence, or just the score display, off in Settings.
 - Leave HEAT Snap off, or switch it off under Add-ons. Sign out of Twitch in its window to revoke its access.
+- Leave the Tactics Board off, or switch it off under Add-ons.
 - Restrict or block ports `17504` and `17505` in your firewall if you do not use the browser or OBS overlays.
 - Switch capture mode between the default direct-read mode and the Legacy OCR mode in the app configuration.
 - Delete `%LOCALAPPDATA%\com.oxcone.heat-sentinel\` to erase all stored data.
