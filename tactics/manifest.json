@@ -1,0 +1,172 @@
+{
+  "packs": [
+    {
+      "map_id": "01_beirut",
+      "display_name": "Scarred City",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/01_beirut.v1.hpak",
+      "sha256": "db5713d9c6114b25b1303e9b63c117f5d12c113c96a88042e347851756e767ee",
+      "size": 3280837,
+      "modes": [
+        "conquest",
+        "conquest20",
+        "control",
+        "hardpoint",
+        "killconfirm",
+        "plantdefuse"
+      ]
+    },
+    {
+      "map_id": "02_vietnam",
+      "display_name": "Blossom Crash",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/02_vietnam.v1.hpak",
+      "sha256": "54be71892b256bfb5c87ab3cff2e01f81b014d0b6ce5f2178941503bfbd4523b",
+      "size": 2259196,
+      "modes": [
+        "conquest",
+        "conquest20",
+        "control",
+        "hardpoint",
+        "killconfirm",
+        "plantdefuse"
+      ]
+    },
+    {
+      "map_id": "03_sunstroke",
+      "display_name": "Sunstroke",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/03_sunstroke.v1.hpak",
+      "sha256": "6ea898ab00e30ce6938d4d9f5135eacae2b470613260eb01cb3553815bc1a63d",
+      "size": 2522149,
+      "modes": [
+        "conquest",
+        "control",
+        "killconfirm",
+        "plantdefuse"
+      ]
+    },
+    {
+      "map_id": "04_nordoko",
+      "display_name": "Nord Oko",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/04_nordoko.v1.hpak",
+      "sha256": "96584beada7ca744abb509303c5d898ac99912f37049fa77ac2bbc5a4ea121a8",
+      "size": 2425595,
+      "modes": [
+        "conquest",
+        "killconfirm"
+      ]
+    },
+    {
+      "map_id": "05_friendshipdam",
+      "display_name": "Nexus Dam",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/05_friendshipdam.v1.hpak",
+      "sha256": "98e81fbea6d856c68f15c2fc0913c07507545d613a972f099fb40edaf55c68a9",
+      "size": 2722050,
+      "modes": [
+        "conquest",
+        "hardpoint",
+        "killconfirm"
+      ]
+    },
+    {
+      "map_id": "06_aircraft_carrier",
+      "display_name": "Aircraft Carrier",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/06_aircraft_carrier.v1.hpak",
+      "sha256": "2132929e5e467856876deb977a3f3fa25da528fddb92ea55f83e5fda75ae036e",
+      "size": 2038113,
+      "modes": [
+        "conquest",
+        "control",
+        "hardpoint",
+        "killconfirm"
+      ]
+    },
+    {
+      "map_id": "07_projectphoenix",
+      "display_name": "Project Phoenix",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/07_projectphoenix.v1.hpak",
+      "sha256": "6cd5d6f2853b53d1cd2a45a72ab97b50b76ba41cb9d8570c0b15426aedd826da",
+      "size": 3484093,
+      "modes": [
+        "conquest",
+        "conquest20",
+        "hardpoint",
+        "killconfirm",
+        "plantdefuse"
+      ]
+    },
+    {
+      "map_id": "08_inferno",
+      "display_name": "Inferno One",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/08_inferno.v1.hpak",
+      "sha256": "5da7206b1ab83370a16e692a3e2dce2b1cd5b3065cdb3ca7954a6b5ff39cae8a",
+      "size": 1717940,
+      "modes": [
+        "conquest",
+        "conquest20",
+        "hardpoint",
+        "killconfirm",
+        "plantdefuse"
+      ]
+    },
+    {
+      "map_id": "08_inferno_halloween",
+      "display_name": "Inferno One",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/08_inferno_halloween.v1.hpak",
+      "sha256": "3ac6d244639ee21e6fb7f9ecd5e060ad9234d9b67763f5fdbfad6b32f0dc02ba",
+      "size": 1311798,
+      "modes": [
+        "conquest",
+        "hardpoint",
+        "killconfirm",
+        "plantdefuse"
+      ]
+    },
+    {
+      "map_id": "09_moonshot",
+      "display_name": "Moonshot",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/09_moonshot.v1.hpak",
+      "sha256": "359ffc7e350fd749f01b5d927d47e78cd89c75afc10e53ab541f888b513d218c",
+      "size": 2665674,
+      "modes": [
+        "conquest",
+        "hardpoint",
+        "killconfirm",
+        "plantdefuse"
+      ]
+    },
+    {
+      "map_id": "10_eden",
+      "display_name": "Eden",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/10_eden.v1.hpak",
+      "sha256": "b0999e6bbc1cb681fe2440514b05f21114ee15c34c87662eabcf5a4b3dfa3301",
+      "size": 2215578,
+      "modes": [
+        "conquest",
+        "hardpoint",
+        "killconfirm",
+        "plantdefuse"
+      ]
+    }
+  ]
+}
