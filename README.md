@@ -15,14 +15,14 @@ HEAT Sentinel is a mod for **World of Tanks: HEAT** that runs next to the game. 
 ## Download
 
 <!-- RELEASE-EN:START -->
-[![Download HEAT Sentinel](https://img.shields.io/badge/Download-HEAT%20Sentinel%20v2.9.1-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v2.9.1/HEAT.Sentinel_2.9.1_x64-setup.exe)
+[![Download HEAT Sentinel](https://img.shields.io/badge/Download-HEAT%20Sentinel%20v3.0.0-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.0.0/HEAT.Sentinel_3.0.0_x64-setup.exe)
 
-**Latest release:** [v2.9.1](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v2.9.1) -- published 2026-10-06
+**Latest release:** [v3.0.0](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v3.0.0) -- published 2026-10-24
 
 | File | Size | VirusTotal report |
 |------|------|------|
-| [`HEAT.Sentinel_2.9.1_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v2.9.1/HEAT.Sentinel_2.9.1_x64-setup.exe) (app installer) | 153.5 MB | [View scan](https://www.virustotal.com/gui/file/d50c53a5a930674ca901186613b6a1a50bce0de357d35c2956521eec81c0ed5f) |
-| `heat-capture.exe` (capture/watcher engine, bundled inside the installer) | 40.0 MB | [View scan](https://www.virustotal.com/gui/file/436c2a389e2e9912ddc9a7c8686a58d5333d30fe731058240c0557e4a4b4fe2e) |
+| [`HEAT.Sentinel_3.0.0_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.0.0/HEAT.Sentinel_3.0.0_x64-setup.exe) (app installer) | 155.5 MB | [View scan](https://www.virustotal.com/gui/file/643de1ec71f5014a32ea13ed30e1bb737dd70f90bae4b9401a2e421e668384b0) |
+| `heat-capture.exe` (capture/watcher engine, bundled inside the installer) | 42.2 MB | [View scan](https://www.virustotal.com/gui/file/28e953a78bf6c7cafdf4b59b38b4b7abc76777bd930b3818cf2d1ba499946ebf) |
 <!-- RELEASE-EN:END -->
 
 Every release is built by GitHub Actions and scanned on VirusTotal, and updates are signed. Windows SmartScreen will warn about the installer because it is not code-signed: "More info", then "Run anyway". [Why, and how to check a build yourself](docs/security-and-privacy.md).
