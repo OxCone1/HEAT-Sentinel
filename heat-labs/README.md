@@ -8,4 +8,4 @@ Images for the HEAT Sentinel page on [HEAT Labs Mods](https://github.com/HEATLab
 | `stats-overview.png` | Overview image 1: Battles, Overview |
 | `rivals-1v1.png` | Overview image 2: Battles, 1v1 |
 | `loadouts.png` | Overview image 3: Battles, Loadouts |
-| `game-ui-sight.png` | Overview image 4: Game UI, Sight |
+| `moe.png` | Overview image 4: Battles, MOE |
