@@ -167,6 +167,17 @@
         "killconfirm",
         "plantdefuse"
       ]
+    },
+    {
+      "map_id": "firing_range",
+      "display_name": "Firing Range",
+      "version": 1,
+      "gen": 1,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/firing_range.v1.hpak",
+      "sha256": "2ae8c963c53e79e9c5de4495028613bd8ce7d56f6c42597895fd1090a5c89966",
+      "size": 572239,
+      "modes": [],
+      "radar_only": true
     }
   ]
 }
