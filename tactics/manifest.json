@@ -1,30 +1,35 @@
-{
+﻿{
   "packs": [
     {
       "map_id": "01_beirut",
       "display_name": "Scarred City",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/01_beirut.v1.hpak",
-      "sha256": "db5713d9c6114b25b1303e9b63c117f5d12c113c96a88042e347851756e767ee",
-      "size": 3280837,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/01_beirut.v2.hpak",
+      "sha256": "12136d7e663f8c85052ff23e9aa3720f787e03fbb8b7157f341cb716cac3e3ec",
+      "size": 4737735,
       "modes": [
         "conquest",
         "conquest20",
+        "conquest20_clientonly",
+        "conquest_clientonly",
         "control",
+        "control_clientonly",
         "hardpoint",
+        "hardpoint_clientonly",
         "killconfirm",
-        "plantdefuse"
+        "plantdefuse",
+        "plantdefuse_clientonly"
       ]
     },
     {
       "map_id": "02_vietnam",
       "display_name": "Blossom Crash",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/02_vietnam.v1.hpak",
-      "sha256": "54be71892b256bfb5c87ab3cff2e01f81b014d0b6ce5f2178941503bfbd4523b",
-      "size": 2259196,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/02_vietnam.v2.hpak",
+      "sha256": "a963e56e5b5d9105470cc68a09fefc8f1fed60e0058c43e6aeaca2feb964a9ab",
+      "size": 3235422,
       "modes": [
         "conquest",
         "conquest20",
@@ -37,11 +42,11 @@
     {
       "map_id": "03_sunstroke",
       "display_name": "Sunstroke",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/03_sunstroke.v1.hpak",
-      "sha256": "6ea898ab00e30ce6938d4d9f5135eacae2b470613260eb01cb3553815bc1a63d",
-      "size": 2522149,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/03_sunstroke.v2.hpak",
+      "sha256": "a46fa09a423f65014766a673d838d4693d5e529853d20d23fbd51ee97466e647",
+      "size": 4188272,
       "modes": [
         "conquest",
         "control",
@@ -52,11 +57,11 @@
     {
       "map_id": "04_nordoko",
       "display_name": "Nord Oko",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/04_nordoko.v1.hpak",
-      "sha256": "96584beada7ca744abb509303c5d898ac99912f37049fa77ac2bbc5a4ea121a8",
-      "size": 2425595,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/04_nordoko.v2.hpak",
+      "sha256": "b0c26a4f940cd92cc2b7d9e4e44dededa4572b3f3688d42f532aa7830d551059",
+      "size": 4520727,
       "modes": [
         "conquest",
         "killconfirm"
@@ -65,11 +70,11 @@
     {
       "map_id": "05_friendshipdam",
       "display_name": "Nexus Dam",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/05_friendshipdam.v1.hpak",
-      "sha256": "98e81fbea6d856c68f15c2fc0913c07507545d613a972f099fb40edaf55c68a9",
-      "size": 2722050,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/05_friendshipdam.v2.hpak",
+      "sha256": "47f62f59a5ab71379f15be2ea9313a06fd1b5c8d6aefba91ef553a8744d6549d",
+      "size": 5974545,
       "modes": [
         "conquest",
         "hardpoint",
@@ -79,11 +84,11 @@
     {
       "map_id": "06_aircraft_carrier",
       "display_name": "Aircraft Carrier",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/06_aircraft_carrier.v1.hpak",
-      "sha256": "2132929e5e467856876deb977a3f3fa25da528fddb92ea55f83e5fda75ae036e",
-      "size": 2038113,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/06_aircraft_carrier.v2.hpak",
+      "sha256": "a7a88f0b784b7524b49b71ce52f3af2382b82c698fba5fd89b68926fa63c45a3",
+      "size": 2539338,
       "modes": [
         "conquest",
         "control",
@@ -94,11 +99,11 @@
     {
       "map_id": "07_projectphoenix",
       "display_name": "Project Phoenix",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/07_projectphoenix.v1.hpak",
-      "sha256": "6cd5d6f2853b53d1cd2a45a72ab97b50b76ba41cb9d8570c0b15426aedd826da",
-      "size": 3484093,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/07_projectphoenix.v2.hpak",
+      "sha256": "11fa4e23914bbd30a0edc051b68e28aea84c7d7f71203656e8ffa517b2787af1",
+      "size": 5185903,
       "modes": [
         "conquest",
         "conquest20",
@@ -110,11 +115,11 @@
     {
       "map_id": "08_inferno",
       "display_name": "Inferno One",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/08_inferno.v1.hpak",
-      "sha256": "5da7206b1ab83370a16e692a3e2dce2b1cd5b3065cdb3ca7954a6b5ff39cae8a",
-      "size": 1717940,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/08_inferno.v2.hpak",
+      "sha256": "fe5c8c4d898ec16b56874a08d3670d2a952b65666b46ae6d89bc88420927864a",
+      "size": 3157262,
       "modes": [
         "conquest",
         "conquest20",
@@ -126,11 +131,11 @@
     {
       "map_id": "08_inferno_halloween",
       "display_name": "Inferno One",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/08_inferno_halloween.v1.hpak",
-      "sha256": "3ac6d244639ee21e6fb7f9ecd5e060ad9234d9b67763f5fdbfad6b32f0dc02ba",
-      "size": 1311798,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/08_inferno_halloween.v2.hpak",
+      "sha256": "7a803ca12f3f8d6addaf7cbaccb902d4ce342ff6dcba0793a24b6226945259be",
+      "size": 2733024,
       "modes": [
         "conquest",
         "hardpoint",
@@ -141,11 +146,11 @@
     {
       "map_id": "09_moonshot",
       "display_name": "Moonshot",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/09_moonshot.v1.hpak",
-      "sha256": "359ffc7e350fd749f01b5d927d47e78cd89c75afc10e53ab541f888b513d218c",
-      "size": 2665674,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/09_moonshot.v2.hpak",
+      "sha256": "5b0bb23782d5cc68e64118c35a62904a7b013a49fcbc3dab428067342218855e",
+      "size": 4486555,
       "modes": [
         "conquest",
         "hardpoint",
@@ -156,11 +161,11 @@
     {
       "map_id": "10_eden",
       "display_name": "Eden",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/10_eden.v1.hpak",
-      "sha256": "b0999e6bbc1cb681fe2440514b05f21114ee15c34c87662eabcf5a4b3dfa3301",
-      "size": 2215578,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/10_eden.v2.hpak",
+      "sha256": "c5ac74f23824a8e3a0256d5a8f7b4ec3dcf45f9b2cd9cac54ccda0b7d55ec3e9",
+      "size": 3232411,
       "modes": [
         "conquest",
         "hardpoint",
@@ -171,11 +176,11 @@
     {
       "map_id": "firing_range",
       "display_name": "Firing Range",
-      "version": 1,
+      "version": 2,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/firing_range.v1.hpak",
-      "sha256": "2ae8c963c53e79e9c5de4495028613bd8ce7d56f6c42597895fd1090a5c89966",
-      "size": 572239,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/firing_range.v2.hpak",
+      "sha256": "2f24ecee7596579f02ba3e9809554e5381795f8dea1fb3ea83c20d4f01e6382e",
+      "size": 783352,
       "modes": [],
       "radar_only": true
     }
