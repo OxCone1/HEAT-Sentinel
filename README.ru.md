@@ -15,14 +15,14 @@ HEAT Sentinel -- мод для **World of Tanks: HEAT**, который рабо
 ## Скачать
 
 <!-- RELEASE-RU:START -->
-[![Скачать HEAT Sentinel](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-HEAT%20Sentinel%20v3.0.0-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.0.0/HEAT.Sentinel_3.0.0_x64-setup.exe)
+[![Скачать HEAT Sentinel](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-HEAT%20Sentinel%20v3.1.0-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.1.0/HEAT.Sentinel_3.1.0_x64-setup.exe)
 
-**Последний релиз:** [v3.0.0](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v3.0.0) -- опубликован 2026-10-24
+**Последний релиз:** [v3.1.0](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v3.1.0) -- опубликован 2026-10-28
 
 | Файл | Размер | Отчёт VirusTotal |
 |------|------|------|
-| [`HEAT.Sentinel_3.0.0_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.0.0/HEAT.Sentinel_3.0.0_x64-setup.exe) (установщик приложения) | 155.5 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/643de1ec71f5014a32ea13ed30e1bb737dd70f90bae4b9401a2e421e668384b0) |
-| `heat-capture.exe` (движок захвата, встроен в установщик) | 42.2 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/28e953a78bf6c7cafdf4b59b38b4b7abc76777bd930b3818cf2d1ba499946ebf) |
+| [`HEAT.Sentinel_3.1.0_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.1.0/HEAT.Sentinel_3.1.0_x64-setup.exe) (установщик приложения) | 158.4 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/69a7683fd413b1c4d82df9c05d87c35a69cdfa65fe63424cee2b65775b8a6f01) |
+| `heat-capture.exe` (движок захвата, встроен в установщик) | 43.0 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/d8cb4890f96e7539813e826f208b3d12047fdca63d0d00fcb0fe14d6a1c23f08) |
 <!-- RELEASE-RU:END -->
 
 Каждый релиз собирается через GitHub Actions и проверяется на VirusTotal, а обновления подписаны. Windows SmartScreen предупредит об установщике, потому что у него нет цифровой подписи: "Подробнее", затем "Выполнить в любом случае". [Почему так и как проверить сборку самому](docs/ru/security-and-privacy.md).
