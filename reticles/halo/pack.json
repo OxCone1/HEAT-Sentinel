@@ -609,14 +609,14 @@
       "t": "reload_game",
       "y": 120,
       "w": 140,
-      "h": 7,
+      "h": 8,
       "indicator_w": 3,
-      "indicator_h": 17,
+      "indicator_h": 19,
       "end_h": 11,
       "color_end": "rgba(248,247,246,0.6)",
       "color_bg": "rgba(18,25,29,0.72)",
-      "color_zone": "rgba(61,217,248,0.9)",
-      "color_perfect": "#ffffffff",
+      "color_zone": "rgba(61,217,248,0.95)",
+      "color_perfect": "#3dd9f8ff",
       "color_indicator": "#ffffffff",
       "color_hit": "#84ffb1ff",
       "color_miss": "#ff6d46ff",
@@ -630,10 +630,10 @@
           "missed"
         ]
       },
-      "zone_texture": "dots",
-      "perfect_h": 11,
+      "zone_texture": "hatch",
+      "perfect_h": 14,
       "texture_step": 4,
-      "color_texture": "rgba(18,25,29,0.5)"
+      "color_texture": "rgba(18,25,29,0.55)"
     }
   ]
 }
