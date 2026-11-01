@@ -145,6 +145,74 @@
     {
       "t": "ring",
       "track": "none",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 30,
+      "sweep_deg": 30,
+      "bg_sweep": true,
+      "cap": "round",
+      "color": "rgba(244,244,242,0.9)",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ]
+      }
+    },
+    {
+      "t": "ring",
+      "track": "none",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 120,
+      "sweep_deg": 30,
+      "bg_sweep": true,
+      "cap": "round",
+      "color": "rgba(244,244,242,0.9)",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ]
+      }
+    },
+    {
+      "t": "ring",
+      "track": "none",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 210,
+      "sweep_deg": 30,
+      "bg_sweep": true,
+      "cap": "round",
+      "color": "rgba(244,244,242,0.9)",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ]
+      }
+    },
+    {
+      "t": "ring",
+      "track": "none",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 300,
+      "sweep_deg": 30,
+      "bg_sweep": true,
+      "cap": "round",
+      "color": "rgba(244,244,242,0.9)",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ]
+      }
+    },
+    {
+      "t": "ring",
+      "track": "none",
       "r": -0.5,
       "r_track": "spread",
       "r_scale": 0.5,
@@ -159,9 +227,7 @@
           "Common",
           "GatlingGun",
           "GatlingGunWithOverheat",
-          "MachineGunMechanic",
-          "TargetTrackerGun",
-          "Mim146Missiles"
+          "MachineGunMechanic"
         ]
       },
       "cap": "round"
