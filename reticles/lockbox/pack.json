@@ -248,11 +248,11 @@
     {
       "t": "text",
       "text": "{time_left:1}",
-      "x": 40,
-      "y": 70,
+      "x": -4,
+      "y": 85,
       "size": 13,
       "font": "Normalidad Extended 400",
-      "align": "left",
+      "align": "right",
       "color": "#ffb300ff",
       "shadow": "rgba(12,8,0,0.35)",
       "when": {
@@ -301,7 +301,7 @@
     {
       "t": "text",
       "text": "{shells_ready}",
-      "x": 40,
+      "x": 36,
       "y": 70,
       "size": 11,
       "font": "Normalidad Extended 400",
@@ -316,11 +316,11 @@
     {
       "t": "text",
       "text": "+{shell_time_left:1}",
-      "x": -34,
-      "y": 70,
+      "x": 4,
+      "y": 85,
       "size": 11,
       "font": "Normalidad Extended 400",
-      "align": "right",
+      "align": "left",
       "color": "rgba(255,179,0,0.45)",
       "shadow": "rgba(12,8,0,0.35)",
       "when": {
@@ -445,7 +445,7 @@
     {
       "t": "text",
       "text": "OVERHEAT",
-      "y": 96,
+      "y": 98,
       "size": 12,
       "font": "Normalidad Extended 400",
       "color": "#ff4d2eff",
@@ -458,11 +458,11 @@
       "t": "text",
       "source": "secondary",
       "text": "2ND {shells_ready}",
-      "x": -34,
-      "y": 83,
+      "x": 0,
+      "y": 100,
       "size": 11,
       "font": "Normalidad Extended 400",
-      "align": "right",
+      "align": "center",
       "color": "rgba(255,179,0,0.45)",
       "shadow": "rgba(12,8,0,0.35)"
     },
