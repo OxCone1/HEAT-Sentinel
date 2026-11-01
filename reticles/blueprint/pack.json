@@ -27,8 +27,6 @@
       "r_max": 8000,
       "width": 1,
       "color": "rgba(232,241,255,0.55)",
-      "shadow": "rgba(6,20,40,0.18)",
-      "shadow_width": 3,
       "when": {
         "crosshair_type": [
           "Common"
@@ -40,16 +38,14 @@
       "t": "strips",
       "sides": "all",
       "count": 1,
-      "len": 10,
+      "len": 8,
       "thickness": 1,
-      "offset": 3,
+      "offset": 5,
       "r_track": "spread",
       "r_scale": 0.5,
-      "r_min": 18,
+      "r_min": 20,
       "r_max": 8000,
       "color": "#e8f1ffff",
-      "shadow": "rgba(6,20,40,0.18)",
-      "shadow_width": 3,
       "when": {
         "crosshair_type": [
           "Common"
@@ -94,16 +90,16 @@
       "t": "bar",
       "track": "reload_time",
       "x": -50,
-      "y": 90,
+      "y": 89.5,
       "w": 100,
-      "h": 1,
+      "h": 2,
       "color": "#7fc8ffff",
-      "color_bg": "rgba(232,241,255,0.16)",
+      "color_bg": "rgba(232,241,255,0.22)",
       "when": {
         "reloading": true,
         "heat_gun": false
       },
-      "radius": 0.5
+      "radius": 1
     },
     {
       "t": "shape",
@@ -165,23 +161,21 @@
       "layout": "stack",
       "x": 80,
       "y": -2,
-      "cell_w": 10,
+      "cell_w": 12,
       "cell_h": 4,
-      "gap": 2,
+      "gap": 4,
       "fill_dir": "right",
-      "border": true,
-      "border_width": 1,
-      "border_color": "rgba(232,241,255,0.4)",
+      "border": false,
       "color_ready": "#e8f1ffff",
       "color_loading": "#7fc8ffff",
       "color_paused": "#ff8a7aff",
-      "color_empty": null,
+      "color_empty": "rgba(232,241,255,0.25)",
       "when": {
         "magazine_min": 2,
         "magazine_max": 14
       },
       "source": "primary",
-      "radius": 2.0
+      "radius": 2
     },
     {
       "t": "bar",

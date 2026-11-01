@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "generated": "2026-11-01T00:20:28Z",
+  "generated": "2026-11-01T00:41:05Z",
   "counts": {
-    "reticles": 7,
+    "reticles": 9,
     "blk": 0,
     "image": 0,
-    "pack": 7,
+    "pack": 9,
     "svg": 0
   },
   "reticles": [
@@ -29,12 +29,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 7983,
-          "sha256": "e743ac884bb57dbb413f57551f4e5b0cf97b403903e3f6df62e9306413089edd"
+          "bytes": 7803,
+          "sha256": "1ab20282f925c4d7faaef9f7e2003165f322dac71814721942f089d56a9df3f1"
         },
         "preview.png": {
-          "bytes": 56558,
-          "sha256": "6b5f837917b3b38321a14c98abe7eac6c9def9898cfa57f0826c86f85eb7bce7"
+          "bytes": 55389,
+          "sha256": "7f0279cec6e55386f5eb65af23f1ad3793886e56324a9e96615ac8b2dd526fe0"
         }
       }
     },
@@ -88,12 +88,68 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 7983,
-          "sha256": "1f40af091d8fa53ba2da7458afd717fcaa457d56edc0b657a86b890e08e074c6"
+          "bytes": 7980,
+          "sha256": "f19a2eacdbd88dc3144d2c1b4166af8f1e13a426bfe46d558bc3e61c68e556d5"
         },
         "preview.png": {
-          "bytes": 57837,
-          "sha256": "a8ed6f98c2406aa789d0b577029b2211282002a99c9cfa15e5a7da179f392f31"
+          "bytes": 57460,
+          "sha256": "2648c75ba77384e4b109991684850452df2c587752eb235fb4fd622ed6ca0e3c"
+        }
+      }
+    },
+    {
+      "id": "halo",
+      "name": "Halo",
+      "dir": "halo",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "The most restrained option. The spread circle is the reload, rounds ride its lower edge and grow in as they load, one small number under the sight.",
+      "preview": "preview.png",
+      "tags": [
+        "minimal",
+        "autoloader"
+      ],
+      "opts": {
+        "show": "always"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 7579,
+          "sha256": "8cb3691c046e154352b63f00f692f8adba544f6906c718dc1167361253b032fa"
+        },
+        "preview.png": {
+          "bytes": 53499,
+          "sha256": "7659bc4721c7eb777ad067bb3dbbe628cfc64c29027e99dda8d1dde9223b7806"
+        }
+      }
+    },
+    {
+      "id": "halo-numerals",
+      "name": "Halo Numerals",
+      "dir": "halo-numerals",
+      "file": "pack.json",
+      "kind": "pack",
+      "author": "HEAT Sentinel",
+      "license": "CC0-1.0",
+      "description": "Halo with a type block beside it: the ready count (or the seconds, on a single shot) as one big number, pips under it, the second gun mirrored on the left.",
+      "preview": "preview.png",
+      "tags": [
+        "numbers",
+        "autoloader"
+      ],
+      "opts": {
+        "show": "always"
+      },
+      "files": {
+        "pack.json": {
+          "bytes": 7157,
+          "sha256": "2aff7d0edd4742268fd207ef6b9b90ecdf4dc2d4d006b18e018c3e2958b3d3a5"
+        },
+        "preview.png": {
+          "bytes": 54227,
+          "sha256": "fc92144489932de2715908ad2c91a80b63a40fe75a9ae048988eb0b629a9a07b"
         }
       }
     },
@@ -122,8 +178,8 @@
           "sha256": "c233a853f683bf2cdba7e377ca42965a478d14c12cf18a776f4d2d849c802a6c"
         },
         "preview.png": {
-          "bytes": 54866,
-          "sha256": "45793a1d4aa4512dd8a804e3ba0c686763b35b83daac2925feef36a1c712b157"
+          "bytes": 54785,
+          "sha256": "164f9b199fa66ef6efbf992936f4bf42f6c8b6150a6c6d351bf619d84440b6d4"
         }
       }
     },
@@ -147,12 +203,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 10000,
-          "sha256": "39cc6f23a8ffc1a2a823e9a430b84c8192ec9f00bac2129705064ad13931c723"
+          "bytes": 9697,
+          "sha256": "f4397a2abb7b82b80301d63bda7b0b60144c65eb762ec062540e76df13ab8079"
         },
         "preview.png": {
-          "bytes": 55812,
-          "sha256": "3392dc144dbece024786f776584f6a1d44f713be85ce0aa717c6d1eaeb5ac379"
+          "bytes": 55976,
+          "sha256": "a6aca5a89db430c6cba9d35d1b853b22df281e63a3a197d755d07a12e1a3054b"
         }
       }
     },
@@ -176,12 +232,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 7704,
-          "sha256": "2d7ee5c2940905ad2d783357a1e8fac401ef053f23975659b2e37daceafdee3d"
+          "bytes": 8157,
+          "sha256": "c8cb3a26f775a4536a8d1a50fbc253cfe246e12859fba5a4212bafcee6235fc9"
         },
         "preview.png": {
-          "bytes": 57635,
-          "sha256": "e0ebee27e6f3d96555deb8462d7953cf2430a670935cd79b5da557777a4b0acb"
+          "bytes": 57520,
+          "sha256": "80c8f0fd478a6f1a6ae476892a8d15045363c56d784962b04f8ee5dc9d3f9464"
         }
       }
     },
@@ -207,11 +263,11 @@
       "files": {
         "pack.json": {
           "bytes": 8527,
-          "sha256": "535227919893d658c828f668cac7dcabcd1db3c92e41ef08ba20d143e61960a2"
+          "sha256": "a550af9903d2294231fba2e79dfa75ed639d802476f3a820d0f34828c1495dd2"
         },
         "preview.png": {
-          "bytes": 56082,
-          "sha256": "3003e8d0b2c66adbbfa66d159915f153ba76702b58d9d6415e39866918bf19f1"
+          "bytes": 56296,
+          "sha256": "8656e0ee34253feca54a6dd9046bbc588d67cdc74070a6ad6b8f94c7807e9188"
         }
       }
     }

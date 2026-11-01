@@ -246,26 +246,11 @@
       }
     },
     {
-      "t": "bar",
-      "track": "reload_time",
-      "x": -30,
-      "y": 92,
-      "w": 60,
-      "h": 3,
-      "color": "#ffb300ff",
-      "color_bg": "rgba(255,179,0,0.15)",
-      "when": {
-        "reloading": true,
-        "heat_gun": false
-      },
-      "radius": 1.5
-    },
-    {
       "t": "text",
       "text": "{time_left:1}",
-      "x": 36,
-      "y": 93,
-      "size": 12,
+      "x": 40,
+      "y": 70,
+      "size": 13,
       "font": "Normalidad Extended 400",
       "align": "left",
       "color": "#ffb300ff",
@@ -278,12 +263,12 @@
     {
       "t": "shells",
       "layout": "row",
-      "x": -30,
-      "y": 102,
+      "x": -27,
+      "y": 67,
       "cell_w": 6,
-      "cell_h": 4,
-      "gap": 2,
-      "skew": -20,
+      "cell_h": 6,
+      "gap": 6,
+      "skew": 0,
       "fill_dir": "grow",
       "color_ready": "#ffb300ff",
       "color_loading": "rgba(255,179,0,0.45)",
@@ -294,16 +279,16 @@
         "magazine_max": 8
       },
       "source": "primary",
-      "radius": 2.0
+      "radius": 3
     },
     {
       "t": "bar",
       "track": "magazine",
       "x": -30,
-      "y": 102,
+      "y": 69,
       "w": 60,
       "h": 3,
-      "skew": -20,
+      "skew": 0,
       "color": "#ffb300ff",
       "color_bg": "rgba(255,179,0,0.15)",
       "when": {
@@ -315,8 +300,8 @@
     {
       "t": "text",
       "text": "{shells_ready}",
-      "x": 36,
-      "y": 104,
+      "x": 40,
+      "y": 70,
       "size": 11,
       "font": "Normalidad Extended 400",
       "align": "left",
@@ -330,8 +315,8 @@
     {
       "t": "text",
       "text": "+{shell_time_left:1}",
-      "x": -36,
-      "y": 104,
+      "x": -34,
+      "y": 70,
       "size": 11,
       "font": "Normalidad Extended 400",
       "align": "right",
@@ -347,7 +332,7 @@
       "t": "bar",
       "track": "heat",
       "x": -30,
-      "y": 114,
+      "y": 82,
       "w": 60,
       "h": 2,
       "color": {
@@ -387,7 +372,7 @@
       "t": "bar",
       "track": "heat",
       "x": -30,
-      "y": 114,
+      "y": 82,
       "w": 60,
       "h": 2,
       "color": {
@@ -424,7 +409,7 @@
       "t": "bar",
       "track": "heat_delay",
       "x": -30,
-      "y": 114,
+      "y": 82,
       "w": 60,
       "h": 2,
       "color": {
@@ -459,7 +444,7 @@
     {
       "t": "text",
       "text": "OVERHEAT",
-      "y": 128,
+      "y": 96,
       "size": 12,
       "font": "Normalidad Extended 400",
       "color": "#ff4d2eff",
@@ -472,8 +457,8 @@
       "t": "text",
       "source": "secondary",
       "text": "2ND {shells_ready}",
-      "x": -36,
-      "y": 93,
+      "x": -34,
+      "y": 83,
       "size": 11,
       "font": "Normalidad Extended 400",
       "align": "right",

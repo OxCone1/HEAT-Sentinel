@@ -32,9 +32,31 @@
       "when": {
         "crosshair_type": [
           "Common"
-        ]
+        ],
+        "reloading": false
       },
       "cap": "round"
+    },
+    {
+      "t": "ring",
+      "track": "none",
+      "r": -0.5,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 14.5,
+      "r_max": 8000,
+      "width": 1.2,
+      "color": "#7cffa0ff",
+      "shadow": "rgba(0,18,8,0.18)",
+      "shadow_width": 3,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ],
+        "reloading": true
+      },
+      "cap": "round",
+      "opacity": 0.3
     },
     {
       "t": "strips",

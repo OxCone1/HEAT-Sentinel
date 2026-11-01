@@ -1,0 +1,18 @@
+{
+  "v": 1,
+  "id": "halo-numerals",
+  "name": "Halo Numerals",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "Halo with a type block beside it: the ready count (or the seconds, on a single shot) as one big number, pips under it, the second gun mirrored on the left.",
+  "tags": [
+    "numbers",
+    "autoloader"
+  ],
+  "opts": {
+    "show": "always"
+  },
+  "preview": "preview.png"
+}

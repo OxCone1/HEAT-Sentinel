@@ -1,0 +1,18 @@
+{
+  "v": 1,
+  "id": "halo",
+  "name": "Halo",
+  "file": "pack.json",
+  "kind": "pack",
+  "author": "HEAT Sentinel",
+  "license": "CC0-1.0",
+  "description": "The most restrained option. The spread circle is the reload, rounds ride its lower edge and grow in as they load, one small number under the sight.",
+  "tags": [
+    "minimal",
+    "autoloader"
+  ],
+  "opts": {
+    "show": "always"
+  },
+  "preview": "preview.png"
+}
