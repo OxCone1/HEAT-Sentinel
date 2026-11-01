@@ -30,7 +30,8 @@
       "color": "rgba(232,241,244,0.28)",
       "shadow": "rgba(6,14,18,0.18)",
       "shadow_width": 3,
-      "cap": "round"
+      "cap": "round",
+      "fx": "line"
     },
     {
       "t": "strips",
@@ -44,7 +45,8 @@
         "reloading": false,
         "heat_gun": false
       },
-      "cap": "round"
+      "cap": "round",
+      "fx": "line"
     },
     {
       "t": "bar",
@@ -60,7 +62,8 @@
         "reloading": true,
         "heat_gun": false
       },
-      "radius": 1.0
+      "radius": 1.0,
+      "fx": "arms"
     },
     {
       "t": "bar",
@@ -76,7 +79,8 @@
         "reloading": true,
         "heat_gun": false
       },
-      "radius": 1.0
+      "radius": 1.0,
+      "fx": "arms"
     },
     {
       "t": "shape",
@@ -113,7 +117,8 @@
       "stroke": "rgba(232,241,244,0.6)",
       "sw": 2,
       "cap": "round",
-      "join": "round"
+      "join": "round",
+      "fx": "line"
     },
     {
       "t": "shape",
@@ -141,7 +146,12 @@
       "stroke": "rgba(6,14,18,0.6)",
       "sw": 4,
       "cap": "round",
-      "join": "round"
+      "join": "round",
+      "fx": "chev",
+      "fx_at": [
+        0,
+        25.5
+      ]
     },
     {
       "t": "shape",
@@ -169,7 +179,12 @@
       "stroke": "#e8f1f4ff",
       "sw": 2,
       "cap": "round",
-      "join": "round"
+      "join": "round",
+      "fx": "chev",
+      "fx_at": [
+        0,
+        25.5
+      ]
     },
     {
       "t": "ring",
@@ -187,7 +202,8 @@
           "Mim146Missiles"
         ],
         "reloading": false
-      }
+      },
+      "fx": "frame"
     },
     {
       "t": "ring",
@@ -205,7 +221,8 @@
           "Mim146Missiles"
         ],
         "reloading": false
-      }
+      },
+      "fx": "frame"
     },
     {
       "t": "ring",
@@ -223,7 +240,8 @@
           "Mim146Missiles"
         ],
         "reloading": false
-      }
+      },
+      "fx": "frame"
     },
     {
       "t": "ring",
@@ -241,7 +259,8 @@
           "Mim146Missiles"
         ],
         "reloading": false
-      }
+      },
+      "fx": "frame"
     },
     {
       "t": "ring",
@@ -260,7 +279,8 @@
         ],
         "reloading": true
       },
-      "opacity": 0.35
+      "opacity": 0.35,
+      "fx": "frame"
     },
     {
       "t": "ring",
@@ -279,7 +299,8 @@
         ],
         "reloading": true
       },
-      "opacity": 0.35
+      "opacity": 0.35,
+      "fx": "frame"
     },
     {
       "t": "ring",
@@ -298,7 +319,8 @@
         ],
         "reloading": true
       },
-      "opacity": 0.35
+      "opacity": 0.35,
+      "fx": "frame"
     },
     {
       "t": "ring",
@@ -317,7 +339,8 @@
         ],
         "reloading": true
       },
-      "opacity": 0.35
+      "opacity": 0.35,
+      "fx": "frame"
     },
     {
       "t": "ring",
@@ -339,7 +362,8 @@
       },
       "color_bg": null,
       "track_from": 0.0,
-      "track_to": 0.25
+      "track_to": 0.25,
+      "fx": "reload"
     },
     {
       "t": "ring",
@@ -361,7 +385,8 @@
       },
       "color_bg": null,
       "track_from": 0.25,
-      "track_to": 0.5
+      "track_to": 0.5,
+      "fx": "reload"
     },
     {
       "t": "ring",
@@ -383,7 +408,8 @@
       },
       "color_bg": null,
       "track_from": 0.5,
-      "track_to": 0.75
+      "track_to": 0.75,
+      "fx": "reload"
     },
     {
       "t": "ring",
@@ -405,7 +431,8 @@
       },
       "color_bg": null,
       "track_from": 0.75,
-      "track_to": 1.0
+      "track_to": 1.0,
+      "fx": "reload"
     },
     {
       "t": "ring",
@@ -427,7 +454,8 @@
           "MachineGunMechanic"
         ]
       },
-      "cap": "round"
+      "cap": "round",
+      "fx": "spread"
     },
     {
       "t": "dot",
@@ -445,7 +473,8 @@
           "TargetTrackerGun",
           "Mim146Missiles"
         ]
-      }
+      },
+      "fx": "aim"
     },
     {
       "t": "shells",
@@ -465,7 +494,8 @@
         "magazine_min": 2,
         "magazine_max": 10
       },
-      "source": "primary"
+      "source": "primary",
+      "fx": "rounds"
     },
     {
       "t": "bar",
@@ -480,7 +510,8 @@
         "magazine_min": 11
       },
       "source": "primary",
-      "radius": 1.5
+      "radius": 1.5,
+      "fx": "mag"
     },
     {
       "t": "text",
@@ -495,7 +526,8 @@
       "when": {
         "magazine_min": 11
       },
-      "source": "primary"
+      "source": "primary",
+      "fx": "count"
     },
     {
       "t": "text",
@@ -510,7 +542,8 @@
       "when": {
         "reloading": true,
         "heat_gun": false
-      }
+      },
+      "fx": "timer"
     },
     {
       "t": "text",
@@ -526,7 +559,8 @@
         "magazine_min": 2,
         "round_loading": true
       },
-      "source": "primary"
+      "source": "primary",
+      "fx": "next"
     },
     {
       "t": "bar",
@@ -567,7 +601,8 @@
         ]
       },
       "source": "primary",
-      "radius": 1.0
+      "radius": 1.0,
+      "fx": "heat"
     },
     {
       "t": "bar",
@@ -586,7 +621,8 @@
       "source": "primary",
       "bg_sweep": false,
       "radius": 1.0,
-      "color_bg": null
+      "color_bg": null,
+      "fx": "heat"
     },
     {
       "t": "text",
@@ -600,7 +636,8 @@
       "shadow": "rgba(6,14,18,0.35)",
       "when": {
         "overheated": true
-      }
+      },
+      "fx": "heat"
     },
     {
       "t": "text",
@@ -612,7 +649,8 @@
       "align": "left",
       "color": "rgba(232,241,244,0.6)",
       "shadow": "rgba(6,14,18,0.35)",
-      "source": "secondary"
+      "source": "secondary",
+      "fx": "count2"
     },
     {
       "t": "text",
@@ -627,7 +665,8 @@
       "when": {
         "range_shown": true,
         "range_close": false
-      }
+      },
+      "fx": "range"
     },
     {
       "t": "text",
@@ -641,7 +680,8 @@
       "shadow": "rgba(6,14,18,0.35)",
       "when": {
         "range_close": true
-      }
+      },
+      "fx": "range"
     },
     {
       "t": "text",
@@ -656,7 +696,8 @@
       "when": {
         "round_loading": true
       },
-      "source": "secondary"
+      "source": "secondary",
+      "fx": "next2"
     },
     {
       "t": "reload_game",
@@ -687,6 +728,175 @@
       "perfect_h": 14,
       "texture_step": 4,
       "color_texture": "rgba(18,25,29,0.55)"
+    }
+  ],
+  "motion": [
+    {
+      "on": "appear",
+      "fx": [
+        "line"
+      ],
+      "do": "enter",
+      "scale": 0.3,
+      "alpha": 0,
+      "dur": 0.6,
+      "ease": "out"
+    },
+    {
+      "on": "appear",
+      "fx": [
+        "spread",
+        "aim"
+      ],
+      "do": "enter",
+      "scale": 0.6,
+      "alpha": 0,
+      "dur": 0.45,
+      "ease": "out",
+      "delay": 0.15
+    },
+    {
+      "on": "appear",
+      "fx": [
+        "chev"
+      ],
+      "do": "enter",
+      "y": 6,
+      "alpha": 0,
+      "dur": 0.4,
+      "bounce": 0.3,
+      "delay": 0.3
+    },
+    {
+      "on": "appear",
+      "fx": [
+        "rounds",
+        "mag"
+      ],
+      "do": "enter",
+      "x": -12,
+      "alpha": 0,
+      "dur": 0.5,
+      "ease": "out",
+      "delay": 0.35
+    },
+    {
+      "on": "appear",
+      "fx": [
+        "timer",
+        "next",
+        "range",
+        "count",
+        "count2",
+        "next2"
+      ],
+      "do": "enter",
+      "alpha": 0,
+      "dur": 0.4,
+      "ease": "out",
+      "delay": 0.45,
+      "stagger": 0.05
+    },
+    {
+      "on": "shot",
+      "fx": [
+        "chev"
+      ],
+      "do": "kick",
+      "y": 3,
+      "dur": 0.3,
+      "ease": "out",
+      "peak": 0.2
+    },
+    {
+      "on": "shot",
+      "fx": [
+        "rounds",
+        "rounds2"
+      ],
+      "do": "spend",
+      "x": 12,
+      "alpha": 0,
+      "dur": 0.4,
+      "ease": "in"
+    },
+    {
+      "on": "round_in",
+      "fx": [
+        "rounds",
+        "rounds2"
+      ],
+      "do": "chamber",
+      "x": -6,
+      "alpha": 0,
+      "dur": 0.4,
+      "bounce": 0.2
+    },
+    {
+      "on": "refilled",
+      "fx": [
+        "rounds",
+        "rounds2"
+      ],
+      "do": "chamber",
+      "x": -6,
+      "alpha": 0,
+      "dur": 0.4,
+      "bounce": 0.2,
+      "stagger": 0.06
+    },
+    {
+      "on": "ready",
+      "fx": [
+        "line"
+      ],
+      "do": "kick",
+      "scale": 1.04,
+      "dur": 0.45,
+      "ease": "out"
+    },
+    {
+      "on": "ready",
+      "fx": [
+        "chev"
+      ],
+      "do": "kick",
+      "y": -3,
+      "dur": 0.4,
+      "ease": "out",
+      "peak": 0.3
+    },
+    {
+      "on": "aimed",
+      "fx": [
+        "chev"
+      ],
+      "do": "shift",
+      "y": -2,
+      "dur": 0.4,
+      "bounce": 0.2
+    },
+    {
+      "on": "unaimed",
+      "fx": [
+        "chev"
+      ],
+      "do": "shift",
+      "y": 0,
+      "dur": 0.3,
+      "bounce": 0
+    },
+    {
+      "on": "swap",
+      "fx": [
+        "count2",
+        "next2",
+        "count"
+      ],
+      "do": "kick",
+      "scale": 1.15,
+      "dur": 0.35,
+      "ease": "out"
     }
   ]
 }
