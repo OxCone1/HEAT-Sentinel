@@ -15,7 +15,8 @@
     "aim_front_sight",
     "scope_reticle",
     "range_readout",
-    "aim_gatling"
+    "aim_gatling",
+    "aim_tracker"
   ],
   "widgets": [
     {
@@ -36,7 +37,9 @@
           "Common",
           "GatlingGun",
           "GatlingGunWithOverheat",
-          "MachineGunMechanic"
+          "MachineGunMechanic",
+          "TargetTrackerGun",
+          "Mim146Missiles"
         ],
         "reloading": false
       }
@@ -57,7 +60,9 @@
           "Common",
           "GatlingGun",
           "GatlingGunWithOverheat",
-          "MachineGunMechanic"
+          "MachineGunMechanic",
+          "TargetTrackerGun",
+          "Mim146Missiles"
         ],
         "reloading": true
       }
@@ -79,7 +84,9 @@
           "Common",
           "GatlingGun",
           "GatlingGunWithOverheat",
-          "MachineGunMechanic"
+          "MachineGunMechanic",
+          "TargetTrackerGun",
+          "Mim146Missiles"
         ],
         "reloading": true,
         "heat_gun": false
@@ -96,7 +103,9 @@
           "Common",
           "GatlingGun",
           "GatlingGunWithOverheat",
-          "MachineGunMechanic"
+          "MachineGunMechanic",
+          "TargetTrackerGun",
+          "Mim146Missiles"
         ]
       }
     },
