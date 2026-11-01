@@ -16,7 +16,8 @@
     "scope_reticle",
     "range_readout",
     "aim_gatling",
-    "aim_tracker"
+    "aim_tracker",
+    "active_reload_bar"
   ],
   "widgets": [
     {
@@ -603,6 +604,61 @@
       "when": {
         "range_close": true
       }
+    },
+    {
+      "t": "reload_game",
+      "y": -24,
+      "w": 80,
+      "h": 3,
+      "indicator_w": 2,
+      "indicator_h": 8,
+      "color_bg": "rgba(248,247,246,0.18)",
+      "color_zone": "rgba(248,247,246,0.45)",
+      "color_perfect": "rgba(248,247,246,1)",
+      "color_indicator": "rgba(248,247,246,0.95)",
+      "color_hit": "#84ffb1ff",
+      "color_miss": "#ff6d46ff",
+      "when": {
+        "active_reload": [
+          "active",
+          "hit",
+          "perfect",
+          "missed"
+        ]
+      }
+    },
+    {
+      "t": "text",
+      "text": "{reload_bonus:1}",
+      "x": -46,
+      "y": -24,
+      "size": 11,
+      "font": "Normalidad Extended 400",
+      "align": "right",
+      "color": "#84ffb1ff",
+      "when": {
+        "active_reload": [
+          "hit",
+          "perfect"
+        ]
+      },
+      "shadow": "rgba(18,25,29,0.35)"
+    },
+    {
+      "t": "text",
+      "text": "{reload_bonus:1}",
+      "x": -46,
+      "y": -24,
+      "size": 11,
+      "font": "Normalidad Extended 400",
+      "align": "right",
+      "color": "#ff6d46ff",
+      "when": {
+        "active_reload": [
+          "missed"
+        ]
+      },
+      "shadow": "rgba(18,25,29,0.35)"
     }
   ]
 }
