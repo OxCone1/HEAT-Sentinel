@@ -698,12 +698,7 @@
       "shadow": "rgba(12,8,0,0.35)",
       "when": {
         "range_shown": true,
-        "range_close": false,
-        "active_reload": [
-          "disabled",
-          "ignored",
-          "cancelled"
-        ]
+        "range_close": false
       }
     },
     {
@@ -716,32 +711,25 @@
       "color": "#ff4d2eff",
       "shadow": "rgba(12,8,0,0.35)",
       "when": {
-        "range_close": true,
-        "active_reload": [
-          "disabled",
-          "ignored",
-          "cancelled"
-        ]
+        "range_close": true
       }
     },
     {
       "t": "reload_game",
-      "w": 96,
-      "h": 5,
+      "y": 120,
+      "w": 140,
+      "h": 7,
       "indicator_w": 3,
-      "indicator_h": 13,
-      "r": 14,
-      "r_track": "spread",
-      "r_scale": 0.5,
-      "r_min": 28,
-      "r_max": 8000,
-      "color_bg": "rgba(18,25,29,0.6)",
-      "color_zone": "rgba(61,217,248,0.5)",
-      "color_perfect": "#5ff0ffff",
+      "indicator_h": 17,
+      "end_h": 11,
+      "color_end": "rgba(248,247,246,0.6)",
+      "color_bg": "rgba(18,25,29,0.72)",
+      "color_zone": "rgba(61,217,248,0.85)",
+      "color_perfect": "#d2fbffff",
       "color_indicator": "#ffffffff",
       "color_hit": "#84ffb1ff",
       "color_miss": "#ff6d46ff",
-      "size": 12,
+      "size": 13,
       "font": "Normalidad Extended 400",
       "when": {
         "active_reload": [
