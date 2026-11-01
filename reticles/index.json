@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "generated": "2026-11-01T02:07:09Z",
+  "generated": "2026-11-01T02:16:59Z",
   "counts": {
     "reticles": 9,
     "blk": 0,
@@ -29,8 +29,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 9646,
-          "sha256": "969ac8020d5a007d4904e032f4a0b7c221acdfe01bdb89e80779895db7d07d16"
+          "bytes": 12819,
+          "sha256": "e5b3779766e7d12b88441c98d6da94983462fbd9409f1d58c4d5d1817df57421"
         },
         "preview.png": {
           "bytes": 56145,
@@ -58,8 +58,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 13373,
-          "sha256": "9bb4e443b5e9ad7ce8b8bac5432d4624d806082ab5751d370bd7781d1ef2eaf8"
+          "bytes": 16546,
+          "sha256": "7c293680cdf72e62a10b4c8aadd581a94f95727bb0d86d97225c6d450f4d82b2"
         },
         "preview.png": {
           "bytes": 54930,
@@ -88,8 +88,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 9501,
-          "sha256": "e804bd405c0c7c12a84a6b83b5442ee380570b1b4ad4d2cc54231850f171ac30"
+          "bytes": 12674,
+          "sha256": "1c1f8aa14d5cb7421848ed6dcabd5105edb6db10643cf9611ae42a03c17a5706"
         },
         "preview.png": {
           "bytes": 57817,
@@ -116,8 +116,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 9265,
-          "sha256": "6ffea2d67642fbb23ffae2dc27e02e79ef8692b7273cfb36c7ae09e0ec1989c2"
+          "bytes": 12438,
+          "sha256": "c31d034cab626769a0b17a8a9059f6d3b88c458d9def49f77b0bfffcda8d397d"
         },
         "preview.png": {
           "bytes": 54222,
@@ -144,8 +144,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 9013,
-          "sha256": "d1c16c081b2f367e118c2e0d32c8029c311234309c09e0a7bc022e47d828ef76"
+          "bytes": 12186,
+          "sha256": "68c3df5ce4063f6a8a3efafe8ae7903523025ee96207c1804d65ad1ee9bb4d58"
         },
         "preview.png": {
           "bytes": 54373,
@@ -174,8 +174,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 9597,
-          "sha256": "9a3086c2a3bd0e19dc47e16f43895c3dd075a9a5645a712c465bfae96503691a"
+          "bytes": 13155,
+          "sha256": "4bf62f4a68f2511d842bf9e7b31744bca3e5e6511c76c76bdd3e6977077c3fe2"
         },
         "preview.png": {
           "bytes": 55395,
@@ -203,8 +203,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 11718,
-          "sha256": "b8a986d9f6a5167fc147e5a5f830acde9eb62ed4927f47024b66c88951335d80"
+          "bytes": 14883,
+          "sha256": "adfb006aa3d45451c95d0dbcfba60dc4c89fa42dc3f5a8216f3d685c7b407c1b"
         },
         "preview.png": {
           "bytes": 56698,
@@ -232,8 +232,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 9890,
-          "sha256": "5317cdccc43c1891821926ef9f80d26f1c7e6e4b36d81298ee7e8574a782c636"
+          "bytes": 13015,
+          "sha256": "79418bcf27b531aad882cde5f90747a214a36c93888f9c580f49861786cde882"
         },
         "preview.png": {
           "bytes": 57727,
@@ -262,8 +262,8 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 9368,
-          "sha256": "4d44267a3a1b6c93a975ff1de7a1f596346922a8be84dcbcc909c3d46afccf07"
+          "bytes": 12926,
+          "sha256": "b490e3aa41c51a527925b05026120e87a1715845031395c9ec498d80de90ca06"
         },
         "preview.png": {
           "bytes": 56752,

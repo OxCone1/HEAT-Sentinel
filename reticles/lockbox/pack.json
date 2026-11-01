@@ -33,7 +33,8 @@
         "crosshair_type": [
           "TargetTrackerGun",
           "Mim146Missiles"
-        ]
+        ],
+        "reloading": false
       }
     },
     {
@@ -50,7 +51,8 @@
         "crosshair_type": [
           "TargetTrackerGun",
           "Mim146Missiles"
-        ]
+        ],
+        "reloading": false
       }
     },
     {
@@ -67,7 +69,8 @@
         "crosshair_type": [
           "TargetTrackerGun",
           "Mim146Missiles"
-        ]
+        ],
+        "reloading": false
       }
     },
     {
@@ -84,17 +87,96 @@
         "crosshair_type": [
           "TargetTrackerGun",
           "Mim146Missiles"
-        ]
+        ],
+        "reloading": false
       }
     },
     {
       "t": "ring",
+      "track": "none",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 30,
+      "sweep_deg": 30,
+      "bg_sweep": true,
+      "cap": "round",
+      "color": "rgba(255,179,0,0.9)",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ],
+        "reloading": true
+      },
+      "opacity": 0.35
+    },
+    {
+      "t": "ring",
+      "track": "none",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 120,
+      "sweep_deg": 30,
+      "bg_sweep": true,
+      "cap": "round",
+      "color": "rgba(255,179,0,0.9)",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ],
+        "reloading": true
+      },
+      "opacity": 0.35
+    },
+    {
+      "t": "ring",
+      "track": "none",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 210,
+      "sweep_deg": 30,
+      "bg_sweep": true,
+      "cap": "round",
+      "color": "rgba(255,179,0,0.9)",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ],
+        "reloading": true
+      },
+      "opacity": 0.35
+    },
+    {
+      "t": "ring",
+      "track": "none",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 300,
+      "sweep_deg": 30,
+      "bg_sweep": true,
+      "cap": "round",
+      "color": "rgba(255,179,0,0.9)",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ],
+        "reloading": true
+      },
+      "opacity": 0.35
+    },
+    {
+      "t": "ring",
       "track": "reload",
-      "r": 12,
-      "width": 2,
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 30,
+      "sweep_deg": 30,
+      "bg_sweep": false,
       "cap": "round",
       "color": "#ffb300ff",
-      "color_bg": null,
       "when": {
         "crosshair_type": [
           "TargetTrackerGun",
@@ -102,7 +184,76 @@
         ],
         "reloading": true,
         "heat_gun": false
-      }
+      },
+      "color_bg": null,
+      "track_from": 0.0,
+      "track_to": 0.25
+    },
+    {
+      "t": "ring",
+      "track": "reload",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 120,
+      "sweep_deg": 30,
+      "bg_sweep": false,
+      "cap": "round",
+      "color": "#ffb300ff",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ],
+        "reloading": true,
+        "heat_gun": false
+      },
+      "color_bg": null,
+      "track_from": 0.25,
+      "track_to": 0.5
+    },
+    {
+      "t": "ring",
+      "track": "reload",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 210,
+      "sweep_deg": 30,
+      "bg_sweep": false,
+      "cap": "round",
+      "color": "#ffb300ff",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ],
+        "reloading": true,
+        "heat_gun": false
+      },
+      "color_bg": null,
+      "track_from": 0.5,
+      "track_to": 0.75
+    },
+    {
+      "t": "ring",
+      "track": "reload",
+      "r": 16,
+      "width": 1.4,
+      "from_deg": 300,
+      "sweep_deg": 30,
+      "bg_sweep": false,
+      "cap": "round",
+      "color": "#ffb300ff",
+      "when": {
+        "crosshair_type": [
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ],
+        "reloading": true,
+        "heat_gun": false
+      },
+      "color_bg": null,
+      "track_from": 0.75,
+      "track_to": 1.0
     },
     {
       "t": "ring",
