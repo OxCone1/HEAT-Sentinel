@@ -12,7 +12,8 @@
     "aim_reload_ring",
     "aim_ring_highlight",
     "scope_reticle",
-    "range_readout"
+    "range_readout",
+    "aim_gatling"
   ],
   "widgets": [
     {
@@ -29,7 +30,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "cap": "round"
@@ -48,7 +52,10 @@
       "color_bg": null,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ],
         "reloading": true,
         "heat_gun": false
@@ -166,32 +173,11 @@
           "heating",
           "cooling",
           "overheat",
-          "overheat_cooling"
-        ]
-      },
-      "source": "primary",
-      "cap": "round"
-    },
-    {
-      "t": "ring",
-      "track": "heat",
-      "r": 52,
-      "width": 4,
-      "from_deg": 90,
-      "sweep_deg": -70,
-      "bg_sweep": true,
-      "color": "#f8f7f6ff",
-      "color_bg": "rgba(18,25,29,0.6)",
-      "shadow": "rgba(18,25,29,0.18)",
-      "shadow_width": 3,
-      "when": {
-        "heat_gun": true,
-        "heat_phase": [
+          "overheat_cooling",
           "delay"
         ]
       },
       "source": "primary",
-      "opacity": 0.4,
       "cap": "round"
     },
     {
@@ -202,7 +188,7 @@
       "from_deg": 90,
       "sweep_deg": -70,
       "bg_sweep": false,
-      "color": "#f8f7f6ff",
+      "color": "rgba(255,143,51,0.9)",
       "shadow": "rgba(18,25,29,0.18)",
       "shadow_width": 3,
       "when": {
@@ -212,7 +198,8 @@
         ]
       },
       "source": "primary",
-      "cap": "round"
+      "cap": "round",
+      "color_bg": null
     },
     {
       "t": "ring",

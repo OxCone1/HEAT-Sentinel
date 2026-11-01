@@ -14,7 +14,8 @@
     "aim_centre_mark",
     "aim_front_sight",
     "scope_reticle",
-    "range_readout"
+    "range_readout",
+    "aim_gatling"
   ],
   "widgets": [
     {
@@ -31,7 +32,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ],
         "reloading": false
       },
@@ -51,7 +55,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ],
         "reloading": true
       },
@@ -74,7 +81,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "cap": "round"
@@ -87,7 +97,10 @@
       "color": "#7cffa0ff",
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       }
     },
@@ -107,7 +120,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ],
         "reloading": true,
         "heat_gun": false
@@ -264,29 +280,11 @@
           "heating",
           "cooling",
           "overheat",
-          "overheat_cooling"
-        ]
-      },
-      "source": "primary",
-      "radius": 1.0
-    },
-    {
-      "t": "bar",
-      "track": "heat",
-      "x": 120,
-      "y": 23,
-      "w": 36,
-      "h": 2,
-      "color": "#7cffa0ff",
-      "color_bg": "rgba(124,255,160,0.14)",
-      "when": {
-        "heat_gun": true,
-        "heat_phase": [
+          "overheat_cooling",
           "delay"
         ]
       },
       "source": "primary",
-      "opacity": 0.4,
       "radius": 1.0
     },
     {
@@ -296,7 +294,7 @@
       "y": 23,
       "w": 36,
       "h": 2,
-      "color": "#7cffa0ff",
+      "color": "rgba(255,143,51,0.9)",
       "when": {
         "heat_gun": true,
         "heat_phase": [
@@ -305,7 +303,8 @@
       },
       "source": "primary",
       "bg_sweep": false,
-      "radius": 1.0
+      "radius": 1.0,
+      "color_bg": null
     },
     {
       "t": "bar",

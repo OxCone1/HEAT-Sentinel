@@ -14,7 +14,8 @@
     "aim_centre_mark",
     "aim_front_sight",
     "scope_reticle",
-    "range_readout"
+    "range_readout",
+    "aim_gatling"
   ],
   "widgets": [
     {
@@ -182,7 +183,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "cap": "round"
@@ -196,7 +200,10 @@
       "border": false,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       }
     },
@@ -315,47 +322,11 @@
           "heating",
           "cooling",
           "overheat",
-          "overheat_cooling"
-        ]
-      },
-      "source": "primary",
-      "radius": 1.0
-    },
-    {
-      "t": "bar",
-      "track": "heat",
-      "x": -132,
-      "y": 8,
-      "w": 96,
-      "h": 2,
-      "color": {
-        "g": "linear",
-        "p": [
-          0,
-          0,
-          96,
-          0
-        ],
-        "s": [
-          [
-            0,
-            "#e8f1f4ff"
-          ],
-          [
-            1,
-            "#ff5a4eff"
-          ]
-        ]
-      },
-      "color_bg": "rgba(232,241,244,0.18)",
-      "when": {
-        "heat_gun": true,
-        "heat_phase": [
+          "overheat_cooling",
           "delay"
         ]
       },
       "source": "primary",
-      "opacity": 0.4,
       "radius": 1.0
     },
     {
@@ -365,25 +336,7 @@
       "y": 8,
       "w": 96,
       "h": 2,
-      "color": {
-        "g": "linear",
-        "p": [
-          0,
-          0,
-          96,
-          0
-        ],
-        "s": [
-          [
-            0,
-            "#e8f1f4ff"
-          ],
-          [
-            1,
-            "#ff5a4eff"
-          ]
-        ]
-      },
+      "color": "rgba(255,143,51,0.9)",
       "when": {
         "heat_gun": true,
         "heat_phase": [
@@ -392,7 +345,8 @@
       },
       "source": "primary",
       "bg_sweep": false,
-      "radius": 1.0
+      "radius": 1.0,
+      "color_bg": null
     },
     {
       "t": "text",

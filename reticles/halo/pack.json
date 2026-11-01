@@ -14,7 +14,8 @@
     "aim_centre_mark",
     "aim_front_sight",
     "scope_reticle",
-    "range_readout"
+    "range_readout",
+    "aim_gatling"
   ],
   "widgets": [
     {
@@ -32,7 +33,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ],
         "reloading": false
       }
@@ -50,7 +54,10 @@
       "color": "rgba(248,247,246,0.28)",
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ],
         "reloading": true
       }
@@ -69,7 +76,10 @@
       "color_bg": null,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ],
         "reloading": true,
         "heat_gun": false
@@ -83,7 +93,10 @@
       "color": "#f8f7f6ff",
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       }
     },
@@ -258,30 +271,7 @@
           "heating",
           "cooling",
           "overheat",
-          "overheat_cooling"
-        ]
-      }
-    },
-    {
-      "t": "ring",
-      "r": 8,
-      "r_track": "spread",
-      "r_scale": 0.5,
-      "r_min": 22.5,
-      "r_max": 8000,
-      "width": 2,
-      "from_deg": 135,
-      "sweep_deg": -90,
-      "bg_sweep": true,
-      "cap": "round",
-      "color": "#f8f7f6ff",
-      "color_bg": "rgba(248,247,246,0.2)",
-      "source": "primary",
-      "track": "heat",
-      "opacity": 0.4,
-      "when": {
-        "heat_gun": true,
-        "heat_phase": [
+          "overheat_cooling",
           "delay"
         ]
       }
@@ -298,7 +288,7 @@
       "sweep_deg": -90,
       "bg_sweep": false,
       "cap": "round",
-      "color": "#f8f7f6ff",
+      "color": "rgba(255,143,51,0.9)",
       "color_bg": null,
       "source": "primary",
       "track": "heat_delay",

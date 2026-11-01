@@ -14,7 +14,8 @@
     "aim_centre_mark",
     "aim_front_sight",
     "scope_reticle",
-    "range_readout"
+    "range_readout",
+    "aim_gatling"
   ],
   "widgets": [
     {
@@ -31,7 +32,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "cap": "round"
@@ -48,7 +52,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "r": 5,
@@ -70,7 +77,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "r": 10,
@@ -92,7 +102,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "r": 5,
@@ -114,7 +127,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "r": 10,
@@ -136,7 +152,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "r": 5,
@@ -158,7 +177,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "r": 10,
@@ -180,7 +202,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "r": 5,
@@ -202,7 +227,10 @@
       "shadow_width": 3,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "r": 10,
@@ -221,7 +249,10 @@
       "color": "#ffb300ff",
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       }
     },
@@ -239,7 +270,10 @@
       "color_bg": null,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ],
         "reloading": true,
         "heat_gun": false
@@ -363,47 +397,11 @@
           "heating",
           "cooling",
           "overheat",
-          "overheat_cooling"
-        ]
-      },
-      "source": "primary",
-      "radius": 1.0
-    },
-    {
-      "t": "bar",
-      "track": "heat",
-      "x": -30,
-      "y": 82,
-      "w": 60,
-      "h": 2,
-      "color": {
-        "g": "linear",
-        "p": [
-          0,
-          0,
-          60,
-          0
-        ],
-        "s": [
-          [
-            0,
-            "#ffb300ff"
-          ],
-          [
-            1,
-            "#ff4d2eff"
-          ]
-        ]
-      },
-      "color_bg": "rgba(255,179,0,0.15)",
-      "when": {
-        "heat_gun": true,
-        "heat_phase": [
+          "overheat_cooling",
           "delay"
         ]
       },
       "source": "primary",
-      "opacity": 0.4,
       "radius": 1.0
     },
     {
@@ -413,25 +411,7 @@
       "y": 82,
       "w": 60,
       "h": 2,
-      "color": {
-        "g": "linear",
-        "p": [
-          0,
-          0,
-          60,
-          0
-        ],
-        "s": [
-          [
-            0,
-            "#ffb300ff"
-          ],
-          [
-            1,
-            "#ff4d2eff"
-          ]
-        ]
-      },
+      "color": "rgba(255,143,51,0.9)",
       "when": {
         "heat_gun": true,
         "heat_phase": [
@@ -440,7 +420,8 @@
       },
       "source": "primary",
       "bg_sweep": false,
-      "radius": 1.0
+      "radius": 1.0,
+      "color_bg": null
     },
     {
       "t": "text",

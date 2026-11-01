@@ -14,7 +14,8 @@
     "aim_centre_mark",
     "aim_front_sight",
     "scope_reticle",
-    "range_readout"
+    "range_readout",
+    "aim_gatling"
   ],
   "widgets": [
     {
@@ -29,7 +30,10 @@
       "color": "rgba(232,241,255,0.55)",
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "cap": "round"
@@ -48,7 +52,10 @@
       "color": "#e8f1ffff",
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       },
       "cap": "round"
@@ -62,7 +69,10 @@
       "color": "#e8f1ffff",
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ]
       }
     },
@@ -80,7 +90,10 @@
       "color_bg": null,
       "when": {
         "crosshair_type": [
-          "Common"
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic"
         ],
         "reloading": true,
         "heat_gun": false
@@ -241,30 +254,11 @@
           "heating",
           "cooling",
           "overheat",
-          "overheat_cooling"
-        ]
-      },
-      "source": "primary",
-      "radius": 25.0
-    },
-    {
-      "t": "bar",
-      "track": "heat",
-      "x": -82,
-      "y": -50,
-      "w": 2,
-      "h": 50,
-      "fill_dir": "up",
-      "color": "#e8f1ffff",
-      "color_bg": "rgba(232,241,255,0.16)",
-      "when": {
-        "heat_gun": true,
-        "heat_phase": [
+          "overheat_cooling",
           "delay"
         ]
       },
       "source": "primary",
-      "opacity": 0.4,
       "radius": 25.0
     },
     {
@@ -275,7 +269,7 @@
       "w": 2,
       "h": 50,
       "fill_dir": "up",
-      "color": "#e8f1ffff",
+      "color": "rgba(255,143,51,0.9)",
       "when": {
         "heat_gun": true,
         "heat_phase": [
@@ -284,7 +278,8 @@
       },
       "source": "primary",
       "bg_sweep": false,
-      "radius": 25.0
+      "radius": 25.0,
+      "color_bg": null
     },
     {
       "t": "text",
