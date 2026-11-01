@@ -31,7 +31,8 @@
         "crosshair_type": [
           "Common"
         ]
-      }
+      },
+      "cap": "round"
     },
     {
       "t": "ring",
@@ -42,7 +43,7 @@
       "r_min": 14,
       "r_max": 8000,
       "width": 2,
-      "cap": "butt",
+      "cap": "round",
       "color": "#f8f7f6ff",
       "color_bg": null,
       "when": {
@@ -63,13 +64,14 @@
       "bg_sweep": true,
       "color": "#ff8f33ff",
       "color_bg": "rgba(18,25,29,0.6)",
-      "shadow": "rgba(18,25,29,0.35)",
+      "shadow": "rgba(18,25,29,0.18)",
       "shadow_width": 3,
       "when": {
         "magazine_max": 1,
         "reloading": true,
         "heat_gun": false
-      }
+      },
+      "cap": "round"
     },
     {
       "t": "ring",
@@ -80,13 +82,14 @@
       "sweep_deg": -72,
       "bg_sweep": true,
       "color": "#84ffb1ff",
-      "shadow": "rgba(18,25,29,0.35)",
+      "shadow": "rgba(18,25,29,0.18)",
       "shadow_width": 3,
       "when": {
         "magazine_max": 1,
         "reloading": false,
         "heat_gun": false
-      }
+      },
+      "cap": "round"
     },
     {
       "t": "sectors",
@@ -98,12 +101,12 @@
       "align": "center",
       "dir": "ccw",
       "fill_dir": "left",
-      "cap": "butt",
+      "cap": "round",
       "color_ready": "#84ffb1ff",
       "color_loading": "#ff8f33ff",
       "color_paused": "#ff6d46ff",
       "color_empty": "rgba(18,25,29,0.6)",
-      "shadow": "rgba(18,25,29,0.35)",
+      "shadow": "rgba(18,25,29,0.18)",
       "shadow_width": 3,
       "when": {
         "magazine_min": 2,
@@ -121,12 +124,13 @@
       "bg_sweep": true,
       "color": "#84ffb1ff",
       "color_bg": "rgba(18,25,29,0.6)",
-      "shadow": "rgba(18,25,29,0.35)",
+      "shadow": "rgba(18,25,29,0.18)",
       "shadow_width": 3,
       "when": {
         "magazine_min": 25
       },
-      "source": "primary"
+      "source": "primary",
+      "cap": "round"
     },
     {
       "t": "text",
@@ -137,7 +141,7 @@
       "font": "Normalidad Compact 400",
       "align": "left",
       "color": "rgba(248,247,246,0.85)",
-      "shadow": "rgba(18,25,29,0.6)",
+      "shadow": "rgba(18,25,29,0.35)",
       "when": {
         "magazine_min": 2
       },
@@ -153,7 +157,7 @@
       "bg_sweep": true,
       "color": "#f8f7f6ff",
       "color_bg": "rgba(18,25,29,0.6)",
-      "shadow": "rgba(18,25,29,0.35)",
+      "shadow": "rgba(18,25,29,0.18)",
       "shadow_width": 3,
       "when": {
         "heat_gun": true,
@@ -165,7 +169,8 @@
           "overheat_cooling"
         ]
       },
-      "source": "primary"
+      "source": "primary",
+      "cap": "round"
     },
     {
       "t": "ring",
@@ -177,7 +182,7 @@
       "bg_sweep": true,
       "color": "#f8f7f6ff",
       "color_bg": "rgba(18,25,29,0.6)",
-      "shadow": "rgba(18,25,29,0.35)",
+      "shadow": "rgba(18,25,29,0.18)",
       "shadow_width": 3,
       "when": {
         "heat_gun": true,
@@ -186,7 +191,8 @@
         ]
       },
       "source": "primary",
-      "opacity": 0.4
+      "opacity": 0.4,
+      "cap": "round"
     },
     {
       "t": "ring",
@@ -197,7 +203,7 @@
       "sweep_deg": -70,
       "bg_sweep": false,
       "color": "#f8f7f6ff",
-      "shadow": "rgba(18,25,29,0.35)",
+      "shadow": "rgba(18,25,29,0.18)",
       "shadow_width": 3,
       "when": {
         "heat_gun": true,
@@ -205,7 +211,8 @@
           "delay"
         ]
       },
-      "source": "primary"
+      "source": "primary",
+      "cap": "round"
     },
     {
       "t": "ring",
@@ -219,7 +226,8 @@
       "when": {
         "overheated": true
       },
-      "source": "primary"
+      "source": "primary",
+      "cap": "round"
     },
     {
       "t": "text",
@@ -230,7 +238,7 @@
       "font": "Normalidad Compact 500",
       "align": "left",
       "color": "#ff6d46ff",
-      "shadow": "rgba(18,25,29,0.6)",
+      "shadow": "rgba(18,25,29,0.35)",
       "when": {
         "overheated": true
       }
@@ -244,7 +252,7 @@
       "font": "Normalidad Compact 500",
       "align": "left",
       "color": "#f8f7f6ff",
-      "shadow": "rgba(18,25,29,0.6)",
+      "shadow": "rgba(18,25,29,0.35)",
       "when": {
         "reloading": true,
         "heat_gun": false
@@ -259,7 +267,7 @@
       "font": "Normalidad Compact 400",
       "align": "left",
       "color": "#ff8f33ff",
-      "shadow": "rgba(18,25,29,0.6)",
+      "shadow": "rgba(18,25,29,0.35)",
       "when": {
         "magazine_min": 2,
         "round_loading": true
@@ -275,13 +283,16 @@
       "gap_deg": 0.6,
       "start_deg": 225,
       "align": "center",
-      "cap": "butt",
+      "cap": "round",
       "color_ready": "#f8f7f6ff",
       "color_loading": "rgba(248,247,246,0.45)",
       "color_paused": "#ff6d46ff",
       "color_empty": "rgba(18,25,29,0.6)",
-      "shadow": "rgba(18,25,29,0.35)",
-      "shadow_width": 3
+      "shadow": "rgba(18,25,29,0.18)",
+      "shadow_width": 3,
+      "when": {
+        "magazine_max": 24
+      }
     },
     {
       "t": "text",
@@ -293,7 +304,7 @@
       "font": "Normalidad Compact 400",
       "align": "right",
       "color": "#f8f7f6ff",
-      "shadow": "rgba(18,25,29,0.6)"
+      "shadow": "rgba(18,25,29,0.35)"
     },
     {
       "t": "text",
@@ -304,7 +315,7 @@
       "font": "Normalidad Compact 400",
       "align": "left",
       "color": "rgba(248,247,246,0.85)",
-      "shadow": "rgba(18,25,29,0.6)",
+      "shadow": "rgba(18,25,29,0.35)",
       "when": {
         "range_shown": true,
         "range_close": false
@@ -319,7 +330,7 @@
       "font": "Normalidad Compact 400",
       "align": "left",
       "color": "#ff8f33ff",
-      "shadow": "rgba(18,25,29,0.6)",
+      "shadow": "rgba(18,25,29,0.35)",
       "when": {
         "range_close": true
       }
@@ -333,11 +344,29 @@
       "font": "Normalidad Compact 400",
       "align": "right",
       "color": "#ff8f33ff",
-      "shadow": "rgba(18,25,29,0.6)",
+      "shadow": "rgba(18,25,29,0.35)",
       "when": {
         "round_loading": true
       },
       "source": "secondary"
+    },
+    {
+      "t": "ring",
+      "track": "magazine",
+      "r": 58,
+      "width": 6,
+      "from_deg": 195,
+      "sweep_deg": 60,
+      "bg_sweep": true,
+      "color": "#f8f7f6ff",
+      "color_bg": "rgba(18,25,29,0.6)",
+      "shadow": "rgba(18,25,29,0.18)",
+      "shadow_width": 3,
+      "when": {
+        "magazine_min": 25
+      },
+      "source": "secondary",
+      "cap": "round"
     }
   ]
 }

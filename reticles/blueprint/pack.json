@@ -27,13 +27,14 @@
       "r_max": 8000,
       "width": 1,
       "color": "rgba(232,241,255,0.55)",
-      "shadow": "rgba(6,20,40,0.55)",
-      "shadow_width": 2,
+      "shadow": "rgba(6,20,40,0.18)",
+      "shadow_width": 3,
       "when": {
         "crosshair_type": [
           "Common"
         ]
-      }
+      },
+      "cap": "round"
     },
     {
       "t": "strips",
@@ -47,13 +48,14 @@
       "r_min": 18,
       "r_max": 8000,
       "color": "#e8f1ffff",
-      "shadow": "rgba(6,20,40,0.55)",
-      "shadow_width": 2,
+      "shadow": "rgba(6,20,40,0.18)",
+      "shadow_width": 3,
       "when": {
         "crosshair_type": [
           "Common"
         ]
-      }
+      },
+      "cap": "round"
     },
     {
       "t": "dot",
@@ -61,7 +63,12 @@
       "w": 8,
       "thickness": 1,
       "gap": 0,
-      "color": "#e8f1ffff"
+      "color": "#e8f1ffff",
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ]
+      }
     },
     {
       "t": "ring",
@@ -72,7 +79,7 @@
       "r_min": 14,
       "r_max": 8000,
       "width": 2,
-      "cap": "butt",
+      "cap": "round",
       "color": "#7fc8ffff",
       "color_bg": null,
       "when": {
@@ -95,7 +102,8 @@
       "when": {
         "reloading": true,
         "heat_gun": false
-      }
+      },
+      "radius": 0.5
     },
     {
       "t": "shape",
@@ -135,7 +143,9 @@
       "when": {
         "reloading": true,
         "heat_gun": false
-      }
+      },
+      "cap": "round",
+      "join": "round"
     },
     {
       "t": "text",
@@ -144,7 +154,7 @@
       "size": 11,
       "font": "Normalidad Compact 400",
       "color": "#e8f1ffff",
-      "shadow": "rgba(6,20,40,0.55)",
+      "shadow": "rgba(6,20,40,0.35)",
       "when": {
         "reloading": true,
         "heat_gun": false
@@ -161,7 +171,7 @@
       "fill_dir": "right",
       "border": true,
       "border_width": 1,
-      "border_color": "rgba(232,241,255,0.55)",
+      "border_color": "rgba(232,241,255,0.4)",
       "color_ready": "#e8f1ffff",
       "color_loading": "#7fc8ffff",
       "color_paused": "#ff8a7aff",
@@ -170,7 +180,8 @@
         "magazine_min": 2,
         "magazine_max": 14
       },
-      "source": "primary"
+      "source": "primary",
+      "radius": 2.0
     },
     {
       "t": "bar",
@@ -185,7 +196,8 @@
       "when": {
         "magazine_min": 15
       },
-      "source": "primary"
+      "source": "primary",
+      "radius": 25.0
     },
     {
       "t": "text",
@@ -196,7 +208,7 @@
       "font": "Normalidad Compact 400",
       "align": "left",
       "color": "#e8f1ffff",
-      "shadow": "rgba(6,20,40,0.55)",
+      "shadow": "rgba(6,20,40,0.35)",
       "when": {
         "magazine_min": 2
       },
@@ -211,7 +223,7 @@
       "font": "Normalidad Compact 400",
       "align": "left",
       "color": "#7fc8ffff",
-      "shadow": "rgba(6,20,40,0.55)",
+      "shadow": "rgba(6,20,40,0.35)",
       "when": {
         "magazine_min": 2,
         "round_loading": true
@@ -238,7 +250,8 @@
           "overheat_cooling"
         ]
       },
-      "source": "primary"
+      "source": "primary",
+      "radius": 25.0
     },
     {
       "t": "bar",
@@ -257,7 +270,8 @@
         ]
       },
       "source": "primary",
-      "opacity": 0.4
+      "opacity": 0.4,
+      "radius": 25.0
     },
     {
       "t": "bar",
@@ -275,7 +289,8 @@
         ]
       },
       "source": "primary",
-      "bg_sweep": false
+      "bg_sweep": false,
+      "radius": 25.0
     },
     {
       "t": "text",
@@ -302,7 +317,8 @@
       "when": {
         "overheated": true
       },
-      "source": "primary"
+      "source": "primary",
+      "radius": 25.0
     },
     {
       "t": "text",
@@ -312,7 +328,7 @@
       "size": 10,
       "font": "Normalidad Compact 500",
       "color": "#ff8a7aff",
-      "shadow": "rgba(6,20,40,0.55)",
+      "shadow": "rgba(6,20,40,0.35)",
       "when": {
         "overheated": true
       }
@@ -327,7 +343,8 @@
       "h": 50,
       "fill_dir": "up",
       "color": "#7fc8ffff",
-      "color_bg": null
+      "color_bg": null,
+      "radius": 25.0
     },
     {
       "t": "text",
@@ -338,7 +355,7 @@
       "size": 10,
       "font": "Normalidad Compact 400",
       "color": "#7fc8ffff",
-      "shadow": "rgba(6,20,40,0.55)"
+      "shadow": "rgba(6,20,40,0.35)"
     },
     {
       "t": "text",
@@ -349,7 +366,7 @@
       "font": "Normalidad Compact 400",
       "align": "left",
       "color": "#e8f1ffff",
-      "shadow": "rgba(6,20,40,0.55)",
+      "shadow": "rgba(6,20,40,0.35)",
       "when": {
         "range_shown": true,
         "range_close": false
@@ -364,7 +381,7 @@
       "font": "Normalidad Compact 400",
       "align": "left",
       "color": "#ff8a7aff",
-      "shadow": "rgba(6,20,40,0.55)",
+      "shadow": "rgba(6,20,40,0.35)",
       "when": {
         "range_close": true
       }
@@ -378,7 +395,7 @@
       "font": "Normalidad Compact 400",
       "align": "left",
       "color": "#7fc8ffff",
-      "shadow": "rgba(6,20,40,0.55)",
+      "shadow": "rgba(6,20,40,0.35)",
       "when": {
         "round_loading": true
       },

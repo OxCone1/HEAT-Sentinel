@@ -1,11 +1,11 @@
 {
   "v": 1,
-  "generated": "2026-09-17T11:57:54Z",
+  "generated": "2026-11-01T00:20:28Z",
   "counts": {
-    "reticles": 12,
+    "reticles": 7,
     "blk": 0,
     "image": 0,
-    "pack": 12,
+    "pack": 7,
     "svg": 0
   },
   "reticles": [
@@ -29,72 +29,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 7638,
-          "sha256": "b177ded66f8de844b76a4e7750183770fb0785fed07d490584b26db45f18a27a"
+          "bytes": 7983,
+          "sha256": "e743ac884bb57dbb413f57551f4e5b0cf97b403903e3f6df62e9306413089edd"
         },
         "preview.png": {
-          "bytes": 52760,
-          "sha256": "cd662c453232f323341114a37fcb36d4839fe6fe5b9850bac0c8040a82f18b83"
-        }
-      }
-    },
-    {
-      "id": "brass-belt",
-      "name": "Brass Belt",
-      "dir": "brass-belt",
-      "file": "pack.json",
-      "kind": "pack",
-      "author": "HEAT Sentinel",
-      "license": "CC0-1.0",
-      "description": "Real cartridges. Each round is a drawn shell that fills from the base as it loads, the machine gun is a nickel belt, and heat is a slim strip that runs brass to red.",
-      "preview": "preview.png",
-      "tags": [
-        "art",
-        "autoloader",
-        "heat"
-      ],
-      "opts": {
-        "show": "always"
-      },
-      "files": {
-        "pack.json": {
-          "bytes": 10519,
-          "sha256": "b8c9c632771a5e2dc059c1a26e808bc120367eb0d19b3c906024f2382b529e2d"
-        },
-        "preview.png": {
-          "bytes": 54600,
-          "sha256": "d680f55d8a7f0c07a4220bcafd68950828a146e98ea2f12fd1fbeec44b0c67f7"
-        }
-      }
-    },
-    {
-      "id": "compass",
-      "name": "Compass",
-      "dir": "compass",
-      "file": "pack.json",
-      "kind": "pack",
-      "author": "HEAT Sentinel",
-      "license": "CC0-1.0",
-      "description": "Khaki dial locked to the fixed aim point with cardinal notches and ranging ladders. The dial itself is the reload, the magazine and second gun sit on its lower quadrants, heat on the upper right.",
-      "preview": "preview.png",
-      "tags": [
-        "dial",
-        "aim-static",
-        "autoloader",
-        "rangefinder"
-      ],
-      "opts": {
-        "show": "always",
-        "anchor": "aim_static"
-      },
-      "files": {
-        "pack.json": {
-          "bytes": 7347,
-          "sha256": "9d07901e1cf0c067e417f59e6d8e9fe02c144a6ba413a7cb5376f14a83960e03"
-        },
-        "preview.png": {
-          "bytes": 74984,
-          "sha256": "20b000d2a9a4c101416b0cc10ed75a8ba5a208fd3f126724e9fb45e493d4803e"
+          "bytes": 56558,
+          "sha256": "6b5f837917b3b38321a14c98abe7eac6c9def9898cfa57f0826c86f85eb7bce7"
         }
       }
     },
@@ -118,12 +58,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 10590,
-          "sha256": "a09fa2b6a22c51ba20bdae1f8c8eb97d3cbc75ecffd0809c247beafd5317d25a"
+          "bytes": 11456,
+          "sha256": "11090d5cbc8e6994220ec92ddef7a6e9508db600940bcb84996d22700f94d432"
         },
         "preview.png": {
-          "bytes": 50295,
-          "sha256": "39763e88eb31a6197cad3b5c9f7eeab4842a12b95da8975c4f4c8b3188cb118e"
+          "bytes": 54477,
+          "sha256": "391531ffc2f0f5a8de5871a47ee7ac62282cbf5be60968d159edec2b9556c810"
         }
       }
     },
@@ -148,42 +88,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 7348,
-          "sha256": "14be3725f5519b07b93a4f5ba85b846cc7480f87f03d13cf6b3abbccf94e188b"
+          "bytes": 7983,
+          "sha256": "1f40af091d8fa53ba2da7458afd717fcaa457d56edc0b657a86b890e08e074c6"
         },
         "preview.png": {
-          "bytes": 56892,
-          "sha256": "3287759d02a850c1f323100361a943959014c4063d6a883c527a1a4119ca20cb"
-        }
-      }
-    },
-    {
-      "id": "gate",
-      "name": "Gate",
-      "dir": "gate",
-      "file": "pack.json",
-      "kind": "pack",
-      "author": "HEAT Sentinel",
-      "license": "CC0-1.0",
-      "description": "Lavender twin posts either side of the fixed aim point: the left fills with the reload (or heat), the right holds the magazine. The gun marker settles between them.",
-      "preview": "preview.png",
-      "tags": [
-        "tactical",
-        "aim-static",
-        "autoloader"
-      ],
-      "opts": {
-        "show": "always",
-        "anchor": "aim_static"
-      },
-      "files": {
-        "pack.json": {
-          "bytes": 9036,
-          "sha256": "190c8e0bcb624401fb567e4383fbaf30b8d661c56265c2834670a6905f1ea836"
-        },
-        "preview.png": {
-          "bytes": 66777,
-          "sha256": "8561346dd5c956b646b4aaeeaf29f20ba193bc1816f8088f7d57adef47650879"
+          "bytes": 57837,
+          "sha256": "a8ed6f98c2406aa789d0b577029b2211282002a99c9cfa15e5a7da179f392f31"
         }
       }
     },
@@ -208,12 +118,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 8533,
-          "sha256": "bf2f3e2536eb4c0e64f8d24c91440dc1c01f4e2584a33a63f58e40843eb3d0a6"
+          "bytes": 8754,
+          "sha256": "c233a853f683bf2cdba7e377ca42965a478d14c12cf18a776f4d2d849c802a6c"
         },
         "preview.png": {
-          "bytes": 65110,
-          "sha256": "88682fe5554cef5465fda49f7604b5bc23c0643af23895910b1c4c312f3d1d3d"
+          "bytes": 54866,
+          "sha256": "45793a1d4aa4512dd8a804e3ba0c686763b35b83daac2925feef36a1c712b157"
         }
       }
     },
@@ -237,41 +147,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 6977,
-          "sha256": "6ac7efd9fad6693dce8b8fb0fdef4889a3ffe18f6c8d51b96eb3c9a1e8802360"
+          "bytes": 10000,
+          "sha256": "39cc6f23a8ffc1a2a823e9a430b84c8192ec9f00bac2129705064ad13931c723"
         },
         "preview.png": {
-          "bytes": 52214,
-          "sha256": "eb697b104f1fdcf704a6de1cbc7ca3a59a8abb6f300b53e8072247df4b678ef3"
-        }
-      }
-    },
-    {
-      "id": "neon-drift",
-      "name": "Neon Drift",
-      "dir": "neon-drift",
-      "file": "pack.json",
-      "kind": "pack",
-      "author": "HEAT Sentinel",
-      "license": "CC0-1.0",
-      "description": "Cyan to magenta. The game's spread circle in neon with a glowing reload ring riding it, a fan of rounds overhead and chromatic split numbers.",
-      "preview": "preview.png",
-      "tags": [
-        "art",
-        "colour",
-        "autoloader"
-      ],
-      "opts": {
-        "show": "always"
-      },
-      "files": {
-        "pack.json": {
-          "bytes": 8564,
-          "sha256": "4096fd514d93d6dfe0e4a3970523cb2841b3ec9fde213168dc76475f3a70c525"
-        },
-        "preview.png": {
-          "bytes": 51010,
-          "sha256": "82f80ccef725c397b72e93006a52a511cbc21f2cd30af1179de8b973bf8619c6"
+          "bytes": 55812,
+          "sha256": "3392dc144dbece024786f776584f6a1d44f713be85ce0aa717c6d1eaeb5ac379"
         }
       }
     },
@@ -295,41 +176,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 7378,
-          "sha256": "7ecaeb9d8250ae34e28174832e4be3339b047864fcdf686f6c481325dbc00f47"
+          "bytes": 7704,
+          "sha256": "2d7ee5c2940905ad2d783357a1e8fac401ef053f23975659b2e37daceafdee3d"
         },
         "preview.png": {
-          "bytes": 56418,
-          "sha256": "64b08fe3f5aaf944d46596bdde5570db614d2872dd6a0428526c14e4e9ad4dfd"
-        }
-      }
-    },
-    {
-      "id": "recon-minimal",
-      "name": "Recon Minimal",
-      "dir": "recon-minimal",
-      "file": "pack.json",
-      "kind": "pack",
-      "author": "HEAT Sentinel",
-      "license": "CC0-1.0",
-      "description": "Hairlines only. The game's spread circle as a thin line with ranging ticks riding outside it, and ammo and heat as quiet side tapes.",
-      "preview": "preview.png",
-      "tags": [
-        "minimal",
-        "rangefinder",
-        "sniper"
-      ],
-      "opts": {
-        "show": "always"
-      },
-      "files": {
-        "pack.json": {
-          "bytes": 6709,
-          "sha256": "18fc0eaef49b3910208b7ae5f4d37d6b00029efe23671b2d39c13d7564578edf"
-        },
-        "preview.png": {
-          "bytes": 52564,
-          "sha256": "75983ed0e62722222f5c3650e171b1baa3f4f06802e805e085d5fa907160a198"
+          "bytes": 57635,
+          "sha256": "e0ebee27e6f3d96555deb8462d7953cf2430a670935cd79b5da557777a4b0acb"
         }
       }
     },
@@ -354,12 +206,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 8378,
-          "sha256": "bff3a08eb18f0911f2bc5e2dd3854f0fc6f966b4b545b767d43eba1b7e9c0f30"
+          "bytes": 8527,
+          "sha256": "535227919893d658c828f668cac7dcabcd1db3c92e41ef08ba20d143e61960a2"
         },
         "preview.png": {
-          "bytes": 67918,
-          "sha256": "173da89e74c23b9f56622a9826720581f22d1ee6347911363a6d784e84af79a5"
+          "bytes": 56082,
+          "sha256": "3003e8d0b2c66adbbfa66d159915f153ba76702b58d9d6415e39866918bf19f1"
         }
       }
     }

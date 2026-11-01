@@ -31,8 +31,8 @@
       "bg_sweep": true,
       "cap": "round",
       "color": "rgba(244,239,230,0.6)",
-      "shadow": "rgba(20,14,12,0.45)",
-      "shadow_width": 2,
+      "shadow": "rgba(20,14,12,0.18)",
+      "shadow_width": 3,
       "when": {
         "crosshair_type": [
           "Common"
@@ -53,8 +53,8 @@
       "bg_sweep": true,
       "cap": "round",
       "color": "rgba(244,239,230,0.6)",
-      "shadow": "rgba(20,14,12,0.45)",
-      "shadow_width": 2,
+      "shadow": "rgba(20,14,12,0.18)",
+      "shadow_width": 3,
       "when": {
         "crosshair_type": [
           "Common"
@@ -75,8 +75,8 @@
       "bg_sweep": true,
       "cap": "round",
       "color": "rgba(244,239,230,0.6)",
-      "shadow": "rgba(20,14,12,0.45)",
-      "shadow_width": 2,
+      "shadow": "rgba(20,14,12,0.18)",
+      "shadow_width": 3,
       "when": {
         "crosshair_type": [
           "Common"
@@ -97,8 +97,8 @@
       "bg_sweep": true,
       "cap": "round",
       "color": "rgba(244,239,230,0.6)",
-      "shadow": "rgba(20,14,12,0.45)",
-      "shadow_width": 2,
+      "shadow": "rgba(20,14,12,0.18)",
+      "shadow_width": 3,
       "when": {
         "crosshair_type": [
           "Common"
@@ -111,9 +111,12 @@
       "w": 5,
       "h": 5,
       "color": "#e8452cff",
-      "border": true,
-      "border_width": 1,
-      "border_color": "rgba(20,14,12,0.45)"
+      "border": false,
+      "when": {
+        "crosshair_type": [
+          "Common"
+        ]
+      }
     },
     {
       "t": "ring",
@@ -220,7 +223,7 @@
       "gap_px": 7,
       "start_deg": 180,
       "align": "center",
-      "fill_dir": "up",
+      "fill_dir": "grow",
       "fill": "#f4efe6ff",
       "color_bg": "rgba(244,239,230,0.18)",
       "color_ready": "#f4efe6ff",
@@ -230,7 +233,8 @@
         "magazine_min": 2,
         "magazine_max": 16
       },
-      "source": "primary"
+      "source": "primary",
+      "join": "round"
     },
     {
       "t": "ring",
@@ -261,7 +265,7 @@
       "font": "Normalidad Compact 500",
       "align": "left",
       "color": "#f4efe6ff",
-      "shadow": "rgba(20,14,12,0.45)",
+      "shadow": "rgba(20,14,12,0.35)",
       "when": {
         "reloading": true,
         "heat_gun": false
@@ -276,7 +280,7 @@
       "font": "Normalidad Compact 500",
       "align": "left",
       "color": "#ffb36bff",
-      "shadow": "rgba(20,14,12,0.45)",
+      "shadow": "rgba(20,14,12,0.35)",
       "when": {
         "magazine_min": 2,
         "round_loading": true
@@ -384,7 +388,7 @@
       "font": "Normalidad Compact 500",
       "align": "left",
       "color": "#e8452cff",
-      "shadow": "rgba(20,14,12,0.45)",
+      "shadow": "rgba(20,14,12,0.35)",
       "when": {
         "overheated": true
       }
@@ -476,12 +480,16 @@
       "gap_deg": 0,
       "start_deg": 270,
       "align": "center",
-      "fill_dir": "up",
+      "fill_dir": "grow",
       "fill": "#f4efe6ff",
       "color_bg": "rgba(244,239,230,0.18)",
       "color_ready": "#f4efe6ff",
       "color_loading": "rgba(244,239,230,0.6)",
-      "color_paused": "#ffb36bff"
+      "color_paused": "#ffb36bff",
+      "when": {
+        "magazine_max": 16
+      },
+      "join": "round"
     },
     {
       "t": "text",
@@ -492,7 +500,7 @@
       "font": "Normalidad Compact 500",
       "align": "left",
       "color": "#f4efe6ff",
-      "shadow": "rgba(20,14,12,0.45)",
+      "shadow": "rgba(20,14,12,0.35)",
       "when": {
         "range_shown": true,
         "range_close": false
@@ -507,7 +515,7 @@
       "font": "Normalidad Compact 500",
       "align": "left",
       "color": "#ffb36bff",
-      "shadow": "rgba(20,14,12,0.45)",
+      "shadow": "rgba(20,14,12,0.35)",
       "when": {
         "range_close": true
       }
@@ -521,9 +529,44 @@
       "font": "Normalidad Compact 500",
       "align": "right",
       "color": "#ffb36bff",
-      "shadow": "rgba(20,14,12,0.45)",
+      "shadow": "rgba(20,14,12,0.35)",
       "when": {
         "round_loading": true
+      },
+      "source": "secondary"
+    },
+    {
+      "t": "ring",
+      "track": "magazine",
+      "r": 18,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 33,
+      "r_max": 8000,
+      "width": 3,
+      "from_deg": 238,
+      "sweep_deg": 64,
+      "bg_sweep": true,
+      "cap": "round",
+      "color": "#f4efe6ff",
+      "color_bg": "rgba(244,239,230,0.18)",
+      "when": {
+        "magazine_min": 17
+      },
+      "source": "secondary"
+    },
+    {
+      "t": "text",
+      "text": "{shells_ready}",
+      "x": -64.0,
+      "y": -6,
+      "size": 12,
+      "font": "Normalidad Compact 500",
+      "align": "right",
+      "color": "#f4efe6ff",
+      "shadow": "rgba(20,14,12,0.35)",
+      "when": {
+        "magazine_min": 17
       },
       "source": "secondary"
     }
