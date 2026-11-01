@@ -1,6 +1,6 @@
 {
   "v": 1,
-  "generated": "2026-11-01T01:44:25Z",
+  "generated": "2026-11-01T02:00:56Z",
   "counts": {
     "reticles": 9,
     "blk": 0,
@@ -232,12 +232,12 @@
       },
       "files": {
         "pack.json": {
-          "bytes": 8651,
-          "sha256": "d4e05f8cad1e5731fb78c44aeb776637168e3ceea9e031f0aed323f62c14ba22"
+          "bytes": 8470,
+          "sha256": "ade5eaaf26d0ae546ce14d884671637e02a7e53229d5786c3be3e8c98ea5e5e4"
         },
         "preview.png": {
-          "bytes": 58760,
-          "sha256": "db62efdff6beef4fd83148c3bca8f244b9064c305f0d1092853928d3ba045f95"
+          "bytes": 57727,
+          "sha256": "de3d5a932445249574496be067c3269f7e6caf5ca143261d900eda4985f39bbd"
         }
       }
     },

@@ -20,6 +20,30 @@
   ],
   "widgets": [
     {
+      "t": "strips",
+      "sides": "all",
+      "count": 1,
+      "len": 5,
+      "thickness": 1.2,
+      "offset": -0.5,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 14.5,
+      "r_max": 8000,
+      "color": "#7cffa0ff",
+      "when": {
+        "crosshair_type": [
+          "Common",
+          "GatlingGun",
+          "GatlingGunWithOverheat",
+          "MachineGunMechanic",
+          "TargetTrackerGun",
+          "Mim146Missiles"
+        ]
+      },
+      "cap": "round"
+    },
+    {
       "t": "ring",
       "track": "none",
       "r": -0.5,
@@ -54,8 +78,6 @@
       "r_max": 8000,
       "width": 1.2,
       "color": "#7cffa0ff",
-      "shadow": "rgba(0,18,8,0.18)",
-      "shadow_width": 3,
       "when": {
         "crosshair_type": [
           "Common",
@@ -69,32 +91,6 @@
       },
       "cap": "round",
       "opacity": 0.3
-    },
-    {
-      "t": "strips",
-      "sides": "all",
-      "count": 1,
-      "len": 6,
-      "thickness": 1.2,
-      "offset": 1,
-      "r_track": "spread",
-      "r_scale": 0.5,
-      "r_min": 16,
-      "r_max": 8000,
-      "color": "#7cffa0ff",
-      "shadow": "rgba(0,18,8,0.18)",
-      "shadow_width": 3,
-      "when": {
-        "crosshair_type": [
-          "Common",
-          "GatlingGun",
-          "GatlingGunWithOverheat",
-          "MachineGunMechanic",
-          "TargetTrackerGun",
-          "Mim146Missiles"
-        ]
-      },
-      "cap": "round"
     },
     {
       "t": "dot",
@@ -125,8 +121,6 @@
       "cap": "round",
       "color": "#7cffa0ff",
       "color_bg": null,
-      "shadow": "rgba(0,18,8,0.18)",
-      "shadow_width": 3,
       "when": {
         "crosshair_type": [
           "Common",
