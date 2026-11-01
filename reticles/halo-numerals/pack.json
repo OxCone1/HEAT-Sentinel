@@ -90,8 +90,8 @@
     {
       "t": "text",
       "text": "{distance:0} m",
-      "x": 24,
-      "y": -8,
+      "x": 30,
+      "y": -12,
       "size": 11,
       "font": "Normalidad Compact 500",
       "align": "left",
@@ -105,8 +105,8 @@
     {
       "t": "text",
       "text": "{distance:0} m",
-      "x": 24,
-      "y": -8,
+      "x": 30,
+      "y": -12,
       "size": 11,
       "font": "Normalidad Compact 500",
       "align": "left",
@@ -119,11 +119,11 @@
     {
       "t": "text",
       "text": "{shells_ready}",
-      "x": 44,
+      "x": 38,
       "y": 26,
       "size": 30,
       "font": "Normalidad Compact 700",
-      "align": "right",
+      "align": "center",
       "color": "#f8f7f6ff",
       "shadow": "rgba(18,25,29,0.35)",
       "when": {
@@ -134,7 +134,7 @@
     {
       "t": "text",
       "text": "/{magazine}",
-      "x": 46,
+      "x": 54,
       "y": 32,
       "size": 11,
       "font": "Normalidad Compact 500",
@@ -149,7 +149,7 @@
     {
       "t": "text",
       "text": "+{shell_time_left:1}",
-      "x": 70,
+      "x": 74,
       "y": 26,
       "size": 12,
       "font": "Normalidad Compact 500",
@@ -165,8 +165,9 @@
     {
       "t": "shells",
       "layout": "row",
-      "x": 24,
+      "x": 38,
       "y": 41,
+      "row_align": "center",
       "cell_w": 4,
       "cell_h": 6,
       "gap": 2,
@@ -184,7 +185,7 @@
     },
     {
       "t": "bar",
-      "x": 24,
+      "x": 18,
       "y": 44,
       "w": 40,
       "h": 3,
@@ -201,11 +202,11 @@
     {
       "t": "text",
       "text": "{time_left:1}",
-      "x": 24,
+      "x": 38,
       "y": 26,
       "size": 30,
       "font": "Normalidad Compact 700",
-      "align": "left",
+      "align": "center",
       "color": "#ff8f33ff",
       "shadow": "rgba(18,25,29,0.35)",
       "when": {
@@ -216,7 +217,7 @@
     },
     {
       "t": "bar",
-      "x": 24,
+      "x": 18,
       "y": 44,
       "w": 40,
       "h": 3,
@@ -234,7 +235,7 @@
     },
     {
       "t": "bar",
-      "x": 24,
+      "x": 18,
       "y": 44,
       "w": 40,
       "h": 3,
@@ -257,7 +258,7 @@
     },
     {
       "t": "bar",
-      "x": 24,
+      "x": 18,
       "y": 44,
       "w": 40,
       "h": 3,
@@ -277,7 +278,7 @@
     },
     {
       "t": "bar",
-      "x": 24,
+      "x": 18,
       "y": 44,
       "w": 40,
       "h": 3,
@@ -297,7 +298,7 @@
     },
     {
       "t": "bar",
-      "x": 24,
+      "x": 18,
       "y": 44,
       "w": 40,
       "h": 3,
@@ -314,11 +315,11 @@
     {
       "t": "text",
       "text": "OVERHEAT",
-      "x": 24,
+      "x": 38,
       "y": 26,
       "size": 14,
       "font": "Normalidad Compact 700",
-      "align": "left",
+      "align": "center",
       "color": "#ff6d46ff",
       "shadow": "rgba(18,25,29,0.35)",
       "when": {
@@ -328,11 +329,11 @@
     {
       "t": "text",
       "text": "{shells_ready}",
-      "x": -24,
-      "y": 26,
+      "x": -42,
+      "y": 28,
       "size": 20,
       "font": "Normalidad Compact 700",
-      "align": "right",
+      "align": "center",
       "color": "#f8f7f6ff",
       "shadow": "rgba(18,25,29,0.35)",
       "source": "secondary"

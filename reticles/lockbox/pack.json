@@ -263,7 +263,7 @@
     {
       "t": "shells",
       "layout": "row",
-      "x": -27,
+      "x": 0,
       "y": 67,
       "cell_w": 6,
       "cell_h": 6,
@@ -279,7 +279,8 @@
         "magazine_max": 8
       },
       "source": "primary",
-      "radius": 3
+      "radius": 3,
+      "row_align": "center"
     },
     {
       "t": "bar",
