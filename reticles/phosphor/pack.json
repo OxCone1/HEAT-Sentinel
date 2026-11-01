@@ -639,17 +639,23 @@
     },
     {
       "t": "reload_game",
-      "y": -24,
-      "w": 80,
-      "h": 3,
-      "indicator_w": 2,
-      "indicator_h": 8,
-      "color_bg": "rgba(124,255,160,0.18)",
-      "color_zone": "rgba(124,255,160,0.45)",
-      "color_perfect": "rgba(124,255,160,1)",
-      "color_indicator": "rgba(124,255,160,0.95)",
+      "w": 96,
+      "h": 5,
+      "indicator_w": 3,
+      "indicator_h": 13,
+      "r": 14,
+      "r_track": "spread",
+      "r_scale": 0.5,
+      "r_min": 28,
+      "r_max": 8000,
+      "color_bg": "rgba(18,25,29,0.6)",
+      "color_zone": "rgba(61,217,248,0.5)",
+      "color_perfect": "#5ff0ffff",
+      "color_indicator": "#ffffffff",
       "color_hit": "#84ffb1ff",
       "color_miss": "#ff6d46ff",
+      "size": 12,
+      "font": "Normalidad Extended 400",
       "when": {
         "active_reload": [
           "active",
@@ -658,39 +664,6 @@
           "missed"
         ]
       }
-    },
-    {
-      "t": "text",
-      "text": "{reload_bonus:1}",
-      "x": -46,
-      "y": -24,
-      "size": 11,
-      "font": "Normalidad Extended 400",
-      "align": "right",
-      "color": "#84ffb1ff",
-      "when": {
-        "active_reload": [
-          "hit",
-          "perfect"
-        ]
-      },
-      "shadow": "rgba(0,18,8,0.35)"
-    },
-    {
-      "t": "text",
-      "text": "{reload_bonus:1}",
-      "x": -46,
-      "y": -24,
-      "size": 11,
-      "font": "Normalidad Extended 400",
-      "align": "right",
-      "color": "#ff6d46ff",
-      "when": {
-        "active_reload": [
-          "missed"
-        ]
-      },
-      "shadow": "rgba(0,18,8,0.35)"
     }
   ]
 }
