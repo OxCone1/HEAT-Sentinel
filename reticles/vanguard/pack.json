@@ -180,7 +180,7 @@
         ],
         "reloading": false
       },
-      "fx": "frame"
+      "fx": "missile"
     },
     {
       "t": "ring",
@@ -199,7 +199,7 @@
         ],
         "reloading": false
       },
-      "fx": "frame"
+      "fx": "missile"
     },
     {
       "t": "ring",
@@ -218,7 +218,7 @@
         ],
         "reloading": false
       },
-      "fx": "frame"
+      "fx": "missile"
     },
     {
       "t": "ring",
@@ -237,7 +237,7 @@
         ],
         "reloading": false
       },
-      "fx": "frame"
+      "fx": "missile"
     },
     {
       "t": "ring",
@@ -257,7 +257,7 @@
         "reloading": true
       },
       "opacity": 0.35,
-      "fx": "frame"
+      "fx": "missile"
     },
     {
       "t": "ring",
@@ -277,7 +277,7 @@
         "reloading": true
       },
       "opacity": 0.35,
-      "fx": "frame"
+      "fx": "missile"
     },
     {
       "t": "ring",
@@ -297,7 +297,7 @@
         "reloading": true
       },
       "opacity": 0.35,
-      "fx": "frame"
+      "fx": "missile"
     },
     {
       "t": "ring",
@@ -317,7 +317,7 @@
         "reloading": true
       },
       "opacity": 0.35,
-      "fx": "frame"
+      "fx": "missile"
     },
     {
       "t": "ring",
@@ -340,7 +340,7 @@
       "color_bg": null,
       "track_from": 0.0,
       "track_to": 0.25,
-      "fx": "reload"
+      "fx": "missile_reload"
     },
     {
       "t": "ring",
@@ -363,7 +363,7 @@
       "color_bg": null,
       "track_from": 0.25,
       "track_to": 0.5,
-      "fx": "reload"
+      "fx": "missile_reload"
     },
     {
       "t": "ring",
@@ -386,7 +386,7 @@
       "color_bg": null,
       "track_from": 0.5,
       "track_to": 0.75,
-      "fx": "reload"
+      "fx": "missile_reload"
     },
     {
       "t": "ring",
@@ -409,7 +409,7 @@
       "color_bg": null,
       "track_from": 0.75,
       "track_to": 1.0,
-      "fx": "reload"
+      "fx": "missile_reload"
     },
     {
       "t": "ring",
@@ -472,7 +472,7 @@
         "magazine_min": 2,
         "magazine_max": 12
       },
-      "source": "primary",
+      "source": "main",
       "fx": "rounds"
     },
     {
@@ -488,7 +488,7 @@
       "when": {
         "magazine_min": 13
       },
-      "source": "primary",
+      "source": "main",
       "fx": "mag"
     },
     {
@@ -504,7 +504,7 @@
       "when": {
         "magazine_min": 13
       },
-      "source": "primary",
+      "source": "main",
       "fx": "count"
     },
     {
@@ -553,12 +553,12 @@
         "magazine_min": 2,
         "round_loading": true
       },
-      "source": "primary",
+      "source": "main",
       "fx": "next"
     },
     {
       "t": "text",
-      "text": "2ND {shells_ready}",
+      "text": "{slot_name} {shells_ready}",
       "x": -30,
       "y": 79,
       "size": 11,
@@ -566,7 +566,7 @@
       "align": "right",
       "color": "rgba(244,244,242,0.6)",
       "shadow": "rgba(20,4,4,0.35)",
-      "source": "secondary",
+      "source": "side",
       "fx": "count2"
     },
     {
@@ -690,7 +690,7 @@
       "when": {
         "round_loading": true
       },
-      "source": "secondary",
+      "source": "side",
       "fx": "next2"
     },
     {
@@ -722,6 +722,43 @@
       "perfect_h": 14,
       "texture_step": 4,
       "color_texture": "rgba(18,25,29,0.55)"
+    },
+    {
+      "t": "shells",
+      "source": "side",
+      "layout": "row",
+      "x": -30,
+      "y": 67.5,
+      "cell_w": 6,
+      "cell_h": 2.5,
+      "gap": 2,
+      "radius": 1.25,
+      "row_align": "end",
+      "fill_dir": "right",
+      "color_ready": "#f4f4f2ff",
+      "color_loading": "#ff3b3bff",
+      "color_empty": "rgba(244,244,242,0.18)",
+      "when": {
+        "magazine_min": 1,
+        "magazine_max": 12
+      },
+      "fx": "rounds2"
+    },
+    {
+      "t": "bar",
+      "source": "side",
+      "track": "magazine",
+      "x": -72,
+      "y": 67.5,
+      "w": 42,
+      "h": 2.5,
+      "radius": 1.25,
+      "color": "#f4f4f2ff",
+      "color_bg": "rgba(244,244,242,0.18)",
+      "when": {
+        "magazine_min": 13
+      },
+      "fx": "mag2"
     }
   ],
   "motion": [
@@ -753,7 +790,9 @@
       "on": "appear",
       "fx": [
         "rounds",
-        "mag"
+        "mag",
+        "rounds2",
+        "mag2"
       ],
       "do": "enter",
       "scale": 0.6,
@@ -897,6 +936,89 @@
       "do": "kick",
       "scale": 1.3,
       "dur": 0.35,
+      "ease": "out"
+    },
+    {
+      "on": "swap_main",
+      "fx": [
+        "rounds",
+        "mag",
+        "count",
+        "next"
+      ],
+      "do": "enter",
+      "y": -8,
+      "alpha": 0,
+      "dur": 0.45,
+      "bounce": 0.3
+    },
+    {
+      "on": "swap_main",
+      "fx": [
+        "rounds2",
+        "mag2",
+        "count2",
+        "next2"
+      ],
+      "do": "enter",
+      "y": 8,
+      "alpha": 0,
+      "dur": 0.45,
+      "bounce": 0.3
+    },
+    {
+      "on": "missile_on",
+      "fx": [
+        "missile"
+      ],
+      "do": "enter",
+      "scale": 1.6,
+      "alpha": 0,
+      "dur": 0.45,
+      "bounce": 0.4
+    },
+    {
+      "on": "missile_off",
+      "fx": [
+        "spread",
+        "aim"
+      ],
+      "do": "enter",
+      "scale": 0.6,
+      "alpha": 0,
+      "dur": 0.4,
+      "bounce": 0.3
+    },
+    {
+      "on": "shot",
+      "fx": [
+        "missile"
+      ],
+      "do": "kick",
+      "scale": 1.3,
+      "dur": 0.32,
+      "ease": "out",
+      "peak": 0.2
+    },
+    {
+      "on": "shot",
+      "fx": [
+        "missile"
+      ],
+      "do": "echo",
+      "scale": 1.8,
+      "from_alpha": 0.6,
+      "dur": 0.45,
+      "ease": "out"
+    },
+    {
+      "on": "ready",
+      "fx": [
+        "missile"
+      ],
+      "do": "kick",
+      "scale": 0.85,
+      "dur": 0.36,
       "ease": "out"
     }
   ]
