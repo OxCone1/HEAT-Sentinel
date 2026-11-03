@@ -25,6 +25,14 @@ HEAT Sentinel is a mod for **World of Tanks: HEAT** that runs next to the game. 
 | `heat-capture.exe` (capture/watcher engine, bundled inside the installer) | 43.0 MB | [View scan](https://www.virustotal.com/gui/file/d8cb4890f96e7539813e826f208b3d12047fdca63d0d00fcb0fe14d6a1c23f08) |
 <!-- RELEASE-EN:END -->
 
+### Linux
+
+HEAT Sentinel also runs on Linux, for players who run the game through Proton. Choose the AppImage, which updates itself, or the .deb, which updates through your package manager. The Linux build of a new version lands shortly after the Windows one.
+
+<!-- LINUX-EN:START -->
+The first Linux build arrives with v3.2.0.
+<!-- LINUX-EN:END -->
+
 Every release is built by GitHub Actions and scanned on VirusTotal, and updates are signed. Windows SmartScreen will warn about the installer because it is not code-signed: "More info", then "Run anyway". [Why, and how to check a build yourself](docs/security-and-privacy.md).
 
 <p align="center">
@@ -173,7 +181,6 @@ The app itself is closed source. This repository is its public home: releases, d
 - **More reticles and in-game designs**, together with the community
 - **Marks of Excellence**: regular rebalancing as the game and its player base change
 - **Opt-in online features**: live combat sharing between platooned HEAT Sentinel players, and a public web portal for the battles you choose to upload. Both strictly opt-in, and the privacy policy is updated before any of it reaches a release
-- **Linux**: builds for players who run the game through Proton
 
 ## Acknowledgements
 

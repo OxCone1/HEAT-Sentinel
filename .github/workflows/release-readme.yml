@@ -13,6 +13,13 @@
 #   5. Puts the same download badge at the top of the release's notes
 #      (between DOWNLOAD marker comments, so re-runs replace it).
 #
+# The Linux build lands later, when WoT_HEAT's Release (Linux) workflow attaches
+# it to the published release and edits the notes. That edit runs this workflow
+# again, which fills the LINUX-EN / LINUX-RU blocks from the release's AppImage
+# and .deb assets. An edit counts only on the latest release, so editing the
+# notes of an old one never puts its version back in the README. This
+# workflow's own notes edit uses the default token and starts no new run.
+#
 # Releases without a release_info.json asset and an *-setup.exe asset
 # (e.g. Light-LabelMe tool releases) are skipped. No secrets required.
 
@@ -20,7 +27,7 @@ name: Update README on release
 
 on:
   release:
-    types: [published]
+    types: [published, edited]
   workflow_dispatch:
     inputs:
       tag:
@@ -52,6 +59,14 @@ jobs:
       - name: Check this is an app release
         id: guard
         run: |
+          if [ "${{ github.event.action }}" = edited ]; then
+            latest="$(gh api "repos/${GITHUB_REPOSITORY}/releases/latest" -q .tag_name)"
+            if [ "$latest" != "$TAG" ]; then
+              echo "${TAG} is not the latest release (${latest}); skipping README update."
+              echo "app_release=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          fi
           if jq -e '.assets[] | select(.name == "release_info.json")' release.json > /dev/null \
             && jq -e '.assets[] | select(.name | test("-setup[.]exe$"; "i"))' release.json > /dev/null; then
             echo "app_release=true" >> "$GITHUB_OUTPUT"
@@ -80,6 +95,13 @@ jobs:
                 sha256: .sha256,
                 size: .size,
                 download_url: (if .kind == "installer" then $inst.browser_download_url else (.download_url // null) end)
+              } ],
+              linux: [ $rel.assets[] | select(.name | test("[.](AppImage|deb)$")) | {
+                kind: (if (.name | endswith(".deb")) then "deb" else "appimage" end),
+                name: .name,
+                sha256: ((.digest // "") | ltrimstr("sha256:")),
+                size: .size,
+                download_url: .browser_download_url
               } ]
             }' release.json info.json > release_info_full.json
           cat release_info_full.json

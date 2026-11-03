@@ -13,11 +13,21 @@ Input JSON (produced by .github/workflows/release-readme.yml):
      "sha256": "...", "size": 12345678, "download_url": null},
     {"kind": "labelme", "name": "labelme.exe",
      "sha256": "...", "size": 12345678, "download_url": "https://..."}
+  ],
+  "linux": [
+    {"kind": "appimage", "name": "HEAT.Sentinel_2.0.0_amd64.AppImage",
+     "sha256": "...", "size": 12345678, "download_url": "https://..."},
+    {"kind": "deb", "name": "HEAT.Sentinel_2.0.0_amd64.deb",
+     "sha256": "...", "size": 12345678, "download_url": "https://..."}
   ]
 }
 
 "kind" is optional; when missing it is inferred from the file name.
 Assets without a download_url are listed as bundled (no link).
+
+"linux" rewrites the LINUX-EN / LINUX-RU blocks. The Linux build lands after the
+Windows release, so with an empty "linux" those blocks are left as they are and
+keep offering the previous build.
 """
 
 import argparse
@@ -30,6 +40,11 @@ VT_FILE_URL = "https://www.virustotal.com/gui/file/{sha256}"
 MARKERS = {
     "en": ("<!-- RELEASE-EN:START -->", "<!-- RELEASE-EN:END -->"),
     "ru": ("<!-- RELEASE-RU:START -->", "<!-- RELEASE-RU:END -->"),
+}
+
+LINUX_MARKERS = {
+    "en": ("<!-- LINUX-EN:START -->", "<!-- LINUX-EN:END -->"),
+    "ru": ("<!-- LINUX-RU:START -->", "<!-- LINUX-RU:END -->"),
 }
 
 NOTES_MARKERS = ("<!-- DOWNLOAD:START -->", "<!-- DOWNLOAD:END -->")
@@ -47,6 +62,9 @@ TEXT = {
         "capture": "capture/watcher engine, bundled inside the installer",
         "labelme": "calibration annotation tool",
         "asset": "release asset",
+        "linux_latest": "**Latest Linux build:**",
+        "appimage": "updates itself",
+        "deb": "updates through your package manager",
     },
     "ru": {
         "badge_label": "Скачать",
@@ -60,6 +78,9 @@ TEXT = {
         "capture": "движок захвата, встроен в установщик",
         "labelme": "инструмент разметки калибровок",
         "asset": "файл релиза",
+        "linux_latest": "**Последняя сборка для Linux:**",
+        "appimage": "обновляется сама",
+        "deb": "обновляется через менеджер пакетов",
     },
 }
 
@@ -142,9 +163,26 @@ def build_block(data: dict, lang: str) -> str:
     return "\n".join(lines)
 
 
-def replace_block(readme: str, lang: str, block: str) -> tuple[str, bool]:
-    """Rewrite one language's marker block; False when the file has none."""
-    start, end = MARKERS[lang]
+def build_linux_block(data: dict, lang: str) -> str:
+    t = TEXT[lang]
+    lines = [
+        f"{t['linux_latest']} [{data['tag']}]({data['release_url']})",
+        "",
+        f"| {t['file']} | {t['size']} | SHA-256 |",
+        "|------|------|------|",
+    ]
+    for asset in data["linux"]:
+        sha = f"`{asset['sha256']}`" if asset.get("sha256") else "-"
+        lines.append(
+            f"| [`{asset['name']}`]({asset['download_url']}) ({t[asset['kind']]})"
+            f" | {human_size(asset['size'])} | {sha} |"
+        )
+    return "\n".join(lines)
+
+
+def replace_block(readme: str, markers: tuple[str, str], block: str) -> tuple[str, bool]:
+    """Rewrite one marker block; False when the file has none."""
+    start, end = markers
     pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
     if not pattern.search(readme):
         return readme, False
@@ -178,21 +216,32 @@ def main() -> None:
     with open(args.data, encoding="utf-8") as f:
         data = json.load(f)
     found = set()
+    linux_found = set()
     for path in args.readme:
         with open(path, encoding="utf-8") as f:
             readme = f.read()
         hit = False
         for lang in MARKERS:
-            readme, ok = replace_block(readme, lang, build_block(data, lang))
+            readme, ok = replace_block(readme, MARKERS[lang], build_block(data, lang))
             if ok:
                 found.add(lang)
                 hit = True
+            if data.get("linux"):
+                readme, ok = replace_block(readme, LINUX_MARKERS[lang], build_linux_block(data, lang))
+                if ok:
+                    linux_found.add(lang)
         if not hit:
             sys.exit(f"No release marker blocks found in {path}.")
         with open(path, "w", encoding="utf-8", newline="\n") as f:
             f.write(readme)
         print(f"{path} updated.")
     missing = [f"{MARKERS[lang][0]} / {MARKERS[lang][1]}" for lang in MARKERS if lang not in found]
+    if data.get("linux"):
+        missing += [
+            f"{LINUX_MARKERS[lang][0]} / {LINUX_MARKERS[lang][1]}"
+            for lang in LINUX_MARKERS
+            if lang not in linux_found
+        ]
     if missing:
         sys.exit(f"Markers not found in any README: {', '.join(missing)}")
 
