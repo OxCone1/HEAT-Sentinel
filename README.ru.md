@@ -15,14 +15,14 @@ HEAT Sentinel -- мод для **World of Tanks: HEAT**, который рабо
 ## Скачать
 
 <!-- RELEASE-RU:START -->
-[![Скачать HEAT Sentinel](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-HEAT%20Sentinel%20v3.2.0-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.2.0/HEAT.Sentinel_3.2.0_x64-setup.exe)
+[![Скачать HEAT Sentinel](https://img.shields.io/badge/%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C-HEAT%20Sentinel%20v3.2.1-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.2.1/HEAT.Sentinel_3.2.1_x64-setup.exe)
 
-**Последний релиз:** [v3.2.0](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v3.2.0) -- опубликован 2026-11-03
+**Последний релиз:** [v3.2.1](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v3.2.1) -- опубликован 2026-11-04
 
 | Файл | Размер | Отчёт VirusTotal |
 |------|------|------|
-| [`HEAT.Sentinel_3.2.0_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.2.0/HEAT.Sentinel_3.2.0_x64-setup.exe) (установщик приложения) | 159.1 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/aa8ea6e9ed8584a4239faeae6ec55659f4cf230f9cb9d84f80f2510b647c7fd7) |
-| `heat-capture.exe` (движок захвата, встроен в установщик) | 44.2 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/367bd587aa18b9b92125a2d1e9ceb18271e0ffa68a0f54eeba4cbf0809a0a77a) |
+| [`HEAT.Sentinel_3.2.1_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.2.1/HEAT.Sentinel_3.2.1_x64-setup.exe) (установщик приложения) | 159.2 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/0b1d22866608a15b384ad3ee8be3b8cff2609ba8eb819ab0f1320f73f1d38271) |
+| `heat-capture.exe` (движок захвата, встроен в установщик) | 44.3 MB | [Открыть отчёт](https://www.virustotal.com/gui/file/26513682ae5ac685a6eadd3c8724e63e3e29880c7da287cdaf18d02ffdb12bdd) |
 <!-- RELEASE-RU:END -->
 
 ### Linux
