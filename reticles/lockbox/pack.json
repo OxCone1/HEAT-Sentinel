@@ -24,7 +24,7 @@
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 30,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -38,14 +38,14 @@
         "reloading": false
       },
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 120,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -59,14 +59,14 @@
         "reloading": false
       },
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 210,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -80,14 +80,14 @@
         "reloading": false
       },
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 300,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -101,14 +101,14 @@
         "reloading": false
       },
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 30,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -123,14 +123,14 @@
       },
       "opacity": 0.35,
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 120,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -145,14 +145,14 @@
       },
       "opacity": 0.35,
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 210,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -167,14 +167,14 @@
       },
       "opacity": 0.35,
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 300,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -189,14 +189,14 @@
       },
       "opacity": 0.35,
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "reload",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 30,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -219,7 +219,7 @@
       "t": "ring",
       "track": "reload",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 120,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -242,7 +242,7 @@
       "t": "ring",
       "track": "reload",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 210,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -265,7 +265,7 @@
       "t": "ring",
       "track": "reload",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 300,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -292,10 +292,10 @@
       "r_scale": 0.5,
       "r_min": 16.67,
       "r_max": 8000,
-      "width": 2.0,
+      "width": 1.5,
       "color": "rgba(255,179,0,0.95)",
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "when": {
         "crosshair_type": [
           "Common",
@@ -316,7 +316,7 @@
       "bg_sweep": true,
       "cap": "round",
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "when": {
         "crosshair_type": [
           "Common",
@@ -327,7 +327,7 @@
       },
       "r": 5.75,
       "r_min": 22.42,
-      "width": 2.39,
+      "width": 1.77,
       "from_deg": 32,
       "sweep_deg": 26,
       "color": "#ffb300ff",
@@ -342,7 +342,7 @@
       "bg_sweep": true,
       "cap": "round",
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "when": {
         "crosshair_type": [
           "Common",
@@ -353,7 +353,7 @@
       },
       "r": 11.5,
       "r_min": 28.17,
-      "width": 2.0,
+      "width": 1.5,
       "from_deg": 38,
       "sweep_deg": 14,
       "color": "rgba(255,179,0,0.95)",
@@ -368,7 +368,7 @@
       "bg_sweep": true,
       "cap": "round",
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "when": {
         "crosshair_type": [
           "Common",
@@ -379,7 +379,7 @@
       },
       "r": 5.75,
       "r_min": 22.42,
-      "width": 2.39,
+      "width": 1.77,
       "from_deg": 122,
       "sweep_deg": 26,
       "color": "#ffb300ff",
@@ -394,7 +394,7 @@
       "bg_sweep": true,
       "cap": "round",
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "when": {
         "crosshair_type": [
           "Common",
@@ -405,7 +405,7 @@
       },
       "r": 11.5,
       "r_min": 28.17,
-      "width": 2.0,
+      "width": 1.5,
       "from_deg": 128,
       "sweep_deg": 14,
       "color": "rgba(255,179,0,0.95)",
@@ -420,7 +420,7 @@
       "bg_sweep": true,
       "cap": "round",
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "when": {
         "crosshair_type": [
           "Common",
@@ -431,7 +431,7 @@
       },
       "r": 5.75,
       "r_min": 22.42,
-      "width": 2.39,
+      "width": 1.77,
       "from_deg": 212,
       "sweep_deg": 26,
       "color": "#ffb300ff",
@@ -446,7 +446,7 @@
       "bg_sweep": true,
       "cap": "round",
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "when": {
         "crosshair_type": [
           "Common",
@@ -457,7 +457,7 @@
       },
       "r": 11.5,
       "r_min": 28.17,
-      "width": 2.0,
+      "width": 1.5,
       "from_deg": 218,
       "sweep_deg": 14,
       "color": "rgba(255,179,0,0.95)",
@@ -472,7 +472,7 @@
       "bg_sweep": true,
       "cap": "round",
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "when": {
         "crosshair_type": [
           "Common",
@@ -483,7 +483,7 @@
       },
       "r": 5.75,
       "r_min": 22.42,
-      "width": 2.39,
+      "width": 1.77,
       "from_deg": 302,
       "sweep_deg": 26,
       "color": "#ffb300ff",
@@ -498,7 +498,7 @@
       "bg_sweep": true,
       "cap": "round",
       "shadow": "rgba(8,6,0,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "when": {
         "crosshair_type": [
           "Common",
@@ -509,7 +509,7 @@
       },
       "r": 11.5,
       "r_min": 28.17,
-      "width": 2.0,
+      "width": 1.5,
       "from_deg": 308,
       "sweep_deg": 14,
       "color": "rgba(255,179,0,0.95)",
@@ -519,7 +519,7 @@
       "t": "dot",
       "shape": "cross",
       "w": 8.05,
-      "thickness": 2.0,
+      "thickness": 1.5,
       "gap": 2.3,
       "color": "#ffb300ff",
       "when": {
@@ -545,7 +545,7 @@
       "r_scale": 0.5,
       "r_min": 16.1,
       "r_max": 8000,
-      "width": 2.99,
+      "width": 2.21,
       "cap": "round",
       "color": "#ffb300ff",
       "color_bg": null,

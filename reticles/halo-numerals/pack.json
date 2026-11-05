@@ -24,7 +24,7 @@
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 30,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -38,14 +38,14 @@
         "reloading": false
       },
       "shadow": "rgba(13,18,20,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 120,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -59,14 +59,14 @@
         "reloading": false
       },
       "shadow": "rgba(13,18,20,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 210,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -80,14 +80,14 @@
         "reloading": false
       },
       "shadow": "rgba(13,18,20,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 300,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -101,14 +101,14 @@
         "reloading": false
       },
       "shadow": "rgba(13,18,20,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 30,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -123,14 +123,14 @@
       },
       "opacity": 0.35,
       "shadow": "rgba(13,18,20,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 120,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -145,14 +145,14 @@
       },
       "opacity": 0.35,
       "shadow": "rgba(13,18,20,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 210,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -167,14 +167,14 @@
       },
       "opacity": 0.35,
       "shadow": "rgba(13,18,20,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 300,
       "sweep_deg": 30,
       "bg_sweep": true,
@@ -189,14 +189,14 @@
       },
       "opacity": 0.35,
       "shadow": "rgba(13,18,20,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "reload",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 30,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -219,7 +219,7 @@
       "t": "ring",
       "track": "reload",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 120,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -242,7 +242,7 @@
       "t": "ring",
       "track": "reload",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 210,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -265,7 +265,7 @@
       "t": "ring",
       "track": "reload",
       "r": 18.4,
-      "width": 2.09,
+      "width": 1.55,
       "from_deg": 300,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -293,10 +293,10 @@
       "r_min": 16.67,
       "r_max": 8000,
       "cap": "round",
-      "width": 2.09,
+      "width": 1.55,
       "color": "rgba(248,247,246,0.95)",
       "shadow": "rgba(13,18,20,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "when": {
         "crosshair_type": [
           "Common",
@@ -317,7 +317,7 @@
       "r_min": 16.67,
       "r_max": 8000,
       "cap": "round",
-      "width": 2.09,
+      "width": 1.55,
       "color": "rgba(248,247,246,0.95)",
       "when": {
         "crosshair_type": [
@@ -329,7 +329,7 @@
         "reloading": true
       },
       "shadow": "rgba(13,18,20,0.62)",
-      "shadow_width": 3.5,
+      "shadow_width": 3.0,
       "fx": "spread"
     },
     {
@@ -341,7 +341,7 @@
       "r_min": 16.67,
       "r_max": 8000,
       "cap": "round",
-      "width": 2.99,
+      "width": 2.21,
       "color": "#f8f7f6ff",
       "color_bg": null,
       "when": {
