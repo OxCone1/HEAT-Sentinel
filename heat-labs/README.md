@@ -4,7 +4,7 @@ Images for the HEAT Sentinel page on [HEAT Labs Mods](https://github.com/HEATLab
 
 | File | Used as |
 |------|---------|
-| `banner.webp` | `page-image` (same as `docs/banner.jpg`) |
+| `banner.webp` | `page-image` (same as `docs/banner.webp`). Animated, plays once. Built by `heat-tray/scripts/readme-media/startup-banner.mjs --publish` |
 | `stats-overview.webp` | Overview image 1: Battles, Overview |
 | `rivals-1v1.webp` | Overview image 2: Battles, 1v1 |
 | `loadouts.webp` | Overview image 3: Battles, Loadouts |

@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="HEAT Sentinel" src="./docs/banner.jpg">
+  <img alt="HEAT Sentinel" src="./docs/banner.webp">
 </p>
 
 <p align="center">
