@@ -23,13 +23,13 @@
     {
       "t": "ring",
       "track": "none",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 30,
       "sweep_deg": 30,
       "bg_sweep": true,
       "cap": "round",
-      "color": "rgba(232,241,255,0.9)",
+      "color": "rgba(232,241,255,0.95)",
       "when": {
         "crosshair_type": [
           "TargetTrackerGun",
@@ -37,18 +37,20 @@
         ],
         "reloading": false
       },
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 120,
       "sweep_deg": 30,
       "bg_sweep": true,
       "cap": "round",
-      "color": "rgba(232,241,255,0.9)",
+      "color": "rgba(232,241,255,0.95)",
       "when": {
         "crosshair_type": [
           "TargetTrackerGun",
@@ -56,18 +58,20 @@
         ],
         "reloading": false
       },
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 210,
       "sweep_deg": 30,
       "bg_sweep": true,
       "cap": "round",
-      "color": "rgba(232,241,255,0.9)",
+      "color": "rgba(232,241,255,0.95)",
       "when": {
         "crosshair_type": [
           "TargetTrackerGun",
@@ -75,18 +79,20 @@
         ],
         "reloading": false
       },
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 300,
       "sweep_deg": 30,
       "bg_sweep": true,
       "cap": "round",
-      "color": "rgba(232,241,255,0.9)",
+      "color": "rgba(232,241,255,0.95)",
       "when": {
         "crosshair_type": [
           "TargetTrackerGun",
@@ -94,18 +100,20 @@
         ],
         "reloading": false
       },
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 30,
       "sweep_deg": 30,
       "bg_sweep": true,
       "cap": "round",
-      "color": "rgba(232,241,255,0.9)",
+      "color": "rgba(232,241,255,0.95)",
       "when": {
         "crosshair_type": [
           "TargetTrackerGun",
@@ -114,18 +122,20 @@
         "reloading": true
       },
       "opacity": 0.35,
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 120,
       "sweep_deg": 30,
       "bg_sweep": true,
       "cap": "round",
-      "color": "rgba(232,241,255,0.9)",
+      "color": "rgba(232,241,255,0.95)",
       "when": {
         "crosshair_type": [
           "TargetTrackerGun",
@@ -134,18 +144,20 @@
         "reloading": true
       },
       "opacity": 0.35,
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 210,
       "sweep_deg": 30,
       "bg_sweep": true,
       "cap": "round",
-      "color": "rgba(232,241,255,0.9)",
+      "color": "rgba(232,241,255,0.95)",
       "when": {
         "crosshair_type": [
           "TargetTrackerGun",
@@ -154,18 +166,20 @@
         "reloading": true
       },
       "opacity": 0.35,
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "none",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 300,
       "sweep_deg": 30,
       "bg_sweep": true,
       "cap": "round",
-      "color": "rgba(232,241,255,0.9)",
+      "color": "rgba(232,241,255,0.95)",
       "when": {
         "crosshair_type": [
           "TargetTrackerGun",
@@ -174,13 +188,15 @@
         "reloading": true
       },
       "opacity": 0.35,
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "missile"
     },
     {
       "t": "ring",
       "track": "reload",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 30,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -202,8 +218,8 @@
     {
       "t": "ring",
       "track": "reload",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 120,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -225,8 +241,8 @@
     {
       "t": "ring",
       "track": "reload",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 210,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -248,8 +264,8 @@
     {
       "t": "ring",
       "track": "reload",
-      "r": 16,
-      "width": 1.4,
+      "r": 18.4,
+      "width": 2.09,
       "from_deg": 300,
       "sweep_deg": 30,
       "bg_sweep": false,
@@ -271,13 +287,13 @@
     {
       "t": "ring",
       "track": "none",
-      "r": -0.5,
+      "r": -0.57,
       "r_track": "spread",
       "r_scale": 0.5,
-      "r_min": 14.5,
+      "r_min": 16.67,
       "r_max": 8000,
-      "width": 1,
-      "color": "rgba(232,241,255,0.55)",
+      "width": 2.0,
+      "color": "rgba(232,241,255,0.95)",
       "when": {
         "crosshair_type": [
           "Common",
@@ -287,18 +303,20 @@
         ]
       },
       "cap": "round",
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "spread"
     },
     {
       "t": "strips",
       "sides": "all",
       "count": 1,
-      "len": 8,
-      "thickness": 1,
-      "offset": 5,
+      "len": 9.2,
+      "thickness": 2.0,
+      "offset": 5.75,
       "r_track": "spread",
       "r_scale": 0.5,
-      "r_min": 20,
+      "r_min": 23.0,
       "r_max": 8000,
       "color": "#e8f1ffff",
       "when": {
@@ -310,14 +328,16 @@
         ]
       },
       "cap": "round",
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "marks"
     },
     {
       "t": "dot",
       "shape": "plus",
-      "w": 8,
-      "thickness": 1,
-      "gap": 0,
+      "w": 9.2,
+      "thickness": 2.0,
+      "gap": 0.0,
       "color": "#e8f1ffff",
       "when": {
         "crosshair_type": [
@@ -329,17 +349,20 @@
           "Mim146Missiles"
         ]
       },
+      "border": true,
+      "border_width": 1.0,
+      "border_color": "rgba(4,14,28,0.85)",
       "fx": "aim"
     },
     {
       "t": "ring",
       "track": "reload",
-      "r": -1,
+      "r": -1.15,
       "r_track": "spread",
       "r_scale": 0.5,
-      "r_min": 14,
+      "r_min": 16.1,
       "r_max": 8000,
-      "width": 2,
+      "width": 2.99,
       "cap": "round",
       "color": "#7fc8ffff",
       "color_bg": null,
@@ -358,17 +381,20 @@
     {
       "t": "bar",
       "track": "reload_time",
-      "x": -50,
-      "y": 89.5,
-      "w": 100,
-      "h": 2,
+      "x": -57.5,
+      "y": 102.92,
+      "w": 115.0,
+      "h": 2.3,
       "color": "#7fc8ffff",
-      "color_bg": "rgba(232,241,255,0.22)",
+      "color_bg": "rgba(92,104,122,0.78)",
       "when": {
         "reloading": true,
         "heat_gun": false
       },
-      "radius": 1,
+      "radius": 1.15,
+      "border": true,
+      "border_width": 1.0,
+      "border_color": "rgba(4,14,28,0.75)",
       "fx": "dim"
     },
     {
@@ -401,115 +427,125 @@
           "c": false
         }
       ],
-      "scale": 1,
-      "y": 90,
+      "scale": 1.15,
+      "y": 103.5,
       "fill": null,
-      "stroke": "rgba(232,241,255,0.55)",
-      "sw": 1,
+      "stroke": "rgba(232,241,255,0.95)",
+      "sw": 2.0,
       "when": {
         "reloading": true,
         "heat_gun": false
       },
       "cap": "round",
       "join": "round",
+      "shadow": "rgba(4,14,28,0.62)",
+      "shadow_width": 3.5,
       "fx": "dim"
     },
     {
       "t": "text",
       "text": "{time_left:2} s",
-      "y": 102,
-      "size": 11,
+      "y": 117.3,
+      "size": 12.65,
       "font": "Normalidad Extended 400",
       "color": "#e8f1ffff",
-      "shadow": "rgba(6,20,40,0.35)",
+      "shadow": "rgba(4,14,28,0.9)",
       "when": {
         "reloading": true,
         "heat_gun": false
       },
+      "outline": 1.0,
       "fx": "timer"
     },
     {
       "t": "shells",
       "layout": "stack",
-      "x": 80,
-      "y": -2,
-      "cell_w": 12,
-      "cell_h": 4,
-      "gap": 4,
+      "x": 92.0,
+      "y": -2.3,
+      "cell_w": 13.8,
+      "cell_h": 4.6,
+      "gap": 4.6,
       "fill_dir": "right",
-      "border": false,
+      "border": true,
       "color_ready": "#e8f1ffff",
       "color_loading": "#7fc8ffff",
       "color_paused": "#ff8a7aff",
-      "color_empty": "rgba(232,241,255,0.25)",
+      "color_empty": "rgba(92,104,122,0.78)",
       "when": {
         "magazine_min": 2,
         "magazine_max": 14
       },
       "source": "main",
-      "radius": 2,
+      "radius": 2.3,
+      "border_width": 1.0,
+      "border_color": "rgba(4,14,28,0.75)",
       "fx": "rounds"
     },
     {
       "t": "bar",
       "track": "magazine",
-      "x": 84,
-      "y": -50,
-      "w": 2,
-      "h": 50,
+      "x": 96.6,
+      "y": -57.5,
+      "w": 2.3,
+      "h": 57.5,
       "fill_dir": "up",
       "color": "#e8f1ffff",
-      "color_bg": "rgba(232,241,255,0.16)",
+      "color_bg": "rgba(92,104,122,0.78)",
       "when": {
         "magazine_min": 15
       },
       "source": "main",
-      "radius": 25.0,
+      "radius": 28.75,
+      "border": true,
+      "border_width": 1.0,
+      "border_color": "rgba(4,14,28,0.75)",
       "fx": "mag"
     },
     {
       "t": "text",
       "text": "{shells_ready}/{magazine}",
-      "x": 80,
-      "y": 12,
-      "size": 11,
+      "x": 92.0,
+      "y": 13.8,
+      "size": 12.65,
       "font": "Normalidad Extended 400",
       "align": "left",
       "color": "#e8f1ffff",
-      "shadow": "rgba(6,20,40,0.35)",
+      "shadow": "rgba(4,14,28,0.9)",
       "when": {
         "magazine_min": 2
       },
       "source": "main",
+      "outline": 1.0,
       "fx": "count"
     },
     {
       "t": "text",
       "text": "+{shell_time_left:1}",
-      "x": 80,
-      "y": 25,
-      "size": 11,
+      "x": 92.0,
+      "y": 28.75,
+      "size": 12.65,
       "font": "Normalidad Extended 400",
       "align": "left",
       "color": "#7fc8ffff",
-      "shadow": "rgba(6,20,40,0.35)",
+      "shadow": "rgba(4,14,28,0.9)",
       "when": {
         "magazine_min": 2,
         "round_loading": true
       },
       "source": "main",
+      "outline": 1.0,
       "fx": "next"
     },
     {
       "t": "bar",
       "track": "heat",
-      "x": -82,
-      "y": -50,
-      "w": 2,
-      "h": 50,
+      "x": -94.3,
+      "y": -57.5,
+      "w": 2.3,
+      "h": 57.5,
       "fill_dir": "up",
       "color": "#e8f1ffff",
-      "color_bg": "rgba(232,241,255,0.16)",
+      "color_bg": "rgba(92,104,122,0.78)",
       "when": {
         "heat_gun": true,
         "heat_phase": [
@@ -522,18 +558,21 @@
         ]
       },
       "source": "primary",
-      "radius": 25.0,
+      "radius": 28.75,
+      "border": true,
+      "border_width": 1.0,
+      "border_color": "rgba(4,14,28,0.75)",
       "fx": "heat"
     },
     {
       "t": "bar",
       "track": "heat_delay",
-      "x": -82,
-      "y": -50,
-      "w": 2,
-      "h": 50,
+      "x": -94.3,
+      "y": -57.5,
+      "w": 2.3,
+      "h": 57.5,
       "fill_dir": "up",
-      "color": "rgba(255,143,51,0.9)",
+      "color": "rgba(255,143,51,0.95)",
       "when": {
         "heat_gun": true,
         "heat_phase": [
@@ -542,147 +581,157 @@
       },
       "source": "primary",
       "bg_sweep": false,
-      "radius": 25.0,
+      "radius": 28.75,
       "color_bg": null,
       "fx": "heat"
     },
     {
       "t": "text",
       "text": "HEAT",
-      "x": -90,
-      "y": -25,
+      "x": -103.5,
+      "y": -28.75,
       "rotate": -90,
-      "size": 9,
+      "size": 10.35,
       "font": "Normalidad Extended 400",
-      "color": "rgba(232,241,255,0.55)",
+      "color": "rgba(232,241,255,0.97)",
       "when": {
         "heat_gun": true
       },
+      "shadow": "rgba(4,14,28,0.9)",
+      "outline": 1.0,
       "fx": "heat"
     },
     {
       "t": "bar",
       "track": "heat",
-      "x": -82,
-      "y": -50,
-      "w": 2,
-      "h": 50,
+      "x": -94.3,
+      "y": -57.5,
+      "w": 2.3,
+      "h": 57.5,
       "color": "#ff8a7aff",
       "color_bg": null,
       "when": {
         "overheated": true
       },
       "source": "primary",
-      "radius": 25.0,
+      "radius": 28.75,
       "fx": "heat"
     },
     {
       "t": "text",
       "text": "OVERHEAT",
-      "x": -81,
-      "y": 12,
-      "size": 10,
+      "x": -93.15,
+      "y": 13.8,
+      "size": 11.5,
       "font": "Normalidad Extended 400",
       "color": "#ff8a7aff",
-      "shadow": "rgba(6,20,40,0.35)",
+      "shadow": "rgba(4,14,28,0.9)",
       "when": {
         "overheated": true
       },
+      "outline": 1.0,
       "fx": "heat"
     },
     {
       "t": "bar",
       "source": "side",
       "track": "magazine",
-      "x": -119,
-      "y": -50,
-      "w": 3,
-      "h": 46,
+      "x": -136.85,
+      "y": -57.5,
+      "w": 3.45,
+      "h": 52.9,
       "fill_dir": "up",
       "color": "#7fc8ffff",
-      "color_bg": "rgba(232,241,255,0.16)",
-      "radius": 25.0,
+      "color_bg": "rgba(92,104,122,0.78)",
+      "radius": 28.75,
       "when": {
         "magazine_min": 15
       },
+      "border": true,
+      "border_width": 1.0,
+      "border_color": "rgba(4,14,28,0.75)",
       "fx": "mag2"
     },
     {
       "t": "text",
       "source": "side",
       "text": "{shells_ready}/{magazine}",
-      "x": -112,
-      "y": 12,
-      "size": 11,
+      "x": -128.8,
+      "y": 13.8,
+      "size": 12.65,
       "font": "Normalidad Extended 400",
       "color": "#7fc8ffff",
-      "shadow": "rgba(6,20,40,0.35)",
+      "shadow": "rgba(4,14,28,0.9)",
       "align": "right",
+      "outline": 1.0,
       "fx": "count2"
     },
     {
       "t": "text",
       "text": "{distance:0} m",
-      "x": 80,
-      "y": 38,
-      "size": 11,
+      "x": 92.0,
+      "y": 43.7,
+      "size": 12.65,
       "font": "Normalidad Extended 400",
       "align": "left",
       "color": "#e8f1ffff",
-      "shadow": "rgba(6,20,40,0.35)",
+      "shadow": "rgba(4,14,28,0.9)",
       "when": {
         "range_shown": true,
         "range_close": false
       },
+      "outline": 1.0,
       "fx": "range"
     },
     {
       "t": "text",
       "text": "{distance:0} m",
-      "x": 80,
-      "y": 38,
-      "size": 11,
+      "x": 92.0,
+      "y": 43.7,
+      "size": 12.65,
       "font": "Normalidad Extended 400",
       "align": "left",
       "color": "#ff8a7aff",
-      "shadow": "rgba(6,20,40,0.35)",
+      "shadow": "rgba(4,14,28,0.9)",
       "when": {
         "range_close": true
       },
+      "outline": 1.0,
       "fx": "range"
     },
     {
       "t": "text",
       "text": "+{shell_time_left:1}",
-      "x": -112,
-      "y": 25,
-      "size": 11,
+      "x": -128.8,
+      "y": 28.75,
+      "size": 12.65,
       "font": "Normalidad Extended 400",
       "align": "right",
       "color": "#7fc8ffff",
-      "shadow": "rgba(6,20,40,0.35)",
+      "shadow": "rgba(4,14,28,0.9)",
       "when": {
         "round_loading": true
       },
       "source": "side",
+      "outline": 1.0,
       "fx": "next2"
     },
     {
       "t": "reload_game",
-      "y": 120,
-      "w": 140,
-      "h": 8,
-      "indicator_w": 3,
-      "indicator_h": 19,
-      "end_h": 11,
+      "y": 138.0,
+      "w": 161.0,
+      "h": 9.2,
+      "indicator_w": 3.45,
+      "indicator_h": 21.85,
+      "end_h": 12.65,
       "color_end": "rgba(248,247,246,0.6)",
-      "color_bg": "rgba(18,25,29,0.72)",
+      "color_bg": "rgba(18,25,29,0.8)",
       "color_zone": "rgba(61,217,248,0.95)",
       "color_perfect": "#3dd9f8ff",
       "color_indicator": "#ffffffff",
       "color_hit": "#84ffb1ff",
       "color_miss": "#ff6d46ff",
-      "size": 13,
+      "size": 14.95,
       "font": "Normalidad Extended 400",
       "when": {
         "active_reload": [
@@ -693,30 +742,32 @@
         ]
       },
       "zone_texture": "hatch",
-      "perfect_h": 14,
-      "texture_step": 4,
+      "perfect_h": 16.1,
+      "texture_step": 4.6,
       "color_texture": "rgba(18,25,29,0.55)"
     },
     {
       "t": "shells",
       "layout": "stack",
-      "x": -124,
-      "y": -2,
-      "cell_w": 12,
-      "cell_h": 4,
-      "gap": 4,
+      "x": -142.6,
+      "y": -2.3,
+      "cell_w": 13.8,
+      "cell_h": 4.6,
+      "gap": 4.6,
       "fill_dir": "right",
-      "border": false,
+      "border": true,
       "color_ready": "#e8f1ffff",
       "color_loading": "#7fc8ffff",
       "color_paused": "#ff8a7aff",
-      "color_empty": "rgba(232,241,255,0.25)",
+      "color_empty": "rgba(92,104,122,0.78)",
       "when": {
         "magazine_min": 1,
         "magazine_max": 14
       },
       "source": "side",
-      "radius": 2,
+      "radius": 2.3,
+      "border_width": 1.0,
+      "border_color": "rgba(4,14,28,0.75)",
       "fx": "rounds2"
     }
   ],
