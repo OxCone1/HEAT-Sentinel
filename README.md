@@ -35,6 +35,7 @@ HEAT Sentinel also runs on Linux, for players who run the game through Proton. C
 | File | Size | SHA-256 |
 |------|------|------|
 | [`HEAT.Sentinel_3.2.4_amd64.AppImage`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.2.4/HEAT.Sentinel_3.2.4_amd64.AppImage) (updates itself) | 261.0 MB | `c7bc141ca010b3114d06e8ff65aa3e2ccf01e444bd00d6f3d6075b3160964ea2` |
+| [`HEAT.Sentinel_3.2.4_amd64.deb`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.2.4/HEAT.Sentinel_3.2.4_amd64.deb) (updates through your package manager) | 292.4 MB | `77434ad2062038048591fed7e82f035e88a60c20cb0d1c27c94da592f777b3a3` |
 <!-- LINUX-EN:END -->
 
 Every release is built by GitHub Actions and scanned on VirusTotal, and updates are signed. Windows SmartScreen will warn about the installer because it is not code-signed: "More info", then "Run anyway". [Why, and how to check a build yourself](docs/security-and-privacy.md).
