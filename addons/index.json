@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "addons": [
+    {
+      "id": "hangars",
+      "releases": [
+        {
+          "version": "1.4.2",
+          "file": "hangars/hangars-1.4.2.heataddon",
+          "sha256": "10b442fb36d7c4a20c87052ecf4508cfdbd19a4127baa1b21a374f992df22a67",
+          "size": 1870676,
+          "sentinel_min": "3.2.0",
+          "game": [
+            "=1.2"
+          ],
+          "clients": [],
+          "notes": "First catalog release. 16 hangar spots on live 1.2 maps.",
+          "date": "2026-11-13"
+        }
+      ],
+      "name": "Map hangars",
+      "description": "Puts your garage on a real map. Pick a spot; Stock hangar puts the game's own files back.",
+      "tags": [
+        "external",
+        "heat"
+      ],
+      "icon": "hangars/icon.svg"
+    }
+  ]
+}
