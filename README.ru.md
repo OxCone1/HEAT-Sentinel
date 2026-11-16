@@ -30,12 +30,12 @@ HEAT Sentinel -- мод для **World of Tanks: HEAT**, который рабо
 HEAT Sentinel работает и на Linux, для игроков, запускающих игру через Proton. Выберите AppImage, который обновляется сам, или .deb, который обновляется через менеджер пакетов. Сборка новой версии для Linux выходит вскоре после сборки для Windows.
 
 <!-- LINUX-RU:START -->
-**Последняя сборка для Linux:** [v3.2.4](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v3.2.4)
+**Последняя сборка для Linux:** [v3.3.1](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v3.3.1)
 
 | Файл | Размер | SHA-256 |
 |------|------|------|
-| [`HEAT.Sentinel_3.2.4_amd64.AppImage`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.2.4/HEAT.Sentinel_3.2.4_amd64.AppImage) (обновляется сама) | 261.0 MB | `c7bc141ca010b3114d06e8ff65aa3e2ccf01e444bd00d6f3d6075b3160964ea2` |
-| [`HEAT.Sentinel_3.2.4_amd64.deb`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.2.4/HEAT.Sentinel_3.2.4_amd64.deb) (обновляется через менеджер пакетов) | 292.4 MB | `77434ad2062038048591fed7e82f035e88a60c20cb0d1c27c94da592f777b3a3` |
+| [`HEAT.Sentinel_3.3.1_amd64.AppImage`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.3.1/HEAT.Sentinel_3.3.1_amd64.AppImage) (обновляется сама) | 258.3 MB | `e1bc8b5930e4eba1cd960a31bb506cbba5de39e32f6025ec3fcfcec1bf23e53f` |
+| [`HEAT.Sentinel_3.3.1_amd64.deb`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.3.1/HEAT.Sentinel_3.3.1_amd64.deb) (обновляется через менеджер пакетов) | 289.2 MB | `9eeac99ef15a3e33cf607df83ba437bded8363d3a6fb4bffd6393b05e5a37e03` |
 <!-- LINUX-RU:END -->
 
 Каждый релиз собирается через GitHub Actions и проверяется на VirusTotal, а обновления подписаны. Windows SmartScreen предупредит об установщике, потому что у него нет цифровой подписи: "Подробнее", затем "Выполнить в любом случае". [Почему так и как проверить сборку самому](docs/ru/security-and-privacy.md).
