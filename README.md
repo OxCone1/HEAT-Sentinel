@@ -15,14 +15,14 @@ HEAT Sentinel is a mod for **World of Tanks: HEAT** that runs next to the game. 
 ## Download
 
 <!-- RELEASE-EN:START -->
-[![Download HEAT Sentinel](https://img.shields.io/badge/Download-HEAT%20Sentinel%20v3.2.4-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.2.4/HEAT.Sentinel_3.2.4_x64-setup.exe)
+[![Download HEAT Sentinel](https://img.shields.io/badge/Download-HEAT%20Sentinel%20v3.3.0-0a0a0a?style=for-the-badge&logo=github)](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.3.0/HEAT.Sentinel_3.3.0_x64-setup.exe)
 
-**Latest release:** [v3.2.4](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v3.2.4) -- published 2026-11-06
+**Latest release:** [v3.3.0](https://github.com/OxCone1/HEAT-Sentinel/releases/tag/v3.3.0) -- published 2026-11-16
 
 | File | Size | VirusTotal report |
 |------|------|------|
-| [`HEAT.Sentinel_3.2.4_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.2.4/HEAT.Sentinel_3.2.4_x64-setup.exe) (app installer) | 161.0 MB | [View scan](https://www.virustotal.com/gui/file/de4af5e35a0d47737a597550a69394d534211a30380bec31b06c4f499dc182b8) |
-| `heat-capture.exe` (capture/watcher engine, bundled inside the installer) | 47.0 MB | [View scan](https://www.virustotal.com/gui/file/c97a37bd992fee46db10267b0a584557024d6e21507ec0c69cc62e602448189c) |
+| [`HEAT.Sentinel_3.3.0_x64-setup.exe`](https://github.com/OxCone1/HEAT-Sentinel/releases/download/v3.3.0/HEAT.Sentinel_3.3.0_x64-setup.exe) (app installer) | 158.8 MB | [View scan](https://www.virustotal.com/gui/file/6c979fa0d6f13e131427dc6a557f7ad58d66d763aeb8b11df87ffb3739c89cb5) |
+| `heat-capture.exe` (capture/watcher engine, bundled inside the installer) | 37.7 MB | [View scan](https://www.virustotal.com/gui/file/b36d00f8b31f2c4310c1a297005f739ecab1da3f8a1ae846926c916337dd42b6) |
 <!-- RELEASE-EN:END -->
 
 ### Linux
