@@ -25,11 +25,11 @@
     {
       "map_id": "02_vietnam",
       "display_name": "Blossom Crash",
-      "version": 2,
+      "version": 3,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/02_vietnam.v2.hpak",
-      "sha256": "a963e56e5b5d9105470cc68a09fefc8f1fed60e0058c43e6aeaca2feb964a9ab",
-      "size": 3235422,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/02_vietnam.v3.hpak",
+      "sha256": "0e3dcc466bdabbc67ba1561996f5dfb93edfee27aed381180d45d267b8b65a31",
+      "size": 3298366,
       "modes": [
         "conquest",
         "conquest20",
@@ -115,11 +115,11 @@
     {
       "map_id": "08_inferno",
       "display_name": "Inferno One",
-      "version": 2,
+      "version": 3,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/08_inferno.v2.hpak",
-      "sha256": "fe5c8c4d898ec16b56874a08d3670d2a952b65666b46ae6d89bc88420927864a",
-      "size": 3157262,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/08_inferno.v3.hpak",
+      "sha256": "098571f682d4668e2fb4c37cf044860026d8e8134546ced20a4d4c197d2474ca",
+      "size": 3208535,
       "modes": [
         "conquest",
         "conquest20",
@@ -131,11 +131,11 @@
     {
       "map_id": "08_inferno_halloween",
       "display_name": "Inferno One",
-      "version": 2,
+      "version": 3,
       "gen": 1,
-      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/08_inferno_halloween.v2.hpak",
-      "sha256": "7a803ca12f3f8d6addaf7cbaccb902d4ce342ff6dcba0793a24b6226945259be",
-      "size": 2733024,
+      "url": "https://github.com/OxCone1/HEAT-Sentinel/releases/download/tactics-gen1-v1/08_inferno_halloween.v3.hpak",
+      "sha256": "aebe8cb6f726833c4f8a5bbf61de98d3bb687cc598832ed62e2ad6b6c598fd62",
+      "size": 2760809,
       "modes": [
         "conquest",
         "hardpoint",
